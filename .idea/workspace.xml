@@ -109,8 +109,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="544" />
-    <option name="y" value="62" />
+    <option name="x" value="153" />
+    <option name="y" value="91" />
     <option name="width" value="1170" />
     <option name="height" value="784" />
   </component>
@@ -194,6 +194,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="recentsLimit" value="5" />
+    <property name="FullScreen" value="false" />
     <property name="DefaultHtmlFileTemplate" value="Html5" />
   </component>
   <component name="RecentsManager">
@@ -245,8 +246,8 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="544" y="62" width="1170" height="784" extended-state="0" />
-    <editor active="true" />
+    <frame x="153" y="91" width="1170" height="784" extended-state="0" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
