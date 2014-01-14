@@ -8,7 +8,8 @@
 Prim = extend(AlgorithmBase, {
     run: function(id){
         Canvas.init(id)
-            .drawBinaryTree();
+            .drawBinaryTree()
+            .draw();
     },
     drawTree: function(){
 

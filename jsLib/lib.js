@@ -15,14 +15,14 @@ window.deepCopy = function(target, source) {
             target[item] = source[item];
         }
     } return target;
-}
+};
 window.extend = function(parent, object) {
     function F() {};
     F.prototype = parent;
     var son = new F();
     deepCopy(son, object);
     return son;
-}
+};
 window.requestAnimFrame = (function() {
     return window.requestAnimationFrame
         || window.webkitRequestAnimationFrame
