@@ -32,7 +32,9 @@ CanvasBase = {
         ctx.closePath();
         ctx.fill();
 
-        this.writeText(str, {x:pos.x - radius/2, y: pos.y + radius/4});
+        if(str) {
+            this.writeText(str, {x:pos.x - radius/2, y: pos.y + radius/4});
+        }
         return this;
     },
 

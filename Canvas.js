@@ -19,15 +19,37 @@ Canvas = extend(CanvasBase, {
     highLight: function() {
 
     },
-    drawBinaryTree: function(treeNodes) {
-        setTimeout("Canvas.drawBoundedCircle(10, {x: 63, y: 103}, '99', 4);", 2000);
-        setTimeout("Canvas.drawBoundedCircle(20, {x: 100, y:50}, '56', 4);", 2000);
-        setTimeout("Canvas.drawBoundedCircle(20, {x: 100, y:150}, '56', 4);", 2000);
+    drawRectangleByNumber: function(array) {
 
-        this.drawCircleBound(20, {x: 100, y:150}, 4);
-
-        this.linkTwoCircle({r:10, o: {x: 63, y: 103}}, {r:20, o: {x: 100, y:50}});
-        this.linkTwoCircle({r:10, o: {x: 63, y: 103}}, {r:20, o: {x: 100, y:150}});
+    },
+    drawGragh: function(nodes, edges) {
+        if(nodes) {
+            for(var key in nodes) {
+                var node = nodes[key];
+                this.drawCircle(node.r, node.o);
+            }
+        }
+        if(edges) {
+            for(var key in edges) {
+                var edge = edges[key],
+                    s = edge[0],
+                    e = edge[1];
+                this.linkTwoCircle(nodes[s], nodes[e]);
+            }
+        }
+    },
+    drawTreeLevel: function(treeNodes, father) {
+        for(var key in treeNodes) {
+            var node = treeNodes[key];
+            this.drawCircle(node.r, node.o);
+        }
+        if(father) {
+            this.drawCircle(father.r, father.o);
+            for(var key in treeNodes) {
+                var node = treeNodes[key];
+                this.linkTwoCircle(father, node);
+            }
+        }
         return this;
     },
     linkTwoCircle: function(A, B, str) {

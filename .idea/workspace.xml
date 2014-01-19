@@ -1,20 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/prim.js" line="9" />
-    <bookmark url="file://$PROJECT_DIR$/prim.js" line="9" />
-  </component>
   <component name="ChangeListManager">
     <list default="true" id="b8866d45-fac2-4c5e-ab85-e2969b0a6841" name="Default" comment="" />
     <ignored path="testjs.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/AlgorithmBase.js" changelist="b8866d45-fac2-4c5e-ab85-e2969b0a6841" time="1388645169609" ignored="false" />
     <file path="/index.html" changelist="b8866d45-fac2-4c5e-ab85-e2969b0a6841" time="1389604019275" ignored="false" />
-    <file path="/CanvasBase.js" changelist="b8866d45-fac2-4c5e-ab85-e2969b0a6841" time="1389706553700" ignored="false" />
+    <file path="/CanvasBase.js" changelist="b8866d45-fac2-4c5e-ab85-e2969b0a6841" time="1390051566632" ignored="false" />
     <file path="/app.js" changelist="b8866d45-fac2-4c5e-ab85-e2969b0a6841" time="1388740719969" ignored="false" />
-    <file path="/Canvas.js" changelist="b8866d45-fac2-4c5e-ab85-e2969b0a6841" time="1389710107348" ignored="false" />
+    <file path="/Canvas.js" changelist="b8866d45-fac2-4c5e-ab85-e2969b0a6841" time="1390052442803" ignored="false" />
     <file path="/lib.js" changelist="b8866d45-fac2-4c5e-ab85-e2969b0a6841" time="1389701838396" ignored="false" />
-    <file path="/prim.js" changelist="b8866d45-fac2-4c5e-ab85-e2969b0a6841" time="1389708909394" ignored="false" />
+    <file path="/prim.js" changelist="b8866d45-fac2-4c5e-ab85-e2969b0a6841" time="1390052234398" ignored="false" />
     <file path="/main.css" changelist="b8866d45-fac2-4c5e-ab85-e2969b0a6841" time="1389704045245" ignored="false" />
     <file path="/init.js" changelist="b8866d45-fac2-4c5e-ab85-e2969b0a6841" time="1389604918098" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -39,7 +35,7 @@
       <file leaf-file-name="CanvasBase.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/CanvasBase.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="55" column="56" selection-start="1634" selection-end="1634" vertical-scroll-proportion="0.0">
+            <state line="13" column="0" selection-start="390" selection-end="390" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -48,7 +44,7 @@
       <file leaf-file-name="Canvas.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Canvas.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="8" selection-start="508" selection-end="508" vertical-scroll-proportion="0.36312848">
+            <state line="26" column="102" selection-start="664" selection-end="664" vertical-scroll-proportion="-0.22905028">
               <folding />
             </state>
           </provider>
@@ -84,10 +80,8 @@
       <file leaf-file-name="prim.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/prim.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="18" selection-start="287" selection-end="287" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="e#0#160#0" expanded="false" />
-              </folding>
+            <state line="19" column="5" selection-start="622" selection-end="622" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -95,7 +89,7 @@
       <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="79" selection-start="801" selection-end="801" vertical-scroll-proportion="-6.0">
+            <state line="17" column="84" selection-start="876" selection-end="876" vertical-scroll-proportion="-12.142858">
               <folding />
             </state>
           </provider>
@@ -158,13 +152,13 @@
   <component name="PropertiesComponent">
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="recentsLimit" value="5" />
     <property name="options.lastSelected" value="editor" />
+    <property name="recentsLimit" value="5" />
     <property name="FullScreen" value="true" />
     <property name="DefaultHtmlFileTemplate" value="Html5" />
-    <property name="GoToClass.includeJavaFiles" value="false" />
-    <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="GoToClass.includeJavaFiles" value="false" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -233,7 +227,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1366" height="768" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
@@ -326,9 +320,7 @@
     <entry file="file://$PROJECT_DIR$/prim.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="8" column="0" selection-start="192" selection-end="192" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#0#160#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -376,30 +368,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/lib/JavascriptLanguage.jar!/com/intellij/lang/javascript/index/predefined/DHTML.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1200" column="7" selection-start="18569" selection-end="18569" vertical-scroll-proportion="0.33240223">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="79" selection-start="801" selection-end="801" vertical-scroll-proportion="-6.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CanvasBase.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="55" column="56" selection-start="1634" selection-end="1634" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/main.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="56" selection-start="476" selection-end="476" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/jsLib/lib.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="43" selection-start="267" selection-end="267" vertical-scroll-proportion="0.0">
+        <state line="17" column="84" selection-start="876" selection-end="876" vertical-scroll-proportion="-12.142858">
           <folding />
         </state>
       </provider>
@@ -411,25 +389,37 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/lib/JavascriptLanguage.jar!/com/intellij/lang/javascript/index/predefined/DHTML.js">
+    <entry file="file://$PROJECT_DIR$/jsLib/lib.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1200" column="7" selection-start="18569" selection-end="18569" vertical-scroll-proportion="0.33240223">
+        <state line="9" column="43" selection-start="267" selection-end="267" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CanvasBase.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="0" selection-start="390" selection-end="390" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/prim.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="18" selection-start="287" selection-end="287" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#0#160#0" expanded="false" />
-          </folding>
+        <state line="19" column="5" selection-start="622" selection-end="622" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/main.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="56" selection-start="476" selection-end="476" vertical-scroll-proportion="0.0">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Canvas.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="8" selection-start="508" selection-end="508" vertical-scroll-proportion="0.36312848">
+        <state line="26" column="102" selection-start="664" selection-end="664" vertical-scroll-proportion="-0.22905028">
           <folding />
         </state>
       </provider>
