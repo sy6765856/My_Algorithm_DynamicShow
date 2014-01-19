@@ -38,3 +38,10 @@ window.cancelRequestAnimFrame = (function() {
         || window.oCancelRequestAnimationFrame
         || window.msCancelRequestAnimationFrame || function() { return -1; }
 })();
+
+window.clearAllTimeOut = function(maxIndex) {
+    maxIndex = maxIndex ? maxIndex : IndexINF;
+    for(var i = 1; i<=maxIndex; i++) {
+        clearTimeout(i);
+    }
+};

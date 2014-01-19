@@ -17,10 +17,13 @@ CanvasBase = {
         return this;
     },
 
-    drawRectangle: function(width, height, pos) {
+    drawRectangle: function(width, height, pos, str) {
         var ctx = this.ctx;
         ctx.fillStyle = "rgb(100,0,0)";
-        ctx.fillRect(pos.x, pos.y, width, height);
+        ctx.fillRect(pos.x - width, pos.y - height, width, height);
+        if(str){
+            this.writeText(str, pos);
+        }
         return this;
     },
 

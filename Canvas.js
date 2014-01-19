@@ -6,7 +6,8 @@
  * To change this template use File | Settings | File Templates.
  */
 var INF = 10000,
-    frame = 0;
+    frame = 0,
+    IndexINF = 100000;
 Canvas = extend(CanvasBase, {
     draw : function() {
         var ctx = this.ctx;
@@ -14,13 +15,19 @@ Canvas = extend(CanvasBase, {
         ctx.fillRect(frame,frame, 10, 10);
         if(frame > 200) return;
         frame += 4;
-        setTimeout("Canvas.draw();", 1000);
+        var tt = setTimeout("Canvas.draw();", 1000);
+        console.log(tt);
     },
     highLight: function() {
 
     },
-    drawRectangleByNumber: function(array) {
-
+    drawRectangleByNumber: function(array, width) {
+        width = width ? width : 4;
+        var pos = {x:10, y:30};
+        for(var i in array) {
+            this.drawRectangle(width, array[i]*10, pos);
+            pos.x += width + 1;
+        }
     },
     drawGragh: function(nodes, edges) {
         if(nodes) {
