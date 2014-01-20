@@ -15,6 +15,9 @@
     <file path="/init.js" changelist="b8866d45-fac2-4c5e-ab85-e2969b0a6841" time="1389604918098" ignored="false" />
     <file path="/sort.js" changelist="b8866d45-fac2-4c5e-ab85-e2969b0a6841" time="1390208944079" ignored="false" />
     <file path="/CanvasLib.js" changelist="b8866d45-fac2-4c5e-ab85-e2969b0a6841" time="1390211020935" ignored="false" />
+    <file path="/dijkstra.js" changelist="b8866d45-fac2-4c5e-ab85-e2969b0a6841" time="1390225063004" ignored="false" />
+    <file path="/dynamic.js" changelist="b8866d45-fac2-4c5e-ab85-e2969b0a6841" time="1390225042983" ignored="false" />
+    <file path="/heap.js" changelist="b8866d45-fac2-4c5e-ab85-e2969b0a6841" time="1390225159560" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,10 +37,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="CanvasBase.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="CanvasBase.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/CanvasBase.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="79" column="12" selection-start="2610" selection-end="2610" vertical-scroll-proportion="0.89385474">
+            <state line="79" column="12" selection-start="2610" selection-end="2610" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -70,24 +73,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main.css" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/css/main.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="56" selection-start="476" selection-end="476" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="lib.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/jsLib/lib.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="AlgorithmBase.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/AlgorithmBase.js">
           <provider selected="true" editor-type-id="text-editor">
@@ -100,8 +85,41 @@
       <file leaf-file-name="prim.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/prim.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="31" column="36" selection-start="1065" selection-end="1065" vertical-scroll-proportion="0.0">
+            <state line="6" column="80" selection-start="160" selection-end="160" vertical-scroll-proportion="0.0">
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="dijkstra.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/dijkstra.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="10" column="7" selection-start="228" selection-end="228" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="e#0#160#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="dynamic.js" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/dynamic.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="10" column="7" selection-start="227" selection-end="227" vertical-scroll-proportion="0.11173184">
+              <folding>
+                <element signature="e#0#160#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="heap.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/heap.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="11" column="4" selection-start="228" selection-end="228" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="e#0#160#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -120,7 +138,7 @@
       <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="22" column="100" selection-start="1065" selection-end="1065" vertical-scroll-proportion="-2.4285715">
+            <state line="43" column="7" selection-start="1696" selection-end="1696" vertical-scroll-proportion="-20.285715">
               <folding />
             </state>
           </provider>
@@ -148,6 +166,9 @@
         <option value="$PROJECT_DIR$/Canvas.js" />
         <option value="$PROJECT_DIR$/CanvasLib.js" />
         <option value="$PROJECT_DIR$/CanvasBase.js" />
+        <option value="$PROJECT_DIR$/dynamic.js" />
+        <option value="$PROJECT_DIR$/dijkstra.js" />
+        <option value="$PROJECT_DIR$/heap.js" />
       </list>
     </option>
   </component>
@@ -343,34 +364,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="42" selection-start="608" selection-end="608" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="47" selection-start="629" selection-end="629" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Desktop/syntaxhighlighter_3.0.83/theme_tests.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-3.4470377" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/jsLib/jquery-1.4.2.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="n#!!doc" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/init.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="7" column="90" selection-start="190" selection-end="190" vertical-scroll-proportion="0.03521127">
@@ -401,39 +394,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="100" selection-start="1065" selection-end="1065" vertical-scroll-proportion="-2.4285715">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/AlgorithmBase.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="0" selection-start="161" selection-end="161" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sort.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="8" selection-start="215" selection-end="215" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#0#160#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/jsLib/lib.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/prim.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="36" selection-start="1065" selection-end="1065" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -463,8 +426,72 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/CanvasBase.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="79" column="12" selection-start="2610" selection-end="2610" vertical-scroll-proportion="0.89385474">
+        <state line="79" column="12" selection-start="2610" selection-end="2610" vertical-scroll-proportion="0.0">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AlgorithmBase.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="0" selection-start="161" selection-end="161" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="43" column="7" selection-start="1696" selection-end="1696" vertical-scroll-proportion="-20.285715">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sort.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="8" selection-start="215" selection-end="215" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#0#160#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/encodings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/prim.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="80" selection-start="160" selection-end="160" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dijkstra.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="7" selection-start="228" selection-end="228" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#0#160#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/heap.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="4" selection-start="228" selection-end="228" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#0#160#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dynamic.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="7" selection-start="227" selection-end="227" vertical-scroll-proportion="0.11173184">
+          <folding>
+            <element signature="e#0#160#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
