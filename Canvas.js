@@ -24,11 +24,13 @@ Canvas = function(){
             },
             drawRectangleByNumber: function(array, width) {
                 width = width ? width : 10;
-                var pos = {x:10, y:100};
+                var h = 100/(array.max() - array.min());
+                var pos = {x:50, y:200};
                 for(var i in array) {
-                    this.drawRectangle(width, array[i]*10, pos);
+                    this.drawRectangle(width, array[i]*h, pos);
                     pos.x += width + 1;
                 }
+                return this;
             },
             drawGragh: function(nodes, edges) {
                 if(nodes) {
@@ -45,6 +47,7 @@ Canvas = function(){
                         this.linkTwoCircle(nodes[s], nodes[e]);
                     }
                 }
+                return this;
             },
             drawTreeLevel: function(treeNodes, father) {
                 for(var key in treeNodes) {
@@ -69,6 +72,7 @@ Canvas = function(){
 
                 this.drawLine({x: d.o.x + d.r/c*b, y: d.o.y - d.r/c*a}
                     , {x: u.o.x - u.r/c*b, y: u.o.y + u.r/c*a});
+                return this;
             }
     });
 }();

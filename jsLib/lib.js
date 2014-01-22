@@ -45,3 +45,8 @@ window.clearAllTimeOut = function(maxIndex) {
         clearTimeout(i);
     }
 };
+
+window.swap = function(a, b) {
+    var tmp = a;
+    a = b; b = tmp;
+};

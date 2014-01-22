@@ -7,8 +7,7 @@
  */
 Prim = extend(AlgorithmBase, {
     run: function(id){
-        clearAllTimeOut();
-        frame = 0;
+        FRAME = 0;
         this.drawRectangles(Canvas.init(id));
     },
     drawTree: function(CanvasObject){
@@ -30,6 +29,6 @@ Prim = extend(AlgorithmBase, {
     },
     drawRectangles: function(CanvasObject){
         var array = [1,2,3,4,5,6];
-        CanvasObject.drawRectangleByNumber(array);
+        CanvasObject.drawRectangleByNumber(array).draw();
     }
 });

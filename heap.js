@@ -7,6 +7,5 @@
  */
 Heap = function(){
     return extend(AlgorithmBase, {
-
     });
 }();
