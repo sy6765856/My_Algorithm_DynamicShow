@@ -10,6 +10,9 @@ Prim = extend(AlgorithmBase, {
         FRAME = 0;
         this.drawRectangles(Canvas.init(id));
     },
+    prim: function(){
+
+    },
     drawTree: function(CanvasObject){
         var treeNodes = new Array();
         treeNodes[0] = {r:6, o:{x:24,y:34}};

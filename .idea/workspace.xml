@@ -8,12 +8,12 @@
     <file path="/index.html" changelist="b8866d45-fac2-4c5e-ab85-e2969b0a6841" time="1390395263262" ignored="false" />
     <file path="/CanvasBase.js" changelist="b8866d45-fac2-4c5e-ab85-e2969b0a6841" time="1390214485469" ignored="false" />
     <file path="/app.js" changelist="b8866d45-fac2-4c5e-ab85-e2969b0a6841" time="1388740719969" ignored="false" />
-    <file path="/Canvas.js" changelist="b8866d45-fac2-4c5e-ab85-e2969b0a6841" time="1390405783643" ignored="false" />
-    <file path="/lib.js" changelist="b8866d45-fac2-4c5e-ab85-e2969b0a6841" time="1390394955136" ignored="false" />
-    <file path="/prim.js" changelist="b8866d45-fac2-4c5e-ab85-e2969b0a6841" time="1390404540866" ignored="false" />
+    <file path="/Canvas.js" changelist="b8866d45-fac2-4c5e-ab85-e2969b0a6841" time="1390462663925" ignored="false" />
+    <file path="/lib.js" changelist="b8866d45-fac2-4c5e-ab85-e2969b0a6841" time="1390453764902" ignored="false" />
+    <file path="/prim.js" changelist="b8866d45-fac2-4c5e-ab85-e2969b0a6841" time="1390452806009" ignored="false" />
     <file path="/main.css" changelist="b8866d45-fac2-4c5e-ab85-e2969b0a6841" time="1389704045245" ignored="false" />
     <file path="/init.js" changelist="b8866d45-fac2-4c5e-ab85-e2969b0a6841" time="1390405615177" ignored="false" />
-    <file path="/sort.js" changelist="b8866d45-fac2-4c5e-ab85-e2969b0a6841" time="1390406035431" ignored="false" />
+    <file path="/sort.js" changelist="b8866d45-fac2-4c5e-ab85-e2969b0a6841" time="1390462266647" ignored="false" />
     <file path="/CanvasLib.js" changelist="b8866d45-fac2-4c5e-ab85-e2969b0a6841" time="1390211020935" ignored="false" />
     <file path="/dijkstra.js" changelist="b8866d45-fac2-4c5e-ab85-e2969b0a6841" time="1390225063004" ignored="false" />
     <file path="/dynamic.js" changelist="b8866d45-fac2-4c5e-ab85-e2969b0a6841" time="1390225042983" ignored="false" />
@@ -46,10 +46,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Canvas.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="Canvas.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Canvas.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="22" column="29" selection-start="668" selection-end="668" vertical-scroll-proportion="0.61452514">
+            <state line="25" column="87" selection-start="818" selection-end="818" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -58,7 +58,7 @@
       <file leaf-file-name="AlgorithmBase.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/AlgorithmBase.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="34" selection-start="494" selection-end="494" vertical-scroll-proportion="0.0">
+            <state line="14" column="52" selection-start="341" selection-end="341" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -84,10 +84,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="sort.js" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="sort.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/sort.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="38" column="9" selection-start="1200" selection-end="1200" vertical-scroll-proportion="0.0">
+            <state line="24" column="8" selection-start="681" selection-end="681" vertical-scroll-proportion="0.6703911">
               <folding />
             </state>
           </provider>
@@ -96,7 +96,7 @@
       <file leaf-file-name="lib.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/jsLib/lib.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="50" column="19" selection-start="1577" selection-end="1577" vertical-scroll-proportion="0.0">
+            <state line="51" column="0" selection-start="1578" selection-end="1578" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -105,7 +105,7 @@
       <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="73" selection-start="630" selection-end="630" vertical-scroll-proportion="-7.142857">
+            <state line="4" column="77" selection-start="196" selection-end="196" vertical-scroll-proportion="-2.857143">
               <folding />
             </state>
           </provider>
@@ -125,7 +125,7 @@
       <file leaf-file-name="prim.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/prim.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="50" selection-start="191" selection-end="191" vertical-scroll-proportion="0.0">
+            <state line="13" column="8" selection-start="309" selection-end="309" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -149,13 +149,13 @@
         <option value="$PROJECT_DIR$/dynamic.js" />
         <option value="$PROJECT_DIR$/dijkstra.js" />
         <option value="$PROJECT_DIR$/heap.js" />
-        <option value="$PROJECT_DIR$/jsLib/lib.js" />
         <option value="$PROJECT_DIR$/index.html" />
-        <option value="$PROJECT_DIR$/prim.js" />
         <option value="$PROJECT_DIR$/AlgorithmBase.js" />
         <option value="$PROJECT_DIR$/init.js" />
-        <option value="$PROJECT_DIR$/sort.js" />
+        <option value="$PROJECT_DIR$/prim.js" />
+        <option value="$PROJECT_DIR$/jsLib/lib.js" />
         <option value="$PROJECT_DIR$/Canvas.js" />
+        <option value="$PROJECT_DIR$/sort.js" />
       </list>
     </option>
   </component>
@@ -398,13 +398,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="73" selection-start="630" selection-end="630" vertical-scroll-proportion="-7.142857">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/heap.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="10" column="70" selection-start="227" selection-end="227" vertical-scroll-proportion="0.0">
@@ -414,9 +407,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/jsLib/lib.js">
+    <entry file="file://$PROJECT_DIR$/CanvasBase.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="50" column="19" selection-start="1577" selection-end="1577" vertical-scroll-proportion="0.0">
+        <state line="79" column="12" selection-start="2610" selection-end="2610" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/prim.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="8" selection-start="309" selection-end="309" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="77" selection-start="196" selection-end="196" vertical-scroll-proportion="-2.857143">
           <folding />
         </state>
       </provider>
@@ -430,37 +437,30 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/prim.js">
+    <entry file="file://$PROJECT_DIR$/jsLib/lib.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="50" selection-start="191" selection-end="191" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CanvasBase.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="79" column="12" selection-start="2610" selection-end="2610" vertical-scroll-proportion="0.0">
+        <state line="51" column="0" selection-start="1578" selection-end="1578" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/AlgorithmBase.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="34" selection-start="494" selection-end="494" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sort.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="38" column="9" selection-start="1200" selection-end="1200" vertical-scroll-proportion="0.0">
+        <state line="14" column="52" selection-start="341" selection-end="341" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Canvas.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="29" selection-start="668" selection-end="668" vertical-scroll-proportion="0.61452514">
+        <state line="25" column="87" selection-start="818" selection-end="818" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sort.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="24" column="8" selection-start="681" selection-end="681" vertical-scroll-proportion="0.6703911">
           <folding />
         </state>
       </provider>

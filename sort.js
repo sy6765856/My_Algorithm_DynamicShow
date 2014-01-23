@@ -13,7 +13,7 @@ Sort = function() {
             INTERVAL = interval ? interval : INTERVAL;
         },
         run: function(id){
-            this.orderSort(Canvas.init(id), this.produceRandomArray(20));
+            this.merge_Sort(Canvas.init(id), this.produceRandomArray(3000));
         },
         produceRandomArray: function(len){
             var ret = [];
@@ -22,8 +22,9 @@ Sort = function() {
             }
             return ret;
         },
+
         orderSort: function(CanvasObject, array){
-            this.init(100);
+            this.init(500);
             QUEUE.push(array.slice(0));
             len = array.length;
             for(var i = 0; i<len; i++) {
@@ -36,6 +37,41 @@ Sort = function() {
             }
             this.draw();
             return this;
+        },
+
+        merge_Sort: function(CanvasObject, array){
+            this.init(5);
+            QUEUE.push(array.slice(0));
+            this.mergeSort(array, 0, array.length-1);
+            this.draw();
+        },
+        mergeSort: function(array, begin, end){
+            if(begin >= end) {
+                return;
+            }
+            var mid = Math.floor((begin + end)/2);
+            this.mergeSort(array, begin, mid);
+            this.mergeSort(array, mid+1, end);
+            var i = begin,j = mid + 1,st = [];
+            while(i<=mid && j<=end){
+                if(array[i] <= array[j]){
+                    st = st.concat(array[i]);
+                    i++;
+                } else {
+                    st = st.concat(array[j]);
+                    j++;
+                }
+            }
+            if(i<=mid) {
+                st = st.concat(array.slice(i, mid+1));
+            } else if(j<=end) {
+                st = st.concat(array.slice(j,end+1));
+            }
+
+            for(var pos = begin; pos<=end; pos++){
+                array[pos] = st[pos - begin];
+            }
+            QUEUE.push(array.slice(0));
         }
     });
 }();

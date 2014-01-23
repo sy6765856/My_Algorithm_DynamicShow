@@ -23,9 +23,9 @@ Canvas = function(){
 
             },
             drawRectangleByNumber: function(array, width) {
-                width = width ? width : 10;
+                width = width ? width : (400 - array.length)/array.length;
                 var h = 100/(array.max() - array.min());
-                var pos = {x:50, y:200};
+                var pos = {x:25, y:200};
                 for(var i in array) {
                     this.drawRectangle(width, array[i]*h, pos);
                     pos.x += width + 1;
