@@ -7,11 +7,6 @@
  */
 Sort = function() {
     return extend(AlgorithmBase, {
-        init: function(interval) {
-            FRAME = 0;
-            QUEUE = [];
-            INTERVAL = interval ? interval : INTERVAL;
-        },
         run: function(id){
             this.merge_Sort(Canvas.init(id), this.produceRandomArray(3000));
         },

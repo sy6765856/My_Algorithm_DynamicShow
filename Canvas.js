@@ -5,9 +5,6 @@
  * Time: 下午3:47
  * To change this template use File | Settings | File Templates.
  */
-var INF = 10000,
-    frame = 0,
-    IndexINF = 100000;
 Canvas = function(){
     return extend(CanvasBase, {
             draw : function() {
@@ -32,23 +29,7 @@ Canvas = function(){
                 }
                 return this;
             },
-            drawGragh: function(nodes, edges) {
-                if(nodes) {
-                    for(var key in nodes) {
-                        var node = nodes[key];
-                        this.drawCircle(node.r, node.o);
-                    }
-                }
-                if(edges) {
-                    for(var key in edges) {
-                        var edge = edges[key],
-                            s = edge[0],
-                            e = edge[1];
-                        this.linkTwoCircle(nodes[s], nodes[e]);
-                    }
-                }
-                return this;
-            },
+
             drawTreeLevel: function(treeNodes, father) {
                 for(var key in treeNodes) {
                     var node = treeNodes[key];
@@ -64,14 +45,19 @@ Canvas = function(){
                 return this;
             },
             linkTwoCircle: function(A, B, str) {
-                var u = A.o.y < B.o.y ? A : B,
-                    d = A.o.y < B.o.y ? B : A;
-                var a = d.o.y - u.o.y,
-                    b = u.o.x - d.o.x,
-                    c = Math.sqrt(a*a + b*b);
+                if(A && B) {
+                    var u = A.o.y < B.o.y ? A : B,
+                        d = A.o.y < B.o.y ? B : A;
+                    var a = d.o.y - u.o.y,
+                        b = u.o.x - d.o.x,
+                        c = Math.sqrt(a*a + b*b);
+                    this.drawLine({x: d.o.x + d.r/c*b, y: d.o.y - d.r/c*a}
+                        , {x: u.o.x - u.r/c*b, y: u.o.y + u.r/c*a});
 
-                this.drawLine({x: d.o.x + d.r/c*b, y: d.o.y - d.r/c*a}
-                    , {x: u.o.x - u.r/c*b, y: u.o.y + u.r/c*a});
+                    if(str) {
+                        this.writeText(str, {x: (A.o.x+ B.o.x)/2, y:(A.o.y+ B.o.y)/2});
+                    }
+                }
                 return this;
             }
     });

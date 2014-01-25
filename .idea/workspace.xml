@@ -5,19 +5,22 @@
     <ignored path="testjs.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/AlgorithmBase.js" changelist="b8866d45-fac2-4c5e-ab85-e2969b0a6841" time="1390225694752" ignored="false" />
-    <file path="/index.html" changelist="b8866d45-fac2-4c5e-ab85-e2969b0a6841" time="1390395263262" ignored="false" />
-    <file path="/CanvasBase.js" changelist="b8866d45-fac2-4c5e-ab85-e2969b0a6841" time="1390214485469" ignored="false" />
+    <file path="/index.html" changelist="b8866d45-fac2-4c5e-ab85-e2969b0a6841" time="1390565233515" ignored="false" />
+    <file path="/CanvasBase.js" changelist="b8866d45-fac2-4c5e-ab85-e2969b0a6841" time="1390665681526" ignored="false" />
     <file path="/app.js" changelist="b8866d45-fac2-4c5e-ab85-e2969b0a6841" time="1388740719969" ignored="false" />
-    <file path="/Canvas.js" changelist="b8866d45-fac2-4c5e-ab85-e2969b0a6841" time="1390462663925" ignored="false" />
+    <file path="/Canvas.js" changelist="b8866d45-fac2-4c5e-ab85-e2969b0a6841" time="1390566374187" ignored="false" />
     <file path="/lib.js" changelist="b8866d45-fac2-4c5e-ab85-e2969b0a6841" time="1390453764902" ignored="false" />
-    <file path="/prim.js" changelist="b8866d45-fac2-4c5e-ab85-e2969b0a6841" time="1390452806009" ignored="false" />
-    <file path="/main.css" changelist="b8866d45-fac2-4c5e-ab85-e2969b0a6841" time="1389704045245" ignored="false" />
-    <file path="/init.js" changelist="b8866d45-fac2-4c5e-ab85-e2969b0a6841" time="1390405615177" ignored="false" />
+    <file path="/prim.js" changelist="b8866d45-fac2-4c5e-ab85-e2969b0a6841" time="1390571398173" ignored="false" />
+    <file path="/main.css" changelist="b8866d45-fac2-4c5e-ab85-e2969b0a6841" time="1390641720488" ignored="false" />
+    <file path="/init.js" changelist="b8866d45-fac2-4c5e-ab85-e2969b0a6841" time="1390570843619" ignored="false" />
     <file path="/sort.js" changelist="b8866d45-fac2-4c5e-ab85-e2969b0a6841" time="1390462266647" ignored="false" />
     <file path="/CanvasLib.js" changelist="b8866d45-fac2-4c5e-ab85-e2969b0a6841" time="1390211020935" ignored="false" />
     <file path="/dijkstra.js" changelist="b8866d45-fac2-4c5e-ab85-e2969b0a6841" time="1390225063004" ignored="false" />
     <file path="/dynamic.js" changelist="b8866d45-fac2-4c5e-ab85-e2969b0a6841" time="1390225042983" ignored="false" />
     <file path="/heap.js" changelist="b8866d45-fac2-4c5e-ab85-e2969b0a6841" time="1390225159560" ignored="false" />
+    <file path="/graph.js" changelist="b8866d45-fac2-4c5e-ab85-e2969b0a6841" time="1390566903864" ignored="false" />
+    <file path="/test.html" changelist="b8866d45-fac2-4c5e-ab85-e2969b0a6841" time="1390568210063" ignored="false" />
+    <file path="/a.dummy" changelist="b8866d45-fac2-4c5e-ab85-e2969b0a6841" time="1390656852098" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,7 +43,7 @@
       <file leaf-file-name="CanvasBase.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/CanvasBase.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="79" column="12" selection-start="2610" selection-end="2610" vertical-scroll-proportion="0.0">
+            <state line="65" column="26" selection-start="2139" selection-end="2139" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -49,45 +52,16 @@
       <file leaf-file-name="Canvas.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Canvas.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="25" column="87" selection-start="818" selection-end="818" vertical-scroll-proportion="0.0">
+            <state line="59" column="4" selection-start="2218" selection-end="2218" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AlgorithmBase.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/AlgorithmBase.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="52" selection-start="341" selection-end="341" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="dynamic.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/dynamic.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="7" selection-start="227" selection-end="227" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="heap.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/heap.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="70" selection-start="227" selection-end="227" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="e#0#160#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="sort.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="sort.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/sort.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="24" column="8" selection-start="681" selection-end="681" vertical-scroll-proportion="0.6703911">
+            <state line="11" column="107" selection-start="330" selection-end="330" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -96,16 +70,34 @@
       <file leaf-file-name="lib.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/jsLib/lib.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="51" column="0" selection-start="1578" selection-end="1578" vertical-scroll-proportion="0.0">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="77" selection-start="196" selection-end="196" vertical-scroll-proportion="-2.857143">
+            <state line="20" column="100" selection-start="1070" selection-end="1070" vertical-scroll-proportion="0.09883721">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="main.css" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/css/main.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="17" column="52" selection-start="805" selection-end="811" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="prim.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/prim.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="35" column="0" selection-start="973" selection-end="973" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -114,19 +106,19 @@
       <file leaf-file-name="init.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/init.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="0" selection-start="361" selection-end="361" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="e#0#160#0" expanded="false" />
-              </folding>
+            <state line="17" column="4" selection-start="365" selection-end="365" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="prim.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/prim.js">
+      <file leaf-file-name="graph.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/graph.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="8" selection-start="309" selection-end="309" vertical-scroll-proportion="0.0">
-              <folding />
+            <state line="13" column="73" selection-start="341" selection-end="341" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="e#0#160#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -141,21 +133,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/lib.js" />
         <option value="$PROJECT_DIR$/app.js" />
-        <option value="$PROJECT_DIR$/css/main.css" />
         <option value="$PROJECT_DIR$/CanvasLib.js" />
-        <option value="$PROJECT_DIR$/CanvasBase.js" />
         <option value="$PROJECT_DIR$/dynamic.js" />
         <option value="$PROJECT_DIR$/dijkstra.js" />
         <option value="$PROJECT_DIR$/heap.js" />
-        <option value="$PROJECT_DIR$/index.html" />
-        <option value="$PROJECT_DIR$/AlgorithmBase.js" />
-        <option value="$PROJECT_DIR$/init.js" />
-        <option value="$PROJECT_DIR$/prim.js" />
         <option value="$PROJECT_DIR$/jsLib/lib.js" />
-        <option value="$PROJECT_DIR$/Canvas.js" />
         <option value="$PROJECT_DIR$/sort.js" />
+        <option value="$PROJECT_DIR$/AlgorithmBase.js" />
+        <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/graph.js" />
+        <option value="$PROJECT_DIR$/test.html" />
+        <option value="$PROJECT_DIR$/prim.js" />
+        <option value="$PROJECT_DIR$/Canvas.js" />
+        <option value="$PROJECT_DIR$/init.js" />
+        <option value="$PROJECT_DIR$/css/main.css" />
+        <option value="$PROJECT_DIR$/CanvasBase.js" />
       </list>
     </option>
   </component>
@@ -193,13 +186,13 @@
   <component name="PropertiesComponent">
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="recentsLimit" value="5" />
     <property name="options.lastSelected" value="editor" />
+    <property name="recentsLimit" value="5" />
     <property name="FullScreen" value="true" />
     <property name="DefaultHtmlFileTemplate" value="Html5" />
-    <property name="GoToClass.includeJavaFiles" value="false" />
-    <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="GoToClass.includeJavaFiles" value="false" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -268,10 +261,11 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1366" height="768" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32974428" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.12518302" sideWeight="0.6011004" order="1" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39889959" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -282,7 +276,6 @@
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
@@ -351,34 +344,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="47" selection-start="583" selection-end="583" vertical-scroll-proportion="0.5633803">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/lib/JavascriptLanguage.jar!/com/intellij/lang/javascript/index/predefined/DHTML.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1200" column="7" selection-start="18569" selection-end="18569" vertical-scroll-proportion="0.33240223">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/main.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="56" selection-start="476" selection-end="476" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CanvasLib.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="12" selection-start="545" selection-end="545" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.idea/encodings.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
@@ -386,51 +351,80 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/dijkstra.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="16" selection-start="233" selection-end="233" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="11" column="16" selection-start="233" selection-end="233" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/dynamic.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="7" selection-start="227" selection-end="227" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="10" column="7" selection-start="227" selection-end="227" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/heap.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="10" column="70" selection-start="227" selection-end="227" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#0#160#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CanvasBase.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="79" column="12" selection-start="2610" selection-end="2610" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/prim.js">
+    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/lib/JavascriptLanguage.jar!/com/intellij/lang/javascript/index/predefined/DHTML.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="8" selection-start="309" selection-end="309" vertical-scroll-proportion="0.0">
+        <state line="946" column="18" selection-start="14917" selection-end="14917" vertical-scroll-proportion="0.33240223">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
+    <entry file="file://$PROJECT_DIR$/AlgorithmBase.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="77" selection-start="196" selection-end="196" vertical-scroll-proportion="-2.857143">
+        <state line="7" column="0" selection-start="161" selection-end="161" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="66" selection-start="257" selection-end="257" vertical-scroll-proportion="0.29069766">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sort.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="107" selection-start="330" selection-end="330" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/init.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="0" selection-start="361" selection-end="361" vertical-scroll-proportion="0.0">
+        <state line="17" column="4" selection-start="365" selection-end="365" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Canvas.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="59" column="4" selection-start="2218" selection-end="2218" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/main.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="52" selection-start="805" selection-end="811" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/prim.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="35" column="0" selection-start="973" selection-end="973" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/graph.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="73" selection-start="341" selection-end="341" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="e#0#160#0" expanded="false" />
           </folding>
@@ -439,28 +433,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/jsLib/lib.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="51" column="0" selection-start="1578" selection-end="1578" vertical-scroll-proportion="0.0">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/AlgorithmBase.js">
+    <entry file="file://$PROJECT_DIR$/CanvasBase.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="52" selection-start="341" selection-end="341" vertical-scroll-proportion="0.0">
+        <state line="65" column="26" selection-start="2139" selection-end="2139" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Canvas.js">
+    <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="87" selection-start="818" selection-end="818" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sort.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="8" selection-start="681" selection-end="681" vertical-scroll-proportion="0.6703911">
+        <state line="20" column="100" selection-start="1070" selection-end="1070" vertical-scroll-proportion="0.09883721">
           <folding />
         </state>
       </provider>

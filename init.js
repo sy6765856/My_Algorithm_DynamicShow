@@ -14,7 +14,10 @@ Array.prototype.min = function(){
 
 var QUEUE = [],
     FRAME = 0,
-    INTERVAL = 500;
+    INTERVAL = 500,
+    INF = 10000,
+    frame = 0,
+    IndexINF = 100000;
 
 $('#prim').click(function() {
     clearAllTimeOut();

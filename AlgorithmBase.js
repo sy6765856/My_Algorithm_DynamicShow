@@ -7,10 +7,11 @@
  */
 AlgorithmBase = function(){
     return {
-        init: function(self) {
-            self.name = 'base';
-            return self;
-        }(this.parent),
+        init: function(interval) {
+            FRAME = 0;
+            QUEUE = [];
+            INTERVAL = interval ? interval : INTERVAL;
+        },
 
         draw: function() {
             if(FRAME >= QUEUE.length) {
