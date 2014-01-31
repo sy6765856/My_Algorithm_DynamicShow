@@ -6,7 +6,7 @@
  * To change this template use File | Settings | File Templates.
  */
 CanvasBase = function() {
-    return {
+    return extend(Base, {
         init: function(id, width, height) {
             var canvas = document.getElementById(id);
             canvas.width = width ? width : 450;
@@ -17,9 +17,7 @@ CanvasBase = function() {
                 var ctx = canvas.getContext("2d");
                 this.ctx = ctx;
             }
-
-            this.functionQUEUE = [];
-
+            Base.init.call(this);
             this.flag = 0;
             var that = this;
             this.canvas.onmousedown = function(e) {
@@ -37,24 +35,11 @@ CanvasBase = function() {
             return this;
         },
 
-        save: function(fun, arguments) {
-            this.functionQUEUE.push({function: fun, arguments: arguments});
-        },
-        restore: function() {
-            for(var key in this.functionQUEUE) {
-                if(this.functionQUEUE[key]['function']) {
-                    var argus = this.functionQUEUE[key]['arguments']
-                        ,pos = {x: argus[1].x, y: argus[1].y};
-                    this.functionQUEUE[key]['function'].call(this, argus[0], pos);
-                }
-            }
-        },
-
         drawBegin: function(pos) {
             var that = this;
             this.canvas.onmousemove = function(e) {
                 that.clear();
-                that.restore();
+                that.restore(that);
                 var end = that.getMousePosition(e);
                 that.drawLine(pos, end);
                 that.start = pos;
@@ -64,7 +49,7 @@ CanvasBase = function() {
         drawEnd: function() {
             this.canvas.onmousemove = null;
             this.save(this.drawLine, [this.start, this.end]);
-            this.restore();
+            this.restore(this);
         },
         drawRectangle: function(width, height, pos, str) {
             var ctx = this.ctx;
@@ -100,12 +85,14 @@ CanvasBase = function() {
         },
 
         drawCircleBound: function(radius, pos, boundWidth, style) {
-            var ctx = this.ctx;
-            ctx.strokeStyle = "rgb(0,255,0)";
-            ctx.beginPath();
-            ctx.arc(pos.x, pos.y, radius, 0, Math.PI*2, true);
-            ctx.lineWidth = boundWidth ? boundWidth : 2;
-            ctx.stroke();
+            if(radius && pos) {
+                var ctx = this.ctx;
+                ctx.strokeStyle = "rgb(255,0,0)";
+                ctx.beginPath();
+                ctx.arc(pos.x, pos.y, radius, 0, Math.PI*2, true);
+                ctx.lineWidth = boundWidth ? boundWidth : 2;
+                ctx.stroke();
+            }
             return this;
         },
 
@@ -155,11 +142,22 @@ CanvasBase = function() {
             }
             return this;
         },
+        clearAll: function(object) {
+            this.clearBuffer();
+            if(object) {
+                if(typeof object === "object") {
+                    this.clearByObject(object);
+                } else if(typeof object === "string") {
+                    this.clearById(object);
+                }
+            } else if(this.ctx) {
+                this.clear();
+            }
+        },
 
         getMousePosition: function(e) {
             var bound = this.canvas.getBoundingClientRect();
             return {x: e.clientX - bound.left, y: e.clientY - bound.top};
-//            this.drawCircle(3, {x: e.clientX - bound.left, y: e.clientY - bound.top});
         }
-    }
+    });
 }();

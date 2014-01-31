@@ -12,22 +12,19 @@ Array.prototype.min = function(){
     return Math.min.apply({}, this);
 };
 
-var QUEUE = [],
-    FRAME = 0,
-    INTERVAL = 500,
-    INF = 10000,
+var INF = 10000,
     frame = 0,
     IndexINF = 100000;
 
 $('#prim').click(function() {
     clearAllTimeOut();
-    Canvas.clearById('canvas');
+    Canvas.clearAll('canvas');
     var fun = 'Prim.run("canvas")';
     $('#start').replaceWith('<button id="start" class="start" onclick=' + fun + '>开始</button>');
 });
 $('#sort').click(function() {
     clearAllTimeOut();
-    Canvas.clearById('canvas');
+    Canvas.clearAll('canvas');
     var fun = 'Sort.run("canvas")';
     $('#start').replaceWith('<button id="start" class="start" onclick=' + fun + '>开始</button>');
 });

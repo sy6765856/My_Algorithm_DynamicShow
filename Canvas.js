@@ -7,18 +7,6 @@
  */
 Canvas = function(){
     return extend(CanvasBase, {
-            draw : function() {
-                var ctx = this.ctx;
-                ctx.fillStyle = 'rgba(255, ' + frame + ', 0, .5)';
-                ctx.fillRect(frame,frame, 10, 10);
-                if(frame > 200) return;
-                frame += 4;
-                var tt = setTimeout("Canvas.draw();", 1000);
-                console.log(tt);
-            },
-            highLight: function() {
-
-            },
             drawRectangleByNumber: function(array, width) {
                 width = width ? width : (400 - array.length)/array.length;
                 var h = 100/(array.max() - array.min());

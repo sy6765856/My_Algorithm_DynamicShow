@@ -6,21 +6,26 @@
  * To change this template use File | Settings | File Templates.
  */
 AlgorithmBase = function(){
-    return {
-        init: function(interval) {
-            FRAME = 0;
-            QUEUE = [];
-            INTERVAL = interval ? interval : INTERVAL;
+    return extend(Base, {
+        init: function(name, interval) {
+            Base.init.call(this);
+            this.NAME = name;
+            this.FRAME = 0;
+            this.QUEUE = [];
+            this.INTERVAL = interval ? interval : this.INTERVAL;
         },
-
         draw: function() {
-            if(FRAME >= QUEUE.length) {
+            this.DRAW_FUNCTION = this.NAME + '.drawing();';
+            this.drawing();
+        },
+        drawing: function() {
+            if(this.FRAME >= this.QUEUE.length) {
                 return;
             }
-            Canvas.clearById('canvas');
-            Canvas.drawRectangleByNumber(QUEUE[FRAME]);
-            FRAME++;
-            setTimeout('Sort.draw()', INTERVAL ? INTERVAL : 500);
+            Canvas.clearAll('canvas');
+            Canvas.drawRectangleByNumber(this.QUEUE[this.FRAME]);
+            this.FRAME++;
+            setTimeout.call(null, this.DRAW_FUNCTION, this.INTERVAL ? this.INTERVAL : 500);
         }
-    }
+    });
 }();

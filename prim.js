@@ -7,7 +7,7 @@
  */
 Prim = extend(Graph, {
     run: function(id){
-        FRAME = 0;
+        this.init();
         this.drawGragh(Canvas.init(id));
     },
     prim: function(graph){

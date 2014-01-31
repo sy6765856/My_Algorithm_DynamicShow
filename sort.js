@@ -8,7 +8,7 @@
 Sort = function() {
     return extend(AlgorithmBase, {
         run: function(id){
-            this.merge_Sort(Canvas.init(id), this.produceRandomArray(3000));
+            this.merge_Sort(Canvas.init(id), this.produceRandomArray(10));
         },
         produceRandomArray: function(len){
             var ret = [];
@@ -19,8 +19,8 @@ Sort = function() {
         },
 
         orderSort: function(CanvasObject, array){
-            this.init(500);
-            QUEUE.push(array.slice(0));
+            this.init('Sort', 500);
+            this.QUEUE.push(array.slice(0));
             len = array.length;
             for(var i = 0; i<len; i++) {
                 for(var j = i+1; j<len; j++) {
@@ -28,15 +28,15 @@ Sort = function() {
                         var tmp = array[i]; array[i] = array[j]; array[j] = tmp;
                     }
                 }
-                QUEUE.push(array.slice(0));
+                this.QUEUE.push(array.slice(0));
             }
             this.draw();
             return this;
         },
 
         merge_Sort: function(CanvasObject, array){
-            this.init(5);
-            QUEUE.push(array.slice(0));
+            this.init('Sort', 100);
+            this.QUEUE.push(array.slice(0));
             this.mergeSort(array, 0, array.length-1);
             this.draw();
         },
@@ -66,7 +66,7 @@ Sort = function() {
             for(var pos = begin; pos<=end; pos++){
                 array[pos] = st[pos - begin];
             }
-            QUEUE.push(array.slice(0));
+            this.QUEUE.push(array.slice(0));
         }
     });
 }();

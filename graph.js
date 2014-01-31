@@ -10,6 +10,7 @@ Graph = function() {
         edges: [],
         nodes: [],
         init: function() {
+            AlgorithmBase.init('Graph', 200);
             Graph.edges = [];
             Graph.nodes = [];
         },
@@ -21,25 +22,35 @@ Graph = function() {
         },
 
         drawGragh: function(nodes, edges) {
-            if(nodes) {
-                for(var key in nodes) {
-                    var node = nodes[key];
-                    Canvas.drawCircle(node.r, node.o);
-                }
-            }
             if(edges) {
                 for(var key in edges) {
                     var edge = edges[key],
                         s = edge[0],
                         e = edge[1];
                     Canvas.linkTwoCircle(nodes[s], nodes[e]);
+                    this.save(Canvas.linkTwoCircle, [nodes[s], nodes[e]]);
                 }
             }
+            if(nodes) {
+                for(var key in nodes) {
+                    var node = nodes[key];
+                    Canvas.drawCircle(node.r, node.o);
+                    this.save(Canvas.drawCircle, [node.r, node.o]);
+                }
+            }
+            this.restore(Canvas);
             return this;
         },
 
+        highLightEdge: function(A, B) {
+            Canvas.linkTwoCircle()
+        },
+        highLightNode: function(node) {
+            Canvas.drawBoundedCircle(node.r, node.o);
+        },
+
         swapNodes: function(A, B) {
-            step = step ? step : 20;
+            this.step = this.step ? this.step : 20;
 
         }
     });
