@@ -38,12 +38,15 @@ Graph = function() {
                     this.save(Canvas.drawCircle, [node.r, node.o]);
                 }
             }
-            this.restore(Canvas);
+//            this.restore(Canvas);
+            this.highLightEdge(nodes[0], nodes[1]);
             return this;
         },
 
         highLightEdge: function(A, B) {
-            Canvas.linkTwoCircle()
+            console.log("%%%");
+            Canvas.linkTwoCircle(A, B, {style: {color: "green", lineWidth: 13}});
+            Canvas.linkTwoCircle(A, B, {style: {color: "red", lineWidth: 1}});
         },
         highLightNode: function(node) {
             Canvas.drawBoundedCircle(node.r, node.o);

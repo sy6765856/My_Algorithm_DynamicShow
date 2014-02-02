@@ -96,13 +96,13 @@ CanvasBase = function() {
             return this;
         },
 
-        drawLine: function(start, end, lineWidth) {
+        drawLine: function(start, end, style) {
             var ctx = this.ctx;
-            ctx.strokeStyle = "rgb(0, 255, 255)";
+            ctx.strokeStyle = CanvasLib.colorSet(style.color);
             ctx.beginPath();
             ctx.moveTo(start.x, start.y);
             ctx.lineTo(end.x, end.y);
-            ctx.lineWidth = lineWidth ? lineWidth : 3;
+            ctx.lineWidth = style.lineWidth ? style.lineWidth : 3;
             ctx.stroke();
             return this;
         },

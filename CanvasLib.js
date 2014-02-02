@@ -20,6 +20,31 @@ CanvasLib = function() {
         //仅用于圆A,B外离的情况
         circleInnerDistance: function(A, B){
             return this.distance(A.o, B.o) - A.r - B.r;
+        },
+
+        colorSet: function(color) {
+            var colorString = "";
+            switch(color) {
+                case "red":
+                    colorString = "#FF0000";
+                    break;
+                case "blue":
+                    colorString = "#0033CC";
+                    break;
+                case "yellow":
+                    colorString = "#FFFF00";
+                    break;
+                case "green":
+                    colorString = "#33FF00";
+                    break;
+                case "purple":
+                    colorString = "#660099";
+                    break;
+                default:
+                    colorString = "#000000";
+                    break;
+            }
+            return colorString;
         }
     }
 }();

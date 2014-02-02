@@ -14,9 +14,16 @@ AlgorithmBase = function(){
             this.QUEUE = [];
             this.INTERVAL = interval ? interval : this.INTERVAL;
         },
-        draw: function() {
+        drawBefore: function() {
             this.DRAW_FUNCTION = this.NAME + '.drawing();';
+        },
+        draw: function() {
+            this.drawBefore();
             this.drawing();
+            this.drawAfter();
+        },
+        drawAfter: function() {
+
         },
         drawing: function() {
             if(this.FRAME >= this.QUEUE.length) {

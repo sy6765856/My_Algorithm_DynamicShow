@@ -32,7 +32,9 @@ Canvas = function(){
                 }
                 return this;
             },
-            linkTwoCircle: function(A, B, str) {
+            linkTwoCircle: function(A, B, option) {
+                var opt = {style: option.style?option.style:{color: "red", lineWidth: 1}
+                    ,str: option.str?option.str:""};
                 if(A && B) {
                     var u = A.o.y < B.o.y ? A : B,
                         d = A.o.y < B.o.y ? B : A;
@@ -40,9 +42,9 @@ Canvas = function(){
                         b = u.o.x - d.o.x,
                         c = Math.sqrt(a*a + b*b);
                     this.drawLine({x: d.o.x + d.r/c*b, y: d.o.y - d.r/c*a}
-                        , {x: u.o.x - u.r/c*b, y: u.o.y + u.r/c*a});
+                        , {x: u.o.x - u.r/c*b, y: u.o.y + u.r/c*a}, opt.style);
 
-                    if(str) {
+                    if(opt.str) {
                         this.writeText(str, {x: (A.o.x+ B.o.x)/2, y:(A.o.y+ B.o.y)/2});
                     }
                 }
