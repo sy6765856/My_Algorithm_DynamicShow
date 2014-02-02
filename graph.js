@@ -27,7 +27,8 @@ Graph = function() {
                     var edge = edges[key],
                         s = edge[0],
                         e = edge[1];
-                    Canvas.linkTwoCircle(nodes[s], nodes[e]);
+//                    Canvas.linkTwoCircle(nodes[s], nodes[e]);
+                    this.highLightEdge(nodes[s], nodes[e]);
                     this.save(Canvas.linkTwoCircle, [nodes[s], nodes[e]]);
                 }
             }
@@ -39,14 +40,12 @@ Graph = function() {
                 }
             }
 //            this.restore(Canvas);
-            this.highLightEdge(nodes[0], nodes[1]);
             return this;
         },
 
         highLightEdge: function(A, B) {
-            console.log("%%%");
-            Canvas.linkTwoCircle(A, B, {style: {color: "green", lineWidth: 13}});
-            Canvas.linkTwoCircle(A, B, {style: {color: "red", lineWidth: 1}});
+            Canvas.linkTwoCircle(A, B, {style: {color: "red", lineWidth: 4}});
+            Canvas.linkTwoCircle(A, B, {style: {color: "green", lineWidth: 2}});
         },
         highLightNode: function(node) {
             Canvas.drawBoundedCircle(node.r, node.o);

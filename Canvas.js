@@ -33,14 +33,15 @@ Canvas = function(){
                 return this;
             },
             linkTwoCircle: function(A, B, option) {
-                var opt = {style: option.style?option.style:{color: "red", lineWidth: 1}
-                    ,str: option.str?option.str:""};
+                var opt = {style: option && option.hasOwnProperty('style')?option.style:{color: "red", lineWidth: 1}
+                    ,str: option && option.hasOwnProperty('str')?option.str:""};
                 if(A && B) {
                     var u = A.o.y < B.o.y ? A : B,
                         d = A.o.y < B.o.y ? B : A;
                     var a = d.o.y - u.o.y,
                         b = u.o.x - d.o.x,
                         c = Math.sqrt(a*a + b*b);
+//                    console.log(opt.style);
                     this.drawLine({x: d.o.x + d.r/c*b, y: d.o.y - d.r/c*a}
                         , {x: u.o.x - u.r/c*b, y: u.o.y + u.r/c*a}, opt.style);
 
