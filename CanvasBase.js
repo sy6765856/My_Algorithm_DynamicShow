@@ -98,6 +98,7 @@ CanvasBase = function() {
 
         drawLine: function(start, end, style) {
             var ctx = this.ctx;
+            style = {color: style && style.color ? style.color : "green", lineWidth: style && style.lineWidth ? style.lineWidth:3};
             ctx.strokeStyle = CanvasLib.colorSet(style.color);
             ctx.beginPath();
             ctx.moveTo(start.x, start.y);

@@ -10,17 +10,52 @@ Prim = extend(Graph, {
         this.init();
         this.drawGragh(Canvas.init(id));
     },
-    prim: function(graph){
+    prim_init: function(){
+        this.INF = 1000000;
+        this.minLength = 0;
+        return this;
+    },
+    prim: function(){
+        this.prim_init();
 
+        var source = 0,
+            min = this.INF,
+            edges = this.edges,
+            dis = [],
+            f = [];
+
+        for(var cnt = 0; cnt < this.nodes.length; cnt++) {
+            dis[cnt] = this.INF;
+        }
+
+        for(var cnt = 1; cnt < this.nodes.length; cnt++) {
+            for(var e = this.first[source]; e; e = this.nxt[e]) {
+                var v = edges[e][1];
+                if(!f[v] && dis[v] > edges[e][2]) {
+                    dis[v] = edges[e][2];
+                }
+            }
+            for(var i = 0; i < this.nodes.length; i++) {
+                if(!f[i] && dis[i] < min) {
+                    min = dis[i];
+                    source = i;
+                }
+            }
+            f[source] = 1;
+            this.minLength += min;
+        }
+        return this;
     },
 
     drawGragh: function(CanvasObject){
-        var treeNodes = new Array();
-        treeNodes[1] = {r:6, o:{x:34,y:34}};
-        treeNodes[2] = {r:6, o:{x:64,y:34}};
-        treeNodes[3] = {r:6, o:{x:124,y:54}};
-        var edges = [[3,2],[1,2]];
-        Graph.drawGragh(treeNodes, edges);
+        this.addNodes({r:6, o:{x:34,y:34}});
+        this.addNodes({r:6, o:{x:64,y:34}});
+        this.addNodes({r:6, o:{x:124,y:54}});
+
+        this.addEdge(2,1,1);
+        this.addEdge(0,1,5);
+        this.addEdge(0,2,9);
+        Graph.drawGragh(this.nodes, this.edges);
     },
 
     drawTree: function(CanvasObject){

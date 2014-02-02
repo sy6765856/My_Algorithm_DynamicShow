@@ -6,7 +6,12 @@
  * To change this template use File | Settings | File Templates.
  */
 Dijkstra = function() {
-    return extend(AlgorithmBase, {
+    return extend(Graph, {
+        dijkstra: function() {
+            for(var i = 0; i < this.nodes.length; i++) {
+
+            }
+        }
 
     });
 }();

@@ -7,18 +7,21 @@
  */
 Graph = function() {
     return extend(AlgorithmBase, {
-        edges: [],
-        nodes: [],
         init: function() {
             AlgorithmBase.init('Graph', 200);
-            Graph.edges = [];
-            Graph.nodes = [];
+            this.edges = [];
+            this.nodes = [];
+            this.edgesNum = 1;
+            this.first = [];
+            this.nxt = [];
         },
         addNodes: function(node) {
-            Graph.nodes.push(node);
+            this.nodes.push(node);
         },
-        addEdge: function(a, b) {
-            Graph.edges.push([a, b]);
+        addEdge: function(a, b, v) {
+            this.edges[this.edgesNum] = [a, b, v];
+            this.nxt[this.edgesNum] = this.first[a]? this.first[a] : 0;
+            this.first[a] = this.edgesNum++;
         },
 
         drawGragh: function(nodes, edges) {
@@ -27,8 +30,8 @@ Graph = function() {
                     var edge = edges[key],
                         s = edge[0],
                         e = edge[1];
-//                    Canvas.linkTwoCircle(nodes[s], nodes[e]);
-                    this.highLightEdge(nodes[s], nodes[e]);
+                    Canvas.linkTwoCircle(nodes[s], nodes[e]);
+//                    this.highLightEdge(nodes[s], nodes[e]);
                     this.save(Canvas.linkTwoCircle, [nodes[s], nodes[e]]);
                 }
             }
