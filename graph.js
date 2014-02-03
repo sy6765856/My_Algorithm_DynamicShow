@@ -19,6 +19,10 @@ Graph = function() {
             this.nodes.push(node);
         },
         addEdge: function(a, b, v) {
+            this.addDirectedEdge(a, b, v);
+            this.addDirectedEdge(b, a, v);
+        },
+        addDirectedEdge: function(a, b, v) {
             this.edges[this.edgesNum] = [a, b, v];
             this.nxt[this.edgesNum] = this.first[a]? this.first[a] : 0;
             this.first[a] = this.edgesNum++;

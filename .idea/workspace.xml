@@ -10,7 +10,7 @@
     <file path="/app.js" changelist="b8866d45-fac2-4c5e-ab85-e2969b0a6841" time="1388740719969" ignored="false" />
     <file path="/Canvas.js" changelist="b8866d45-fac2-4c5e-ab85-e2969b0a6841" time="1391310095473" ignored="false" />
     <file path="/lib.js" changelist="b8866d45-fac2-4c5e-ab85-e2969b0a6841" time="1390453764902" ignored="false" />
-    <file path="/prim.js" changelist="b8866d45-fac2-4c5e-ab85-e2969b0a6841" time="1391342515199" ignored="false" />
+    <file path="/prim.js" changelist="b8866d45-fac2-4c5e-ab85-e2969b0a6841" time="1391410549448" ignored="false" />
     <file path="/main.css" changelist="b8866d45-fac2-4c5e-ab85-e2969b0a6841" time="1390641720488" ignored="false" />
     <file path="/init.js" changelist="b8866d45-fac2-4c5e-ab85-e2969b0a6841" time="1390893046353" ignored="false" />
     <file path="/sort.js" changelist="b8866d45-fac2-4c5e-ab85-e2969b0a6841" time="1391069577708" ignored="false" />
@@ -18,7 +18,7 @@
     <file path="/dijkstra.js" changelist="b8866d45-fac2-4c5e-ab85-e2969b0a6841" time="1391342674624" ignored="false" />
     <file path="/dynamic.js" changelist="b8866d45-fac2-4c5e-ab85-e2969b0a6841" time="1390225042983" ignored="false" />
     <file path="/heap.js" changelist="b8866d45-fac2-4c5e-ab85-e2969b0a6841" time="1390225159560" ignored="false" />
-    <file path="/graph.js" changelist="b8866d45-fac2-4c5e-ab85-e2969b0a6841" time="1391341701339" ignored="false" />
+    <file path="/graph.js" changelist="b8866d45-fac2-4c5e-ab85-e2969b0a6841" time="1391410433176" ignored="false" />
     <file path="/test.html" changelist="b8866d45-fac2-4c5e-ab85-e2969b0a6841" time="1390568210063" ignored="false" />
     <file path="/a.dummy" changelist="b8866d45-fac2-4c5e-ab85-e2969b0a6841" time="1391154469884" ignored="false" />
     <file path="/Base.js" changelist="b8866d45-fac2-4c5e-ab85-e2969b0a6841" time="1391171473587" ignored="false" />
@@ -89,25 +89,25 @@
       <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="58" selection-start="404" selection-end="404" vertical-scroll-proportion="-1.4285715">
+            <state line="8" column="80" selection-start="480" selection-end="480" vertical-scroll-proportion="-2.142857">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="prim.js" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="prim.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/prim.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="47" column="34" selection-start="1252" selection-end="1252" vertical-scroll-proportion="0.0">
+            <state line="19" column="26" selection-start="466" selection-end="466" vertical-scroll-proportion="0.1396648">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="dijkstra.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="dijkstra.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/dijkstra.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="16" selection-start="300" selection-end="300" vertical-scroll-proportion="0.30726257">
+            <state line="11" column="16" selection-start="300" selection-end="300" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -125,7 +125,7 @@
       <file leaf-file-name="graph.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/graph.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="12" selection-start="302" selection-end="302" vertical-scroll-proportion="0.0">
+            <state line="22" column="42" selection-start="649" selection-end="649" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -154,9 +154,9 @@
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/Canvas.js" />
         <option value="$PROJECT_DIR$/CanvasBase.js" />
+        <option value="$PROJECT_DIR$/dijkstra.js" />
         <option value="$PROJECT_DIR$/graph.js" />
         <option value="$PROJECT_DIR$/prim.js" />
-        <option value="$PROJECT_DIR$/dijkstra.js" />
       </list>
     </option>
   </component>
@@ -391,20 +391,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="58" selection-start="404" selection-end="404" vertical-scroll-proportion="-1.4285715">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/graph.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="12" selection-start="302" selection-end="302" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/CanvasBase.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="102" column="67" selection-start="3519" selection-end="3519" vertical-scroll-proportion="0.0">
@@ -433,6 +419,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="80" selection-start="480" selection-end="480" vertical-scroll-proportion="-2.142857">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dijkstra.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="16" selection-start="300" selection-end="300" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/AlgorithmBase.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="8" column="42" selection-start="214" selection-end="214" vertical-scroll-proportion="0.0">
@@ -440,16 +440,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/prim.js">
+    <entry file="file://$PROJECT_DIR$/graph.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="47" column="34" selection-start="1252" selection-end="1252" vertical-scroll-proportion="0.0">
+        <state line="22" column="42" selection-start="649" selection-end="649" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dijkstra.js">
+    <entry file="file://$PROJECT_DIR$/prim.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="16" selection-start="300" selection-end="300" vertical-scroll-proportion="0.30726257">
+        <state line="19" column="26" selection-start="466" selection-end="466" vertical-scroll-proportion="0.1396648">
           <folding />
         </state>
       </provider>

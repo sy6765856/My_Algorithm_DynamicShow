@@ -9,6 +9,8 @@ Prim = extend(Graph, {
     run: function(id){
         this.init();
         this.drawGragh(Canvas.init(id));
+        this.prim();
+        console.log(this.minLength);
     },
     prim_init: function(){
         this.INF = 1000000;
@@ -28,6 +30,7 @@ Prim = extend(Graph, {
             dis[cnt] = this.INF;
         }
 
+        f[source] = 1;
         for(var cnt = 1; cnt < this.nodes.length; cnt++) {
             for(var e = this.first[source]; e; e = this.nxt[e]) {
                 var v = edges[e][1];
@@ -35,6 +38,7 @@ Prim = extend(Graph, {
                     dis[v] = edges[e][2];
                 }
             }
+            min = this.INF;
             for(var i = 0; i < this.nodes.length; i++) {
                 if(!f[i] && dis[i] < min) {
                     min = dis[i];
@@ -51,10 +55,12 @@ Prim = extend(Graph, {
         this.addNodes({r:6, o:{x:34,y:34}});
         this.addNodes({r:6, o:{x:64,y:34}});
         this.addNodes({r:6, o:{x:124,y:54}});
+        this.addNodes({r:6, o:{x:150,y:33}});
 
         this.addEdge(2,1,1);
         this.addEdge(0,1,5);
-        this.addEdge(0,2,9);
+        this.addEdge(0,2,1);
+        this.addEdge(1,3,2);
         Graph.drawGragh(this.nodes, this.edges);
     },
 
