@@ -19,8 +19,9 @@ Sort = function() {
         },
 
         orderSort: function(CanvasObject, array){
-            this.init('Sort', 500);
-            this.QUEUE.push(array.slice(0));
+            this.init('Sort', 500)
+                .QUEUE.push(array.slice(0));
+
             len = array.length;
             for(var i = 0; i<len; i++) {
                 for(var j = i+1; j<len; j++) {
@@ -35,18 +36,21 @@ Sort = function() {
         },
 
         merge_Sort: function(CanvasObject, array){
-            this.init('Sort', 100);
-            this.QUEUE.push(array.slice(0));
-            this.mergeSort(array, 0, array.length-1);
-            this.draw();
+            this.init('Sort', 100)
+                .QUEUE.push(array.slice(0));
+
+            this.mergeSort(array, 0, array.length-1)
+                .draw();
+
+            return this;
         },
         mergeSort: function(array, begin, end){
             if(begin >= end) {
-                return;
+                return this;
             }
             var mid = Math.floor((begin + end)/2);
-            this.mergeSort(array, begin, mid);
-            this.mergeSort(array, mid+1, end);
+            this.mergeSort(array, begin, mid)
+                .mergeSort(array, mid+1, end);
             var i = begin,j = mid + 1,st = [];
             while(i<=mid && j<=end){
                 if(array[i] <= array[j]){
@@ -67,6 +71,7 @@ Sort = function() {
                 array[pos] = st[pos - begin];
             }
             this.QUEUE.push(array.slice(0));
+            return this;
         }
     });
 }();

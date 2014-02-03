@@ -9,9 +9,11 @@ Base = function() {
     return {
         init: function() {
             this.clearBuffer();
+            return this;
         },
         save: function(fun, arguments) {
             this.functionQUEUE.push({function: fun, arguments: arguments});
+            return this;
         },
         restore: function(that) {
             for(var key in this.functionQUEUE) {
@@ -20,9 +22,11 @@ Base = function() {
                     this.functionQUEUE[key]['function'].apply(that, argus);
                 }
             }
+            return this;
         },
         clearBuffer: function() {
             this.functionQUEUE = [];
+            return this;
         }
     }
 }();

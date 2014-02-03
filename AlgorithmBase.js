@@ -13,26 +13,30 @@ AlgorithmBase = function(){
             this.FRAME = 0;
             this.QUEUE = [];
             this.INTERVAL = interval ? interval : this.INTERVAL;
+            return this;
         },
         drawBefore: function() {
             this.DRAW_FUNCTION = this.NAME + '.drawing();';
+            return this;
         },
         draw: function() {
-            this.drawBefore();
-            this.drawing();
-            this.drawAfter();
+            this.drawBefore()
+                .drawing()
+                .drawAfter();
+            return this;
         },
         drawAfter: function() {
-
+            return this;
         },
         drawing: function() {
             if(this.FRAME >= this.QUEUE.length) {
-                return;
+                return this;
             }
-            Canvas.clearAll('canvas');
-            Canvas.drawRectangleByNumber(this.QUEUE[this.FRAME]);
+            Canvas.clearAll('canvas')
+                .drawRectangleByNumber(this.QUEUE[this.FRAME]);
             this.FRAME++;
             setTimeout.call(null, this.DRAW_FUNCTION, this.INTERVAL ? this.INTERVAL : 500);
+            return this;
         }
     });
 }();

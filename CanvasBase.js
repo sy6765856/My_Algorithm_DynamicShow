@@ -22,9 +22,9 @@ CanvasBase = function() {
             var that = this;
             this.canvas.onmousedown = function(e) {
                 var mousePosition = that.getMousePosition(e);
-                that.drawCircle(3, mousePosition);
-                that.save(that.drawCircle, [3, mousePosition]);
-                that.flag = (that.flag + 1)%2;
+                that.drawCircle(3, mousePosition)
+                    .save(that.drawCircle, [3, mousePosition])
+                    .flag = (that.flag + 1)%2;
                 if(that.flag) {
                     that.drawBegin(mousePosition);
                 } else {
@@ -38,9 +38,10 @@ CanvasBase = function() {
         drawBegin: function(pos) {
             var that = this;
             this.canvas.onmousemove = function(e) {
-                that.clear();
-                that.restore(that);
-                var end = that.getMousePosition(e);
+                var end = that.clear()
+                    .restore(that)
+                    .getMousePosition(e);
+
                 that.drawLine(pos, end);
                 that.start = pos;
                 that.end = end;
@@ -48,18 +49,36 @@ CanvasBase = function() {
         },
         drawEnd: function() {
             this.canvas.onmousemove = null;
-            this.save(this.drawLine, [this.start, this.end]);
-            this.restore(this);
+            this.save(this.drawLine, [this.start, this.end])
+                .restore(this);
         },
         drawRectangle: function(width, height, pos, str) {
             var ctx = this.ctx;
-            ctx.fillStyle = "rgb(100,0,0)";
+            ctx.fillStyle = CanvasLib.colorSet("purple");
             var ps = {x: pos.x - width, y: pos.y-height};
             ctx.fillRect(ps.x, ps.y, width, height);
             if(str){
                 this.writeText(str, ps);
             }
             return this;
+        },
+        drawSquare: function(sideLength, pos, number, color) {
+            var ctx = this.ctx;
+            ctx.fillStyle = CanvasLib.colorSet(color);
+            var ps = {x: pos.x - sideLength, y: pos.y - sideLength};
+            ctx.fillRect(ps.x, ps.y, sideLength, sideLength);
+            this.writeText(number, {x: pos.x - sideLength/2 - 4, y: pos.y - sideLength/2 + 4});
+            return this;
+        },
+        drawSquareBound: function(sideLength, pos) {
+            var ctx = this.ctx;
+            ctx.fillStyle = CanvasLib.colorSet("red");
+            ctx.strokeRect(pos.x - sideLength, pos.y - sideLength, sideLength, sideLength);
+            return this;
+        },
+        drawBoundedSquare: function(sideLength, pos, number, color) {
+            this.drawSquareBound(sideLength, pos)
+                .drawSquare(sideLength, pos, number, color);
         },
 
         drawCircle: function(radius, pos, str) {
@@ -70,17 +89,17 @@ CanvasBase = function() {
                 ctx.arc(pos.x, pos.y, radius, 0, Math.PI*2, true);
                 ctx.closePath();
                 ctx.fill();
-            }
 
-            if(str) {
-                this.writeText(str, {x:pos.x - radius/2, y: pos.y + radius/4});
+                if(str) {
+                    this.writeText(str, {x:pos.x - 3, y: pos.y + 3});
+                }
             }
             return this;
         },
 
         drawBoundedCircle: function(radius, pos, str, boundWidth) {
-            this.drawCircleBound(radius, pos, boundWidth);
-            this.drawCircle(radius, pos, str);
+            this.drawCircleBound(radius, pos, boundWidth)
+                .drawCircle(radius, pos, str);
             return this;
         },
 
@@ -154,6 +173,7 @@ CanvasBase = function() {
             } else if(this.ctx) {
                 this.clear();
             }
+            return this;
         },
 
         getMousePosition: function(e) {

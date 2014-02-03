@@ -41,12 +41,11 @@ Canvas = function(){
                     var a = d.o.y - u.o.y,
                         b = u.o.x - d.o.x,
                         c = Math.sqrt(a*a + b*b);
-//                    console.log(opt.style);
                     this.drawLine({x: d.o.x + d.r/c*b, y: d.o.y - d.r/c*a}
                         , {x: u.o.x - u.r/c*b, y: u.o.y + u.r/c*a}, opt.style);
 
                     if(opt.str) {
-                        this.writeText(str, {x: (A.o.x+ B.o.x)/2, y:(A.o.y+ B.o.y)/2});
+                        this.writeText(opt.str, {x: (A.o.x+ B.o.x)/2, y:(A.o.y+ B.o.y)/2});
                     }
                 }
                 return this;

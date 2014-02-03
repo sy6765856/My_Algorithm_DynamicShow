@@ -7,9 +7,9 @@
  */
 Prim = extend(Graph, {
     run: function(id){
-        this.init();
-        this.drawGragh(Canvas.init(id));
-        this.prim();
+        this.init()
+            .drawGragh(Canvas.init(id))
+            .prim();
         console.log(this.minLength);
     },
     prim_init: function(){
@@ -52,16 +52,20 @@ Prim = extend(Graph, {
     },
 
     drawGragh: function(CanvasObject){
-        this.addNodes({r:6, o:{x:34,y:34}});
-        this.addNodes({r:6, o:{x:64,y:34}});
-        this.addNodes({r:6, o:{x:124,y:54}});
-        this.addNodes({r:6, o:{x:150,y:33}});
+        this.addNodes({r:6, o:{x:34,y:34}})
+            .addNodes({r:6, o:{x:64,y:34}})
+            .addNodes({r:6, o:{x:124,y:154}})
+            .addNodes({r:6, o:{x:150,y:33}});
 
-        this.addEdge(2,1,1);
-        this.addEdge(0,1,5);
-        this.addEdge(0,2,1);
-        this.addEdge(1,3,2);
+        this.addEdge(2,1,1)
+            .addEdge(0,1,5)
+            .addEdge(0,2,1)
+            .addEdge(1,3,2);
         Graph.drawGragh(this.nodes, this.edges);
+
+        CanvasObject.drawBoundedSquare(10, {x: 145, y: 145}, 10, "green");
+
+        return this;
     },
 
     drawTree: function(CanvasObject){
