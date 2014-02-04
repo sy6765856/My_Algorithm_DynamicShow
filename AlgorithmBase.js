@@ -12,6 +12,7 @@ AlgorithmBase = function(){
             this.NAME = name;
             this.FRAME = 0;
             this.QUEUE = [];
+
             this.INTERVAL = interval ? interval : this.INTERVAL;
             return this;
         },
@@ -36,6 +37,14 @@ AlgorithmBase = function(){
                 .drawRectangleByNumber(this.QUEUE[this.FRAME]);
             this.FRAME++;
             setTimeout.call(null, this.DRAW_FUNCTION, this.INTERVAL ? this.INTERVAL : 500);
+            return this;
+        },
+        saveCanvasFrame: function() {
+            Canvas.saveCanvasFrame();
+            return this;
+        },
+        drawCanvasFrame: function(imageData) {
+            Canvas.drawCanvasFrame(imageData);
             return this;
         }
     });

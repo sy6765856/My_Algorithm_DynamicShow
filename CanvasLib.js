@@ -40,8 +40,11 @@ CanvasLib = function() {
                 case "purple":
                     colorString = "#660099";
                     break;
-                default:
+                case "black":
                     colorString = "#000000";
+                    break;
+                default:
+                    colorString = "#FFFFFF";
                     break;
             }
             return colorString;

@@ -9,13 +9,17 @@ Canvas = function(){
     return extend(CanvasBase, {
             drawRectangleByNumber: function(array, width) {
                 width = width ? width : (400 - array.length)/array.length;
-                var h = 100/(array.max() - array.min());
-                var pos = {x:25, y:200};
+                var h = 100/(array.max() - array.min()),
+                    pos = {x:25, y:200};
                 for(var i in array) {
                     this.drawRectangle(width, array[i]*h, pos);
                     pos.x += width + 1;
                 }
                 return this;
+            },
+
+            drawSquareArray: function(array, width) {
+
             },
 
             drawTreeLevel: function(treeNodes, father) {
@@ -48,6 +52,20 @@ Canvas = function(){
                         this.writeText(opt.str, {x: (A.o.x+ B.o.x)/2, y:(A.o.y+ B.o.y)/2});
                     }
                 }
+                return this;
+            },
+            saveCanvasFrame: function() {
+                this.imageDataTmp = this.imageData;
+                this.getImageData()
+                    .imageDataQUEUE.push(this.imageData);
+                this.imageData = this.imageDataTmp;
+                return this;
+            },
+            drawCanvasFrame: function(imageData) {
+                this.imageDataTmp = this.imageData;
+                this.imageData = imageData;
+                this.setImageData();
+                this.imageData = this.imageDataTmp;
                 return this;
             }
     });

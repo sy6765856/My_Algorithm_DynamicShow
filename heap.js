@@ -6,6 +6,7 @@
  * To change this template use File | Settings | File Templates.
  */
 Heap = function(){
-    return extend(AlgorithmBase, {
+    return extend(Tree, {
+
     });
 }();

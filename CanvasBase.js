@@ -7,7 +7,7 @@
  */
 CanvasBase = function() {
     return extend(Base, {
-        init: function(id, width, height) {
+        initCanvas: function(id, width, height) {
             var canvas = document.getElementById(id);
             canvas.width = width ? width : 450;
             canvas.height = height ? height : 500;
@@ -17,8 +17,19 @@ CanvasBase = function() {
                 var ctx = canvas.getContext("2d");
                 this.ctx = ctx;
             }
+            return this;
+        },
+        imageBufferQUEUE_init: function(){
+            this.imageFrame = 0;
+            this.imageDataQUEUE = [];
+            return this;
+        },
+        init: function(id, width, height) {
+            this.initCanvas(id, width, height);
             Base.init.call(this);
-            this.flag = 0;
+            this.imageBufferQUEUE_init()
+                .flag = 0;
+
             var that = this;
             this.canvas.onmousedown = function(e) {
                 var mousePosition = that.getMousePosition(e);
@@ -31,10 +42,18 @@ CanvasBase = function() {
                     that.drawEnd();
                 }
             };
-
             return this;
         },
-
+        getImageData: function() {
+            var ctx = this.ctx;
+            this.imageData = ctx.getImageData(0, 0, this.canvas.width, this.canvas.height);
+            return this;
+        },
+        setImageData: function() {
+            var ctx = this.ctx;
+            ctx.putImageData(this.imageData, 0, 0);
+            return this;
+        },
         drawBegin: function(pos) {
             var that = this;
             this.canvas.onmousemove = function(e) {
@@ -79,19 +98,21 @@ CanvasBase = function() {
         drawBoundedSquare: function(sideLength, pos, number, color) {
             this.drawSquareBound(sideLength, pos)
                 .drawSquare(sideLength, pos, number, color);
+            return this;
         },
 
-        drawCircle: function(radius, pos, str) {
+        drawCircle: function(radius, pos, opt) {
             if(pos && pos.x && pos.y && radius) {
-                var ctx = this.ctx;
-                ctx.fillStyle = "rgb(0,255,0)";
+                var ctx = this.ctx,
+                    color = opt && opt.color ? opt.color : "white";
+                ctx.fillStyle = CanvasLib.colorSet(color);
                 ctx.beginPath();
                 ctx.arc(pos.x, pos.y, radius, 0, Math.PI*2, true);
                 ctx.closePath();
                 ctx.fill();
 
-                if(str) {
-                    this.writeText(str, {x:pos.x - 3, y: pos.y + 3});
+                if(opt && opt.str) {
+                    this.writeText(opt.str, {x:pos.x - 3, y: pos.y + 3});
                 }
             }
             return this;
@@ -106,7 +127,7 @@ CanvasBase = function() {
         drawCircleBound: function(radius, pos, boundWidth, style) {
             if(radius && pos) {
                 var ctx = this.ctx;
-                ctx.strokeStyle = "rgb(255,0,0)";
+                ctx.strokeStyle = CanvasLib.colorSet("red");
                 ctx.beginPath();
                 ctx.arc(pos.x, pos.y, radius, 0, Math.PI*2, true);
                 ctx.lineWidth = boundWidth ? boundWidth : 2;

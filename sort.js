@@ -9,10 +9,11 @@ Sort = function() {
     return extend(AlgorithmBase, {
         run: function(id){
             this.merge_Sort(Canvas.init(id), this.produceRandomArray(10));
+            return this;
         },
         produceRandomArray: function(len){
             var ret = [];
-            for(var i = 0; i<len; i++){
+            for(var i = 0; i < len; i++){
                 ret[i] = Math.random()*100;
             }
             return ret;
@@ -52,7 +53,7 @@ Sort = function() {
             this.mergeSort(array, begin, mid)
                 .mergeSort(array, mid+1, end);
             var i = begin,j = mid + 1,st = [];
-            while(i<=mid && j<=end){
+            while(i <= mid && j <= end){
                 if(array[i] <= array[j]){
                     st = st.concat(array[i]);
                     i++;
@@ -61,13 +62,13 @@ Sort = function() {
                     j++;
                 }
             }
-            if(i<=mid) {
+            if(i <= mid) {
                 st = st.concat(array.slice(i, mid+1));
-            } else if(j<=end) {
-                st = st.concat(array.slice(j,end+1));
+            } else if(j <= end) {
+                st = st.concat(array.slice(j, end+1));
             }
 
-            for(var pos = begin; pos<=end; pos++){
+            for(var pos = begin; pos <= end; pos++){
                 array[pos] = st[pos - begin];
             }
             this.QUEUE.push(array.slice(0));

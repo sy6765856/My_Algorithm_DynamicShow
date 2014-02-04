@@ -7,8 +7,8 @@
  */
 Graph = function() {
     return extend(AlgorithmBase, {
-        init: function() {
-            AlgorithmBase.init('Graph', 200);
+        init: function(name) {
+            AlgorithmBase.init(name, 200);
             this.edges = [];
             this.nodes = [];
             this.edgesNum = 1;
@@ -20,13 +20,13 @@ Graph = function() {
             this.nodes.push(node);
             return this;
         },
-        addEdge: function(a, b, v) {
-            this.addDirectedEdge(a, b, v)
-                .addDirectedEdge(b, a, v);
+        addEdge: function(a, b, v, c) {
+            this.addDirectedEdge(a, b, v, c)
+                .addDirectedEdge(b, a, v, c);
             return this;
         },
-        addDirectedEdge: function(a, b, v) {
-            this.edges[this.edgesNum] = [a, b, v];
+        addDirectedEdge: function(a, b, v, c) {
+            this.edges[this.edgesNum] = [a, b, v, c];
             this.nxt[this.edgesNum] = this.first[a]? this.first[a] : 0;
             this.first[a] = this.edgesNum++;
             return this;
@@ -38,16 +38,16 @@ Graph = function() {
                     var edge = edges[key],
                         s = edge[0],
                         e = edge[1];
-                    Canvas.linkTwoCircle(nodes[s], nodes[e], {str: edge[2]});
+                    Canvas.linkTwoCircle(nodes[s], nodes[e], {str: edge[2], style: {color: edge[3]}});
 //                    this.highLightEdge(nodes[s], nodes[e]);
-                    this.save(Canvas.linkTwoCircle, [nodes[s], nodes[e]]);
+                    this.save(Canvas.linkTwoCircle, [nodes[s], nodes[e], {str: edge[2], style: {color: edge[3]}}]);
                 }
             }
             if(nodes) {
                 for(var key in nodes) {
                     var node = nodes[key];
-                    Canvas.drawCircle(node.r, node.o, key);
-                    this.save(Canvas.drawCircle, [node.r, node.o, key]);
+                    Canvas.drawCircle(node.r, node.o, {str: key, color: node.color});
+                    this.save(Canvas.drawCircle, [node.r, node.o, {str: key, color: node.color}]);
                 }
             }
 //            Canvas.clearAll();
@@ -58,14 +58,41 @@ Graph = function() {
         highLightEdge: function(A, B) {
             Canvas.linkTwoCircle(A, B, {style: {color: "red", lineWidth: 4}})
                 .linkTwoCircle(A, B, {style: {color: "green", lineWidth: 2}});
+            return this;
         },
         highLightNode: function(node) {
             Canvas.drawBoundedCircle(node.r, node.o);
+            return this;
         },
-
-        swapNodes: function(A, B) {
-            this.step = this.step ? this.step : 20;
-
+        changeNodeColor: function(index, color) {
+            this.nodes[index].color = color;
+            return this;
+        },
+        changeEdgeColor: function(index, color) {
+            this.changeDirectedEdgeColor(index, color)
+                .changeDirectedEdgeColor((index - 1) ^ 1 + 1, color);
+            return this;
+        },
+        changeDirectedEdgeColor: function(index, color) {
+            if(this.edges[index]) {
+                this.edges[index][3] = color;
+            }
+            return this;
+        },
+        saveGraph: function() {
+            this.drawGragh()
+                .saveCanvasFrame();
+            Canvas.clearAll();
+            return this;
+        },
+        drawing: function() {
+            if(Canvas.imageFrame >= Canvas.imageDataQUEUE.length) {
+                return this;
+            }
+            this.drawCanvasFrame(Canvas.imageDataQUEUE[Canvas.imageFrame]);
+            Canvas.imageFrame++;
+            setTimeout.call(null, 'Graph.drawing();', 1000);
+            return this;
         }
     });
 }();
