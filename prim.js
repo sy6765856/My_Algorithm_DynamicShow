@@ -10,27 +10,15 @@ Prim = extend(Graph, {
         Canvas.init(id);
         this.init('Prim')
             .generateGraph()
-//            .drawGragh();
             .prim()
             .draw();
         console.log(this.NAME);
         console.log(this.minLength);
+        return this;
     },
     prim_init: function(){
         this.INF = 1000000;
         this.minLength = 0;
-        return this;
-    },
-    generateGraph: function() {
-        this.addNodes({r:6, o:{x:34,y:34}})
-            .addNodes({r:6, o:{x:64,y:34}})
-            .addNodes({r:6, o:{x:124,y:154}})
-            .addNodes({r:6, o:{x:150,y:33}});
-
-        this.addEdge(2,1,1, 'black')
-            .addEdge(0,1,5, 'black')
-            .addEdge(0,2,1, 'black')
-            .addEdge(1,3,2, 'black');
         return this;
     },
     prim: function(){
@@ -59,15 +47,21 @@ Prim = extend(Graph, {
                 }
             }
             min = this.INF;
+            var pre_source = source;
             for(var i = 0; i < this.nodes.length; i++) {
-                if(!f[i]) {
+                if(!f[i] && edgeIndex[i]) {
                     this.changeEdgeColor(edgeIndex[i], 'red')
                         .saveGraph();
                     if(dis[i] < min) {
                         min = dis[i];
-                        this.changeEdgeColor(edgeIndex[i], 'yellow')
-                            .changeEdgeColor(edgeIndex[source], 'black')
-                            .saveGraph();
+                        if(source === pre_source) {
+                            this.changeEdgeColor(edgeIndex[i], 'yellow')
+                                .saveGraph();
+                        } else {
+                            this.changeEdgeColor(edgeIndex[i], 'yellow')
+                                .changeEdgeColor(edgeIndex[source], 'black')
+                                .saveGraph();
+                        }
                         source = i;
                     } else {
                         this.changeEdgeColor(edgeIndex[i], 'black')
@@ -84,12 +78,6 @@ Prim = extend(Graph, {
         return this;
     },
 
-    drawGragh: function(){
-        Graph.drawGragh(this.nodes, this.edges);
-
-        Canvas.drawBoundedSquare(10, {x: 145, y: 145}, 10, "green");
-        return this;
-    },
 
     drawTree: function(CanvasObject){
         var treeNodes = new Array();

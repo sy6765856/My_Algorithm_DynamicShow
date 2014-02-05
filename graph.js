@@ -32,7 +32,24 @@ Graph = function() {
             return this;
         },
 
-        drawGragh: function(nodes, edges) {
+        generateGraph: function() {
+            this.addNodes({r:6, o:{x:34,y:34}})
+                .addNodes({r:6, o:{x:64,y:34}})
+                .addNodes({r:6, o:{x:124,y:154}})
+                .addNodes({r:6, o:{x:150,y:33}})
+                .addNodes({r:6, o:{x:300,y:300}});
+
+            this.addEdge(2,1,1, 'black')
+                .addEdge(0,1,5, 'black')
+                .addEdge(0,2,1, 'black')
+                .addEdge(1,3,2, 'black')
+                .addEdge(1,4,3, 'black')
+                .addEdge(3,4,1, 'black')
+                .addEdge(2,4,1, 'black');
+            return this;
+        },
+
+        draw_Gragh: function(nodes, edges) {
             if(edges) {
                 for(var key in edges) {
                     var edge = edges[key],
@@ -54,7 +71,10 @@ Graph = function() {
 //            this.restore(Canvas);
             return this;
         },
-
+        drawGragh: function(){
+            this.draw_Gragh(this.nodes, this.edges);
+            return this;
+        },
         highLightEdge: function(A, B) {
             Canvas.linkTwoCircle(A, B, {style: {color: "red", lineWidth: 4}})
                 .linkTwoCircle(A, B, {style: {color: "green", lineWidth: 2}});
@@ -69,8 +89,10 @@ Graph = function() {
             return this;
         },
         changeEdgeColor: function(index, color) {
-            this.changeDirectedEdgeColor(index, color)
-                .changeDirectedEdgeColor((index - 1) ^ 1 + 1, color);
+            if(index) {
+                this.changeDirectedEdgeColor(index, color)
+                    .changeDirectedEdgeColor(((index - 1) ^ 1) + 1, color);
+            }
             return this;
         },
         changeDirectedEdgeColor: function(index, color) {
@@ -91,7 +113,7 @@ Graph = function() {
             }
             this.drawCanvasFrame(Canvas.imageDataQUEUE[Canvas.imageFrame]);
             Canvas.imageFrame++;
-            setTimeout.call(null, 'Graph.drawing();', 1000);
+            setTimeout.call(null, 'Graph.drawing();', 300);
             return this;
         }
     });

@@ -7,12 +7,25 @@
  */
 Krusal = function() {
     return extend(Graph, {
+        run: function(id) {
+            Canvas.init(id);
+            this.init('Krusal')
+                .generateGraph()
+                .krusal()
+                .draw();
+            console.log(this.minLength);
+            return this;
+        },
+
         krusal_init: function() {
             this.father = [];
+            for(var i = 0; i < this.nodes.length; i++) {
+                this.father[i] = i;
+            }
             this.minLength = 0;
         },
         find: function(x) {
-            while(this.father[x] != null) {
+            while(this.father[x] != x) {
                 x = this.father[x];
             }
             return x;
@@ -23,18 +36,29 @@ Krusal = function() {
         },
         krusal: function() {
             this.krusal_init();
+            console.log(this.father);
             var edges = this.edges;
             var cmp = function(a, b) {
                 return a[2] - b[2];
             };
             edges.sort(cmp);
+            for(var i = 1; i < edges.length; i+=2) {
+                if(typeof edges[i] !== 'object') {
+                    continue;
+                }
+                this.changeEdgeColor(i, 'red')
+                    .saveGraph();
 
-            for(var i = 0; i < edges.length; i++) {
-                var a = find(edges[i][0]),
-                    b = find(edges[i][1]);
+                var a = this.find(edges[i][0]),
+                    b = this.find(edges[i][1]);
                 if(a !== b) {
-                    merge(a, b);
+                    this.changeEdgeColor(i, 'yellow')
+                        .saveGraph();
+                    this.merge(a, b);
                     this.minLength += edges[i][2];
+                } else {
+                    this.changeEdgeColor(i, 'black')
+                        .saveGraph();
                 }
             }
             return this;
