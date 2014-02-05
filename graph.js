@@ -45,7 +45,8 @@ Graph = function() {
                 .addEdge(1,3,2, 'black')
                 .addEdge(1,4,3, 'black')
                 .addEdge(3,4,1, 'black')
-                .addEdge(2,4,1, 'black');
+                .addEdge(2,4,1, 'black')
+                .addEdge(2,3,2, 'black');
             return this;
         },
 

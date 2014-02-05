@@ -6,9 +6,9 @@
     <ignored path=".idea/workspace.xml" />
     <file path="/AlgorithmBase.js" changelist="b8866d45-fac2-4c5e-ab85-e2969b0a6841" time="1391518881856" ignored="false" />
     <file path="/index.html" changelist="b8866d45-fac2-4c5e-ab85-e2969b0a6841" time="1391590258298" ignored="false" />
-    <file path="/CanvasBase.js" changelist="b8866d45-fac2-4c5e-ab85-e2969b0a6841" time="1391525236211" ignored="false" />
+    <file path="/CanvasBase.js" changelist="b8866d45-fac2-4c5e-ab85-e2969b0a6841" time="1391608720440" ignored="false" />
     <file path="/app.js" changelist="b8866d45-fac2-4c5e-ab85-e2969b0a6841" time="1388740719969" ignored="false" />
-    <file path="/Canvas.js" changelist="b8866d45-fac2-4c5e-ab85-e2969b0a6841" time="1391525178672" ignored="false" />
+    <file path="/Canvas.js" changelist="b8866d45-fac2-4c5e-ab85-e2969b0a6841" time="1391610611601" ignored="false" />
     <file path="/lib.js" changelist="b8866d45-fac2-4c5e-ab85-e2969b0a6841" time="1390453764902" ignored="false" />
     <file path="/prim.js" changelist="b8866d45-fac2-4c5e-ab85-e2969b0a6841" time="1391588566843" ignored="false" />
     <file path="/main.css" changelist="b8866d45-fac2-4c5e-ab85-e2969b0a6841" time="1390641720488" ignored="false" />
@@ -18,7 +18,7 @@
     <file path="/dijkstra.js" changelist="b8866d45-fac2-4c5e-ab85-e2969b0a6841" time="1391342674624" ignored="false" />
     <file path="/dynamic.js" changelist="b8866d45-fac2-4c5e-ab85-e2969b0a6841" time="1390225042983" ignored="false" />
     <file path="/heap.js" changelist="b8866d45-fac2-4c5e-ab85-e2969b0a6841" time="1391434393081" ignored="false" />
-    <file path="/graph.js" changelist="b8866d45-fac2-4c5e-ab85-e2969b0a6841" time="1391592069938" ignored="false" />
+    <file path="/graph.js" changelist="b8866d45-fac2-4c5e-ab85-e2969b0a6841" time="1391608426202" ignored="false" />
     <file path="/test.html" changelist="b8866d45-fac2-4c5e-ab85-e2969b0a6841" time="1390568210063" ignored="false" />
     <file path="/a.dummy" changelist="b8866d45-fac2-4c5e-ab85-e2969b0a6841" time="1391521943885" ignored="false" />
     <file path="/Base.js" changelist="b8866d45-fac2-4c5e-ab85-e2969b0a6841" time="1391428338054" ignored="false" />
@@ -46,16 +46,16 @@
       <file leaf-file-name="CanvasBase.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/CanvasBase.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="51" column="8" selection-start="1685" selection-end="1685" vertical-scroll-proportion="0.0">
+            <state line="160" column="8" selection-start="5764" selection-end="5764" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Canvas.js" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="Canvas.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Canvas.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="66" column="30" selection-start="2613" selection-end="2613" vertical-scroll-proportion="0.0">
+            <state line="73" column="76" selection-start="2842" selection-end="2842" vertical-scroll-proportion="0.16201118">
               <folding />
             </state>
           </provider>
@@ -73,16 +73,16 @@
       <file leaf-file-name="graph.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/graph.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+            <state line="39" column="57" selection-start="1282" selection-end="1282" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="tree.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="tree.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tree.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="39" selection-start="507" selection-end="507" vertical-scroll-proportion="0.39106146">
+            <state line="20" column="39" selection-start="507" selection-end="507" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="e#0#159#0" expanded="false" />
               </folding>
@@ -122,7 +122,7 @@
       <file leaf-file-name="init.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/init.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="73" selection-start="305" selection-end="305" vertical-scroll-proportion="0.0">
+            <state line="17" column="50" selection-start="365" selection-end="365" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -156,13 +156,13 @@
         <option value="$PROJECT_DIR$/tree.js" />
         <option value="$PROJECT_DIR$/CanvasLib.js" />
         <option value="$PROJECT_DIR$/AlgorithmBase.js" />
-        <option value="$PROJECT_DIR$/Canvas.js" />
-        <option value="$PROJECT_DIR$/CanvasBase.js" />
         <option value="$PROJECT_DIR$/index.html" />
-        <option value="$PROJECT_DIR$/graph.js" />
         <option value="$PROJECT_DIR$/prim.js" />
         <option value="$PROJECT_DIR$/krusal.js" />
         <option value="$PROJECT_DIR$/init.js" />
+        <option value="$PROJECT_DIR$/graph.js" />
+        <option value="$PROJECT_DIR$/CanvasBase.js" />
+        <option value="$PROJECT_DIR$/Canvas.js" />
       </list>
     </option>
   </component>
@@ -398,20 +398,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Canvas.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="66" column="30" selection-start="2613" selection-end="2613" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CanvasBase.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="51" column="8" selection-start="1685" selection-end="1685" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="23" column="42" selection-start="1261" selection-end="1261" vertical-scroll-proportion="0.42857143">
@@ -442,13 +428,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/init.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="73" selection-start="305" selection-end="305" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/heap.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="8" column="74" selection-start="205" selection-end="205" vertical-scroll-proportion="0.0">
@@ -456,19 +435,40 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/graph.js">
+    <entry file="file://$PROJECT_DIR$/tree.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+        <state line="20" column="39" selection-start="507" selection-end="507" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#0#159#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/init.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="50" selection-start="365" selection-end="365" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tree.js">
+    <entry file="file://$PROJECT_DIR$/graph.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="39" selection-start="507" selection-end="507" vertical-scroll-proportion="0.39106146">
-          <folding>
-            <element signature="e#0#159#0" expanded="false" />
-          </folding>
+        <state line="39" column="57" selection-start="1282" selection-end="1282" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CanvasBase.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="160" column="8" selection-start="5764" selection-end="5764" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Canvas.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="73" column="76" selection-start="2842" selection-end="2842" vertical-scroll-proportion="0.16201118">
+          <folding />
         </state>
       </provider>
     </entry>
