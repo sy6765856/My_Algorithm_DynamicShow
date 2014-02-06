@@ -36,6 +36,7 @@ Canvas = function(){
                 }
                 return this;
             },
+
             linkTwoCircle: function(A, B, option) {
                 var opt = {style: option && option.hasOwnProperty('style')?option.style:{color: "red", lineWidth: 1}
                     ,str: option && option.hasOwnProperty('str')?option.str:""};
@@ -54,6 +55,7 @@ Canvas = function(){
                 }
                 return this;
             },
+
             saveCanvasFrame: function() {
                 this.imageDataTmp = this.imageData;
                 this.getImageData()
@@ -61,6 +63,7 @@ Canvas = function(){
                 this.imageData = this.imageDataTmp;
                 return this;
             },
+
             drawCanvasFrame: function(imageData) {
                 this.imageDataTmp = this.imageData;
                 this.imageData = imageData;
@@ -68,6 +71,5 @@ Canvas = function(){
                 this.imageData = this.imageDataTmp;
                 return this;
             }
-
     });
 }();

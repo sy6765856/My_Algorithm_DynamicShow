@@ -19,7 +19,7 @@ var INF = 10000,
 $('#prim').click(function() {
     clearAllTimeOut();
     Canvas.clearAll('canvas');
-    var fun = 'Krusal.run("canvas")';
+    var fun = 'Prim.run("canvas")';
     $('#start').replaceWith('<button id="start" class="start" onclick=' + fun + '>开始</button>');
 });
 $('#sort').click(function() {

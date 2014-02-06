@@ -7,6 +7,7 @@
  */
 CanvasBase = function() {
     return extend(Base, {
+
         initCanvas: function(id, width, height) {
             var canvas = document.getElementById(id);
             canvas.width = width ? width : 450;
@@ -19,11 +20,13 @@ CanvasBase = function() {
             }
             return this;
         },
-        imageBufferQUEUE_init: function(){
+
+        imageBufferQUEUE_init: function() {
             this.imageFrame = 0;
             this.imageDataQUEUE = [];
             return this;
         },
+
         init: function(id, width, height) {
             this.initCanvas(id, width, height);
             Base.init.call(this);
@@ -44,16 +47,21 @@ CanvasBase = function() {
             };
             return this;
         },
+
+
         getImageData: function() {
             var ctx = this.ctx;
             this.imageData = ctx.getImageData(0, 0, this.canvas.width, this.canvas.height);
             return this;
         },
+
         setImageData: function() {
             var ctx = this.ctx;
             ctx.putImageData(this.imageData, 0, 0);
             return this;
         },
+
+
         drawBegin: function(pos) {
             var that = this;
             this.canvas.onmousemove = function(e) {
@@ -66,11 +74,14 @@ CanvasBase = function() {
                 that.end = end;
             };
         },
+
         drawEnd: function() {
             this.canvas.onmousemove = null;
             this.save(this.drawLine, [this.start, this.end])
                 .restore(this);
         },
+
+
         drawRectangle: function(width, height, pos, str) {
             var ctx = this.ctx;
             ctx.fillStyle = CanvasLib.colorSet("purple");
@@ -81,6 +92,7 @@ CanvasBase = function() {
             }
             return this;
         },
+
         drawSquare: function(sideLength, pos, number, color) {
             var ctx = this.ctx;
             ctx.fillStyle = CanvasLib.colorSet(color);
@@ -89,12 +101,14 @@ CanvasBase = function() {
             this.writeText(number, {x: pos.x - sideLength/2 - 4, y: pos.y - sideLength/2 + 4});
             return this;
         },
+
         drawSquareBound: function(sideLength, pos) {
             var ctx = this.ctx;
             ctx.fillStyle = CanvasLib.colorSet("red");
             ctx.strokeRect(pos.x - sideLength, pos.y - sideLength, sideLength, sideLength);
             return this;
         },
+
         drawBoundedSquare: function(sideLength, pos, number, color) {
             this.drawSquareBound(sideLength, pos)
                 .drawSquare(sideLength, pos, number, color);
@@ -165,6 +179,8 @@ CanvasBase = function() {
             return this;
         },
 
+
+
         clear: function() {
             this.ctx.clearRect(0, 0, INF, INF);
             return this;
@@ -183,6 +199,7 @@ CanvasBase = function() {
             }
             return this;
         },
+
         clearAll: function(object) {
             this.clearBuffer();
             if(object) {

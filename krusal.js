@@ -26,16 +26,19 @@ Krusal = function() {
             }
             this.minLength = 0;
         },
+
         find: function(x) {
             while(this.father[x] != x) {
                 x = this.father[x];
             }
             return x;
         },
+
         merge: function(a, b) {
             this.father[a] = b;
             return this;
         },
+
         krusal: function() {
             this.krusal_init();
             console.log(this.father);

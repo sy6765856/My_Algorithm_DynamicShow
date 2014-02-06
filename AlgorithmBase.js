@@ -7,6 +7,7 @@
  */
 AlgorithmBase = function(){
     return extend(Base, {
+
         init: function(name, interval) {
             Base.init.call(this);
             this.NAME = name;
@@ -16,19 +17,23 @@ AlgorithmBase = function(){
             this.INTERVAL = interval ? interval : this.INTERVAL;
             return this;
         },
+
         drawBefore: function() {
             this.DRAW_FUNCTION = this.NAME + '.drawing();';
             return this;
         },
+
         draw: function() {
             this.drawBefore()
                 .drawing()
                 .drawAfter();
             return this;
         },
+
         drawAfter: function() {
             return this;
         },
+
         drawing: function() {
             if(this.FRAME >= this.QUEUE.length) {
                 return this;
@@ -39,12 +44,19 @@ AlgorithmBase = function(){
             setTimeout.call(null, this.DRAW_FUNCTION, this.INTERVAL ? this.INTERVAL : 500);
             return this;
         },
+
         saveCanvasFrame: function() {
             Canvas.saveCanvasFrame();
             return this;
         },
+
         drawCanvasFrame: function(imageData) {
             Canvas.drawCanvasFrame(imageData);
+            return this;
+        },
+
+        clearAll: function() {
+            Canvas.clearAll();
             return this;
         }
     });

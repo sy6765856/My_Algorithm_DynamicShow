@@ -7,6 +7,7 @@
  */
 Graph = function() {
     return extend(AlgorithmBase, {
+
         init: function(name) {
             AlgorithmBase.init(name, 200);
             this.edges = [];
@@ -16,15 +17,18 @@ Graph = function() {
             this.nxt = [];
             return this;
         },
+
         addNodes: function(node) {
             this.nodes.push(node);
             return this;
         },
+
         addEdge: function(a, b, v, c) {
             this.addDirectedEdge(a, b, v, c)
                 .addDirectedEdge(b, a, v, c);
             return this;
         },
+
         addDirectedEdge: function(a, b, v, c) {
             this.edges[this.edgesNum] = [a, b, v, c];
             this.nxt[this.edgesNum] = this.first[a]? this.first[a] : 0;
@@ -72,23 +76,28 @@ Graph = function() {
 //            this.restore(Canvas);
             return this;
         },
+
         drawGragh: function(){
             this.draw_Gragh(this.nodes, this.edges);
             return this;
         },
+
         highLightEdge: function(A, B) {
             Canvas.linkTwoCircle(A, B, {style: {color: "red", lineWidth: 4}})
                 .linkTwoCircle(A, B, {style: {color: "green", lineWidth: 2}});
             return this;
         },
+
         highLightNode: function(node) {
             Canvas.drawBoundedCircle(node.r, node.o);
             return this;
         },
+
         changeNodeColor: function(index, color) {
             this.nodes[index].color = color;
             return this;
         },
+
         changeEdgeColor: function(index, color) {
             if(index) {
                 this.changeDirectedEdgeColor(index, color)
@@ -96,18 +105,21 @@ Graph = function() {
             }
             return this;
         },
+
         changeDirectedEdgeColor: function(index, color) {
             if(this.edges[index]) {
                 this.edges[index][3] = color;
             }
             return this;
         },
+
         saveGraph: function() {
             this.drawGragh()
-                .saveCanvasFrame();
-            Canvas.clearAll();
+                .saveCanvasFrame()
+                .clearAll();
             return this;
         },
+
         drawing: function() {
             if(Canvas.imageFrame >= Canvas.imageDataQUEUE.length) {
                 return this;
@@ -117,11 +129,13 @@ Graph = function() {
             setTimeout.call(null, 'Graph.drawing();', 300);
             return this;
         },
+
         drawTable: function(table, row, col) {
             Table.init()
                 .drawTable(table, row, col);
             return this;
         },
+
         drawArray: function(array, col) {
             Table.init()
                 .drawArray(array, col);
