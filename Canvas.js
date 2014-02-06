@@ -67,35 +67,7 @@ Canvas = function(){
                 this.setImageData();
                 this.imageData = this.imageDataTmp;
                 return this;
-            },
-
-            drawTable: function(table, row, col) {
-                var tableWidth = 20,
-                    tableHeight = 20,
-                    offset_x = tableWidth/2 - 5,
-                    offset_y = tableHeight/2 - 5,
-                    pos = {x: 100, y: 100},
-                    x_now, y_now,
-                    i ,j;
-
-                for(i = 0; i <= row; i++) {
-                    y_now = pos.y + i * tableHeight;
-                    this.drawLine({x: pos.x, y: y_now}
-                        ,{x: pos.x + col * tableWidth, y: y_now}, 'black');
-                }
-                for(j = 0; j <= col; j++) {
-                    x_now = pos.x + j * tableWidth;
-                    this.drawLine({x: x_now, y: pos.y}
-                        ,{x: x_now, y: pos.y + row * tableHeight}, 'black');
-                }
-
-                for(i = 0; i < row; i++){
-                    for(j = 0; j < col; j++){
-                        this.writeText(table[i][j], {x: pos.x + j * tableWidth + offset_x
-                            , y: pos.y + i * tableHeight + offset_y});
-                    }
-                }
-                return this;
             }
+
     });
 }();

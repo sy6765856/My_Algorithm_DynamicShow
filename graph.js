@@ -116,6 +116,15 @@ Graph = function() {
             Canvas.imageFrame++;
             setTimeout.call(null, 'Graph.drawing();', 300);
             return this;
+        },
+        drawTable: function(table, row, col) {
+            Table.init()
+                .drawTable(table, row, col);
+            return this;
+        },
+        drawArray: function(array, col) {
+            Table.init()
+                .drawArray(array, col);
         }
     });
 }();
