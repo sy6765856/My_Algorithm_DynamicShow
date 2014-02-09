@@ -17,7 +17,6 @@ Prim = extend(Graph, {
         return this;
     },
     prim_init: function(){
-        this.INF = 1000000;
         this.minLength = 0;
         return this;
     },

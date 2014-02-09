@@ -7,10 +7,18 @@
  */
 Dijkstra = function() {
     return extend(Graph, {
+        run: function(id) {
+            Canvas.init(id);
+            this.init('Dijkstra')
+                .generateGraph()
+                .dijkstra()
+                .draw();
+        },
         dijkstra: function() {
             for(var i = 0; i < this.nodes.length; i++) {
 
             }
+            return this;
         }
 
     });

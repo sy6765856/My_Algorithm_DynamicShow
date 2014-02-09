@@ -16,15 +16,41 @@ var INF = 10000,
     frame = 0,
     IndexINF = 100000;
 
+var name_list = {
+    'sort': 'Sort',
+    'prim': 'Prim'
+};
+
+//for(var key in name_list) {
+//    var ff = '#' + key.substr(0);
+//    var rr = name_list[key];
+//
+//    $(ff).click(function() {
+//        clearAllTimeOut();
+//        Canvas.clearAll('canvas');
+//        $('#start').replaceWith('<button id="start" class="start" onclick=' + rr + '.run("canvas")' + '>开始</button>');
+//    });
+//}
 $('#prim').click(function() {
+        clearAllTimeOut();
+        Canvas.clearAll('canvas');
+        $('#start').replaceWith('<button id="start" class="start" onclick=' + 'Prim' + '.run("canvas")' + '>开始</button>');
+});
+
+$('#krusal').click(function() {
     clearAllTimeOut();
     Canvas.clearAll('canvas');
-    var fun = 'Prim.run("canvas")';
-    $('#start').replaceWith('<button id="start" class="start" onclick=' + fun + '>开始</button>');
+    $('#start').replaceWith('<button id="start" class="start" onclick=' + 'Krusal' + '.run("canvas")' + '>开始</button>');
 });
+
 $('#sort').click(function() {
     clearAllTimeOut();
     Canvas.clearAll('canvas');
-    var fun = 'Sort.run("canvas")';
-    $('#start').replaceWith('<button id="start" class="start" onclick=' + fun + '>开始</button>');
+    $('#start').replaceWith('<button id="start" class="start" onclick=' + 'Sort' + '.run("canvas")' + '>开始</button>');
+});
+
+$('#floyd').click(function() {
+    clearAllTimeOut();
+    Canvas.clearAll('canvas');
+    $('#start').replaceWith('<button id="start" class="start" onclick=' + 'Floyd' + '.run("canvas")' + '>开始</button>');
 });

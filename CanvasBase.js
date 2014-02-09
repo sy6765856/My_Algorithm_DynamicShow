@@ -93,6 +93,14 @@ CanvasBase = function() {
             return this;
         },
 
+        drawRectangleBound: function(pos, width, height, color) {
+            color = color ? color : 'black';
+            var ctx = this.ctx;
+            ctx.fillStyle = CanvasLib.colorSet(color);
+            ctx.strokeRect(pos.x, pos.y, width, height);
+            return this;
+        },
+
         drawSquare: function(sideLength, pos, number, color) {
             var ctx = this.ctx;
             ctx.fillStyle = CanvasLib.colorSet(color);

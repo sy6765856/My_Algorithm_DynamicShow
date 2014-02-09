@@ -5,26 +5,27 @@
     <ignored path="testjs.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/AlgorithmBase.js" changelist="b8866d45-fac2-4c5e-ab85-e2969b0a6841" time="1391691978235" ignored="false" />
-    <file path="/index.html" changelist="b8866d45-fac2-4c5e-ab85-e2969b0a6841" time="1391682274540" ignored="false" />
-    <file path="/CanvasBase.js" changelist="b8866d45-fac2-4c5e-ab85-e2969b0a6841" time="1391608720440" ignored="false" />
+    <file path="/index.html" changelist="b8866d45-fac2-4c5e-ab85-e2969b0a6841" time="1391935988418" ignored="false" />
+    <file path="/CanvasBase.js" changelist="b8866d45-fac2-4c5e-ab85-e2969b0a6841" time="1391941962536" ignored="false" />
     <file path="/app.js" changelist="b8866d45-fac2-4c5e-ab85-e2969b0a6841" time="1388740719969" ignored="false" />
     <file path="/Canvas.js" changelist="b8866d45-fac2-4c5e-ab85-e2969b0a6841" time="1391677604068" ignored="false" />
-    <file path="/lib.js" changelist="b8866d45-fac2-4c5e-ab85-e2969b0a6841" time="1390453764902" ignored="false" />
+    <file path="/lib.js" changelist="b8866d45-fac2-4c5e-ab85-e2969b0a6841" time="1391934794724" ignored="false" />
     <file path="/prim.js" changelist="b8866d45-fac2-4c5e-ab85-e2969b0a6841" time="1391588566843" ignored="false" />
     <file path="/main.css" changelist="b8866d45-fac2-4c5e-ab85-e2969b0a6841" time="1390641720488" ignored="false" />
-    <file path="/init.js" changelist="b8866d45-fac2-4c5e-ab85-e2969b0a6841" time="1390893046353" ignored="false" />
+    <file path="/init.js" changelist="b8866d45-fac2-4c5e-ab85-e2969b0a6841" time="1391780483115" ignored="false" />
     <file path="/sort.js" changelist="b8866d45-fac2-4c5e-ab85-e2969b0a6841" time="1391433765124" ignored="false" />
     <file path="/CanvasLib.js" changelist="b8866d45-fac2-4c5e-ab85-e2969b0a6841" time="1391504013932" ignored="false" />
-    <file path="/dijkstra.js" changelist="b8866d45-fac2-4c5e-ab85-e2969b0a6841" time="1391342674624" ignored="false" />
+    <file path="/dijkstra.js" changelist="b8866d45-fac2-4c5e-ab85-e2969b0a6841" time="1391933534071" ignored="false" />
     <file path="/dynamic.js" changelist="b8866d45-fac2-4c5e-ab85-e2969b0a6841" time="1390225042983" ignored="false" />
     <file path="/heap.js" changelist="b8866d45-fac2-4c5e-ab85-e2969b0a6841" time="1391434393081" ignored="false" />
-    <file path="/graph.js" changelist="b8866d45-fac2-4c5e-ab85-e2969b0a6841" time="1391683356359" ignored="false" />
+    <file path="/graph.js" changelist="b8866d45-fac2-4c5e-ab85-e2969b0a6841" time="1391942742139" ignored="false" />
     <file path="/test.html" changelist="b8866d45-fac2-4c5e-ab85-e2969b0a6841" time="1390568210063" ignored="false" />
-    <file path="/a.dummy" changelist="b8866d45-fac2-4c5e-ab85-e2969b0a6841" time="1391521943885" ignored="false" />
+    <file path="/a.dummy" changelist="b8866d45-fac2-4c5e-ab85-e2969b0a6841" time="1391937311520" ignored="false" />
     <file path="/Base.js" changelist="b8866d45-fac2-4c5e-ab85-e2969b0a6841" time="1391428338054" ignored="false" />
     <file path="/tree.js" changelist="b8866d45-fac2-4c5e-ab85-e2969b0a6841" time="1391434528787" ignored="false" />
-    <file path="/krusal.js" changelist="b8866d45-fac2-4c5e-ab85-e2969b0a6841" time="1391683294099" ignored="false" />
-    <file path="/table.js" changelist="b8866d45-fac2-4c5e-ab85-e2969b0a6841" time="1391683259204" ignored="false" />
+    <file path="/krusal.js" changelist="b8866d45-fac2-4c5e-ab85-e2969b0a6841" time="1391935862866" ignored="false" />
+    <file path="/table.js" changelist="b8866d45-fac2-4c5e-ab85-e2969b0a6841" time="1391943016419" ignored="false" />
+    <file path="/floyd.js" changelist="b8866d45-fac2-4c5e-ab85-e2969b0a6841" time="1391936296298" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,34 +45,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="CanvasBase.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/CanvasBase.js">
+      <file leaf-file-name="graph.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/graph.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="e#262#620#0" expanded="false" />
-                <element signature="e#665#772#0" expanded="false" />
-                <element signature="e#817#1484#0" expanded="false" />
-                <element signature="e#1521#1681#0" expanded="false" />
-                <element signature="e#1717#1837#0" expanded="false" />
-                <element signature="e#1874#2205#0" expanded="false" />
-                <element signature="e#2236#2384#0" expanded="false" />
-                <element signature="e#2445#2758#0" expanded="false" />
-                <element signature="e#2822#3172#0" expanded="false" />
-                <element signature="e#3226#3441#0" expanded="false" />
-                <element signature="e#3512#3659#0" expanded="false" />
-                <element signature="e#3709#4263#0" expanded="false" />
-                <element signature="e#4332#4473#0" expanded="false" />
-                <element signature="e#4542#4912#0" expanded="false" />
-                <element signature="e#4961#5426#0" expanded="false" />
-                <element signature="e#5487#5768#0" expanded="false" />
-                <element signature="e#5809#5966#0" expanded="false" />
-                <element signature="e#5997#6081#0" expanded="false" />
-                <element signature="e#6121#6200#0" expanded="false" />
-                <element signature="e#6235#6468#0" expanded="false" />
-                <element signature="e#6506#6892#0" expanded="false" />
-                <element signature="e#6933#7079#0" expanded="false" />
-              </folding>
+            <state line="169" column="10" selection-start="5462" selection-end="5462" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AlgorithmBase.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/AlgorithmBase.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="48" column="25" selection-start="1274" selection-end="1274" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -79,7 +66,16 @@
       <file leaf-file-name="Canvas.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Canvas.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="54" column="46" selection-start="2108" selection-end="2108" vertical-scroll-proportion="0.0">
+            <state line="14" column="34" selection-start="519" selection-end="519" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CanvasBase.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/CanvasBase.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="99" column="56" selection-start="3015" selection-end="3015" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -88,61 +84,8 @@
       <file leaf-file-name="table.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/table.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="60" column="105" selection-start="2336" selection-end="2336" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="e#0#159#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="tree.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tree.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="40" selection-start="266" selection-end="266" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="e#0#159#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="graph.js" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/graph.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="30" column="28" selection-start="748" selection-end="748" vertical-scroll-proportion="0.02793296">
-              <folding>
-                <element signature="e#247#471#0" expanded="false" />
-                <element signature="e#507#578#0" expanded="false" />
-                <element signature="e#619#746#0" expanded="false" />
-                <element signature="e#795#1002#0" expanded="false" />
-                <element signature="e#1039#1651#0" expanded="false" />
-                <element signature="e#2652#2741#0" expanded="false" />
-                <element signature="e#3157#3238#0" expanded="false" />
-                <element signature="e#3289#3498#0" expanded="false" />
-                <element signature="e#3313#3463#0" expanded="false" />
-                <element signature="e#3557#3689#0" expanded="false" />
-                <element signature="e#3722#3851#0" expanded="false" />
-                <element signature="e#3882#4198#0" expanded="false" />
-                <element signature="e#4246#4352#0" expanded="false" />
-                <element signature="e#4395#4471#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AlgorithmBase.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/AlgorithmBase.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="58" column="30" selection-start="1516" selection-end="1516" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="e#255#478#0" expanded="false" />
-                <element signature="e#512#608#0" expanded="false" />
-                <element signature="e#636#759#0" expanded="false" />
-                <element signature="e#792#828#0" expanded="false" />
-                <element signature="e#859#1208#0" expanded="false" />
-                <element signature="e#1369#1452#0" expanded="false" />
-              </folding>
+            <state line="101" column="39" selection-start="3823" selection-end="3823" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -150,18 +93,16 @@
       <file leaf-file-name="krusal.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/krusal.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="71" column="8" selection-start="2032" selection-end="2032" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="e#0#159#0" expanded="false" />
-              </folding>
+            <state line="76" column="32" selection-start="2160" selection-end="2160" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="54" selection-start="756" selection-end="756" vertical-scroll-proportion="-7.142857">
+            <state line="4" column="124" selection-start="196" selection-end="196" vertical-scroll-proportion="0.11627907">
               <folding />
             </state>
           </provider>
@@ -170,8 +111,19 @@
       <file leaf-file-name="init.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/init.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="23" column="19" selection-start="586" selection-end="586" vertical-scroll-proportion="0.0">
+            <state line="52" column="80" selection-start="1452" selection-end="1452" vertical-scroll-proportion="0.0">
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="floyd.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/floyd.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="25" column="39" selection-start="809" selection-end="809" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="e#0#159#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -179,7 +131,7 @@
       <file leaf-file-name="prim.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/prim.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="0" selection-start="307" selection-end="307" vertical-scroll-proportion="0.0">
+            <state line="90" column="47" selection-start="2771" selection-end="2771" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -195,22 +147,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/css/main.css" />
-        <option value="$PROJECT_DIR$/dijkstra.js" />
-        <option value="$PROJECT_DIR$/Base.js" />
         <option value="$PROJECT_DIR$/sort.js" />
         <option value="$PROJECT_DIR$/heap.js" />
         <option value="$PROJECT_DIR$/tree.js" />
         <option value="$PROJECT_DIR$/CanvasLib.js" />
-        <option value="$PROJECT_DIR$/prim.js" />
-        <option value="$PROJECT_DIR$/index.html" />
-        <option value="$PROJECT_DIR$/table.js" />
-        <option value="$PROJECT_DIR$/init.js" />
-        <option value="$PROJECT_DIR$/CanvasBase.js" />
-        <option value="$PROJECT_DIR$/krusal.js" />
         <option value="$PROJECT_DIR$/Canvas.js" />
         <option value="$PROJECT_DIR$/AlgorithmBase.js" />
+        <option value="$PROJECT_DIR$/dijkstra.js" />
+        <option value="$PROJECT_DIR$/prim.js" />
+        <option value="$PROJECT_DIR$/jsLib/lib.js" />
+        <option value="$PROJECT_DIR$/krusal.js" />
+        <option value="$PROJECT_DIR$/init.js" />
+        <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/floyd.js" />
+        <option value="$PROJECT_DIR$/CanvasBase.js" />
         <option value="$PROJECT_DIR$/graph.js" />
+        <option value="$PROJECT_DIR$/table.js" />
       </list>
     </option>
   </component>
@@ -327,7 +279,7 @@
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32974428" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.44145358" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.12518302" sideWeight="0.6011004" order="1" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39889959" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -406,81 +358,77 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/jsLib/lib.js">
+    <entry file="file://$PROJECT_DIR$/heap.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="42" column="0" selection-start="1389" selection-end="1389" vertical-scroll-proportion="0.0">
+        <state line="8" column="74" selection-start="205" selection-end="205" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tree.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="40" selection-start="266" selection-end="266" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CanvasLib.js">
+    <entry file="file://$PROJECT_DIR$/css/main.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="45" column="22" selection-start="1413" selection-end="1413" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Base.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="8" selection-start="297" selection-end="297" vertical-scroll-proportion="0.0">
+        <state line="14" column="53" selection-start="739" selection-end="739" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/sort.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+        <state line="9" column="28" selection-start="242" selection-end="242" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jsLib/lib.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="59" column="2" selection-start="1700" selection-end="1700" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/dijkstra.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="16" selection-start="300" selection-end="300" vertical-scroll-proportion="0.0">
+        <state line="12" column="31" selection-start="333" selection-end="334" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/heap.js">
+    <entry file="file://$PROJECT_DIR$/AlgorithmBase.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="74" selection-start="205" selection-end="205" vertical-scroll-proportion="0.0">
+        <state line="48" column="25" selection-start="1274" selection-end="1274" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
+    <entry file="file://$PROJECT_DIR$/krusal.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="54" selection-start="756" selection-end="756" vertical-scroll-proportion="-7.142857">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/table.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="60" column="105" selection-start="2336" selection-end="2336" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#0#159#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/prim.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="0" selection-start="307" selection-end="307" vertical-scroll-proportion="0.0">
+        <state line="76" column="32" selection-start="2160" selection-end="2160" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/init.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="19" selection-start="586" selection-end="586" vertical-scroll-proportion="0.0">
+        <state line="52" column="80" selection-start="1452" selection-end="1452" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tree.js">
+    <entry file="file://$PROJECT_DIR$/prim.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="40" selection-start="266" selection-end="266" vertical-scroll-proportion="0.0">
+        <state line="90" column="47" selection-start="2771" selection-end="2771" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/floyd.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="25" column="39" selection-start="809" selection-end="809" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="e#0#159#0" expanded="false" />
           </folding>
@@ -489,83 +437,36 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/CanvasBase.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#262#620#0" expanded="false" />
-            <element signature="e#665#772#0" expanded="false" />
-            <element signature="e#817#1484#0" expanded="false" />
-            <element signature="e#1521#1681#0" expanded="false" />
-            <element signature="e#1717#1837#0" expanded="false" />
-            <element signature="e#1874#2205#0" expanded="false" />
-            <element signature="e#2236#2384#0" expanded="false" />
-            <element signature="e#2445#2758#0" expanded="false" />
-            <element signature="e#2822#3172#0" expanded="false" />
-            <element signature="e#3226#3441#0" expanded="false" />
-            <element signature="e#3512#3659#0" expanded="false" />
-            <element signature="e#3709#4263#0" expanded="false" />
-            <element signature="e#4332#4473#0" expanded="false" />
-            <element signature="e#4542#4912#0" expanded="false" />
-            <element signature="e#4961#5426#0" expanded="false" />
-            <element signature="e#5487#5768#0" expanded="false" />
-            <element signature="e#5809#5966#0" expanded="false" />
-            <element signature="e#5997#6081#0" expanded="false" />
-            <element signature="e#6121#6200#0" expanded="false" />
-            <element signature="e#6235#6468#0" expanded="false" />
-            <element signature="e#6506#6892#0" expanded="false" />
-            <element signature="e#6933#7079#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/krusal.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="71" column="8" selection-start="2032" selection-end="2032" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#0#159#0" expanded="false" />
-          </folding>
+        <state line="99" column="56" selection-start="3015" selection-end="3015" vertical-scroll-proportion="0.0">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Canvas.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="54" column="46" selection-start="2108" selection-end="2108" vertical-scroll-proportion="0.0">
+        <state line="14" column="34" selection-start="519" selection-end="519" vertical-scroll-proportion="0.0">
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/AlgorithmBase.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="58" column="30" selection-start="1516" selection-end="1516" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#255#478#0" expanded="false" />
-            <element signature="e#512#608#0" expanded="false" />
-            <element signature="e#636#759#0" expanded="false" />
-            <element signature="e#792#828#0" expanded="false" />
-            <element signature="e#859#1208#0" expanded="false" />
-            <element signature="e#1369#1452#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/graph.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="28" selection-start="748" selection-end="748" vertical-scroll-proportion="0.02793296">
-          <folding>
-            <element signature="e#247#471#0" expanded="false" />
-            <element signature="e#507#578#0" expanded="false" />
-            <element signature="e#619#746#0" expanded="false" />
-            <element signature="e#795#1002#0" expanded="false" />
-            <element signature="e#1039#1651#0" expanded="false" />
-            <element signature="e#2652#2741#0" expanded="false" />
-            <element signature="e#3157#3238#0" expanded="false" />
-            <element signature="e#3289#3498#0" expanded="false" />
-            <element signature="e#3313#3463#0" expanded="false" />
-            <element signature="e#3557#3689#0" expanded="false" />
-            <element signature="e#3722#3851#0" expanded="false" />
-            <element signature="e#3882#4198#0" expanded="false" />
-            <element signature="e#4246#4352#0" expanded="false" />
-            <element signature="e#4395#4471#0" expanded="false" />
-          </folding>
+        <state line="169" column="10" selection-start="5462" selection-end="5462" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/table.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="101" column="39" selection-start="3823" selection-end="3823" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="124" selection-start="196" selection-end="196" vertical-scroll-proportion="0.11627907">
+          <folding />
         </state>
       </provider>
     </entry>

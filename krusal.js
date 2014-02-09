@@ -12,8 +12,8 @@ Krusal = function() {
             this.init('Krusal')
                 .generateGraph()
                 .krusal()
-//                .draw()
-                .drawArray([1,33,4], 5);
+                .draw();
+//                .drawArray([1,33,4], 5);
 //                .drawTable([[1, 4, 4], [3, 4, 1], [3, 5, 3]], 3, 5);
             console.log(this.minLength);
             return this;
@@ -41,11 +41,12 @@ Krusal = function() {
 
         krusal: function() {
             this.krusal_init();
-            console.log(this.father);
-            var edges = this.edges;
-            var cmp = function(a, b) {
-                return a[2] - b[2];
-            };
+            var edges = this.edges,
+                cmp = function(a, b) {
+                    return a[2] - b[2];
+                },
+                cnt = 0;
+
             edges.sort(cmp);
             for(var i = 1; i < edges.length; i+=2) {
                 if(typeof edges[i] !== 'object') {
@@ -60,10 +61,14 @@ Krusal = function() {
                     this.changeEdgeColor(i, 'yellow')
                         .saveGraph();
                     this.merge(a, b);
+                    cnt ++;
                     this.minLength += edges[i][2];
                 } else {
                     this.changeEdgeColor(i, 'black')
                         .saveGraph();
+                }
+                if(cnt === this.nodes.length - 1) {
+                    return this;
                 }
             }
             return this;

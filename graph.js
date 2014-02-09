@@ -10,11 +10,13 @@ Graph = function() {
 
         init: function(name) {
             AlgorithmBase.init(name, 200);
+            this.INF = 1000000;
             this.edges = [];
             this.nodes = [];
             this.edgesNum = 1;
             this.first = [];
             this.nxt = [];
+            this.GraphMatrix = [];
             return this;
         },
 
@@ -33,16 +35,19 @@ Graph = function() {
             this.edges[this.edgesNum] = [a, b, v, c];
             this.nxt[this.edgesNum] = this.first[a]? this.first[a] : 0;
             this.first[a] = this.edgesNum++;
+            this.GraphMatrix[a][b] = min(this.GraphMatrix[a][b], v);
             return this;
         },
 
-        generateGraph: function() {
+        generateNodes: function() {
             this.addNodes({r:6, o:{x:34,y:34}})
                 .addNodes({r:6, o:{x:64,y:34}})
                 .addNodes({r:6, o:{x:124,y:154}})
                 .addNodes({r:6, o:{x:150,y:33}})
                 .addNodes({r:6, o:{x:300,y:300}});
-
+            return this;
+        },
+        generateEdges: function() {
             this.addEdge(2,1,1, 'black')
                 .addEdge(0,1,5, 'black')
                 .addEdge(0,2,1, 'black')
@@ -51,6 +56,35 @@ Graph = function() {
                 .addEdge(3,4,1, 'black')
                 .addEdge(2,4,1, 'black')
                 .addEdge(2,3,2, 'black');
+            return this;
+        },
+        generateGraph: function() {
+            this.generateNodes()
+                .resetGraphMatrix()
+                .generateEdges();
+            return this;
+        },
+
+        changeGraphMatrixInf: function(row, col) {
+            for(var i = 0 ; i < row; i++ ) {
+                for(var j = 0 ; j < col; j++) {
+                    if(this.GraphMatrix[i][j] === this.INF) {
+                        this.GraphMatrix[i][j] = 'INF';
+                    }
+                }
+            }
+            return this;
+        },
+
+        resetGraphMatrix: function() {
+            var n = this.nodes.length;
+            this.GraphMatrix = [];
+            for(var i = 0; i < n; i++) {
+                this.GraphMatrix[i] = [];
+                for(var j = 0; j < n; j++) {
+                    this.GraphMatrix[i][j] = i === j ? 0 : this.INF;
+                }
+            }
             return this;
         },
 
@@ -130,9 +164,17 @@ Graph = function() {
             return this;
         },
 
-        drawTable: function(table, row, col) {
+        drawTable: function(table, row, col, highlightRectangles) {
             Table.init()
-                .drawTable(table, row, col);
+                .drawTable(table, row, col)
+                .highLightRectangles(highlightRectangles);
+            return this;
+        },
+
+        saveTable: function() {
+            this.drawTable(this.GraphMatrix, this.nodes.length, this.nodes.length)
+                .saveCanvasFrame()
+                .clearAll();
             return this;
         },
 

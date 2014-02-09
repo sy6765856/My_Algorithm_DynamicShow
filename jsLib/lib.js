@@ -50,3 +50,11 @@ window.swap = function(a, b) {
     var tmp = a;
     a = b; b = tmp;
 };
+
+window.min = function(a, b) {
+    return a < b ? a : b;
+};
+
+window.max = function(a, b) {
+    return a > b ? a : b;
+};
