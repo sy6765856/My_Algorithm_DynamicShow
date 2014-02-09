@@ -96,7 +96,7 @@ CanvasBase = function() {
         drawRectangleBound: function(pos, width, height, color) {
             color = color ? color : 'black';
             var ctx = this.ctx;
-            ctx.fillStyle = CanvasLib.colorSet(color);
+            ctx.strokeStyle = CanvasLib.colorSet(color);
             ctx.strokeRect(pos.x, pos.y, width, height);
             return this;
         },
@@ -112,7 +112,7 @@ CanvasBase = function() {
 
         drawSquareBound: function(sideLength, pos) {
             var ctx = this.ctx;
-            ctx.fillStyle = CanvasLib.colorSet("red");
+            ctx.strokeStyle = CanvasLib.colorSet("red");
             ctx.strokeRect(pos.x - sideLength, pos.y - sideLength, sideLength, sideLength);
             return this;
         },

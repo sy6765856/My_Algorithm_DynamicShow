@@ -100,13 +100,14 @@ Table = function() {
         highLightRectangles: function(array) {
             array = array ? array : [];
             for(var i = 0; i < array.length; i++) {
-                this.highLightRectangle(array[i].pos, array[i].color);
+                this.highLightRectangle({x: this.pos.x + this.tableWidth * array[i][1]
+                    , y: this.pos.y + this.tableHeight * array[i][0]}, array[i][2]);
             }
             return this;
         },
         highLightRectangle: function(pos, color) {
             color = color ? color : 'black';
-            Canvas.drawRectangleBound(pos, this.width, this.height, color);
+            Canvas.drawRectangleBound(pos, this.tableWidth, this.tableHeight, color);
             return this;
         }
     });

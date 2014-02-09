@@ -12,7 +12,6 @@ Prim = extend(Graph, {
             .generateGraph()
             .prim()
             .draw();
-        console.log(this.NAME);
         console.log(this.minLength);
         return this;
     },

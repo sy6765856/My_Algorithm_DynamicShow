@@ -13,8 +13,13 @@ Dijkstra = function() {
                 .generateGraph()
                 .dijkstra()
                 .draw();
+            return this;
+        },
+        dij_init: function() {
+            return this;
         },
         dijkstra: function() {
+            this.dij_init();
             for(var i = 0; i < this.nodes.length; i++) {
 
             }

@@ -23,6 +23,7 @@ CanvasLib = function() {
         },
 
         colorSet: function(color) {
+            color = color.toLowerCase();
             var colorString = "";
             switch(color) {
                 case "red":

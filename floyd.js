@@ -11,6 +11,7 @@ Floyd = function() {
             Canvas.init(id);
             this.init('floyd')
                 .generateGraph()
+                .drawGragh()
                 .floyd()
                 .draw();
             return this;
@@ -23,7 +24,8 @@ Floyd = function() {
                     for(var j = 0; j < n; j++) {
                         if(v[i][k] + v[k][j] < v[i][j]) {
                             v[i][j] = v[i][k] + v[k][j];
-                            this.saveTable();
+                            this.drawGragh()
+                                .saveTable([[i, j, 'red'], [i, k, 'blue'], [k, j, 'BLue']]);
                         }
                     }
                 }

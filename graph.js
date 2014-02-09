@@ -171,8 +171,8 @@ Graph = function() {
             return this;
         },
 
-        saveTable: function() {
-            this.drawTable(this.GraphMatrix, this.nodes.length, this.nodes.length)
+        saveTable: function(highlightRectangles) {
+            this.drawTable(this.GraphMatrix, this.nodes.length, this.nodes.length, highlightRectangles)
                 .saveCanvasFrame()
                 .clearAll();
             return this;

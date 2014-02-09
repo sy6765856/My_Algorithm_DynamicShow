@@ -7,6 +7,14 @@
  */
 Heap = function(){
     return extend(Tree, {
+        run: function(id) {
 
+        },
+        insert: function() {
+
+        },
+        maintain: function() {
+
+        }
     });
 }();

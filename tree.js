@@ -6,11 +6,19 @@
  * To change this template use File | Settings | File Templates.
  */
 Tree = function() {
-    return extend(AlgorithmBase, {
-        init: function() {
+    return extend(Graph, {
+        generateTree: function() {
+            this.generateNodes()
+                .generateTreeEdges();
             return this;
         },
-        addFatherChildRelation: function(father, child) {
+        generateTreeEdges: function() {
+            this.addFatherChildRelation(1,3,1)
+                .addFatherChildRelation(1,4,1);
+            return this;
+        },
+        addFatherChildRelation: function(father, child, len) {
+            this.addEdge(father, child, len, 'black');
             return this;
         },
         swapNodes: function(A, B) {
