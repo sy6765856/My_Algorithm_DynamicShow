@@ -17,7 +17,7 @@
     <file path="/CanvasLib.js" changelist="b8866d45-fac2-4c5e-ab85-e2969b0a6841" time="1391958664207" ignored="false" />
     <file path="/dijkstra.js" changelist="b8866d45-fac2-4c5e-ab85-e2969b0a6841" time="1391958208368" ignored="false" />
     <file path="/dynamic.js" changelist="b8866d45-fac2-4c5e-ab85-e2969b0a6841" time="1390225042983" ignored="false" />
-    <file path="/heap.js" changelist="b8866d45-fac2-4c5e-ab85-e2969b0a6841" time="1391961661073" ignored="false" />
+    <file path="/heap.js" changelist="b8866d45-fac2-4c5e-ab85-e2969b0a6841" time="1391961873910" ignored="false" />
     <file path="/graph.js" changelist="b8866d45-fac2-4c5e-ab85-e2969b0a6841" time="1391956420964" ignored="false" />
     <file path="/test.html" changelist="b8866d45-fac2-4c5e-ab85-e2969b0a6841" time="1390568210063" ignored="false" />
     <file path="/a.dummy" changelist="b8866d45-fac2-4c5e-ab85-e2969b0a6841" time="1391957727882" ignored="false" />
@@ -26,6 +26,7 @@
     <file path="/krusal.js" changelist="b8866d45-fac2-4c5e-ab85-e2969b0a6841" time="1391935862866" ignored="false" />
     <file path="/table.js" changelist="b8866d45-fac2-4c5e-ab85-e2969b0a6841" time="1391957508426" ignored="false" />
     <file path="/floyd.js" changelist="b8866d45-fac2-4c5e-ab85-e2969b0a6841" time="1391960798839" ignored="false" />
+    <file path="/stack.js" changelist="b8866d45-fac2-4c5e-ab85-e2969b0a6841" time="1391961852643" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -86,8 +87,19 @@
       <file leaf-file-name="heap.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/heap.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="9" selection-start="328" selection-end="328" vertical-scroll-proportion="0.47486034">
+            <state line="16" column="24" selection-start="390" selection-end="390" vertical-scroll-proportion="0.44692737">
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="stack.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/stack.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="17" column="24" selection-start="404" selection-end="404" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="e#0#161#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -96,15 +108,6 @@
         <entry file="file://$PROJECT_DIR$/graph.js">
           <provider selected="true" editor-type-id="text-editor">
             <state line="19" column="0" selection-start="504" selection-end="504" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="app.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -147,7 +150,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/sort.js" />
         <option value="$PROJECT_DIR$/Canvas.js" />
         <option value="$PROJECT_DIR$/AlgorithmBase.js" />
         <option value="$PROJECT_DIR$/jsLib/lib.js" />
@@ -162,6 +164,7 @@
         <option value="$PROJECT_DIR$/CanvasLib.js" />
         <option value="$PROJECT_DIR$/floyd.js" />
         <option value="$PROJECT_DIR$/tree.js" />
+        <option value="$PROJECT_DIR$/stack.js" />
         <option value="$PROJECT_DIR$/heap.js" />
       </list>
     </option>
@@ -394,13 +397,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/krusal.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="76" column="4" selection-start="2160" selection-end="2160" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/dynamic.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
@@ -501,9 +497,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/stack.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="24" selection-start="404" selection-end="404" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#0#161#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/heap.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="9" selection-start="328" selection-end="328" vertical-scroll-proportion="0.47486034">
+        <state line="16" column="24" selection-start="390" selection-end="390" vertical-scroll-proportion="0.44692737">
           <folding />
         </state>
       </provider>
