@@ -101,7 +101,8 @@ Graph = function() {
             }
             if(nodes) {
                 for(var key in nodes) {
-                    var node = nodes[key];
+                    var node = nodes[key],
+                        str = node.label ? node.label : key;
                     Canvas.drawCircle(node.r, node.o, {str: key, color: node.color});
                     this.save(Canvas.drawCircle, [node.r, node.o, {str: key, color: node.color}]);
                 }
@@ -111,8 +112,14 @@ Graph = function() {
             return this;
         },
 
-        drawGragh: function(){
+        drawGragh: function(highlightNodes){
             this.draw_Gragh(this.nodes, this.edges);
+            if(highlightNodes) {
+                for(var key in highlightNodes) {
+                    var index = highlightNodes[key];
+                    this.highLightNode(this.nodes[index]);
+                }
+            }
             return this;
         },
 
@@ -123,7 +130,7 @@ Graph = function() {
         },
 
         highLightNode: function(node) {
-            Canvas.drawBoundedCircle(node.r, node.o);
+            Canvas.drawCircleBound(node.r, node.o);
             return this;
         },
 
@@ -147,8 +154,8 @@ Graph = function() {
             return this;
         },
 
-        saveGraph: function() {
-            this.drawGragh()
+        saveGraph: function(highlightNodes) {
+            this.drawGragh(highlightNodes)
                 .saveCanvasFrame()
                 .clearAll();
             return this;
@@ -173,6 +180,14 @@ Graph = function() {
 
         saveTable: function(highlightRectangles) {
             this.drawTable(this.GraphMatrix, this.nodes.length, this.nodes.length, highlightRectangles)
+                .saveCanvasFrame()
+                .clearAll();
+            return this;
+        },
+
+        saveGraphAndTable: function(table, row, col, highlightNodes, highlightRectangles) {
+            this.drawTable(table, row, col, highlightRectangles)
+                .drawGragh(highlightNodes)
                 .saveCanvasFrame()
                 .clearAll();
             return this;

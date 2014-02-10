@@ -54,3 +54,11 @@ $('#floyd').click(function() {
     Canvas.clearAll('canvas');
     $('#start').replaceWith('<button id="start" class="start" onclick=' + 'Floyd' + '.run("canvas")' + '>开始</button>');
 });
+
+$('#heap').click(function() {
+    clearAllTimeOut();
+    Canvas.clearAll('canvas');
+    $('#start').replaceWith('<button id="start" class="start" onclick=' + 'Heap' + '.run("canvas")' + '>开始</button>');
+});
+
+$('#insert').click(BinaryTree.insert);

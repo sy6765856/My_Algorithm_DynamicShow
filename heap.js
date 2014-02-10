@@ -8,9 +8,14 @@
 Heap = function(){
     return extend(Tree, {
         run: function(id) {
+            Canvas.init(id);
+            this.init('heap')
+                .generateTree()
+                .drawGragh();
             return this;
         },
-        insert: function() {
+        insert: function(value) {
+
             return this;
         },
         maintain: function() {

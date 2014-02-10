@@ -9,6 +9,7 @@ Tree = function() {
     return extend(Graph, {
         generateTree: function() {
             this.generateNodes()
+                .resetGraphMatrix()
                 .generateTreeEdges();
             return this;
         },
@@ -21,8 +22,32 @@ Tree = function() {
             this.addEdge(father, child, len, 'black');
             return this;
         },
-        swapNodes: function(A, B) {
-            this.step = this.step ? this.step : 20;
+        draw_Tree: function() {
+            return this;
+        },
+        drawTree: function() {
+
+            return this;
+        },
+        swapNodes: function(x, y) {
+            var a = this.nodes[x],
+                b = this.nodes[y];
+            if(a.label && b.label) {
+                var label = a.label;
+                a.label = b.label;
+                b.label = label;
+            }
+            if(a.value && b.value) {
+                var value = a.value;
+                a.value = b.value;
+                b.value = value;
+            }
+            return this;
+        },
+        saveTree: function(highlightNodes) {
+            this.drawTree()
+                .saveCanvasFrame()
+                .clearAll();
             return this;
         }
     });
