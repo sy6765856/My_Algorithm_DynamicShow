@@ -7,6 +7,30 @@
  */
 Dynamic = function() {
     return extend(AlgorithmBase, {
+        init: function(name) {
+            AlgorithmBase.init(name, 200);
+            this.queue = [];
+            this.Table = Table.init();
+            return this;
+        },
+
+        drawQueue: function() {
+            this.Table.drawArrayContent(this.queue, this.queue.length)
+                .drawTableBody(1, this.queue.length, 0, 0);
+            return this;
+        },
+
+        push: function(val) {
+            this.queue.push(val);
+            this.drawQueue();
+            return this;
+        },
+
+        pop: function() {
+            this.queue.pop();
+            this.drawQueue();
+            return this;
+        }
 
     });
 }();

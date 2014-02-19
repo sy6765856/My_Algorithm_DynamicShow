@@ -17,6 +17,7 @@ Graph = function() {
             this.first = [];
             this.nxt = [];
             this.GraphMatrix = [];
+            this.array = [];
             return this;
         },
 
@@ -135,6 +136,8 @@ Graph = function() {
         },
 
         changeNodeColor: function(index, color) {
+//            console.log(index);
+//            console.log(this.nodes[index]);
             this.nodes[index].color = color;
             return this;
         },
@@ -178,12 +181,16 @@ Graph = function() {
             return this;
         },
 
-        saveTable: function(highlightRectangles) {
-            this.drawTable(this.GraphMatrix, this.nodes.length, this.nodes.length, highlightRectangles)
+        saveTable: function(highlightRectangles, table, row, col) {
+            var table = table ? table : this.GraphMatrix,
+                row = row ? row : this.nodes.length,
+                col = col ? col : this.nodes.length;
+            this.drawTable(table, row, col, highlightRectangles)
                 .saveCanvasFrame()
                 .clearAll();
             return this;
         },
+
 
         saveGraphAndTable: function(table, row, col, highlightNodes, highlightRectangles) {
             this.drawTable(table, row, col, highlightRectangles)
@@ -193,9 +200,25 @@ Graph = function() {
             return this;
         },
 
-        drawArray: function(array, col) {
+        drawArray: function(array, col, highlightNodes) {
             Table.init()
-                .drawArray(array, col);
+                .drawArray(array, col)
+                .highLightRectangles(highlightNodes);
+            return this;
+        },
+
+        saveGraphAndArray: function(highlightNodes) {
+            this.drawArray(this.array, this.nodes.length, highlightNodes)
+                .drawGragh()
+                .saveCanvasFrame()
+                .clearAll();
+            return this;
+        },
+        saveArray: function(highlightNodes) {
+            this.drawArray(this.array, this.nodes.length, highlightNodes)
+                .saveCanvasFrame()
+                .clearAll();
+            return this;
         }
     });
 }();

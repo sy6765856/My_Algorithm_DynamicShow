@@ -8,7 +8,7 @@
 Table = function() {
     return extend(Canvas, {
         init: function(pos, tableWidth, tableHeight) {
-            this.pos = pos ? pos : {x: 100, y:100};
+            this.pos = pos ? pos : {x: 100, y:350};
             this.tableWidth = tableWidth ? tableWidth : 40;
             this.tableHeight = tableHeight ? tableHeight : 20;
             this.offset_x = this.tableWidth/2 - 3;
@@ -16,8 +16,8 @@ Table = function() {
             return this;
         },
         drawTableBody: function(row, col, rowBegin, colBegin) {
-            rowBegin = rowBegin ? rowBegin : -1;
-            colBegin = colBegin ? colBegin : -1;
+            rowBegin = (rowBegin !== null) ? rowBegin : -1;
+            colBegin = (colBegin !== null) ? colBegin : -1;
 
             var tableWidth = this.tableWidth,
                 tableHeight = this.tableHeight,

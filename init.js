@@ -61,4 +61,16 @@ $('#heap').click(function() {
     $('#start').replaceWith('<button id="start" class="start" onclick=' + 'Heap' + '.run("canvas")' + '>开始</button>');
 });
 
+$('#dijkstra').click(function() {
+    clearAllTimeOut();
+    Canvas.clearAll('canvas');
+    $('#start').replaceWith('<button id="start" class="start" onclick=' + 'Dijkstra' + '.run("canvas")' + '>开始</button>');
+});
+
+$('#greedy').click(function() {
+    clearAllTimeOut();
+    Canvas.clearAll('canvas');
+    $('#start').replaceWith('<button id="start" class="start" onclick=' + 'Greedy' + '.run("canvas")' + '>开始</button>');
+});
+
 $('#insert').click(BinaryTree.insert);

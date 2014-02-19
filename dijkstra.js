@@ -12,42 +12,56 @@ Dijkstra = function() {
             this.init('Dijkstra')
                 .generateGraph()
                 .dijkstra()
+//                .drawGragh();
                 .draw();
+            console.log(this.array);
             return this;
         },
         dij_init: function() {
-            this.d = [];
+            this.array = [];
+            this.source = 0;
             for(var i = 0; i < this.nodes.length; i++) {
-                this.d[i] = this.INF;
+                this.array[i] = this.INF;
             }
             return this;
         },
         dijkstra: function() {
             this.dij_init();
             var f = [],
-                s = 0,
-                d = this.d,
+                s = this.source,
+                d = this.array,
                 edges = this.edges,
-                n = this.nodes.length;
+                n = this.nodes.length,
+                link = [],
+                min;
             d[0] = 0;
             for(var i = 0; i < n; i++) {
                 min = this.INF;
+                var s_pre = s;
                 for(var j = 0; j < n; j++) {
                     if(!f[j] && d[j] < min) {
                         min = d[j];
                         s = j;
                     }
                 }
+
+                this.changeNodeColor(s, "green")
+                    .changeNodeColor(s_pre, 'white');
+
                 f[s] = 1;
                 for(var e = this.first[s]; e; e = this.nxt[e]) {
                     var v = edges[e][1];
                     if(edges[e][2] + d[s] < d[v]) {
                         d[v] = d[s] + edges[e][2];
+                        this.saveGraphAndArray([[0, v, 'red']]);
                     } else {
 
                     }
                 }
             }
+            this.changeNodeColor(s, "white")
+                .saveGraphAndArray();
+
             return this;
         }
 
