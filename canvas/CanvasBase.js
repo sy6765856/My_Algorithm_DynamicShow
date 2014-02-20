@@ -9,6 +9,7 @@ CanvasBase = function() {
     return extend(Base, {
 
         initCanvas: function(id, width, height) {
+            this.INF = 10000;
             var canvas = document.getElementById(id);
             canvas.width = width ? width : 450;
             canvas.height = height ? height : 500;
@@ -190,12 +191,12 @@ CanvasBase = function() {
 
 
         clear: function() {
-            this.ctx.clearRect(0, 0, INF, INF);
+            this.ctx.clearRect(0, 0, this.INF, this.INF);
             return this;
         },
 
         clearByObject: function(ctx) {
-            ctx.clearRect(0, 0, INF, INF);
+            ctx.clearRect(0, 0, this.INF, this.INF);
             return this;
         },
 

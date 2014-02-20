@@ -7,15 +7,13 @@
         <script type="text/javascript" src = "../jsLib/lib.js"></script>
         <script type="text/javascript" src = "../canvas/CanvasLib.js"></script>
         <script type="text/javascript" src = "../Base.js"></script>
-        <script type="application/x-javascript" src = "../algorithms/AlgorithmBase.js"></script>
+        <script type="text/javascript" src = "../algorithms/AlgorithmBase.js"></script>
         <script type="text/javascript" src = "../canvas/CanvasBase.js"></script>
         <script type="text/javascript" src = "../canvas/Canvas.js"></script>
         <script type="text/javascript" src = "../canvas/table.js"></script>
-        <script type="application/x-javascript" src = "../algorithms/graph/graph.js"></script>
+        <script type="text/javascript" src = "../algorithms/graph/graph.js"></script>
         <script type="text/javascript" src = "../structure/tree/tree.js"></script>
-
         <script type="text/javascript" src = "../app.js"></script>
-
         <script type="text/javascript" src = "../algorithms/graph/minum_spanning_tree/prim.js"></script>
         <script type="text/javascript" src = "../algorithms/graph/minum_spanning_tree/krusal.js"></script>
         <script type="text/javascript" src = "../algorithms/sort/sort.js"></script>
@@ -25,40 +23,13 @@
         <script type="text/javascript" src = "../structure/tree/binaryTree.js"></script>
         <script type="text/javascript" src = "../algorithms/dynamic/dynamic.js"></script>
         <script type="text/javascript" src = "../algorithms/dynamic/greedy.js"></script>
-
-
+        <script type="text/javascript" src = "../templates/template.js"></script>
+        <script type="text/javascript" src = "../menu.js"></script>
     </head>
     <body>
         <div class="title">Algorithm Dynamic Show</div>
         <div class="body">
-            <div class="col1 left-bar">
-                <div class="Item">
-                    <a href="#" class="item">动态规划</a>
-                </div>
-                <div class="Item">
-                    <a id="sort" href="#" class="item">排序算法</a>
-                </div>
-                <div class="Item">
-                    <a id="greedy" href="#" class="item">贪心算法</a>
-                </div>
-                <div class="Item">
-                    <a href="#" class="item">最小生成树</a>
-                </div>
-                <div class="Item">
-                    <a id="prim" href="#" class="item">prim</a>
-                </div>
-                <div class="Item">
-                    <a id="krusal" href="#" class="item">krusal</a>
-                </div>
-                <div class="Item">
-                    <a id="dijkstra" href="#" class="item">最短路</a>
-                </div>
-                <div class="Item">
-                    <a id = "floyd" href="#" class="item">floyd</a>
-                </div>
-                <div class="Item">
-                    <a id = "heap" href="#" class="item">heap</a>
-                </div>
+            <div id = "menu" class="col1 left-bar">
             </div>
 
             <div class="col4 context">
@@ -75,5 +46,8 @@
 
         </div>
     </body>
-    <script type="text/javascript" src = "../init.js"></script>
+    <script type="text/javascript">
+        app.init('canvas')
+                .run();
+    </script>
 </html>

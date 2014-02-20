@@ -6,16 +6,60 @@
  * To change this template use File | Settings | File Templates.
  */
 app = {
-    run: function(id) {
-        var canvas = document.getElementById(id);
-        if (canvas.getContext) {
-            var ctx = canvas.getContext("2d");
-//            Canvas.draw(ctx);
-            Canvas.drawRectangle(ctx, 230, 10, {x: 24, y: 111});
-            Canvas.drawCircle(ctx, 50, {x: 23, y: 23});
-            Canvas.drawLine(ctx, {x: 21, y: 56}, {x: 123, y: 32});
-//            Canvas.clearByObject(ctx);
-            Canvas.draw(ctx, 0);
-        }
+    init: function(id) {
+        Array.prototype.max = function(){
+            return Math.max.apply({}, this);
+        };
+        Array.prototype.min = function(){
+            return Math.min.apply({}, this);
+        };
+        frame = 0;
+        IndexINF = 100000;
+        Menu.init('menu');
+        return this;
+    },
+    run: function() {
+        $('#prim').click(function() {
+            clearAllTimeOut();
+            Canvas.clearAll('canvas');
+            $('#start').replaceWith('<button id="start" class="start" onclick=' + 'Prim' + '.run("canvas")' + '>开始</button>');
+        });
+        $('#krusal').click(function() {
+            clearAllTimeOut();
+            Canvas.clearAll('canvas');
+            $('#start').replaceWith('<button id="start" class="start" onclick=' + 'Krusal' + '.run("canvas")' + '>开始</button>');
+        });
+
+        $('#sort').click(function() {
+            clearAllTimeOut();
+            Canvas.clearAll('canvas');
+            $('#start').replaceWith('<button id="start" class="start" onclick=' + 'Sort' + '.run("canvas")' + '>开始</button>');
+        });
+
+        $('#floyd').click(function() {
+            clearAllTimeOut();
+            Canvas.clearAll('canvas');
+            $('#start').replaceWith('<button id="start" class="start" onclick=' + 'Floyd' + '.run("canvas")' + '>开始</button>');
+        });
+
+        $('#heap').click(function() {
+            clearAllTimeOut();
+            Canvas.clearAll('canvas');
+            $('#start').replaceWith('<button id="start" class="start" onclick=' + 'Heap' + '.run("canvas")' + '>开始</button>');
+        });
+
+        $('#dijkstra').click(function() {
+            clearAllTimeOut();
+            Canvas.clearAll('canvas');
+            $('#start').replaceWith('<button id="start" class="start" onclick=' + 'Dijkstra' + '.run("canvas")' + '>开始</button>');
+        });
+
+        $('#greedy').click(function() {
+            clearAllTimeOut();
+            Canvas.clearAll('canvas');
+            $('#start').replaceWith('<button id="start" class="start" onclick=' + 'Greedy' + '.run("canvas")' + '>开始</button>');
+        });
+        $('#insert').click(BinaryTree.insert);
+        return this;
     }
-}
+};
