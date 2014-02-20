@@ -5,13 +5,13 @@
  * Time: 下午9:40
  * To change this template use File | Settings | File Templates.
  */
-Krusal = function() {
+Kruskal = function() {
     return extend(Graph, {
         run: function(id) {
             Canvas.init(id);
             this.init('Krusal')
                 .generateGraph()
-                .krusal()
+                .kruskal()
                 .draw();
 //                .drawArray([1,33,4], 5);
 //                .drawTable([[1, 4, 4], [3, 4, 1], [3, 5, 3]], 3, 5);
@@ -19,7 +19,7 @@ Krusal = function() {
             return this;
         },
 
-        krusal_init: function() {
+        kruskal_init: function() {
             this.father = [];
             for(var i = 0; i < this.nodes.length; i++) {
                 this.father[i] = i;
@@ -39,8 +39,8 @@ Krusal = function() {
             return this;
         },
 
-        krusal: function() {
-            this.krusal_init();
+        kruskal: function() {
+            this.kruskal_init();
             var edges = this.edges,
                 cmp = function(a, b) {
                     return a[2] - b[2];

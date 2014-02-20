@@ -24,10 +24,10 @@ app = {
             Canvas.clearAll('canvas');
             $('#start').replaceWith('<button id="start" class="start" onclick=' + 'Prim' + '.run("canvas")' + '>开始</button>');
         });
-        $('#krusal').click(function() {
+        $('#kruskal').click(function() {
             clearAllTimeOut();
             Canvas.clearAll('canvas');
-            $('#start').replaceWith('<button id="start" class="start" onclick=' + 'Krusal' + '.run("canvas")' + '>开始</button>');
+            $('#start').replaceWith('<button id="start" class="start" onclick=' + 'Kruskal' + '.run("canvas")' + '>开始</button>');
         });
 
         $('#sort').click(function() {
