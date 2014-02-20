@@ -58,3 +58,10 @@ window.min = function(a, b) {
 window.max = function(a, b) {
     return a > b ? a : b;
 };
+
+window.isset = function(a) {
+    if(a === null || a === undefined) {
+        return 0;
+    }
+    return 1;
+};

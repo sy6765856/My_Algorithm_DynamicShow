@@ -9,6 +9,7 @@
 .col8 { float: left; width: 960px; margin: 5px;}
 
 .left-bar { margin: -20px 12px 12px 12px; background-color: gray; opacity:0.88; }
+.active { color: yellow; }
 
 .Item { font-weight: 25px; font-weight: bold; margin: 1px; padding: 6px; background-color: green; color: greenyellow; }
 .item { font-weight: 25px; font-weight: bold; margin: 1px; padding: 8px; background-color: green; color: greenyellow; text-decoration: none;}
