@@ -6,6 +6,7 @@
  * To change this template use File | Settings | File Templates.
  */
 Kruskal = function() {
+    $('#kruskal').click(FunctionTemplate.startButton('Kruskal'));
     return extend(Graph, {
         run: function(id) {
             Canvas.init(id);

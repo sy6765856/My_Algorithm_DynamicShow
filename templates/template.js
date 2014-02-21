@@ -17,12 +17,16 @@ Template = function() {
                         '</div>';
                     break;
                 case 2:
-                    ret = '<div class="Item">' +
+                    ret = '<div class="subItem">' +
                         '<a id="' + id +
-                        '" href="#" class="item">' + name +'</a>' +
+                        '" href="#" class="subitem">' + name +'</a>' +
                         '</div>';
                     break;
             }
+            return ret;
+        },
+        beginButton: function(name) {
+            var ret = '<button id="start" class="start" onclick=' + name + '.run("canvas")' + '>开始</button>';
             return ret;
         }
     };

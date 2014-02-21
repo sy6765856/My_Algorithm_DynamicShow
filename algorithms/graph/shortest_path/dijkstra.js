@@ -6,6 +6,7 @@
  * To change this template use File | Settings | File Templates.
  */
 Dijkstra = function() {
+    $('#dijkstra').click(FunctionTemplate.startButton('Dijkstra'));
     return extend(Graph, {
         run: function(id) {
             Canvas.init(id);

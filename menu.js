@@ -17,7 +17,10 @@ Menu = function() {
             this.config = {
                 'dynamic': ['动态规划', 1],
                 'sort': ['排序算法', 1],
+                'mergeSort': ['归并排序', 2],
+                'orderSort': ['顺序排序', 2],
                 'greedy': ['贪心算法', 1],
+                'activitySelect': ['活动选择', 2],
                 'minum_spanning_tree': ['最小生成树', 1],
                 'prim': ['prim', 2],
                 'kruskal': ['kruskal', 2],

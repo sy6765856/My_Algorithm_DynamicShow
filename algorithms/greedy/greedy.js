@@ -6,8 +6,9 @@
  * To change this template use File | Settings | File Templates.
  */
 Greedy = function() {
+    $('#greedy').click(FunctionTemplate.startButton('Greedy'));
     return extend(Dynamic, {
-        run: function(id) {
+        init: function(id) {
             Canvas.init(id);
             this.init('Greedy')
                 .generateQueue()

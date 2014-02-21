@@ -19,47 +19,6 @@ app = {
         return this;
     },
     run: function() {
-        $('#prim').click(function() {
-            clearAllTimeOut();
-            Canvas.clearAll('canvas');
-            $('#start').replaceWith('<button id="start" class="start" onclick=' + 'Prim' + '.run("canvas")' + '>开始</button>');
-        });
-        $('#kruskal').click(function() {
-            clearAllTimeOut();
-            Canvas.clearAll('canvas');
-            $('#start').replaceWith('<button id="start" class="start" onclick=' + 'Kruskal' + '.run("canvas")' + '>开始</button>');
-        });
-
-        $('#sort').click(function() {
-            clearAllTimeOut();
-            Canvas.clearAll('canvas');
-            $('#start').replaceWith('<button id="start" class="start" onclick=' + 'Sort' + '.run("canvas")' + '>开始</button>');
-        });
-
-        $('#floyd').click(function() {
-            clearAllTimeOut();
-            Canvas.clearAll('canvas');
-            $('#start').replaceWith('<button id="start" class="start" onclick=' + 'Floyd' + '.run("canvas")' + '>开始</button>');
-        });
-
-        $('#heap').click(function() {
-            clearAllTimeOut();
-            Canvas.clearAll('canvas');
-            $('#start').replaceWith('<button id="start" class="start" onclick=' + 'Heap' + '.run("canvas")' + '>开始</button>');
-        });
-
-        $('#dijkstra').click(function() {
-            clearAllTimeOut();
-            Canvas.clearAll('canvas');
-            $('#start').replaceWith('<button id="start" class="start" onclick=' + 'Dijkstra' + '.run("canvas")' + '>开始</button>');
-        });
-
-        $('#greedy').click(function() {
-            clearAllTimeOut();
-            Canvas.clearAll('canvas');
-            $('#start').replaceWith('<button id="start" class="start" onclick=' + 'Greedy' + '.run("canvas")' + '>开始</button>');
-        });
-        $('#insert').click(BinaryTree.insert);
         return this;
     }
 };
