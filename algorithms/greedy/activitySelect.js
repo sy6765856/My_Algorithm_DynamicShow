@@ -6,6 +6,7 @@
  * To change this template use File | Settings | File Templates.
  */
 ActivitySelect = function() {
+    $('#activitySelect').click(FunctionTemplate.startButton('ActivitySelect'));
     return extend(Greedy, {
 
     });
