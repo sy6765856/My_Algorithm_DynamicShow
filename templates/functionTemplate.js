@@ -13,6 +13,11 @@ FunctionTemplate = function() {
                 Canvas.clearAll('canvas');
                 $('#start').replaceWith(Template.beginButton(name));
             };
+        },
+        addButton: function(name) {
+            return function() {
+                $('#add').replaceWith(Template.addButton(name));
+            };
         }
     };
 }();

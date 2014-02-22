@@ -65,3 +65,13 @@ window.isset = function(a) {
     }
     return 1;
 };
+window.warnNumber = function(value, warnInfo) {
+    $("#input2").val('');
+    if(isNaN(value)) {
+        alert(warnInfo);
+        $("#input1").val('').focus();
+        return 1;
+    }
+    $("#input1").val('').focus();
+    return 0;
+};

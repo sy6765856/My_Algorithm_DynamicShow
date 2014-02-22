@@ -22,6 +22,7 @@ Graph = function() {
         },
 
         addNodes: function(node) {
+            node.r = 10;
             this.nodes.push(node);
             return this;
         },
@@ -41,11 +42,11 @@ Graph = function() {
         },
 
         generateNodes: function() {
-            this.addNodes({r:6, o:{x:34,y:34}})
-                .addNodes({r:6, o:{x:64,y:34}})
-                .addNodes({r:6, o:{x:124,y:154}})
-                .addNodes({r:6, o:{x:150,y:33}})
-                .addNodes({r:6, o:{x:300,y:300}});
+            this.addNodes({o:{x:34,y:34}})
+                .addNodes({o:{x:64,y:34}})
+                .addNodes({o:{x:124,y:154}})
+                .addNodes({o:{x:150,y:33}})
+                .addNodes({o:{x:300,y:300}});
             return this;
         },
         generateEdges: function() {
@@ -103,8 +104,10 @@ Graph = function() {
             if(nodes) {
                 for(var key in nodes) {
                     var node = nodes[key],
-                        str = node.label ? node.label : key;
-                    Canvas.drawCircle(node.r, node.o, {str: key, color: node.color});
+                        str = node.label ? node.label : key,
+                        r = isset(node.r) ? node.r : 10;
+
+                    Canvas.drawCircle(r, node.o, {str: key, color: node.color});
                     this.save(Canvas.drawCircle, [node.r, node.o, {str: key, color: node.color}]);
                 }
             }

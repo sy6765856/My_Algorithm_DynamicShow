@@ -21,7 +21,7 @@ Menu = function() {
                 'orderSort': ['顺序排序', 2],
                 'greedy': ['贪心算法', 1],
                 'activitySelect': ['活动选择', 2],
-                'minum_spanning_tree': ['最小生成树', 1],
+                'minimum_spanning_tree': ['最小生成树', 1],
                 'prim': ['prim', 2],
                 'kruskal': ['kruskal', 2],
                 'shortest_path': ['最短路径', 1],

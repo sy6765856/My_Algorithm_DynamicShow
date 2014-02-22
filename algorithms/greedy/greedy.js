@@ -10,15 +10,16 @@ Greedy = function() {
     return extend(Dynamic, {
         init: function(id) {
             Canvas.init(id);
-            this.init('Greedy')
-                .generateQueue()
-                .drawQueue();
             return this;
         },
         generateQueue: function() {
             this.push(1)
                 .push(2)
                 .push(3);
+            return this;
+        },
+        drawActivities: function(width, height, pos) {
+            Canvas.drawActivities(width, height, pos);
             return this;
         }
     });

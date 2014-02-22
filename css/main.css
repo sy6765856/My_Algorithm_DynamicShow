@@ -20,3 +20,5 @@
 .context {}
 
 .canvas { margin: 25px; background-color: darkgray; border: 3px solid gray;}
+
+.buttonFrame { margin: 10px 0 0 25px;}

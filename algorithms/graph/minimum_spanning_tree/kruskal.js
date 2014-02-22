@@ -14,8 +14,6 @@ Kruskal = function() {
                 .generateGraph()
                 .kruskal()
                 .draw();
-//                .drawArray([1,33,4], 5);
-//                .drawTable([[1, 4, 4], [3, 4, 1], [3, 5, 3]], 3, 5);
             console.log(this.minLength);
             return this;
         },

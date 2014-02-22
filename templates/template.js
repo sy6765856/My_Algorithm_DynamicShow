@@ -28,6 +28,14 @@ Template = function() {
         beginButton: function(name) {
             var ret = '<button id="start" class="start" onclick=' + name + '.run("canvas")' + '>开始</button>';
             return ret;
+        },
+        addButton: function(name) {
+            var ret = '<button id="add" class="add" onclick=' + name + ".add($('#input1').val(),$('#input2').val());" + '>插入</button>';
+            return ret;
+        },
+        addSingleButton: function(name) {
+            var ret = '<button id="add" class="add" onclick=' + name + ".add($('#input1').val());" + '>插入</button>';
+            return ret;
         }
     };
 }();

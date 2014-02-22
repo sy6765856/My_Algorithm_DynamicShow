@@ -18,6 +18,10 @@ Canvas = function(){
                 return this;
             },
 
+            drawActivities: function() {
+                return this;
+            },
+
             drawSquareArray: function(array, width) {
 
             },
