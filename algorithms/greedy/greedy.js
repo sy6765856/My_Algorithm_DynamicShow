@@ -18,8 +18,41 @@ Greedy = function() {
                 .push(3);
             return this;
         },
-        drawActivities: function(width, height, pos) {
-            Canvas.drawActivities(width, height, pos);
+        setPos: function(pos) {
+            this.pos = pos;
+            return this;
+        },
+        setWidth: function(width) {
+            this.width = width;
+            return this;
+        },
+        setHeight: function(height) {
+            this.height = height;
+            return this;
+        },
+        setSpacing: function(spacing) {
+            this.spacing = spacing;
+            return this;
+        },
+        checkParameters: function() {
+            if(!isset(this.width)) {
+                this.width = 300;
+            }
+            if(!isset(this.height)) {
+                this.height = 10;
+            }
+            if(!isset(this.pos)) {
+                this.pos = {x: 10, y: 10};
+            }
+            if(!isset(this.spacing)) {
+                this.spacing = 15;
+            }
+            return this;
+        },
+        drawActivities: function(array, minimum, maximum) {
+            this.checkParameters();
+            Canvas.clearAll()
+                .drawActivities(array, minimum, maximum, this.pos, this.width, this.height, this.spacing);
             return this;
         }
     });

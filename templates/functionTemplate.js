@@ -18,6 +18,11 @@ FunctionTemplate = function() {
             return function() {
                 $('#add').replaceWith(Template.addButton(name));
             };
+        },
+        resetButton: function(name) {
+            return function() {
+                $('#reset').replaceWith(Template.resetButton(name));
+            };
         }
     };
 }();

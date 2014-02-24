@@ -8,6 +8,7 @@
 ActivitySelect = function() {
     $('#activitySelect').click(FunctionTemplate.startButton('ActivitySelect'));
     $('#activitySelect').click(FunctionTemplate.addButton('ActivitySelect'));
+    $('#activitySelect').click(FunctionTemplate.resetButton('ActivitySelect'));
     Canvas.init('canvas');
     return extend(Greedy, {
         activities: [],
@@ -25,8 +26,13 @@ ActivitySelect = function() {
             this.maximum = -this.inf;
             return this;
         },
+        reset: function() {
+            this.selfInit();
+            return this;
+        },
         run: function() {
-            this.init('canvas');
+            this.init('canvas')
+                .activitySelect();
             return this;
         },
         add: function(begin, end) {
@@ -49,9 +55,11 @@ ActivitySelect = function() {
         },
         insert: function(obj) {
             this.activities.push(obj);
-//            this.drawRectangle(this.widthPer * (obj[1] - obj[0]), this.height, this.pos);
-//            this.pos.y += this.spacing + this.height;
-            this.drawActivities(this.activities);
+            this.drawActivities(this.activities, this.minimum, this.maximum);
+            return this;
+        },
+        activitySelect: function() {
+
             return this;
         }
     });

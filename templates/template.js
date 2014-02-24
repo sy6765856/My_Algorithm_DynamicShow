@@ -36,6 +36,10 @@ Template = function() {
         addSingleButton: function(name) {
             var ret = '<button id="add" class="add" onclick=' + name + ".add($('#input1').val());" + '>插入</button>';
             return ret;
+        },
+        resetButton: function(name) {
+            var ret = '<button id="reset" class="reset" onclick=' + name + ".reset();" + '>重置</button>';;
+            return ret;
         }
     };
 }();

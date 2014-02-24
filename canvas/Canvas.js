@@ -18,7 +18,16 @@ Canvas = function(){
                 return this;
             },
 
-            drawActivities: function() {
+            drawActivities: function(array, minimum, maximum, pos, width, height, spacing) {
+                var widthPer = width/(maximum - minimum + 1),
+                    row = 0;
+                for(var key in array) {
+                    var st = array[key][0],
+                        ed = array[key][1],
+                        ps = { x: pos.x + (ed - minimum + 1)*widthPer, y: pos.y + row*(height+spacing) + height};
+                    this.drawRectangle(widthPer * (ed - st + 1), height, ps);
+                    row ++;
+                }
                 return this;
             },
 
