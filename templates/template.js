@@ -24,28 +24,22 @@ Template = function() {
             return ret;
         },
         navBarBottom: function() {
-            var ret = '<li class="menubottom">&nbsp</li>&nbsp';
-            return ret;
+            return '<li class="menubottom">&nbsp</li>&nbsp';
         },
         beginButton: function(name) {
-            var ret = '<button id="start" class="start" onclick=' + name + '.run("canvas")' + '>开始</button>';
-            return ret;
+            return '<button id="start" class="start" onclick=' + name + '.run("canvas")' + '>开始</button>';
         },
         addButton: function(name) {
-            var ret = '<button id="add" class="add" onclick=' + name + ".add($('#input1').val(),$('#input2').val());" + '>插入</button>';
-            return ret;
+            return'<button id="add" class="add" onclick=' + name + ".add($('#input1').val(),$('#input2').val());" + '>插入</button>';
         },
         addSingleButton: function(name) {
-            var ret = '<button id="add" class="add" onclick=' + name + ".add($('#input1').val());" + '>插入</button>';
-            return ret;
+            return '<button id="add" class="add" onclick=' + name + ".add($('#input1').val());" + '>插入</button>';
         },
         resetButton: function(name) {
-            var ret = '<button id="reset" class="reset" onclick=' + name + ".reset();" + '>重置</button>';;
-            return ret;
+            return '<button id="reset" class="reset" onclick=' + name + ".reset();" + '>重置</button>';;
         },
         popButton: function(name) {
-            var ret = '<button id="pop" class="pop" onclick=' + name + ".pop();" + '>出栈</button>';;
-            return ret;
+            return '<button id="pop" class="pop" onclick=' + name + ".pop();" + '>出栈</button>';
         }
     };
 }();

@@ -30,7 +30,7 @@
     <file path="/binaryTree.js" changelist="b8866d45-fac2-4c5e-ab85-e2969b0a6841" time="1392034581511" ignored="false" />
     <file path="/greedy.js" changelist="b8866d45-fac2-4c5e-ab85-e2969b0a6841" time="1393230445076" ignored="false" />
     <file path="/menu.js" changelist="b8866d45-fac2-4c5e-ab85-e2969b0a6841" time="1393395708627" ignored="false" />
-    <file path="/template.js" changelist="b8866d45-fac2-4c5e-ab85-e2969b0a6841" time="1393418143751" ignored="false" />
+    <file path="/template.js" changelist="b8866d45-fac2-4c5e-ab85-e2969b0a6841" time="1393425796600" ignored="false" />
     <file path="/mergeSort.js" changelist="b8866d45-fac2-4c5e-ab85-e2969b0a6841" time="1393424443532" ignored="false" />
     <file path="/orderSort.js" changelist="b8866d45-fac2-4c5e-ab85-e2969b0a6841" time="1393423619202" ignored="false" />
     <file path="/activitySelect.js" changelist="b8866d45-fac2-4c5e-ab85-e2969b0a6841" time="1393231257797" ignored="false" />
@@ -59,15 +59,6 @@
         <entry file="file://$PROJECT_DIR$/structure/queue.js">
           <provider selected="true" editor-type-id="text-editor">
             <state line="19" column="28" selection-start="634" selection-end="634" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="menu.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/menu.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="34" column="16" selection-start="933" selection-end="933" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -109,10 +100,28 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CanvasBase.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="CanvasBase.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/canvas/CanvasBase.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="84" column="31" selection-start="2417" selection-end="2417" vertical-scroll-proportion="0.6685633">
+            <state line="84" column="31" selection-start="2417" selection-end="2417" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="functionTemplate.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/functionTemplate.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="31" column="32" selection-start="976" selection-end="976" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="template.js" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/templates/template.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="42" column="0" selection-start="1616" selection-end="1616" vertical-scroll-proportion="0.77240396">
               <folding />
             </state>
           </provider>
@@ -136,15 +145,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="table.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/canvas/table.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="106" column="8" selection-start="4058" selection-end="4058" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
     </leaf>
   </component>
   <component name="FindManager">
@@ -163,7 +163,6 @@
         <option value="$PROJECT_DIR$/html/index.html" />
         <option value="$PROJECT_DIR$/templates/functionTemplate.js" />
         <option value="$PROJECT_DIR$/structure/stack.js" />
-        <option value="$PROJECT_DIR$/templates/template.js" />
         <option value="$PROJECT_DIR$/menu.js" />
         <option value="$PROJECT_DIR$/structure/queue.js" />
         <option value="$PROJECT_DIR$/algorithms/sort/sort.js" />
@@ -171,6 +170,7 @@
         <option value="$PROJECT_DIR$/algorithms/sort/mergeSort.js" />
         <option value="$PROJECT_DIR$/canvas/Canvas.js" />
         <option value="$PROJECT_DIR$/canvas/CanvasBase.js" />
+        <option value="$PROJECT_DIR$/templates/template.js" />
       </list>
     </option>
   </component>
@@ -659,20 +659,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/functionTemplate.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="32" selection-start="976" selection-end="976" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/template.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="85" selection-start="1161" selection-end="1161" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/menu.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="34" column="16" selection-start="933" selection-end="933" vertical-scroll-proportion="0.0">
@@ -745,7 +731,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/canvas/CanvasBase.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="84" column="31" selection-start="2417" selection-end="2417" vertical-scroll-proportion="0.6685633">
+        <state line="84" column="31" selection-start="2417" selection-end="2417" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/functionTemplate.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="31" column="32" selection-start="976" selection-end="976" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/template.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="42" column="0" selection-start="1616" selection-end="1616" vertical-scroll-proportion="0.77240396">
           <folding />
         </state>
       </provider>
