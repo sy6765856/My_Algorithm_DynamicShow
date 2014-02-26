@@ -7,12 +7,17 @@
  */
 MergeSort = function() {
     $('#mergeSort').click(FunctionTemplate.startButton('MergeSort'));
+    $('#mergeSort').click(FunctionTemplate.addSingleButton('MergeSort'));
+    $('#mergeSort').click(FunctionTemplate.resetButton('MergeSort'));
+    $('#mergeSort').click(FunctionTemplate.popButton('MergeSort'));
     return extend(Sort, {
         run: function(id) {
-            this.merge_Sort(Canvas.init(id), this.produceRandomArray(10));
+//            this.produceRandomArray(10)
+            this.merge_Sort(Canvas.init(id));
             return this;
         },
-        merge_Sort: function(CanvasObject, array){
+        merge_Sort: function(CanvasObject){
+            var array = this.array;
             this.init('MergeSort', 100)
                 .QUEUE.push(array.slice(0));
 

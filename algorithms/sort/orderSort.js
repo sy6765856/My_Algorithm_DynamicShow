@@ -7,12 +7,17 @@
  */
 OrderSort = function() {
     $('#orderSort').click(FunctionTemplate.startButton('OrderSort'));
+    $('#orderSort').click(FunctionTemplate.addSingleButton('OrderSort'));
+    $('#orderSort').click(FunctionTemplate.resetButton('OrderSort'));
+    $('#orderSort').click(FunctionTemplate.popButton('OrderSort'));
     return extend(Sort, {
         run: function(id) {
-            this.orderSort(Canvas.init(id), this.produceRandomArray(10));
+//            this.produceRandomArray(10)
+            this.orderSort(Canvas.init(id));
             return this;
         },
-        orderSort: function(CanvasObject, array){
+        orderSort: function(CanvasObject){
+            var array = this.array;
             this.init('OrderSort', 500)
                 .QUEUE.push(array.slice(0));
 

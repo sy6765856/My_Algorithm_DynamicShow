@@ -139,8 +139,6 @@ Graph = function() {
         },
 
         changeNodeColor: function(index, color) {
-//            console.log(index);
-//            console.log(this.nodes[index]);
             this.nodes[index].color = color;
             return this;
         },
@@ -204,7 +202,6 @@ Graph = function() {
         },
 
         drawArray: function(array, col, highlightNodes) {
-//            console.log(array, col);
             Table.init()
                 .drawArray(array, col)
                 .highLightRectangles(highlightNodes);

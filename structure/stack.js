@@ -9,6 +9,8 @@ Stack = function() {
     $('#stack').click(FunctionTemplate.startButton('Stack'));
     $('#stack').click(FunctionTemplate.addSingleButton('Stack'));
     $('#stack').click(FunctionTemplate.resetButton('Stack'));
+    $('#stack').click(FunctionTemplate.popButton('Stack'));
+    Table.init();
     return extend(AlgorithmBase, {
         stack: [],
         init: function() {
@@ -16,6 +18,12 @@ Stack = function() {
         },
         reset: function() {
             this.stack = [];
+            this.clearAll();
+            return this;
+        },
+        add: function(v) {
+            this.push(v);
+            $("#input1").val('').focus();
             return this;
         },
         push: function(v) {
@@ -29,7 +37,8 @@ Stack = function() {
             return this;
         },
         drawStack: function() {
-            Table.drawArray(this.stack, this.stack.length);
+            this.clearAll();
+            Table.drawStackAndQueue(this.stack, this.stack.length);
             return this;
         }
     });

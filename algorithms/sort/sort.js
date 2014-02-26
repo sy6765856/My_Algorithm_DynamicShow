@@ -7,15 +7,34 @@
  */
 Sort = function() {
     return extend(AlgorithmBase, {
+        array: [],
         run: function(id){
             return this;
         },
         produceRandomArray: function(len){
-            var ret = [];
+            this.array = [];
             for(var i = 0; i < len; i++){
-                ret[i] = Math.random()*100;
+                this.array[i] = Math.random()*100;
             }
-            return ret;
+            return this;
+        },
+        reset: function() {
+            this.array = [];
+            this.clearAll();
+            return this;
+        },
+        add: function(v) {
+            if(warnNumber(v, '输入应该是数字！')) {
+                return this;
+            }
+            this.array.push(Number(v));
+            this.drawSortArray();
+            return this;
+        },
+        drawSortArray: function() {
+            this.clearAll();
+            Table.drawStackAndQueue(this.array, this.array.length);
+            return this;
         }
     });
 }();

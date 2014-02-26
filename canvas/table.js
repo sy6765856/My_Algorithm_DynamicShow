@@ -15,15 +15,13 @@ Table = function() {
             this.offset_y = this.tableHeight/2 + 3;
             return this;
         },
-        drawTableBody: function(row, col, rowBegin, colBegin) {
+        drawTableBody: function(row, col, rowBegin, colBegin, pos) {
             rowBegin = isset(rowBegin) ? rowBegin : -1;
             colBegin = isset(colBegin) ? colBegin : -1;
 
-//            console.log(rowBegin, row);
-//            console.log(colBegin, col);
             var tableWidth = this.tableWidth,
                 tableHeight = this.tableHeight,
-                pos = this.pos,
+                pos = pos ? pos : this.pos,
                 x_now, y_now;
             for(var i = rowBegin; i <= row; i++) {
                 y_now = pos.y + i * tableHeight;
@@ -72,6 +70,18 @@ Table = function() {
             }
             return this;
         },
+        drawStackAndQueueContent: function(array, row) {
+            var tableHeight = this.tableHeight,
+                offset_x = this.offset_x,
+                offset_y = this.offset_y,
+                pos = this.pos;
+            for(var i = 0; i < row; i++) {
+                if(array[i] !== undefined) {
+                    this.writeText(array[i], {x: pos.x +  offset_x, y: pos.y - i * tableHeight + offset_y});
+                }
+            }
+            return this;
+        },
         separateGrad: function(kind) {
             var pos = this.pos;
             if(kind == 2) {
@@ -94,8 +104,14 @@ Table = function() {
             return this;
         },
 
+        drawStackAndQueue: function(array, row) {
+            this.drawTableBody(row, 1, 0, 0, {x: this.pos.x, y: this.pos.y - this.tableHeight * (row-1)})
+                .drawStackAndQueueContent(array, row);
+            return this;
+        },
+
         drawArray: function(array, col) {
-            this.drawTableBody(1, col)
+            this.drawTableBody(1, col, 0, 0)
                 .drawArrayContent(array, col);
             return this;
         },

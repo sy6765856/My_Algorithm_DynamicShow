@@ -15,22 +15,27 @@ Menu = function() {
         },
         load: function() {
             this.config = {
+                'structure': ['数据结构', 1],
+                'stack': ['栈', 2],
+                'queue': ['队列', 2],
+                'heap': ['堆', 2],
+
                 'dynamic': ['动态规划', 1],
+
                 'sort': ['排序算法', 1],
                 'mergeSort': ['归并排序', 2],
                 'orderSort': ['顺序排序', 2],
+
                 'greedy': ['贪心算法', 1],
                 'activitySelect': ['活动选择', 2],
+
                 'minimum_spanning_tree': ['最小生成树', 1],
                 'prim': ['prim', 2],
                 'kruskal': ['kruskal', 2],
+
                 'shortest_path': ['最短路径', 1],
                 'dijkstra': ['dijkstra', 2],
-                'floyd': ['floyd', 2],
-                'structure': ['数据结构', 1],
-                'heap': ['堆', 2],
-                'stack': ['栈', 2],
-                'queue': ['队列', 2]
+                'floyd': ['floyd', 2]
             };
             return this;
         },

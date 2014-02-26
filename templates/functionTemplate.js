@@ -14,6 +14,11 @@ FunctionTemplate = function() {
                 $('#start').replaceWith(Template.beginButton(name));
             };
         },
+        addSingleButton: function(name) {
+            return function() {
+                $('#add').replaceWith(Template.addSingleButton(name));
+            };
+        },
         addButton: function(name) {
             return function() {
                 $('#add').replaceWith(Template.addButton(name));
@@ -23,6 +28,11 @@ FunctionTemplate = function() {
             return function() {
                 $('#reset').replaceWith(Template.resetButton(name));
             };
+        },
+        popButton: function(name) {
+            return function() {
+                $('#pop').replaceWith(Template.popButton(name));
+            }
         }
     };
 }();

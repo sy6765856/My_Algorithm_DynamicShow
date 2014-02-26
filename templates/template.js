@@ -42,6 +42,10 @@ Template = function() {
         resetButton: function(name) {
             var ret = '<button id="reset" class="reset" onclick=' + name + ".reset();" + '>重置</button>';;
             return ret;
+        },
+        popButton: function(name) {
+            var ret = '<button id="pop" class="pop" onclick=' + name + ".pop();" + '>出栈</button>';;
+            return ret;
         }
     };
 }();

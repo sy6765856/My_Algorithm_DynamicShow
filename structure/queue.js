@@ -9,6 +9,7 @@ Queue = function() {
     $('#queue').click(FunctionTemplate.startButton('Queue'));
     $('#queue').click(FunctionTemplate.addSingleButton('Queue'));
     $('#queue').click(FunctionTemplate.resetButton('Queue'));
+    $('#queue').click(FunctionTemplate.popButton('Queue'));
     return extend(AlgorithmBase, {
         queue: [],
         init: function() {
@@ -16,6 +17,12 @@ Queue = function() {
         },
         reset: function() {
             this.queue = [];
+            this.clearAll();
+            return this;
+        },
+        add: function(v) {
+            this.push(v);
+            $("#input1").val('').focus();
             return this;
         },
         push: function(v) {
@@ -23,13 +30,14 @@ Queue = function() {
             this.drawQueue();
             return this;
         },
-        shift: function() {
+        pop: function() {
             this.queue.shift();
             this.drawQueue();
             return this;
         },
         drawQueue: function() {
-            Table.drawArray(this.stack, this.stack.length);
+            this.clearAll();
+            Table.drawStackAndQueue(this.queue, this.queue.length);
             return this;
         }
     });

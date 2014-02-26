@@ -89,7 +89,7 @@ CanvasBase = function() {
             var ps = {x: pos.x - width, y: pos.y-height};
             ctx.fillRect(ps.x, ps.y, width, height);
             if(str){
-                this.writeText(str, ps);
+                this.writeText(str, { x: ps.x, y: ps.y - 10});
             }
             return this;
         },
