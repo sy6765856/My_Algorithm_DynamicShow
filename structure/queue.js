@@ -1,34 +1,34 @@
 /**
  * Created with JetBrains WebStorm.
  * User: sy6765856
- * Date: 14-2-10
- * Time: 上午12:02
+ * Date: 14-2-24
+ * Time: 下午6:10
  * To change this template use File | Settings | File Templates.
  */
-Stack = function() {
-    $('#stack').click(FunctionTemplate.startButton('Stack'));
-    $('#stack').click(FunctionTemplate.addSingleButton('Stack'));
-    $('#stack').click(FunctionTemplate.resetButton('Stack'));
+Queue = function() {
+    $('#queue').click(FunctionTemplate.startButton('Queue'));
+    $('#queue').click(FunctionTemplate.addSingleButton('Queue'));
+    $('#queue').click(FunctionTemplate.resetButton('Queue'));
     return extend(AlgorithmBase, {
-        stack: [],
+        queue: [],
         init: function() {
             return this;
         },
         reset: function() {
-            this.stack = [];
+            this.queue = [];
             return this;
         },
         push: function(v) {
-            this.stack.push(v);
-            this.drawStack();
+            this.queue.push(v);
+            this.drawQueue();
             return this;
         },
-        pop: function() {
-            this.stack.pop();
-            this.drawStack();
+        shift: function() {
+            this.queue.shift();
+            this.drawQueue();
             return this;
         },
-        drawStack: function() {
+        drawQueue: function() {
             Table.drawArray(this.stack, this.stack.length);
             return this;
         }

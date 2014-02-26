@@ -11,8 +11,8 @@ CanvasBase = function() {
         initCanvas: function(id, width, height) {
             this.INF = 10000;
             var canvas = document.getElementById(id);
-            canvas.width = width ? width : 450;
-            canvas.height = height ? height : 500;
+            canvas.width = width ? width : 710;
+            canvas.height = height ? height : 690;
             this.canvas = canvas;
 
             if (canvas.getContext) {

@@ -27,13 +27,20 @@ Menu = function() {
                 'shortest_path': ['最短路径', 1],
                 'dijkstra': ['dijkstra', 2],
                 'floyd': ['floyd', 2],
-                'heap': ['堆', 1]
+                'structure': ['数据结构', 1],
+                'heap': ['堆', 2],
+                'stack': ['栈', 2],
+                'queue': ['队列', 2]
             };
             return this;
         },
         render: function() {
             this.generateContext();
             $(this.area).html(this.context);
+            $('.menutitle').before(Template.navBarBottom());
+            var li = $('li');
+            li.last().after(Template.navBarBottom());
+            li.first().remove();
             return this;
         },
         generateContext: function() {

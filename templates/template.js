@@ -11,18 +11,20 @@ Template = function() {
             var ret = '';
             switch (level) {
                 case 1:
-                    ret =  '<div class="Item">' +
-                        '<a id ="' + id +
-                        '" href="#" class="item">' + name + '</a>' +
-                        '</div>';
+                    ret =  '<li class="menutitle" id="' + id + '">' +
+                        name + '</li>';
                     break;
                 case 2:
-                    ret = '<div class="subItem">' +
+                    ret = '<li>' +
                         '<a id="' + id +
-                        '" href="#" class="subitem">' + name +'</a>' +
-                        '</div>';
+                        '" href="#">' + name +'</a>' +
+                        '</li>';
                     break;
             }
+            return ret;
+        },
+        navBarBottom: function() {
+            var ret = '<li class="menubottom">&nbsp</li>&nbsp';
             return ret;
         },
         beginButton: function(name) {
