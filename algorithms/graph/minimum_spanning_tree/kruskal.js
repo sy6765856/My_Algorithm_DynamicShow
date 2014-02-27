@@ -7,14 +7,19 @@
  */
 Kruskal = function() {
     $('#kruskal').click(FunctionTemplate.startButton('Kruskal'));
+    $('#kruskal').click(FunctionTemplate.randomButton('Kruskal', '产生随机图'));
+    $('#kruskal').click(FunctionTemplate.clearButton('add'));
+    $('#kruskal').click(FunctionTemplate.clearButton('pop'));
     return extend(Graph, {
         run: function(id) {
             Canvas.init(id);
-            this.init('Krusal')
-                .generateGraph()
+            this.random()
                 .kruskal()
                 .draw();
-            console.log(this.minLength);
+            return this;
+        },
+        drawAfter: function() {
+            $('#answer').html('最小生成树边权和为：' + this.minLength);
             return this;
         },
 

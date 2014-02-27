@@ -6,6 +6,12 @@
  * To change this template use File | Settings | File Templates.
  */
 Menu = function() {
+    $('#menu').click(function(e) {
+        e = window.event ? window.event : e;
+        var who = e.target ? e.target : e.srcElement;
+        who.className = 'active';
+        $('#answer').html('');
+    });
     return {
         init: function(id) {
             this.area = '#' + id;

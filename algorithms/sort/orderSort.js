@@ -6,14 +6,15 @@
  * To change this template use File | Settings | File Templates.
  */
 OrderSort = function() {
-    $('#orderSort').click(FunctionTemplate.startButton('OrderSort'));
-    $('#orderSort').click(FunctionTemplate.addSingleButton('OrderSort'));
+    $('#orderSort').click(FunctionTemplate.startButton('OrderSort', '开始动态演示'));
+    $('#orderSort').click(FunctionTemplate.addSingleButton('OrderSort', '输入'));
     $('#orderSort').click(FunctionTemplate.resetButton('OrderSort'));
-    $('#orderSort').click(FunctionTemplate.popButton('OrderSort'));
+    $('#orderSort').click(FunctionTemplate.randomButton('OrderSort'));
+    $('#orderSort').click(FunctionTemplate.clearButton('pop'));
+    Canvas.init('canvas');
     return extend(Sort, {
         run: function(id) {
-//            this.produceRandomArray(10)
-            this.orderSort(Canvas.init(id));
+            this.orderSort();
             return this;
         },
         orderSort: function(CanvasObject){

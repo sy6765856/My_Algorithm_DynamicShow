@@ -7,6 +7,9 @@
  */
 Prim = function() {
     $('#prim').click(FunctionTemplate.startButton('Prim'));
+    $('#prim').click(FunctionTemplate.randomButton('Prim', '产生随机图'));
+    $('#prim').click(FunctionTemplate.clearButton('add'));
+    $('#prim').click(FunctionTemplate.clearButton('pop'));
     return extend(Graph, {
         run: function(id){
             Canvas.init(id);
@@ -14,7 +17,7 @@ Prim = function() {
                 .generateGraph()
                 .prim()
                 .draw();
-            console.log(this.minLength);
+            $('#answer').html('最小生成树边权和为：' + this.minLength);
             return this;
         },
         prim_init: function(){

@@ -6,14 +6,17 @@
  * To change this template use File | Settings | File Templates.
  */
 Stack = function() {
-    $('#stack').click(FunctionTemplate.startButton('Stack'));
-    $('#stack').click(FunctionTemplate.addSingleButton('Stack'));
+    $('#stack').click(FunctionTemplate.clearButton('start'));
+    $('#stack').click(FunctionTemplate.clearButton('random'));
+    $('#stack').click(FunctionTemplate.addSingleButton('Stack', '入栈'));
     $('#stack').click(FunctionTemplate.resetButton('Stack'));
-    $('#stack').click(FunctionTemplate.popButton('Stack'));
+    $('#stack').click(FunctionTemplate.popButton('Stack', '出栈'));
     Table.init();
     return extend(AlgorithmBase, {
         stack: [],
         init: function() {
+            this.stack = [];
+            this.drawStack();
             return this;
         },
         reset: function() {
@@ -38,7 +41,7 @@ Stack = function() {
         },
         drawStack: function() {
             this.clearAll();
-            Table.drawStackAndQueue(this.stack, this.stack.length);
+            Table.drawStackAndQueue(this.stack, this.stack.length, 'stack');
             return this;
         }
     });

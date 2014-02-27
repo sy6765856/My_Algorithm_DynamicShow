@@ -11,13 +11,14 @@ Template = function() {
             var ret = '';
             switch (level) {
                 case 1:
-                    ret =  '<li class="menutitle" id="' + id + '">' +
+                    ret =  '<li class="menutitle" id = ' + id +
+                        '>' +
                         name + '</li>';
                     break;
                 case 2:
                     ret = '<li>' +
-                        '<a id="' + id +
-                        '" href="#">' + name +'</a>' +
+                        '<a  href="#" id =' + id +
+                        '>' + name +'</a>' +
                         '</li>';
                     break;
             }
@@ -26,20 +27,34 @@ Template = function() {
         navBarBottom: function() {
             return '<li class="menubottom">&nbsp</li>&nbsp';
         },
-        beginButton: function(name) {
-            return '<button id="start" class="start" onclick=' + name + '.run("canvas")' + '>开始</button>';
+        beginButton: function(name, str) {
+            str = isset(str) ? str : '开始';
+            return '<button class="start" onclick=' + name + '.run("canvas")' + '>' +
+                str +
+                '</button>';
         },
         addButton: function(name) {
-            return'<button id="add" class="add" onclick=' + name + ".add($('#input1').val(),$('#input2').val());" + '>插入</button>';
+            return'<button class="add" onclick=' + name + ".add($('#input1').val(),$('#input2').val());" + '>插入</button>';
         },
-        addSingleButton: function(name) {
-            return '<button id="add" class="add" onclick=' + name + ".add($('#input1').val());" + '>插入</button>';
+        addSingleButton: function(name, str) {
+            str = isset(str) ? str : '插入';
+            return '<button class="add" onclick=' + name + ".add($('#input1').val());" + '>' +
+                str + '</button>';
         },
         resetButton: function(name) {
-            return '<button id="reset" class="reset" onclick=' + name + ".reset();" + '>重置</button>';;
+            return '<button class="reset" onclick=' + name + ".reset();" + '>重置</button>';;
         },
-        popButton: function(name) {
-            return '<button id="pop" class="pop" onclick=' + name + ".pop();" + '>出栈</button>';
+        popButton: function(name, str) {
+            str = isset(str) ? str : '弹出';
+            return '<button class="pop" onclick=' + name + ".pop();" + '>' +
+                str +
+                '</button>';
+        },
+        randomButton: function(name, str) {
+            str = isset(str) ? str : '产生随机序列';
+            return '<button class="random" onclick=' + name + ".random();" + '>' +
+                str +
+                '</button>';
         }
     };
 }();

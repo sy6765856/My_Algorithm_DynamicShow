@@ -9,8 +9,9 @@ Canvas = function(){
     return extend(CanvasBase, {
             drawRectangleByNumber: function(array, width) {
                 width = width ? width : (400 - array.length)/array.length;
+
                 var h = 100/(array.max() - array.min()),
-                    pos = {x:120, y:350};
+                    pos = {x:120 + width, y:350};
                 for(var i in array) {
                     this.drawRectangle(width, array[i]*h, pos, array[i]);
                     pos.x += width + 1;

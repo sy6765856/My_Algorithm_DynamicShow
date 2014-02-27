@@ -20,6 +20,11 @@ Graph = function() {
             this.array = [];
             return this;
         },
+        random: function() {
+            this.init()
+                .generateGraph();
+            return this;
+        },
 
         addNodes: function(node) {
             node.r = 10;
@@ -167,6 +172,7 @@ Graph = function() {
 
         drawing: function() {
             if(Canvas.imageFrame >= Canvas.imageDataQUEUE.length) {
+                Kruskal.drawAfter();
                 return this;
             }
             this.drawCanvasFrame(Canvas.imageDataQUEUE[Canvas.imageFrame]);

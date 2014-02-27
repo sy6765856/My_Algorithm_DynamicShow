@@ -11,10 +11,16 @@ Sort = function() {
         run: function(id){
             return this;
         },
+        random: function() {
+            this.produceRandomArray(10);
+            $('#info').html('成功生成随机序列');
+            setTimeout("$('#info').html('');", '1600');
+            return this;
+        },
         produceRandomArray: function(len){
             this.array = [];
             for(var i = 0; i < len; i++){
-                this.array[i] = Math.random()*100;
+                this.array[i] = Math.round(Math.random()*10000)/100;
             }
             return this;
         },

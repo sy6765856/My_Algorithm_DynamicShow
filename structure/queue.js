@@ -6,10 +6,10 @@
  * To change this template use File | Settings | File Templates.
  */
 Queue = function() {
-    $('#queue').click(FunctionTemplate.startButton('Queue'));
-    $('#queue').click(FunctionTemplate.addSingleButton('Queue'));
+    $('#queue').click(FunctionTemplate.clearButton('start'));
+    $('#queue').click(FunctionTemplate.addSingleButton('Queue', '进队列'));
     $('#queue').click(FunctionTemplate.resetButton('Queue'));
-    $('#queue').click(FunctionTemplate.popButton('Queue'));
+    $('#queue').click(FunctionTemplate.popButton('Queue', '出队列'));
     return extend(AlgorithmBase, {
         queue: [],
         init: function() {
@@ -37,8 +37,9 @@ Queue = function() {
         },
         drawQueue: function() {
             this.clearAll();
-            Table.drawStackAndQueue(this.queue, this.queue.length);
+            Table.drawStackAndQueue(this.queue, this.queue.length, 'queue');
             return this;
         }
     });
 }();
+$('#queue').click(Queue.init);

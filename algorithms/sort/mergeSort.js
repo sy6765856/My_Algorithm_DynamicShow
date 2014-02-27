@@ -6,13 +6,13 @@
  * To change this template use File | Settings | File Templates.
  */
 MergeSort = function() {
-    $('#mergeSort').click(FunctionTemplate.startButton('MergeSort'));
-    $('#mergeSort').click(FunctionTemplate.addSingleButton('MergeSort'));
+    $('#mergeSort').click(FunctionTemplate.startButton('MergeSort', '开始动态演示'));
+    $('#mergeSort').click(FunctionTemplate.addSingleButton('MergeSort', '输入'));
     $('#mergeSort').click(FunctionTemplate.resetButton('MergeSort'));
-    $('#mergeSort').click(FunctionTemplate.popButton('MergeSort'));
+    $('#mergeSort').click(FunctionTemplate.randomButton('MergeSort'));
+    $('#mergeSort').click(FunctionTemplate.clearButton('pop'));
     return extend(Sort, {
         run: function(id) {
-//            this.produceRandomArray(10)
             this.merge_Sort(Canvas.init(id));
             return this;
         },

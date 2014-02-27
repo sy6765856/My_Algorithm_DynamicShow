@@ -25,8 +25,7 @@ AlgorithmBase = function(){
 
         draw: function() {
             this.drawBefore()
-                .drawing()
-                .drawAfter();
+                .drawing();
             return this;
         },
 

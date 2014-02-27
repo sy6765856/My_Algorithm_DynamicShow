@@ -28,14 +28,14 @@ Table = function() {
                 x_now = pos.x + colBegin * tableWidth;
 
                 this.drawLine({x: x_now, y: y_now}
-                    ,{x: pos.x + col * tableWidth, y: y_now}, 'black');
+                    ,{x: pos.x + col * tableWidth, y: y_now});
             }
             for(var j = colBegin; j <= col; j++) {
                 x_now = pos.x + j * tableWidth;
                 y_now = pos.y + rowBegin * tableHeight;
 
                 this.drawLine({x: x_now, y: y_now}
-                    ,{x: x_now, y: pos.y + row * tableHeight}, 'black');
+                    ,{x: x_now, y: pos.y + row * tableHeight});
             }
             return this;
         },
@@ -103,10 +103,29 @@ Table = function() {
                 .drawTableContent(table, row, col);
             return this;
         },
-
-        drawStackAndQueue: function(array, row) {
-            this.drawTableBody(row, 1, 0, 0, {x: this.pos.x, y: this.pos.y - this.tableHeight * (row-1)})
-                .drawStackAndQueueContent(array, row);
+        drawStackAndQueueBorder: function(type) {
+            var border = 2;
+            this.drawLine({ x: this.pos.x - border, y: 60}, { x:this.pos.x - border, y: this.pos.y + this.tableHeight}, {color: 'red'})
+                .drawLine({ x: this.pos.x + this.tableWidth + border, y: 60}, { x: this.pos.x + this.tableWidth + border, y: this.pos.y + this.tableHeight}, {color: 'red'})
+            if(type === 'stack') {
+                this.drawLine({ x: this.pos.x - border, y: this.pos.y + this.tableHeight}, { x: this.pos.x + this.tableWidth + border, y: this.pos.y + this.tableHeight}, {color: 'red'});
+            }
+            return this;
+        },
+        drawStackAndQueue: function(array, row, type) {
+            var topOffset = this.tableHeight * (row-1),
+                textOffset = 10;
+            this.drawTableBody(row, 1, 0, 0, {x: this.pos.x, y: this.pos.y - topOffset})
+                .drawStackAndQueueContent(array, row)
+                .drawStackAndQueueBorder(type);
+            switch (type) {
+                case 'queue':
+                    this.writeText('front', { x: this.pos.x, y: this.pos.y + this.tableHeight + textOffset});
+                    break;
+                case 'stack':
+                    this.writeText('top', { x: this.pos.x, y: this.pos.y - topOffset - textOffset});
+                    break;
+            }
             return this;
         },
 

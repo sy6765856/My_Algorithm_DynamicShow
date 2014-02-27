@@ -7,31 +7,41 @@
  */
 FunctionTemplate = function() {
     return {
-        startButton: function(name) {
+        startButton: function(name, str) {
             return function() {
                 clearAllTimeOut();
                 Canvas.clearAll('canvas');
-                $('#start').replaceWith(Template.beginButton(name));
+                $('#start').html(Template.beginButton(name, str));
             };
         },
-        addSingleButton: function(name) {
+        addSingleButton: function(name, str) {
             return function() {
-                $('#add').replaceWith(Template.addSingleButton(name));
+                $('#add').html(Template.addSingleButton(name, str));
             };
         },
         addButton: function(name) {
             return function() {
-                $('#add').replaceWith(Template.addButton(name));
+                $('#add').html(Template.addButton(name));
             };
         },
         resetButton: function(name) {
             return function() {
-                $('#reset').replaceWith(Template.resetButton(name));
+                $('#reset').html(Template.resetButton(name));
             };
         },
-        popButton: function(name) {
+        popButton: function(name, str) {
             return function() {
-                $('#pop').replaceWith(Template.popButton(name));
+                $('#pop').html(Template.popButton(name, str));
+            }
+        },
+        randomButton: function(name, str) {
+            return function() {
+                $('#random').html(Template.randomButton(name, str));
+            }
+        },
+        clearButton: function(name) {
+            return function() {
+                $('#' + name).html('');
             }
         }
     };

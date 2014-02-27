@@ -9,6 +9,7 @@ ActivitySelect = function() {
     $('#activitySelect').click(FunctionTemplate.startButton('ActivitySelect'));
     $('#activitySelect').click(FunctionTemplate.addButton('ActivitySelect'));
     $('#activitySelect').click(FunctionTemplate.resetButton('ActivitySelect'));
+    $('#activitySelect').click(FunctionTemplate.clearButton('random'));
     Canvas.init('canvas');
     return extend(Greedy, {
         activities: [],
