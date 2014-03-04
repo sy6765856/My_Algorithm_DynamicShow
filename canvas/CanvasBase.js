@@ -82,10 +82,18 @@ CanvasBase = function() {
                 .restore(this);
         },
 
-
+        setColor: function(color) {
+            this.colorTmp = this.color;
+            this.color = CanvasLib.colorSet(color);
+            return this;
+        },
+        restoreColor: function(color) {
+            this.color = this.colorTmp;
+            return this;
+        },
         drawRectangle: function(width, height, pos, str) {
             var ctx = this.ctx;
-            ctx.fillStyle = CanvasLib.colorSet("purple");
+            ctx.fillStyle = isset(this.color) ? this.color : CanvasLib.colorSet("purple");
             var ps = {x: pos.x - width, y: pos.y-height};
             ctx.fillRect(ps.x, ps.y, width, height);
             if(str){
@@ -183,7 +191,7 @@ CanvasBase = function() {
 
         writeText: function(str, pos) {
             var ctx = this.ctx;
-            ctx.fillStyle = "rgb(100,0,0)";
+            ctx.fillStyle = CanvasLib.colorSet('yellow');
             ctx.fillText(str, pos.x, pos.y);
             return this;
         },

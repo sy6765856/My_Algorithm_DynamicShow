@@ -31,6 +31,7 @@ Menu = function() {
                 'sort': ['排序算法', 1],
                 'mergeSort': ['归并排序', 2],
                 'orderSort': ['顺序排序', 2],
+                'bubbleSort': ['冒泡排序', 2],
 
                 'greedy': ['贪心算法', 1],
                 'activitySelect': ['活动选择', 2],

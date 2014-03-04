@@ -39,7 +39,7 @@ Greedy = function() {
                 this.width = 300;
             }
             if(!isset(this.height)) {
-                this.height = 10;
+                this.height = 50;
             }
             if(!isset(this.pos)) {
                 this.pos = {x: 10, y: 10};
@@ -53,6 +53,10 @@ Greedy = function() {
             this.checkParameters();
             Canvas.clearAll()
                 .drawActivities(array, minimum, maximum, this.pos, this.width, this.height, this.spacing);
+            return this;
+        },
+        save: function() {
+            this.saveCanvasFrame();
             return this;
         }
     });

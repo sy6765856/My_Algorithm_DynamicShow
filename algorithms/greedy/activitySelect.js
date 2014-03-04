@@ -13,7 +13,7 @@ ActivitySelect = function() {
     Canvas.init('canvas');
     return extend(Greedy, {
         activities: [],
-        height: 10,
+        height: 20,
         widthPer: 2,
         pos: { x: 100, y: 150},
         spacing: 3,
@@ -33,7 +33,22 @@ ActivitySelect = function() {
         },
         run: function() {
             this.init('canvas')
-                .activitySelect();
+                .activitySelect()
+                .draw();
+            return this;
+        },
+        drawAfter: function() {
+            $('#info').html('选出活动最多为' + this.ans + '个');
+            return this;
+        },
+        drawing: function() {
+            if(Canvas.imageFrame >= Canvas.imageDataQUEUE.length) {
+                ActivitySelect.drawAfter();
+                return this;
+            }
+            this.drawCanvasFrame(Canvas.imageDataQUEUE[Canvas.imageFrame]);
+            Canvas.imageFrame++;
+            setTimeout.call(null, 'ActivitySelect.drawing();', 300);
             return this;
         },
         add: function(begin, end) {
@@ -51,16 +66,51 @@ ActivitySelect = function() {
             }
             this.minimum = min(this.minimum, begin);
             this.maximum = max(this.maximum, end);
-            this.insert([begin, end]);
+            this.insert([begin, end, 'green', this.activities.length]);
+            return this;
+        },
+        refresh: function() {
+            this.drawActivities(this.activities, this.minimum, this.maximum);
             return this;
         },
         insert: function(obj) {
             this.activities.push(obj);
-            this.drawActivities(this.activities, this.minimum, this.maximum);
+            this.refresh();
             return this;
         },
         activitySelect: function() {
+            var activities = this.activities,
+                cmp = function(a, b) {
+                    return a[1] - b[1];
+                },
+                ed = this.minimum - 1,
+                ans = 0;
+            activities.sort(cmp);
+            this.refresh()
+                .save();
 
+            for(var key in activities) {
+                this.changeActivityColor(key, 'red')
+                    .refresh()
+                    .save();
+                var activity = activities[key];
+                if(activity[0] > ed) {
+                    ans ++;
+                    ed = activity[1];
+                    this.changeActivityColor(key, 'yellow')
+                        .refresh()
+                        .save();
+                } else {
+                    this.changeActivityColor(key, 'green')
+                        .refresh()
+                        .save();
+                }
+            }
+            this.ans = ans;
+            return this;
+        },
+        changeActivityColor: function(key, color) {
+            this.activities[key][2] = color;
             return this;
         }
     });
