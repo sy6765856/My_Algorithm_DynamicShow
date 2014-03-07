@@ -34,18 +34,18 @@ CanvasBase = function() {
             this.imageBufferQUEUE_init()
                 .flag = 0;
 
-            var that = this;
-            this.canvas.onmousedown = function(e) {
-                var mousePosition = that.getMousePosition(e);
-                that.drawCircle(3, mousePosition)
-                    .save(that.drawCircle, [3, mousePosition])
-                    .flag = (that.flag + 1)%2;
-                if(that.flag) {
-                    that.drawBegin(mousePosition);
-                } else {
-                    that.drawEnd();
-                }
-            };
+//            var that = this;
+//            this.canvas.onmousedown = function(e) {
+//                var mousePosition = that.getMousePosition(e);
+//                that.drawCircle(3, mousePosition)
+//                    .save(that.drawCircle, [3, mousePosition])
+//                    .flag = (that.flag + 1)%2;
+//                if(that.flag) {
+//                    that.drawBegin(mousePosition);
+//                } else {
+//                    that.drawEnd();
+//                }
+//            };
             return this;
         },
 
@@ -91,14 +91,49 @@ CanvasBase = function() {
             this.color = this.colorTmp;
             return this;
         },
+        setShadow: function() {
+            var ctx = this.ctx;
+            this.ctxTmp = ctx;
+            ctx.shadowColor = CanvasLib.colorSet('white');
+            ctx.shadowOffsetX = 1.5;
+            ctx.shadowOffsetY = 2;
+            ctx.shadowBlur = 1;
+            return this;
+        },
+        setOpacity: function(persent) {
+            var ctx = this.ctx;
+            ctx.globalAlpha = persent;
+            return this;
+        },
+        restoreCtx: function() {
+            this.ctx = this.ctxTmp;
+            return this;
+        },
         drawRectangle: function(width, height, pos, str) {
             var ctx = this.ctx;
-            ctx.fillStyle = isset(this.color) ? this.color : CanvasLib.colorSet("purple");
-            var ps = {x: pos.x - width, y: pos.y-height};
-            ctx.fillRect(ps.x, ps.y, width, height);
+            ctx.fillStyle = isset(this.color) ? this.color : CanvasLib.colorSet("green");
+            this.setShadow()
+                .setOpacity(0.85);
+            var ps = {x: pos.x - width, y: pos.y-height},
+                radius = 5;
+            radius = Math.min(width, height, radius * 2) / 2;
+
+            ctx.beginPath();
+            ctx.arc(ps.x + radius, ps.y + radius, radius, Math.PI/2*3, Math.PI, true);
+            ctx.lineTo(ps.x, ps.y + height - radius);
+            ctx.arc(ps.x + radius, ps.y + height - radius, radius, Math.PI, Math.PI / 2, true);
+            ctx.lineTo(ps.x + width - radius, ps.y + height);
+            ctx.arc(ps.x + width - radius, ps.y + height - radius, radius, Math.PI / 2, 0, true);
+            ctx.lineTo(ps.x + width, ps.y + radius);
+            ctx.arc(ps.x + width - radius, ps.y + radius, radius,  0, Math.PI * 3/ 2, true);
+            ctx.lineTo(ps.x + radius, ps.y);
+            ctx.closePath();
+            ctx.fill();
+//            ctx.fillRect(ps.x, ps.y, width, height);
             if(str){
                 this.writeText(str, { x: ps.x, y: ps.y - 10});
             }
+            this.restoreCtx();
             return this;
         },
 
@@ -170,7 +205,7 @@ CanvasBase = function() {
         drawLine: function(start, end, style) {
             var ctx = this.ctx;
             style = {color: style && style.color ? style.color : "green", lineWidth: style && style.lineWidth ? style.lineWidth:3};
-            ctx.strokeStyle = CanvasLib.colorSet(style.color);
+            ctx.strokeStyle = isset(this.lineColor) ? this.lineColor : CanvasLib.colorSet(style.color);
             ctx.beginPath();
             ctx.moveTo(start.x, start.y);
             ctx.lineTo(end.x, end.y);
@@ -191,7 +226,8 @@ CanvasBase = function() {
 
         writeText: function(str, pos) {
             var ctx = this.ctx;
-            ctx.fillStyle = CanvasLib.colorSet('yellow');
+            ctx.font = isset(this.font) ? this.font : "15px Arial";
+            ctx.fillStyle = CanvasLib.colorSet('black');
             ctx.fillText(str, pos.x, pos.y);
             return this;
         },

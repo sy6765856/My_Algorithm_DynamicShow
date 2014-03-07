@@ -14,7 +14,7 @@ Canvas = function(){
                     pos = {x:120 + width, y:350};
                 for(var i in array) {
                     this.drawRectangle(width, array[i]*h, pos, array[i]);
-                    pos.x += width + 1;
+                    pos.x += width + 5;
                 }
                 return this;
             },
@@ -22,7 +22,7 @@ Canvas = function(){
             drawActivities: function(array, minimum, maximum, pos, width, height, spacing) {
                 var widthPer = width/(maximum - minimum + 1),
                     row = 0,
-                    textOffset = 0;
+                    textOffset = widthPer/4;
                 for(var key in array) {
                     var st = array[key][0],
                         ed = array[key][1],
@@ -31,11 +31,24 @@ Canvas = function(){
                     if(isset(st) && isset(ed)) {
                         this.setColor(color)
                             .drawRectangle(widthPer * (ed - st + 1), height, ps)
-                            .writeText(st, { x: pos.x + (st - minimum + 1)*widthPer - textOffset, y: ps.y})
-                            .writeText(ed, ps)
-                            .restoreColor();
+                            .writeText(st, { x: pos.x + (st - minimum )*widthPer - textOffset, y: ps.y - height/4})
+                            .writeText(ed, { x: pos.x + (ed - minimum + 1 )*widthPer + textOffset, y: ps.y - height/4})
+                            .restoreColor()
+                            .drawSeparate(ps, height, (ed - st), widthPer);
                         row ++;
                     }
+                }
+                return this;
+            },
+
+            drawSeparate: function(pos, height, num, widPer){
+                if(widPer < 10) {
+
+                    return this;
+                }
+                for(var i = 0; i < num ; i++) {
+                    this.lineColor = 'black';
+                    this.drawLine({x: pos.x - (i+1) * widPer, y: pos.y}, { x: pos.x - (i + 1) *widPer, y: pos.y - height});
                 }
                 return this;
             },
