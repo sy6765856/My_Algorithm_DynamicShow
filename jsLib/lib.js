@@ -5,6 +5,12 @@
  * Time: 下午3:24
  * To change this template use File | Settings | File Templates.
  */
+window.isset = function(a) {
+    if(a === null || a === undefined) {
+        return 0;
+    }
+    return 1;
+};
 window.deepCopy = function(target, source) {
     var target = target || {};
     for (var item in source) {
@@ -57,13 +63,6 @@ window.min = function(a, b) {
 
 window.max = function(a, b) {
     return a > b ? a : b;
-};
-
-window.isset = function(a) {
-    if(a === null || a === undefined) {
-        return 0;
-    }
-    return 1;
 };
 window.warnNumber = function(value, warnInfo) {
     $("#input2").val('');

@@ -16,7 +16,7 @@ ActivitySelect = function() {
         height: 20,
         widthPer: 2,
         pos: { x: 100, y: 150},
-        spacing: 3,
+        spacing: 10,
         inf: 10000000,
         minimum: 1000000,
         maximum: -1000000,

@@ -18,6 +18,7 @@ Table = function() {
         drawTableBody: function(row, col, rowBegin, colBegin, pos) {
             rowBegin = isset(rowBegin) ? rowBegin : -1;
             colBegin = isset(colBegin) ? colBegin : -1;
+            Canvas.lineColor = "black";
 
             var tableWidth = this.tableWidth,
                 tableHeight = this.tableHeight,
@@ -105,6 +106,7 @@ Table = function() {
         },
         drawStackAndQueueBorder: function(type) {
             var border = 2;
+            Canvas.lineColor = 'green';
             this.drawLine({ x: this.pos.x - border, y: 60}, { x:this.pos.x - border, y: this.pos.y + this.tableHeight}, {color: 'red'})
                 .drawLine({ x: this.pos.x + this.tableWidth + border, y: 60}, { x: this.pos.x + this.tableWidth + border, y: this.pos.y + this.tableHeight}, {color: 'red'})
             if(type === 'stack') {

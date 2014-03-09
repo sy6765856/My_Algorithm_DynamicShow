@@ -47,7 +47,7 @@ Canvas = function(){
                     return this;
                 }
                 for(var i = 0; i < num ; i++) {
-                    this.lineColor = 'black';
+                    this.lineColor = 'skyblue';
                     this.drawLine({x: pos.x - (i+1) * widPer, y: pos.y}, { x: pos.x - (i + 1) *widPer, y: pos.y - height});
                 }
                 return this;
@@ -104,6 +104,20 @@ Canvas = function(){
                 this.imageData = imageData;
                 this.setImageData();
                 this.imageData = this.imageDataTmp;
+                return this;
+            },
+
+            writeTextArray: function(str, highlights, pos) {
+                var sp = 20;
+                for(var i = 0; i < str.length; i++) {
+                    if(highlights[i]) {
+                        this.setFont('yellow')
+                            .writeText(str[i], { x: pos.x + i*sp, y: pos.y})
+                            .restoreFont();
+                    } else {
+                        this.writeText(str[i], { x: pos.x + i*sp, y: pos.y});
+                    }
+                }
                 return this;
             }
     });

@@ -45,7 +45,7 @@ Greedy = function() {
                 this.pos = {x: 10, y: 10};
             }
             if(!isset(this.spacing)) {
-                this.spacing = 15;
+                this.spacing = 30;
             }
             return this;
         },

@@ -94,9 +94,9 @@ CanvasBase = function() {
         setShadow: function() {
             var ctx = this.ctx;
             this.ctxTmp = ctx;
-            ctx.shadowColor = CanvasLib.colorSet('white');
+            ctx.shadowColor = CanvasLib.colorSet('black');
             ctx.shadowOffsetX = 1.5;
-            ctx.shadowOffsetY = 2;
+            ctx.shadowOffsetY = 1.5;
             ctx.shadowBlur = 1;
             return this;
         },
@@ -106,7 +106,9 @@ CanvasBase = function() {
             return this;
         },
         restoreCtx: function() {
-            this.ctx = this.ctxTmp;
+            var ctx = this.ctx;
+            ctx.shadowBlur = 0;
+            ctx.shadowColor = '';
             return this;
         },
         drawRectangle: function(width, height, pos, str) {
@@ -130,10 +132,10 @@ CanvasBase = function() {
             ctx.closePath();
             ctx.fill();
 //            ctx.fillRect(ps.x, ps.y, width, height);
+            this.restoreCtx();
             if(str){
                 this.writeText(str, { x: ps.x, y: ps.y - 10});
             }
-            this.restoreCtx();
             return this;
         },
 
@@ -204,8 +206,9 @@ CanvasBase = function() {
 
         drawLine: function(start, end, style) {
             var ctx = this.ctx;
-            style = {color: style && style.color ? style.color : "green", lineWidth: style && style.lineWidth ? style.lineWidth:3};
-            ctx.strokeStyle = isset(this.lineColor) ? this.lineColor : CanvasLib.colorSet(style.color);
+            style = {color: style && style.color ? style.color : this.lineColor, lineWidth: style && style.lineWidth ? style.lineWidth:3};
+            ctx.strokeStyle = style.color;
+//            ctx.strokeStyle = isset(this.lineColor) ? CanvasLib.colorSet(this.lineColor) : CanvasLib.colorSet(style.color);
             ctx.beginPath();
             ctx.moveTo(start.x, start.y);
             ctx.lineTo(end.x, end.y);
@@ -224,10 +227,28 @@ CanvasBase = function() {
 
         },
 
+        setFont: function(color, font) {
+            this.fontColotTmp = this.fontColor;
+            this.fontColor = color;
+            if(isset(font)) {
+                this.fontTmp = this.font;
+                this.font = font;
+            }
+            return this;
+        },
+
+        restoreFont: function() {
+            this.fontColor = this.fontColotTmp;
+            this.font = this.fontTmp;
+            return this;
+        },
+
         writeText: function(str, pos) {
             var ctx = this.ctx;
             ctx.font = isset(this.font) ? this.font : "15px Arial";
-            ctx.fillStyle = CanvasLib.colorSet('black');
+            ctx.shadowOffsetX = 0;
+            ctx.shadowOffsetY = 0;
+            ctx.fillStyle = isset(this.fontColor)? CanvasLib.colorSet(this.fontColor) : CanvasLib.colorSet('black');
             ctx.fillText(str, pos.x, pos.y);
             return this;
         },

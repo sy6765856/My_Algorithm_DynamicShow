@@ -6,12 +6,6 @@
  * To change this template use File | Settings | File Templates.
  */
 Menu = function() {
-    $('#menu').click(function(e) {
-        e = window.event ? window.event : e;
-        var who = e.target ? e.target : e.srcElement;
-        who.className = 'active';
-        $('#answer').html('');
-    });
     return {
         init: function(id) {
             this.area = '#' + id;
@@ -21,12 +15,16 @@ Menu = function() {
         },
         load: function() {
             this.config = {
-                'structure': ['数据结构', 1],
+                'structure': ['基本数据结构', 1],
                 'stack': ['栈', 2],
                 'queue': ['队列', 2],
                 'heap': ['堆', 2],
 
                 'dynamic': ['动态规划', 1],
+                'LCS': ['最长公共子序列', 2],
+
+                'divideAndConquer': ['分治算法', 1],
+                'boardCover': ['棋盘覆盖问题', 2],
 
                 'sort': ['排序算法', 1],
                 'mergeSort': ['归并排序', 2],

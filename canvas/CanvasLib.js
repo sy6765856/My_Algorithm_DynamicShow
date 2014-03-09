@@ -32,11 +32,17 @@ CanvasLib = function() {
                 case "blue":
                     colorString = "#0033CC";
                     break;
+                case "skyblue":
+                    colorString = "#00FFFF";
+                    break;
                 case "yellow":
                     colorString = "#FFFF00";
                     break;
                 case "green":
                     colorString = "#33FF00";
+                    break;
+                case "darkgreen":
+                    colorString = "#2F4F2F";
                     break;
                 case "purple":
                     colorString = "#660099";
