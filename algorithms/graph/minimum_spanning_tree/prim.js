@@ -6,10 +6,9 @@
  * To change this template use File | Settings | File Templates.
  */
 Prim = function() {
-    $('#prim').click(FunctionTemplate.startButton('Prim'));
-    $('#prim').click(FunctionTemplate.randomButton('Prim', '产生随机图'));
-    $('#prim').click(FunctionTemplate.clearButton('add'));
-    $('#prim').click(FunctionTemplate.clearButton('pop'));
+    app.initToolsView('prim')
+        .startButtonInit()
+        .randomButtonInit('产生随机图');
     return extend(Graph, {
         run: function(id){
             Canvas.init(id);

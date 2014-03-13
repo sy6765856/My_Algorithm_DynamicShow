@@ -6,11 +6,11 @@
  * To change this template use File | Settings | File Templates.
  */
 Stack = function() {
-    $('#stack').click(FunctionTemplate.clearButton('start'));
-    $('#stack').click(FunctionTemplate.clearButton('random'));
-    $('#stack').click(FunctionTemplate.addSingleButton('Stack', '入栈'));
-    $('#stack').click(FunctionTemplate.resetButton('Stack'));
-    $('#stack').click(FunctionTemplate.popButton('Stack', '出栈'));
+    app.initToolsView('stack')
+        .singleAddButtonInit('入栈')
+        .resetButtonInit()
+        .popButtonInit('出栈')
+        .inputOneInit();
     Table.init();
     return extend(AlgorithmBase, {
         stack: [],

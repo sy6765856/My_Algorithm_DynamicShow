@@ -14,18 +14,28 @@
             </div>
 
             <div class="context">
-                <div class="buttonFrame">
-                    <div id = "answer" class = "answer"></div>
-                    <div id = "info" class="info">&nbsp</div>
-                    <input id = "input1"/></br>
-                    <input id = "input2"/>
-                    <div id = "add"></div>
-                    <div id = "pop"></div>
-                    <div id = "start"></div>
-                    <div id = "reset"></div>
-                    <div id = "random"></div>
+                <div>
+                    <div class="buttonFrame">
+                        <div class="information">
+                            <div id = "answer" class = "answer"></div>
+                            <div id = "info" class="info">&nbsp</div>
+                        </div>
+                        <div class="input" id = "input">
+                            <input id = "input1"/>
+                            <input id = "input2"/>
+                        </div>
+                        <div class = "buttons">
+                            <div id = "add"></div>
+                            <div id = "pop"></div>
+                            <div id = "start"></div>
+                            <div id = "reset"></div>
+                            <div id = "random"></div>
+                        </div>
+                        <div class = "subTitle" id = "subTitle"></div>
+                    </div>
+                    <canvas id="canvas" class="canvas curved_box"></canvas>
+
                 </div>
-                <canvas id="canvas" class="canvas"></canvas>
                 <div class="code">
                 </div>
             </div>
@@ -68,6 +78,7 @@
     <script type="text/javascript" src = "../algorithms/graph/shortest_path/dijkstra.js"></script>
     <script type="text/javascript" src = "../algorithms/dynamic/dynamic.js"></script>
     <script type="text/javascript" src = "../algorithms/dynamic/LCS.js"></script>
+    <script type="text/javascript" src = "../algorithms/dynamic/ZeroOnePackage.js"></script>
     <script type="text/javascript" src = "../algorithms/greedy/greedy.js"></script>
     <script type="text/javascript" src = "../algorithms/greedy/activitySelect.js"></script>
     <script type="text/javascript" src = "../algorithms/divide_and_conquer/divideAndConquer.js"></script>
@@ -98,5 +109,23 @@
                     break;
             }
         });
+
+        $('.menutitle').click(function(e) {
+            var who = e.target ? e.target : e.srcElement;
+            who = $('#' + who.id).next();
+            while(who.attr('class') !== 'menubottom') {
+                who.toggle(500);
+                who = who.next();
+            }
+        });
+
+//        $('.menubottom').click(function(e) {
+//            var who = e.target ? e.target : e.srcElement;
+//            who = who.previousSibling;
+//            while(who.getAttribute('class') !== 'menutitle') {
+//                who.setAttribute('disabled', 'disabled');
+//                who = who.previousSibling;
+//            }
+//        });
     </script>
 </html>

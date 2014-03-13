@@ -6,6 +6,11 @@
  * To change this template use File | Settings | File Templates.
  */
 ZeroOnePackage = function() {
+    app.initToolsView('zeroOnePackage')
+        .addButtonInit()
+        .inputOneInit('物品重量')
+        .inputTwoInit('物品价值')
+        .resetButtonInit();
     return extend(Dynamic, {
         goods: [],
         dp: [],

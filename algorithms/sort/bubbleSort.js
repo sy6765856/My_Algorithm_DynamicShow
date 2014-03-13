@@ -6,11 +6,12 @@
  * To change this template use File | Settings | File Templates.
  */
 BubbleSort = function() {
-    $('#bubbleSort').click(FunctionTemplate.startButton('BubbleSort', '开始动态演示'));
-    $('#bubbleSort').click(FunctionTemplate.addSingleButton('BubbleSort', '输入'));
-    $('#bubbleSort').click(FunctionTemplate.resetButton('BubbleSort'));
-    $('#bubbleSort').click(FunctionTemplate.randomButton('BubbleSort'));
-    $('#bubbleSort').click(FunctionTemplate.clearButton('pop'));
+    app.initToolsView('bubbleSort')
+        .startButtonInit('开始动态演示')
+        .singleAddButtonInit('输入')
+        .resetButtonInit()
+        .randomButtonInit()
+        .inputOneInit('请输入一个数');
     return extend(Sort, {
         run: function(id) {
             this.bubble_Sort(Canvas.init(id));

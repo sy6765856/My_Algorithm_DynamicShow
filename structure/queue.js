@@ -6,10 +6,12 @@
  * To change this template use File | Settings | File Templates.
  */
 Queue = function() {
-    $('#queue').click(FunctionTemplate.clearButton('start'));
-    $('#queue').click(FunctionTemplate.addSingleButton('Queue', '进队列'));
-    $('#queue').click(FunctionTemplate.resetButton('Queue'));
-    $('#queue').click(FunctionTemplate.popButton('Queue', '出队列'));
+    app.initToolsView('queue')
+        .singleAddButtonInit('进队列')
+        .popButtonInit('出队列')
+        .resetButtonInit()
+        .inputOneInit();
+
     return extend(AlgorithmBase, {
         queue: [],
         init: function() {

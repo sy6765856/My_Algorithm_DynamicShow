@@ -43,6 +43,20 @@ FunctionTemplate = function() {
             return function() {
                 $('#' + name).html('');
             }
+        },
+        clearAllButtons: function() {
+            return function() {
+                $('#add').html('');
+                $('#pop').html('');
+                $('#start').html('');
+                $('#reset').html('');
+                $('#random').html('');
+            }
+        },
+        clearAllInputs: function() {
+            return function() {
+                $('#input').html('');
+            }
         }
     };
 }();

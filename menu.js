@@ -22,6 +22,7 @@ Menu = function() {
 
                 'dynamic': ['动态规划', 1],
                 'LCS': ['最长公共子序列', 2],
+                'zeroOnePackage': ['0-1背包问题', 2],
 
                 'divideAndConquer': ['分治算法', 1],
                 'boardCover': ['棋盘覆盖问题', 2],

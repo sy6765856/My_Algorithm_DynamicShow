@@ -6,7 +6,8 @@
  * To change this template use File | Settings | File Templates.
  */
 Heap = function(){
-    $('#heap').click(FunctionTemplate.startButton('Heap'));
+    app.initToolsView('heap')
+        .startButtonInit();
     return extend(Tree, {
         run: function(id) {
             Canvas.init(id);

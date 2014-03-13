@@ -6,11 +6,12 @@
  * To change this template use File | Settings | File Templates.
  */
 OrderSort = function() {
-    $('#orderSort').click(FunctionTemplate.startButton('OrderSort', '开始动态演示'));
-    $('#orderSort').click(FunctionTemplate.addSingleButton('OrderSort', '输入'));
-    $('#orderSort').click(FunctionTemplate.resetButton('OrderSort'));
-    $('#orderSort').click(FunctionTemplate.randomButton('OrderSort'));
-    $('#orderSort').click(FunctionTemplate.clearButton('pop'));
+    app.initToolsView('orderSort')
+        .startButtonInit('开始动态演示')
+        .resetButtonInit()
+        .randomButtonInit()
+        .singleAddButtonInit('输入')
+        .inputOneInit('请输入一个数');
     Canvas.init('canvas');
     return extend(Sort, {
         run: function(id) {

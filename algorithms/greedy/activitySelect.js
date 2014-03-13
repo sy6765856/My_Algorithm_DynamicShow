@@ -6,10 +6,12 @@
  * To change this template use File | Settings | File Templates.
  */
 ActivitySelect = function() {
-    $('#activitySelect').click(FunctionTemplate.startButton('ActivitySelect'));
-    $('#activitySelect').click(FunctionTemplate.addButton('ActivitySelect'));
-    $('#activitySelect').click(FunctionTemplate.resetButton('ActivitySelect'));
-    $('#activitySelect').click(FunctionTemplate.clearButton('random'));
+    app.initToolsView('activitySelect')
+        .startButtonInit()
+        .addButtonInit()
+        .resetButtonInit()
+        .inputOneInit('活动开始时间')
+        .inputTwoInit('活动结束时间');
     Canvas.init('canvas');
     return extend(Greedy, {
         activities: [],

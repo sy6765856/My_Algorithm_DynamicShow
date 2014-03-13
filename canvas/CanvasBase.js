@@ -11,8 +11,8 @@ CanvasBase = function() {
         initCanvas: function(id, width, height) {
             this.INF = 10000;
             var canvas = document.getElementById(id);
-            canvas.width = width ? width : 710;
-            canvas.height = height ? height : 690;
+            canvas.width = width ? width : 1110;
+            canvas.height = height ? height : 780;
             this.canvas = canvas;
 
             if (canvas.getContext) {
@@ -100,7 +100,12 @@ CanvasBase = function() {
             ctx.shadowBlur = 1;
             return this;
         },
-        setOpacity: function(persent) {
+        setOpacity: function(opacity) {
+            this.opacityTmp = this.opacity;
+            this.opacity = opacity;
+            return this;
+        },
+        setSelfOpacity: function(persent) {
             var ctx = this.ctx;
             ctx.globalAlpha = persent;
             return this;
@@ -111,11 +116,27 @@ CanvasBase = function() {
             ctx.shadowColor = '';
             return this;
         },
-        drawRectangle: function(width, height, pos, str) {
+        restoreOpacity: function() {
+            this.opacity = isset(this.opacityTmp) ? this.opacityTmp : 0.85;
+            this.setSelfOpacity(this.opacity);
+            return this;
+        },
+        drawPolygon: function(vertexs) {
             var ctx = this.ctx;
+            ctx.beginPath();
+            for(var vertex in vertexs) {
+
+            }
+            ctx.closePath();
+            ctx.fill();
+            return this;
+        },
+        drawRectangle: function(width, height, pos, str) {
+            var ctx = this.ctx,
+                opacity = isset(this.opacity) ? this.opacity : 0.85;
             ctx.fillStyle = isset(this.color) ? this.color : CanvasLib.colorSet("green");
             this.setShadow()
-                .setOpacity(0.85);
+                .setSelfOpacity(opacity);
             var ps = {x: pos.x - width, y: pos.y-height},
                 radius = 5;
             radius = Math.min(width, height, radius * 2) / 2;

@@ -6,10 +6,12 @@
  * To change this template use File | Settings | File Templates.
  */
 LCS = function() {
-    $('#LCS').click(FunctionTemplate.startButton('LCS'));
-    $('#LCS').click(FunctionTemplate.addButton('LCS'));
-    $('#LCS').click(FunctionTemplate.resetButton('LCS'));
-    $('#LCS').click(FunctionTemplate.clearButton('random'));
+    app.initToolsView('LCS')
+        .inputOneInit('字符串a')
+        .inputTwoInit('字符串b')
+        .startButtonInit()
+        .resetButtonInit();
+
     return extend(Dynamic, {
         dp: [],
         link: [],

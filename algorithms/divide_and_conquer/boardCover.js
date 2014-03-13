@@ -6,7 +6,10 @@
  * To change this template use File | Settings | File Templates.
  */
 BoardCover = function() {
-    $('#boardCover').click(FunctionTemplate.addSingleButton('BoardCover', '开始覆盖'));
+    app.initToolsView('boardCover')
+        .inputOneInit('棋盘大小（2的次方数）')
+        .inputTwoInit()
+        .singleAddButtonInit('开始覆盖');
     return extend(DivideAndConquer, {
         board: [],
         init: function() {

@@ -6,11 +6,12 @@
  * To change this template use File | Settings | File Templates.
  */
 MergeSort = function() {
-    $('#mergeSort').click(FunctionTemplate.startButton('MergeSort', '开始动态演示'));
-    $('#mergeSort').click(FunctionTemplate.addSingleButton('MergeSort', '输入'));
-    $('#mergeSort').click(FunctionTemplate.resetButton('MergeSort'));
-    $('#mergeSort').click(FunctionTemplate.randomButton('MergeSort'));
-    $('#mergeSort').click(FunctionTemplate.clearButton('pop'));
+    app.initToolsView('mergeSort')
+        .startButtonInit('开始动态演示')
+        .singleAddButtonInit('输入')
+        .resetButtonInit()
+        .randomButtonInit()
+        .inputOneInit('请输入一个数');
     return extend(Sort, {
         run: function(id) {
             this.merge_Sort(Canvas.init(id));

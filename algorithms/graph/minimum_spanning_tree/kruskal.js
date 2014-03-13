@@ -6,10 +6,9 @@
  * To change this template use File | Settings | File Templates.
  */
 Kruskal = function() {
-    $('#kruskal').click(FunctionTemplate.startButton('Kruskal'));
-    $('#kruskal').click(FunctionTemplate.randomButton('Kruskal', '产生随机图'));
-    $('#kruskal').click(FunctionTemplate.clearButton('add'));
-    $('#kruskal').click(FunctionTemplate.clearButton('pop'));
+    app.initToolsView('kruskal')
+        .startButtonInit()
+        .randomButtonInit('产生随机图');
     return extend(Graph, {
         run: function(id) {
             Canvas.init(id);

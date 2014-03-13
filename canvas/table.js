@@ -8,7 +8,7 @@
 Table = function() {
     return extend(Canvas, {
         init: function(pos, tableWidth, tableHeight) {
-            this.pos = pos ? pos : {x: 100, y:350};
+            this.pos = pos ? pos : {x: 300, y:450};
             this.tableWidth = tableWidth ? tableWidth : 40;
             this.tableHeight = tableHeight ? tableHeight : 20;
             this.offset_x = this.tableWidth/2 - 3;
@@ -104,22 +104,65 @@ Table = function() {
                 .drawTableContent(table, row, col);
             return this;
         },
-        drawStackAndQueueBorder: function(type) {
-            var border = 2;
+        drawStackAndQueueBorder: function(num, type) {
+            var border = 2,
+                pos = this.pos;
             Canvas.lineColor = 'green';
-            this.drawLine({ x: this.pos.x - border, y: 60}, { x:this.pos.x - border, y: this.pos.y + this.tableHeight}, {color: 'red'})
-                .drawLine({ x: this.pos.x + this.tableWidth + border, y: 60}, { x: this.pos.x + this.tableWidth + border, y: this.pos.y + this.tableHeight}, {color: 'red'})
+            Canvas.setOpacity(0.5);
             if(type === 'stack') {
-                this.drawLine({ x: this.pos.x - border, y: this.pos.y + this.tableHeight}, { x: this.pos.x + this.tableWidth + border, y: this.pos.y + this.tableHeight}, {color: 'red'});
+                this.drawRectangle(this.tableWidth, this.tableHeight * (num + 1), { x: pos.x + this.tableWidth, y: pos.y + this.tableHeight});
+
+            } else {
+                this.drawRectangle(this.tableWidth, this.tableHeight * (num + 2), { x: pos.x + this.tableWidth, y: pos.y + this.tableHeight * 2});
             }
+            Canvas.restoreOpacity();
+//            this.drawLine({ x: this.pos.x - border, y: 60}, { x:this.pos.x - border, y: this.pos.y + this.tableHeight}, {color: 'red'})
+//                .drawLine({ x: this.pos.x + this.tableWidth + border, y: 60}, { x: this.pos.x + this.tableWidth + border, y: this.pos.y + this.tableHeight}, {color: 'red'})
+//            if(type === 'stack') {
+//                this.drawLine({ x: this.pos.x - border, y: this.pos.y + this.tableHeight}, { x: this.pos.x + this.tableWidth + border, y: this.pos.y + this.tableHeight}, {color: 'red'});
+//            }
+            return this;
+        },
+        render3Dback: function(row, col, pos) {
+            var tableWidth = this.tableWidth,
+                tableHeight = this.tableHeight,
+                ps = { x: pos.x + col * this.tableWidth, y: pos.y},
+                x_now, y_now,
+                angle = 30/180 * Math.PI,
+                length = 20,
+                offsetX = length * Math.cos(angle),
+                offsetY = -length * Math.sin(angle);
+
+            this.drawLine(pos, { x: pos.x + offsetX, y: pos.y + offsetY})
+                .drawLine({ x: pos.x + offsetX, y: pos.y + offsetY}
+                    ,{ x: ps.x + offsetX, y: ps.y + offsetY});
+            for(var i = 0; i <= row; i++) {
+                y_now = ps.y + i * tableHeight;
+                x_now = ps.x;
+
+                this.drawLine({x: x_now, y: y_now}
+                    ,{x: x_now + offsetX, y: y_now + offsetY});
+            }
+            this.drawLine({x: ps.x + offsetX, y: ps.y + offsetY}
+            ,{x: ps.x + offsetX, y: ps.y + row * tableHeight  + offsetY});
+            return this;
+        },
+        render3Dborder: function(type) {
+
             return this;
         },
         drawStackAndQueue: function(array, row, type) {
+            if(array.length === 0) {
+                this.drawStackAndQueueBorder(type);
+                return this;
+            }
             var topOffset = this.tableHeight * (row-1),
                 textOffset = 10;
             this.drawTableBody(row, 1, 0, 0, {x: this.pos.x, y: this.pos.y - topOffset})
+                .render3Dback(row, 1, {x: this.pos.x, y: this.pos.y - topOffset})
                 .drawStackAndQueueContent(array, row)
-                .drawStackAndQueueBorder(type);
+                .drawStackAndQueueBorder(array.length, type)
+                .render3Dborder(type);
             switch (type) {
                 case 'queue':
                     this.writeText('front', { x: this.pos.x, y: this.pos.y + this.tableHeight + textOffset});

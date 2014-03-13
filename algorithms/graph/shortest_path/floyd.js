@@ -6,7 +6,8 @@
  * To change this template use File | Settings | File Templates.
  */
 Floyd = function() {
-    $('#floyd').click(FunctionTemplate.startButton('Floyd'));
+    app.initToolsView('floyd')
+        .startButtonInit();
     return extend(Graph, {
         run: function(id) {
             Canvas.init(id);
