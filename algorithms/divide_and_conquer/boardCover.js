@@ -8,7 +8,9 @@
 BoardCover = function() {
     app.initToolsView('boardCover')
         .inputOneInit('棋盘大小（2的次方数）')
-        .inputTwoInit()
+        .informationInit('棋盘上特殊格位置')
+        .inputTwoInit('x坐标')
+        .inputThreeInit('y坐标')
         .singleAddButtonInit('开始覆盖');
     return extend(DivideAndConquer, {
         board: [],
@@ -16,15 +18,30 @@ BoardCover = function() {
             return this;
         },
         run: function(scale, x, y) {
-            this.divideAndConquer(scale, x, y);
+            this.clearAll()
+                .divideAndConquer(scale, x, y);
+            return this;
+        },
+        check: function(v) {
+            if(isNaN(v)) {
+                alert('坐标应为整数！');
+                return this;
+            }
             return this;
         },
         add: function(scale) {
-            this.divideAndConquer(scale, 1, 1);
-            Table.drawGrids(this.board, this.width, this.height);
+            var x = $('#input2').val(),
+                y = $('#input3').val();
+            this.clearAll();
+            this.check(scale)
+                .check(x)
+                .check(y);
+            this.divideAndConquer(scale, x, y);
+            Table.drawGrids(this.board, this.height, this.width)
+                .drawXYCoordinateSystem();
             return this;
         },
-        generateBoard: function(scale) {
+        generateBoard: function(scale, x, y) {
             var ret = 1,
                 mul = 2;
             while(scale) {
@@ -34,10 +51,15 @@ BoardCover = function() {
                 scale = parseInt(scale/2);
                 mul *= mul;
             }
+            if(!(x >=0 && x < ret) || !(y >=0 && y < ret)) {
+                alert('特殊格须是棋盘上一点！');
+                return this;
+            }
             this.width = ret;
             this.height = ret;
             return this;
         },
+
         divide_conquer_init: function(x, y) {
             this.index = 1;
             for(var i = 0; i < this.width; i++) {
@@ -46,8 +68,9 @@ BoardCover = function() {
             this.board[x][y] = 0;
             return this;
         },
+
         divideAndConquer: function(scale, x, y) {
-            this.generateBoard(scale);
+            this.generateBoard(scale, x, y);
             var width =  this.width,
                 height = this.height;
             this.divide_conquer_init(x, y)
@@ -64,12 +87,23 @@ BoardCover = function() {
             var midx = parseInt( (low_x + high_x) / 2),
                 midy = parseInt( (low_y + high_y) / 2),
                 board = this.board,
-                index = this.index,
-                indx = index;
+                index = this.index;
+            if(!this.in(low_x, midx, x, low_y, midy, y)) {
+                board[midx][midy] = index;
+            }
+            if(!this.in(low_x, midx, x, midy + 1, high_y, y)) {
+                board[midx][midy + 1] = index;
+            }
+            if(!this.in(midx + 1, high_x, x, low_y, midy, y)) {
+                board[midx + 1][midy] = index;
+            }
+            if(!this.in(midx + 1, high_x, x, midy + 1, high_y, y)) {
+                board[midx + 1][midy + 1] = index;
+            }
+
+            this.index ++;
             //left-top block
             if(!this.in(low_x, midx, x, low_y, midy, y)) {
-                board[midx][midy] = indx;
-                index ++;
                 this.divide_conquer(low_x, midx, low_y, midy, midx, midy);
             } else {
                 this.divide_conquer(low_x, midx, low_y, midy, x, y);
@@ -77,8 +111,6 @@ BoardCover = function() {
 
             //left-bottom block
             if(!this.in(low_x, midx, x, midy + 1, high_y, y)) {
-                board[midx][midy + 1] = indx;
-                index ++;
                 this.divide_conquer(low_x, midx, midy + 1, high_y, midx, midy + 1);
             } else {
                 this.divide_conquer(low_x, midx, midy + 1, high_y, x, y);
@@ -86,8 +118,6 @@ BoardCover = function() {
 
             //right-top block
             if(!this.in(midx + 1, high_x, x, low_y, midy, y)) {
-                board[midx + 1][midy] = indx;
-                index ++;
                 this.divide_conquer(midx + 1, high_x, low_y, midy, midx + 1, midy);
             } else {
                 this.divide_conquer(midx + 1, high_x, low_y, midy, x, y);
@@ -95,8 +125,6 @@ BoardCover = function() {
 
             //right-bottom block
             if(!this.in(midx + 1, high_x, x, midy + 1, high_y, y)) {
-                board[midx + 1][midy + 1] = indx;
-                index ++;
                 this.divide_conquer(midx + 1, high_x, midy + 1, high_y, midx + 1, midy + 1);
             } else {
                 this.divide_conquer(midx + 1, high_x, midy + 1, high_y, x, y);

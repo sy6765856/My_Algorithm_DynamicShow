@@ -101,6 +101,34 @@ app = {
         );
         return this;
     },
+    inputThreeInit: function(name) {
+        var index = '#' + this.id;
+        if(name === undefined) {
+            name = '';
+        } else {
+            name += ':';
+        }
+        $(index).click(
+            function() {
+                $('#input').append('</br><label class = "label" for="input3">' + name + '</label><input id = "input3"/>');
+            }
+        );
+        return this;
+    },
+    informationInit: function(name) {
+        var index = '#' + this.id;
+        if(name === undefined) {
+            name = '';
+        } else {
+            name += ':';
+        }
+        $(index).click(
+            function() {
+                $('#input').append('</br><a>' + name + '</a>');
+            }
+        );
+        return this;
+    },
     randomButtonInit: function(name) {
         var index = '#' + this.id
             ,className = this.class;

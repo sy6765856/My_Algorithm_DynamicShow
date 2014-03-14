@@ -19,7 +19,7 @@ MergeSort = function() {
         },
         merge_Sort: function(CanvasObject){
             var array = this.array;
-            this.init('MergeSort', 100)
+            this.init('MergeSort', 500)
                 .QUEUE.push(array.slice(0));
 
             this.mergeSort(array, 0, array.length-1)

@@ -103,6 +103,7 @@ CanvasBase = function() {
         setOpacity: function(opacity) {
             this.opacityTmp = this.opacity;
             this.opacity = opacity;
+            this.setSelfOpacity(opacity);
             return this;
         },
         setSelfOpacity: function(persent) {
@@ -122,10 +123,13 @@ CanvasBase = function() {
             return this;
         },
         drawPolygon: function(vertexs) {
-            var ctx = this.ctx;
+            var ctx = this.ctx,
+                n = vertexs.length;
+            ctx.fillStyle = isset(this.color) ? this.color : CanvasLib.colorSet("green");
+            ctx.moveTo(vertexs[n-1][0], vertexs[n-1][1]);
             ctx.beginPath();
-            for(var vertex in vertexs) {
-
+            for(var i = 0; i < n; i++) {
+                ctx.lineTo(vertexs[i][0], vertexs[i][1]);
             }
             ctx.closePath();
             ctx.fill();
@@ -245,7 +249,7 @@ CanvasBase = function() {
             var c = CanvasLib.distance(start, end),
                 p = {x: end.x - len/c*(end.x-start.x)
                     ,y: end.y - len/c*(end.y-start.y)};
-
+            return this;
         },
 
         setFont: function(color, font) {
@@ -312,6 +316,12 @@ CanvasBase = function() {
         getMousePosition: function(e) {
             var bound = this.canvas.getBoundingClientRect();
             return {x: e.clientX - bound.left, y: e.clientY - bound.top};
+        },
+
+        drawXYCoordinateSystem: function(origin, unitLength) {
+            this.drawDirectedLine(origin, { x: origin.x, y: origin.y + unitLength * 8})
+                .drawDirectedLine(origin, { x: origin.x + unitLength * 8, y: origin.y});
+            return this;
         }
     });
 }();

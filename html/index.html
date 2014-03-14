@@ -3,6 +3,22 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta>
         <link rel="stylesheet" href="../css/main.css"/>
+        <style type="text/css">
+            .picView li{
+                position:relative;
+                overflow:hidden;
+                list-style:none;
+                float:left;
+                display:inline;
+                margin:2px;
+                cursor:pointer;
+            }
+            .picView li .bend{
+                position:absolute;
+                top:0;
+                right:0;
+            }
+        </style>
     </head>
     <body>
         <div class="title">Algorithm Dynamic Show</div>
@@ -12,7 +28,6 @@
 
                 </ul>
             </div>
-
             <div class="context">
                 <div>
                     <div class="buttonFrame">
@@ -34,11 +49,9 @@
                         <div class = "subTitle" id = "subTitle"></div>
                     </div>
                     <canvas id="canvas" class="canvas curved_box"></canvas>
-
                 </div>
-                <div class="code">
-                </div>
-            </div>
+                <div class="code"></div>
+        </div>
         </div>
     </body>
 
@@ -127,5 +140,41 @@
 //                who = who.previousSibling;
 //            }
 //        });
+    </script>
+
+    <script type="text/javascript">
+        function bendImg(wrap){
+            wrap=typeof wrap=="string"?document.getElementById(wrap):wrap;
+            var _bendImg=this, bend=document.createElement('IMG');
+            wrap.appendChild(bend);
+            bend.src=this.src;
+            bend.className='bend';
+            bend.width=2;
+            wrap.onmouseover=function (){
+                this.fxTimer=_bendImg.fx(bend.width,70,function (x){
+                    bend.width=x
+                },0,0,function(x){return -(Math.pow((x-1), 4) -1)},this)
+            };
+            wrap.onmouseout=function (){
+                this.fxTimer=_bendImg.fx(bend.width,0,function (x){
+                    bend.width=x
+                },0,0,0,this)
+            }
+        };
+        bendImg.prototype={
+            src:'http://www.zzsky.cn/effect/images/201005062030/curl.png',
+            fx:function fx(f,t,fn,E,T,F,el){
+                clearInterval(el.fxTimer);
+                var D=Date,d=+new D,e,T=T||480,E=E||D,
+                        F=F||function(x){return Math.pow(x,2)};
+                return e=setInterval(function (){
+                    var z=Math.min(1,(new D-d)/T);
+                    if(z==1||false===fn(+f+(t-f)*F(z),z))E(clearTimeout(e))
+                },10)
+            }
+        };
+        window.onload=function (){
+            new bendImg('canvas');
+        }
     </script>
 </html>

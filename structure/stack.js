@@ -10,7 +10,7 @@ Stack = function() {
         .singleAddButtonInit('入栈')
         .resetButtonInit()
         .popButtonInit('出栈')
-        .inputOneInit();
+        .inputOneInit('入栈值');
     Table.init();
     return extend(AlgorithmBase, {
         stack: [],
@@ -25,6 +25,10 @@ Stack = function() {
             return this;
         },
         add: function(v) {
+            if(!v) {
+                alert('请输入进栈的元素！');
+                return this;
+            }
             this.push(v);
             $("#input1").val('').focus();
             return this;

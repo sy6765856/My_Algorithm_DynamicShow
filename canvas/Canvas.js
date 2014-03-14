@@ -54,7 +54,13 @@ Canvas = function(){
             },
 
             drawSquareArray: function(array, width) {
+                return this;
+            },
 
+            drawGrid: function(pos, width, str) {
+                this.drawRectangle(width, width, pos)
+                    .writeText(str, pos);
+                return this;
             },
 
             drawTreeLevel: function(treeNodes, father) {

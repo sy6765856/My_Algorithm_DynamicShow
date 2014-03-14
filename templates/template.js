@@ -16,8 +16,8 @@ Template = function() {
                         name + '</li>';
                     break;
                 case 2:
-                    ret = '<li>' +
-                        '<a  href="#" id =' + id +
+                    ret = '<li style="display:none">' +
+                        '<a  href="#"  id =' + id +
                         '>' + name +'</a>' +
                         '</li>';
                     break;

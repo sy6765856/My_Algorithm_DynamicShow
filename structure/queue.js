@@ -10,19 +10,24 @@ Queue = function() {
         .singleAddButtonInit('进队列')
         .popButtonInit('出队列')
         .resetButtonInit()
-        .inputOneInit();
+        .inputOneInit('进队值');
 
     return extend(AlgorithmBase, {
         queue: [],
         init: function() {
+            this.drawQueue();
             return this;
         },
         reset: function() {
             this.queue = [];
-            this.clearAll();
+            this.drawQueue();
             return this;
         },
         add: function(v) {
+            if(!v) {
+                alert('请输入进队列元素！');
+                return this;
+            }
             this.push(v);
             $("#input1").val('').focus();
             return this;

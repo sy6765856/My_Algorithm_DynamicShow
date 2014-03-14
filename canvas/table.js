@@ -106,16 +106,78 @@ Table = function() {
         },
         drawStackAndQueueBorder: function(num, type) {
             var border = 2,
-                pos = this.pos;
+                pos = this.pos,
+                angle = 30/180 * Math.PI,
+                length = 20;
             Canvas.lineColor = 'green';
-            Canvas.setOpacity(0.5);
             if(type === 'stack') {
+                //正面
+                Canvas.setOpacity(0.5);
                 this.drawRectangle(this.tableWidth, this.tableHeight * (num + 1), { x: pos.x + this.tableWidth, y: pos.y + this.tableHeight});
+                Canvas.restoreOpacity();
 
+                //右侧面
+                Canvas.setOpacity(0.6);
+                var vertexs = [];
+                vertexs.push([pos.x + this.tableWidth, pos.y + this.tableHeight]);
+                vertexs.push([pos.x + this.tableWidth + length * Math.cos(angle), pos.y + this.tableHeight - length * Math.sin(angle)]);
+                vertexs.push([pos.x + this.tableWidth + length * Math.cos(angle), pos.y + this.tableHeight - length * Math.sin(angle) - this.tableHeight * (num + 1)]);
+                vertexs.push([pos.x + this.tableWidth, pos.y + this.tableHeight - this.tableHeight * (num + 1)]);
+                this.drawPolygon(vertexs);
+                Canvas.restoreOpacity();
+                //左侧面
+                Canvas.setOpacity(0.4);
+                vertexs = [];
+                vertexs.push([pos.x - 2, pos.y + this.tableHeight - this.tableHeight * (num + 1)]);
+                vertexs.push([pos.x - 2, pos.y + this.tableHeight - this.tableHeight * num]);
+                vertexs.push([pos.x - 2 + length * Math.cos(angle), pos.y + this.tableHeight - this.tableHeight * num - length * Math.sin(angle)]);
+                vertexs.push([pos.x - 2 + length * Math.cos(angle), pos.y + this.tableHeight - this.tableHeight * (num+1) - length * Math.sin(angle)]);
+                this.drawPolygon(vertexs);
+                Canvas.restoreOpacity();
+                //背面
+                Canvas.setOpacity(0.3);
+                vertexs = [];
+                vertexs.push([pos.x - 2 + length * Math.cos(angle), pos.y + this.tableHeight - this.tableHeight * num - length * Math.sin(angle)]);
+                vertexs.push([pos.x - 2 + length * Math.cos(angle), pos.y + this.tableHeight - this.tableHeight * (num+1) - length * Math.sin(angle)]);
+                vertexs.push([pos.x + this.tableWidth + length * Math.cos(angle), pos.y + this.tableHeight - this.tableHeight * (num+1) - length * Math.sin(angle)]);
+                vertexs.push([pos.x + this.tableWidth + length * Math.cos(angle), pos.y + this.tableHeight - this.tableHeight * num - length * Math.sin(angle)]);
+                this.drawPolygon(vertexs);
+                Canvas.restoreOpacity();
             } else {
-                this.drawRectangle(this.tableWidth, this.tableHeight * (num + 2), { x: pos.x + this.tableWidth, y: pos.y + this.tableHeight * 2});
+                var ps = { x: pos.x, y: pos.y + this.tableHeight};
+                //正面
+                Canvas.setOpacity(0.5);
+                this.drawRectangle(this.tableWidth, this.tableHeight * (num + 2), { x: ps.x + this.tableWidth, y: ps.y + this.tableHeight});
+                Canvas.restoreOpacity();
+
+                //右侧面
+                Canvas.setOpacity(0.6);
+                var vertexs = [];
+                vertexs.push([ps.x + this.tableWidth, ps.y + this.tableHeight]);
+                vertexs.push([ps.x + this.tableWidth + length * Math.cos(angle), ps.y + this.tableHeight - length * Math.sin(angle)]);
+                vertexs.push([ps.x + this.tableWidth + length * Math.cos(angle), ps.y + this.tableHeight - length * Math.sin(angle) - this.tableHeight * (num + 2)]);
+                vertexs.push([ps.x + this.tableWidth, ps.y + this.tableHeight - this.tableHeight * (num + 2)]);
+                this.drawPolygon(vertexs);
+                Canvas.restoreOpacity();
+                //左侧面
+                Canvas.setOpacity(0.4);
+                vertexs = [];
+                vertexs.push([ps.x - 2, ps.y + this.tableHeight - this.tableHeight * (num + 2)]);
+                vertexs.push([ps.x - 2, ps.y + this.tableHeight - this.tableHeight * num]);
+                vertexs.push([ps.x - 2 + length * Math.cos(angle), ps.y + this.tableHeight - this.tableHeight * num - length * Math.sin(angle)]);
+                vertexs.push([ps.x - 2 + length * Math.cos(angle), ps.y + this.tableHeight - this.tableHeight * (num+2) - length * Math.sin(angle)]);
+                this.drawPolygon(vertexs);
+                Canvas.restoreOpacity();
+                //背面
+                Canvas.setOpacity(0.3);
+                vertexs = [];
+                vertexs.push([ps.x - 2 + length * Math.cos(angle), ps.y + this.tableHeight - this.tableHeight * num - length * Math.sin(angle)]);
+                vertexs.push([ps.x - 2 + length * Math.cos(angle), ps.y + this.tableHeight - this.tableHeight * (num+2) - length * Math.sin(angle)]);
+                vertexs.push([ps.x + this.tableWidth + length * Math.cos(angle), ps.y + this.tableHeight - this.tableHeight * (num+2) - length * Math.sin(angle)]);
+                vertexs.push([ps.x + this.tableWidth + length * Math.cos(angle), ps.y + this.tableHeight - this.tableHeight * num - length * Math.sin(angle)]);
+                this.drawPolygon(vertexs);
+                Canvas.restoreOpacity();
             }
-            Canvas.restoreOpacity();
 //            this.drawLine({ x: this.pos.x - border, y: 60}, { x:this.pos.x - border, y: this.pos.y + this.tableHeight}, {color: 'red'})
 //                .drawLine({ x: this.pos.x + this.tableWidth + border, y: 60}, { x: this.pos.x + this.tableWidth + border, y: this.pos.y + this.tableHeight}, {color: 'red'})
 //            if(type === 'stack') {
@@ -152,10 +214,6 @@ Table = function() {
             return this;
         },
         drawStackAndQueue: function(array, row, type) {
-            if(array.length === 0) {
-                this.drawStackAndQueueBorder(type);
-                return this;
-            }
             var topOffset = this.tableHeight * (row-1),
                 textOffset = 10;
             this.drawTableBody(row, 1, 0, 0, {x: this.pos.x, y: this.pos.y - topOffset})
@@ -190,6 +248,25 @@ Table = function() {
         highLightRectangle: function(pos, color) {
             color = color ? color : 'black';
             Canvas.drawRectangleBound(pos, this.tableWidth, this.tableHeight, color);
+            return this;
+        },
+        drawGrids: function(grids, row, col) {
+            var pos = this.pos,
+                width = this.tableWidth,
+                sp = 10,
+                ps;
+            for(var i = 0; i < row; i++) {
+                for(var j = 0; j < col; j++) {
+                    ps = {x: pos.x + i * (width + sp), y: pos.y + j * (width + sp)};
+                    Canvas.drawGrid(ps, width, grids[i][j]);
+                }
+            }
+            return this;
+        },
+        drawXYCoordinateSystem: function() {
+            var pos = this.pos,
+                width = this.tableWidth;
+            Canvas.drawXYCoordinateSystem({ x: pos.x - width, y: pos.y - width}, width + 5);
             return this;
         }
     });
