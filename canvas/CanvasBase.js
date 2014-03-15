@@ -245,10 +245,14 @@ CanvasBase = function() {
         drawDirectedLine: function(start, end, lineWidth) {
             var ctx = this.ctx;
             this.drawLine(start, end, lineWidth);
-            var len = 5;
-            var c = CanvasLib.distance(start, end),
-                p = {x: end.x - len/c*(end.x-start.x)
-                    ,y: end.y - len/c*(end.y-start.y)};
+            var l = 5,
+                t = {x: -end.y + start.y, y: end.x - start.x},
+                p_x = end.x - l / (CanvasLib.distance(start, end)) * (end.x - start.x),
+                p_y = end.y - l / (CanvasLib.distance(start, end)) * (end.y - start.y),
+                offX = l / CanvasLib.distance(t, {x:0, y:0})* t.x,
+                offY = l / CanvasLib.distance(t, {x:0, y:0})* t.y;
+            this.drawLine(end, { x: p_x + offX, y: p_y + offY})
+                .drawLine(end, { x: p_x - offX, y: p_y - offY});
             return this;
         },
 
@@ -270,7 +274,7 @@ CanvasBase = function() {
 
         writeText: function(str, pos) {
             var ctx = this.ctx;
-            ctx.font = isset(this.font) ? this.font : "15px Arial";
+            ctx.font = isset(this.font) ? this.font : "25px Arial";
             ctx.shadowOffsetX = 0;
             ctx.shadowOffsetY = 0;
             ctx.fillStyle = isset(this.fontColor)? CanvasLib.colorSet(this.fontColor) : CanvasLib.colorSet('black');
@@ -320,7 +324,10 @@ CanvasBase = function() {
 
         drawXYCoordinateSystem: function(origin, unitLength) {
             this.drawDirectedLine(origin, { x: origin.x, y: origin.y + unitLength * 8})
-                .drawDirectedLine(origin, { x: origin.x + unitLength * 8, y: origin.y});
+                .drawDirectedLine(origin, { x: origin.x + unitLength * 8, y: origin.y})
+                .writeText('o', origin)
+                .writeText('x', { x: origin.x , y: origin.y + unitLength * 8 + 8})
+                .writeText('y', { x: origin.x + unitLength * 8, y: origin.y});
             return this;
         }
     });

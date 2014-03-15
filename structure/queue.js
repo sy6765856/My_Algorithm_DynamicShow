@@ -10,11 +10,13 @@ Queue = function() {
         .singleAddButtonInit('进队列')
         .popButtonInit('出队列')
         .resetButtonInit()
-        .inputOneInit('进队值');
+        .inputOneInit('进队值')
+        .description('队列是一种先进先出的基本数据结构，图中front即为队首。');
 
     return extend(AlgorithmBase, {
         queue: [],
         init: function() {
+            this.queue = [];
             this.drawQueue();
             return this;
         },

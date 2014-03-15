@@ -39,6 +39,11 @@ FunctionTemplate = function() {
                 $('#random').html(Template.randomButton(name, str));
             }
         },
+        setButton: function(name, str) {
+            return function() {
+                $('#set').html(Template.setButton(name, str));
+            }
+        },
         clearButton: function(name) {
             return function() {
                 $('#' + name).html('');
@@ -51,6 +56,7 @@ FunctionTemplate = function() {
                 $('#start').html('');
                 $('#reset').html('');
                 $('#random').html('');
+                $('#set').html('');
             }
         },
         clearAllInputs: function() {

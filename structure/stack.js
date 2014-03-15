@@ -10,7 +10,8 @@ Stack = function() {
         .singleAddButtonInit('入栈')
         .resetButtonInit()
         .popButtonInit('出栈')
-        .inputOneInit('入栈值');
+        .inputOneInit('入栈值')
+        .description('栈是一种先进后出的基本数据结构，图中top即为栈顶。');
     Table.init();
     return extend(AlgorithmBase, {
         stack: [],

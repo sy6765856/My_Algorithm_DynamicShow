@@ -30,6 +30,7 @@ app = {
             function() {
                 $('#answer').html('');
                 $('#info').html('');
+                $('#description').html('');
             }
         );
         $(index).click(
@@ -42,7 +43,11 @@ app = {
         return this;
     },
 
-
+    description: function(content) {
+        var index = '#' + this.id;
+        $(index).click(function(){$('#description').html('&nbsp&nbsp' + content);});
+        return this;
+    },
     startButtonInit: function(name) {
         var index = '#' + this.id,
             className = this.class;
@@ -133,6 +138,12 @@ app = {
         var index = '#' + this.id
             ,className = this.class;
         $(index).click(FunctionTemplate.randomButton(className, name));
+        return this;
+    },
+    setButtonInit: function(name) {
+        var index = '#' + this.id
+            ,className = this.class;
+        $(index).click(FunctionTemplate.setButton(className, name));
         return this;
     }
 };

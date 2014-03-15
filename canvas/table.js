@@ -251,7 +251,7 @@ Table = function() {
             return this;
         },
         drawGrids: function(grids, row, col) {
-            var pos = this.pos,
+            var pos = { x: this.pos.x - 50, y: this.pos.y - 100},
                 width = this.tableWidth,
                 sp = 10,
                 ps;
@@ -267,6 +267,30 @@ Table = function() {
             var pos = this.pos,
                 width = this.tableWidth;
             Canvas.drawXYCoordinateSystem({ x: pos.x - width, y: pos.y - width}, width + 5);
+            return this;
+        },
+        drawGoods: function(goods) {
+            var pos = this.pos,
+                width = this.width,
+                array = []
+                ct = 0;
+            for(var i = 0; i < 3; i++) {
+                array[i] = [];
+            }
+            array[0].push('');
+            array[1].push('w');
+            array[2].push('v');
+            for(var key in goods) {
+                var good = goods[key];
+                ct ++;
+                array[0].push(ct);
+                array[1].push(good[0]);
+                array[2].push(good[1]);
+            }
+
+            this.drawTableBody(3, goods.length + 1, 0, 0)
+                .drawTableContent(array, 3, goods.length + 1);
+
             return this;
         }
     });

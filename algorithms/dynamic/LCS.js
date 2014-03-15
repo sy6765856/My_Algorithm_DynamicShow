@@ -10,7 +10,8 @@ LCS = function() {
         .inputOneInit('字符串a')
         .inputTwoInit('字符串b')
         .startButtonInit()
-        .resetButtonInit();
+        .resetButtonInit()
+        .description('现有两个你给出的字符串A,B。最长公共子序列问题就是求解A,B中相同子序列的最大长度，最后会给出最大公共子序列长度及子序列。');
 
     return extend(Dynamic, {
         dp: [],
@@ -18,6 +19,7 @@ LCS = function() {
         pos: { x: 40, y: 60},
         reset: function() {
             this.str1 = this.str2 = '';
+            this.clearAll();
             return this;
         },
         run: function() {
@@ -32,19 +34,21 @@ LCS = function() {
             Canvas.init('canvas');
             this.init('canvas')
                 .LCS()
-//            console.log(Canvas.imageDataQUEUE.length);
                 .draw();
-            console.log(this.chose1, this.chose2);
             return this;
         },
         drawing: function() {
             if(Canvas.imageFrame >= Canvas.imageDataQUEUE.length) {
-                console.log("end!");
+                LCS.drawAfter();
                 return this;
             }
             this.drawCanvasFrame(Canvas.imageDataQUEUE[Canvas.imageFrame]);
             Canvas.imageFrame++;
             setTimeout.call(null, 'LCS.drawing();', 300);
+            return this;
+        },
+        drawAfter: function() {
+            $('#answer').html('最长公共子序列长度为：' + this.dp[this.str1.length][this.str2.length]);
             return this;
         },
         LCS_init: function() {
@@ -77,7 +81,6 @@ LCS = function() {
             link[0][0] = link[0][1] = link[1][0] = 0;
             for(var i = 0; i < a.length; i++) {
                 for(var j = 0; j < b.length; j++) {
-//                    this.saveTextArray();
                     if(dp[i][j+1] > dp[i+1][j]) {
                         dp[i+1][j+1] = dp[i][j+1];
                         link[i+1][j+1] = 1;
@@ -94,8 +97,8 @@ LCS = function() {
             }
             var fi = a.length,
                 li = b.length;
-            console.log(dp[fi][li]);
             while(link[fi][li]) {
+                this.saveTextArray();
                 switch (link[fi][li]) {
                     case 1:
                         fi --;
@@ -119,8 +122,9 @@ LCS = function() {
             return this;
         },
         saveTextArray: function() {
-            Canvas.writeTextArray(this.str1, this.chose1, this.pos)
-                  .writeTextArray(this.str2, this.chose2, {x: this.pos.x, y: this.pos.y + 20})
+            var ps = { x: this.pos.x + 90, y: this.pos.y + 60};
+            Canvas.writeTextArray(this.str1, this.chose1, ps)
+                  .writeTextArray(this.str2, this.chose2, {x: ps.x, y: ps.y + 50})
                   .saveCanvasFrame()
                   .clearAll();
             return this;

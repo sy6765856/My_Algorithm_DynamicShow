@@ -11,7 +11,8 @@ MergeSort = function() {
         .singleAddButtonInit('输入')
         .resetButtonInit()
         .randomButtonInit()
-        .inputOneInit('请输入一个数');
+        .inputOneInit('请输入一个数')
+        .description('这里会演示归并排序过程中数字序列的变化过程');
     return extend(Sort, {
         run: function(id) {
             this.merge_Sort(Canvas.init(id));

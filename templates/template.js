@@ -55,6 +55,12 @@ Template = function() {
             return '<button class="random" onclick=' + name + ".random();" + '>' +
                 str +
                 '</button>';
+        },
+        setButton: function(name, str) {
+            str = isset(str) ? str : '产生随机序列';
+            return '<button class="random" onclick=' + name + ".set();" + '>' +
+                str +
+                '</button>';
         }
     };
 }();

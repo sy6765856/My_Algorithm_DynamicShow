@@ -172,7 +172,7 @@ Graph = function() {
 
         drawing: function() {
             if(Canvas.imageFrame >= Canvas.imageDataQUEUE.length) {
-                Kruskal.drawAfter();
+                Graph.drawAfter();
                 return this;
             }
             this.drawCanvasFrame(Canvas.imageDataQUEUE[Canvas.imageFrame]);

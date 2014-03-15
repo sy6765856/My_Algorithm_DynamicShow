@@ -11,7 +11,8 @@ OrderSort = function() {
         .resetButtonInit()
         .randomButtonInit()
         .singleAddButtonInit('输入')
-        .inputOneInit('请输入一个数');
+        .inputOneInit('请输入一个数')
+        .description('这里会演示顺序排序过程中数字序列的变化过程');
     Canvas.init('canvas');
     return extend(Sort, {
         run: function(id) {

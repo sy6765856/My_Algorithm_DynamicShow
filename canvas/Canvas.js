@@ -58,8 +58,11 @@ Canvas = function(){
             },
 
             drawGrid: function(pos, width, str) {
+                var offX = 25,
+                    offY = 15;
+                this.fontColor = 'red';
                 this.drawRectangle(width, width, pos)
-                    .writeText(str, pos);
+                    .writeText(str,{ x: pos.x - offX, y: pos.y - offY});
                 return this;
             },
 
@@ -117,7 +120,7 @@ Canvas = function(){
                 var sp = 20;
                 for(var i = 0; i < str.length; i++) {
                     if(highlights[i]) {
-                        this.setFont('yellow')
+                        this.setFont('red')
                             .writeText(str[i], { x: pos.x + i*sp, y: pos.y})
                             .restoreFont();
                     } else {
