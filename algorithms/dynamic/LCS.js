@@ -81,6 +81,7 @@ LCS = function() {
             link[0][0] = link[0][1] = link[1][0] = 0;
             for(var i = 0; i < a.length; i++) {
                 for(var j = 0; j < b.length; j++) {
+                    this.saveDpArray();
                     if(dp[i][j+1] > dp[i+1][j]) {
                         dp[i+1][j+1] = dp[i][j+1];
                         link[i+1][j+1] = 1;
@@ -121,6 +122,7 @@ LCS = function() {
             this.saveTextArray();
             return this;
         },
+
         saveTextArray: function() {
             var ps = { x: this.pos.x + 90, y: this.pos.y + 60};
             Canvas.writeTextArray(this.str1, this.chose1, ps)

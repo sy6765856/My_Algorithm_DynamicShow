@@ -30,6 +30,12 @@ Dynamic = function() {
             this.queue.pop();
             this.drawQueue();
             return this;
+        },
+        saveDpArray: function() {
+            Table.drawTable(this.dp, this.str1.length, this.str2.length);
+            this.saveCanvasFrame()
+                .clearAll();
+            return this;
         }
 
     });

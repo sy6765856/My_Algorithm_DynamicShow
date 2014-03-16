@@ -66,7 +66,8 @@ ZeroOnePackage = function() {
                 alert('请设置背包大小！');
                 return this;
             }
-            this.zeroOne_package();
+            this.zeroOne_package()
+                .draw();
             return this;
         },
         zeroOne_package: function() {
@@ -87,6 +88,7 @@ ZeroOnePackage = function() {
             for(var i = 0; i < n; i++) {
                 var good = this.goods[i];
                 for(var w = size; w >= good[0]; w--) {
+                    this.saveDpArray();
                     if(dp[w - good[0]] + good[1] > dp[w]) {
                         dp[w] = dp[w - good[0]] + good[1];
                     } else {
