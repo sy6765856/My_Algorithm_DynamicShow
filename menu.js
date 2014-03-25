@@ -31,9 +31,11 @@ Menu = function() {
                 'mergeSort': ['归并排序', 2],
                 'orderSort': ['顺序排序', 2],
                 'bubbleSort': ['冒泡排序', 2],
+                'quickSort': ['快速排序', 2],
 
                 'greedy': ['贪心算法', 1],
                 'activitySelect': ['活动选择', 2],
+                'fractionPackage': ['分数背包', 2],
 
                 'minimum_spanning_tree': ['最小生成树', 1],
                 'prim': ['prim', 2],
@@ -41,7 +43,8 @@ Menu = function() {
 
                 'shortest_path': ['最短路径', 1],
                 'dijkstra': ['dijkstra', 2],
-                'floyd': ['floyd', 2]
+                'floyd': ['floyd', 2],
+                'spfa': ['spfa', 2]
             };
             return this;
         },

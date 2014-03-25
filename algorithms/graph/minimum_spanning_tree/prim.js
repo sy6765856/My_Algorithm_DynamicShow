@@ -8,7 +8,8 @@
 Prim = function() {
     app.initToolsView('prim')
         .startButtonInit()
-        .randomButtonInit('产生随机图');
+        .randomButtonInit('产生随机图')
+        .description('最小生成树问题：给定一张无向图，选择其中的一些边得到图的一棵生成树，使得这些边的权值和最小。');
     return extend(Graph, {
         run: function(id){
             Canvas.init(id);

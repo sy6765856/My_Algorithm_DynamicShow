@@ -55,6 +55,14 @@ ActivitySelect = function() {
             return this;
         },
         add: function(begin, end) {
+            if(!begin) {
+                alert('请输入开始时间！');
+                return this;
+            }
+            if(!end) {
+                alert('请输入结束时间！');
+                return this;
+            }
             if(warnNumber(begin, '开始时间应为数字！')) {
                 return this;
             }
