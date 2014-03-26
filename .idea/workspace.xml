@@ -45,7 +45,7 @@
     <file path="/ZeroOnePackage.js" changelist="b8866d45-fac2-4c5e-ab85-e2969b0a6841" time="1394960908557" ignored="false" />
     <file path="$PROJECT_DIR$/.idea/workspace.xml" changelist="b8866d45-fac2-4c5e-ab85-e2969b0a6841" time="1394792688484" ignored="false" />
     <file path="/fractionPackage.js" changelist="b8866d45-fac2-4c5e-ab85-e2969b0a6841" time="1395736931052" ignored="false" />
-    <file path="/quickSort.js" changelist="b8866d45-fac2-4c5e-ab85-e2969b0a6841" time="1395737037493" ignored="false" />
+    <file path="/quickSort.js" changelist="b8866d45-fac2-4c5e-ab85-e2969b0a6841" time="1395823043737" ignored="false" />
     <file path="/spfa.js" changelist="b8866d45-fac2-4c5e-ab85-e2969b0a6841" time="1395737220341" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -66,46 +66,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="activitySelect.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/algorithms/greedy/activitySelect.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="71" column="76" selection-start="2183" selection-end="2183" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="greedy.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/algorithms/greedy/greedy.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="graph.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/algorithms/graph/graph.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="137" column="40" selection-start="4585" selection-end="4585" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/html/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="27" column="68" selection-start="851" selection-end="851" vertical-scroll-proportion="0.18867925">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="menu.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/menu.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="39" column="69" selection-start="1171" selection-end="1171" vertical-scroll-proportion="0.0">
+            <state line="12" column="101" selection-start="481" selection-end="481" vertical-scroll-proportion="-10.0">
               <folding />
             </state>
           </provider>
@@ -114,10 +78,17 @@
       <file leaf-file-name="spfa.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/algorithms/graph/shortest_path/spfa.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="48" selection-start="258" selection-end="258" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="e#0#160#0" expanded="false" />
-              </folding>
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="menu.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/menu.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="42" column="69" selection-start="1252" selection-end="1252" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -131,13 +102,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="fractionPackage.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/algorithms/greedy/fractionPackage.js">
+      <file leaf-file-name="dijkstra.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/algorithms/graph/shortest_path/dijkstra.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="37" selection-start="310" selection-end="310" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="e#0#160#0" expanded="false" />
-              </folding>
+            <state line="14" column="25" selection-start="390" selection-end="390" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -145,10 +114,17 @@
       <file leaf-file-name="quickSort.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/algorithms/sort/quickSort.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="46" selection-start="327" selection-end="327" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="e#0#160#0" expanded="false" />
-              </folding>
+            <state line="8" column="16" selection-start="202" selection-end="202" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="app.js" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="25" column="25" selection-start="622" selection-end="622" vertical-scroll-proportion="0.403709">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -156,7 +132,25 @@
       <file leaf-file-name="orderSort.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/algorithms/sort/orderSort.js">
           <provider selected="true" editor-type-id="text-editor">
+            <state line="7" column="78" selection-start="185" selection-end="185" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="sort.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/algorithms/sort/sort.js">
+          <provider selected="true" editor-type-id="text-editor">
             <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="mergeSort.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/algorithms/sort/mergeSort.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="10" column="63" selection-start="290" selection-end="290" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -185,17 +179,17 @@
         <option value="$PROJECT_DIR$/algorithms/graph/minimum_spanning_tree/kruskal.js" />
         <option value="$PROJECT_DIR$/algorithms/graph/graph.js" />
         <option value="$PROJECT_DIR$/algorithms/greedy/fractionPackage.js" />
-        <option value="$PROJECT_DIR$/algorithms/sort/quickSort.js" />
         <option value="$PROJECT_DIR$/menu.js" />
         <option value="$PROJECT_DIR$/algorithms/graph/shortest_path/spfa.js" />
+        <option value="$PROJECT_DIR$/algorithms/sort/quickSort.js" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
-    <option name="width" value="1382" />
-    <option name="height" value="754" />
+    <option name="width" value="1456" />
+    <option name="height" value="886" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -223,6 +217,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -252,6 +247,20 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="html" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="testjs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="My_Algorithm_DynamicShow" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="documents" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -419,20 +428,19 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="recentsLimit" value="5" />
     <property name="options.lastSelected" value="editor" />
+    <property name="recentsLimit" value="5" />
     <property name="last_opened_file_path" value="E:/boss.js" />
     <property name="FullScreen" value="false" />
     <property name="DefaultHtmlFileTemplate" value="Html5" />
-    <property name="GoToClass.includeJavaFiles" value="false" />
-    <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="GoToClass.includeJavaFiles" value="false" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -504,13 +512,13 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="754" extended-state="7" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1456" height="886" extended-state="6" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24963397" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16983895" sideWeight="0.788712" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16937192" sideWeight="0.788712" order="1" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39838493" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.08468596" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -518,8 +526,8 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.21128799" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
@@ -588,20 +596,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/algorithms/dynamic/ZeroOnePackage.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="58" column="94" selection-start="1832" selection-end="1832" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/canvas/CanvasBase.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="283" column="57" selection-start="10207" selection-end="10207" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/algorithms/dynamic/LCS.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="129" column="10" selection-start="4292" selection-end="4292" vertical-scroll-proportion="0.0">
@@ -619,13 +613,6 @@
     <entry file="file://$PROJECT_DIR$/algorithms/graph/minimum_spanning_tree/kruskal.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="29" column="90" selection-start="850" selection-end="850" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/algorithms/graph/shortest_path/dijkstra.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="25" selection-start="390" selection-end="390" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -651,34 +638,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/algorithms/greedy/fractionPackage.js">
+    <entry file="file://$PROJECT_DIR$/menu.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="37" selection-start="310" selection-end="310" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#0#160#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/algorithms/sort/orderSort.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+        <state line="42" column="69" selection-start="1252" selection-end="1252" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/algorithms/sort/quickSort.js">
+    <entry file="file://$PROJECT_DIR$/algorithms/graph/shortest_path/spfa.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="46" selection-start="327" selection-end="327" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#0#160#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/menu.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="39" column="69" selection-start="1171" selection-end="1171" vertical-scroll-proportion="0.0">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -690,18 +659,51 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/algorithms/graph/shortest_path/spfa.js">
+    <entry file="file://$PROJECT_DIR$/algorithms/graph/shortest_path/dijkstra.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="48" selection-start="258" selection-end="258" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#0#160#0" expanded="false" />
-          </folding>
+        <state line="14" column="25" selection-start="390" selection-end="390" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/algorithms/sort/sort.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/algorithms/sort/orderSort.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="78" selection-start="185" selection-end="185" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/algorithms/sort/mergeSort.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="63" selection-start="290" selection-end="290" vertical-scroll-proportion="0.0">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/html/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="68" selection-start="851" selection-end="851" vertical-scroll-proportion="0.18867925">
+        <state line="12" column="101" selection-start="481" selection-end="481" vertical-scroll-proportion="-10.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/algorithms/sort/quickSort.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="16" selection-start="202" selection-end="202" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="25" column="25" selection-start="622" selection-end="622" vertical-scroll-proportion="0.403709">
           <folding />
         </state>
       </provider>
