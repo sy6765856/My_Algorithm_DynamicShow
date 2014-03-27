@@ -5,27 +5,27 @@
     <ignored path="testjs.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/AlgorithmBase.js" changelist="b8866d45-fac2-4c5e-ab85-e2969b0a6841" time="1394353249476" ignored="false" />
-    <file path="/index.html" changelist="b8866d45-fac2-4c5e-ab85-e2969b0a6841" time="1394867385041" ignored="false" />
-    <file path="/CanvasBase.js" changelist="b8866d45-fac2-4c5e-ab85-e2969b0a6841" time="1394861705307" ignored="false" />
+    <file path="/index.html" changelist="b8866d45-fac2-4c5e-ab85-e2969b0a6841" time="1395887629255" ignored="false" />
+    <file path="/CanvasBase.js" changelist="b8866d45-fac2-4c5e-ab85-e2969b0a6841" time="1395906355309" ignored="false" />
     <file path="/app.js" changelist="b8866d45-fac2-4c5e-ab85-e2969b0a6841" time="1394867981013" ignored="false" />
     <file path="/Canvas.js" changelist="b8866d45-fac2-4c5e-ab85-e2969b0a6841" time="1394866628030" ignored="false" />
     <file path="/lib.js" changelist="b8866d45-fac2-4c5e-ab85-e2969b0a6841" time="1394203714672" ignored="false" />
-    <file path="/prim.js" changelist="b8866d45-fac2-4c5e-ab85-e2969b0a6841" time="1395543045317" ignored="false" />
+    <file path="/prim.js" changelist="b8866d45-fac2-4c5e-ab85-e2969b0a6841" time="1395904504200" ignored="false" />
     <file path="/main.css" changelist="b8866d45-fac2-4c5e-ab85-e2969b0a6841" time="1394868979889" ignored="false" />
     <file path="/init.js" changelist="b8866d45-fac2-4c5e-ab85-e2969b0a6841" time="1392033732266" ignored="false" />
     <file path="/sort.js" changelist="b8866d45-fac2-4c5e-ab85-e2969b0a6841" time="1393479970368" ignored="false" />
-    <file path="/CanvasLib.js" changelist="b8866d45-fac2-4c5e-ab85-e2969b0a6841" time="1394248941761" ignored="false" />
-    <file path="/dijkstra.js" changelist="b8866d45-fac2-4c5e-ab85-e2969b0a6841" time="1394693910179" ignored="false" />
+    <file path="/CanvasLib.js" changelist="b8866d45-fac2-4c5e-ab85-e2969b0a6841" time="1395902932764" ignored="false" />
+    <file path="/dijkstra.js" changelist="b8866d45-fac2-4c5e-ab85-e2969b0a6841" time="1395905337690" ignored="false" />
     <file path="/dynamic.js" changelist="b8866d45-fac2-4c5e-ab85-e2969b0a6841" time="1392819200309" ignored="false" />
     <file path="/heap.js" changelist="b8866d45-fac2-4c5e-ab85-e2969b0a6841" time="1394694224747" ignored="false" />
-    <file path="/graph.js" changelist="b8866d45-fac2-4c5e-ab85-e2969b0a6841" time="1394862546656" ignored="false" />
+    <file path="/graph.js" changelist="b8866d45-fac2-4c5e-ab85-e2969b0a6841" time="1395905740504" ignored="false" />
     <file path="/test.html" changelist="b8866d45-fac2-4c5e-ab85-e2969b0a6841" time="1390568210063" ignored="false" />
-    <file path="/a.dummy" changelist="b8866d45-fac2-4c5e-ab85-e2969b0a6841" time="1395542723482" ignored="false" />
-    <file path="/Base.js" changelist="b8866d45-fac2-4c5e-ab85-e2969b0a6841" time="1391428338054" ignored="false" />
+    <file path="/a.dummy" changelist="b8866d45-fac2-4c5e-ab85-e2969b0a6841" time="1395906473585" ignored="false" />
+    <file path="/Base.js" changelist="b8866d45-fac2-4c5e-ab85-e2969b0a6841" time="1395903964212" ignored="false" />
     <file path="/tree.js" changelist="b8866d45-fac2-4c5e-ab85-e2969b0a6841" time="1392035631310" ignored="false" />
     <file path="/krusal.js" changelist="b8866d45-fac2-4c5e-ab85-e2969b0a6841" time="1392870132908" ignored="false" />
     <file path="/table.js" changelist="b8866d45-fac2-4c5e-ab85-e2969b0a6841" time="1394870876715" ignored="false" />
-    <file path="/floyd.js" changelist="b8866d45-fac2-4c5e-ab85-e2969b0a6841" time="1394693927862" ignored="false" />
+    <file path="/floyd.js" changelist="b8866d45-fac2-4c5e-ab85-e2969b0a6841" time="1395905347451" ignored="false" />
     <file path="/stack.js" changelist="b8866d45-fac2-4c5e-ab85-e2969b0a6841" time="1394783419381" ignored="false" />
     <file path="/binaryTree.js" changelist="b8866d45-fac2-4c5e-ab85-e2969b0a6841" time="1392034581511" ignored="false" />
     <file path="/greedy.js" changelist="b8866d45-fac2-4c5e-ab85-e2969b0a6841" time="1393945558934" ignored="false" />
@@ -43,10 +43,10 @@
     <file path="/divideAndConquer.js" changelist="b8866d45-fac2-4c5e-ab85-e2969b0a6841" time="1394269594423" ignored="false" />
     <file path="/LCS.js" changelist="b8866d45-fac2-4c5e-ab85-e2969b0a6841" time="1394960409965" ignored="false" />
     <file path="/ZeroOnePackage.js" changelist="b8866d45-fac2-4c5e-ab85-e2969b0a6841" time="1394960908557" ignored="false" />
-    <file path="$PROJECT_DIR$/.idea/workspace.xml" changelist="b8866d45-fac2-4c5e-ab85-e2969b0a6841" time="1394792688484" ignored="false" />
-    <file path="/fractionPackage.js" changelist="b8866d45-fac2-4c5e-ab85-e2969b0a6841" time="1395736931052" ignored="false" />
-    <file path="/quickSort.js" changelist="b8866d45-fac2-4c5e-ab85-e2969b0a6841" time="1395823043737" ignored="false" />
+    <file path="/fractionPackage.js" changelist="b8866d45-fac2-4c5e-ab85-e2969b0a6841" time="1395888687759" ignored="false" />
+    <file path="/quickSort.js" changelist="b8866d45-fac2-4c5e-ab85-e2969b0a6841" time="1395887200103" ignored="false" />
     <file path="/spfa.js" changelist="b8866d45-fac2-4c5e-ab85-e2969b0a6841" time="1395737220341" ignored="false" />
+    <file path="/*.regexp" changelist="b8866d45-fac2-4c5e-ab85-e2969b0a6841" time="1395906539907" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,37 +66,64 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/html/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="101" selection-start="481" selection-end="481" vertical-scroll-proportion="-10.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="spfa.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/algorithms/graph/shortest_path/spfa.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+            <state line="9" column="26" selection-start="237" selection-end="237" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="menu.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/menu.js">
+      <file leaf-file-name="graph.js" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/algorithms/graph/graph.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="42" column="69" selection-start="1252" selection-end="1252" vertical-scroll-proportion="0.0">
+            <state line="114" column="25" selection-start="3605" selection-end="3605" vertical-scroll-proportion="0.2853067">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="floyd.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/algorithms/graph/shortest_path/floyd.js">
+      <file leaf-file-name="Canvas.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/canvas/Canvas.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+            <state line="92" column="31" selection-start="3787" selection-end="3787" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CanvasBase.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/canvas/CanvasBase.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="232" column="46" selection-start="8123" selection-end="8123" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="app.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="115" column="49" selection-start="3371" selection-end="3371" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/html/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="110" column="30" selection-start="5601" selection-end="5601" vertical-scroll-proportion="-16.666666">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="kruskal.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/algorithms/graph/minimum_spanning_tree/kruskal.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="69" column="49" selection-start="2018" selection-end="2018" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -105,52 +132,25 @@
       <file leaf-file-name="dijkstra.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/algorithms/graph/shortest_path/dijkstra.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="25" selection-start="390" selection-end="390" vertical-scroll-proportion="0.0">
+            <state line="10" column="24" selection-start="278" selection-end="278" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="quickSort.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/algorithms/sort/quickSort.js">
+      <file leaf-file-name="prim.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/algorithms/graph/minimum_spanning_tree/prim.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="16" selection-start="202" selection-end="202" vertical-scroll-proportion="0.0">
+            <state line="54" column="51" selection-start="1764" selection-end="1764" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="app.js" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app.js">
+      <file leaf-file-name="CanvasLib.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/canvas/CanvasLib.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="25" column="25" selection-start="622" selection-end="622" vertical-scroll-proportion="0.403709">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="orderSort.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/algorithms/sort/orderSort.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="78" selection-start="185" selection-end="185" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="sort.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/algorithms/sort/sort.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="mergeSort.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/algorithms/sort/mergeSort.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="63" selection-start="290" selection-end="290" vertical-scroll-proportion="0.0">
+            <state line="34" column="58" selection-start="1053" selection-end="1053" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -166,22 +166,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app.js" />
-        <option value="$PROJECT_DIR$/css/main.css" />
-        <option value="$PROJECT_DIR$/canvas/Canvas.js" />
-        <option value="$PROJECT_DIR$/canvas/table.js" />
-        <option value="$PROJECT_DIR$/algorithms/dynamic/LCS.js" />
         <option value="$PROJECT_DIR$/algorithms/dynamic/dynamic.js" />
         <option value="$PROJECT_DIR$/algorithms/dynamic/ZeroOnePackage.js" />
-        <option value="$PROJECT_DIR$/canvas/CanvasBase.js" />
+        <option value="$PROJECT_DIR$/algorithms/sort/quickSort.js" />
+        <option value="$PROJECT_DIR$/html/index.html" />
         <option value="$PROJECT_DIR$/algorithms/greedy/activitySelect.js" />
-        <option value="$PROJECT_DIR$/algorithms/graph/minimum_spanning_tree/prim.js" />
-        <option value="$PROJECT_DIR$/algorithms/graph/minimum_spanning_tree/kruskal.js" />
-        <option value="$PROJECT_DIR$/algorithms/graph/graph.js" />
         <option value="$PROJECT_DIR$/algorithms/greedy/fractionPackage.js" />
         <option value="$PROJECT_DIR$/menu.js" />
+        <option value="$PROJECT_DIR$/Base.js" />
+        <option value="$PROJECT_DIR$/algorithms/graph/shortest_path/dijkstra.js" />
+        <option value="$PROJECT_DIR$/algorithms/graph/shortest_path/floyd.js" />
         <option value="$PROJECT_DIR$/algorithms/graph/shortest_path/spfa.js" />
-        <option value="$PROJECT_DIR$/algorithms/sort/quickSort.js" />
+        <option value="$PROJECT_DIR$/algorithms/graph/graph.js" />
+        <option value="$PROJECT_DIR$/algorithms/graph/minimum_spanning_tree/kruskal.js" />
+        <option value="$PROJECT_DIR$/algorithms/graph/minimum_spanning_tree/prim.js" />
+        <option value="$PROJECT_DIR$/canvas/CanvasLib.js" />
+        <option value="$PROJECT_DIR$/canvas/CanvasBase.js" />
       </list>
     </option>
   </component>
@@ -517,8 +517,9 @@
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.21045393" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24963397" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16937192" sideWeight="0.788712" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16937192" sideWeight="0.7895461" order="1" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39838493" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.08468596" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -526,7 +527,6 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.21128799" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
@@ -596,114 +596,114 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/algorithms/dynamic/LCS.js">
+    <entry file="file://$PROJECT_DIR$/menu.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="129" column="10" selection-start="4292" selection-end="4292" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/algorithms/graph/minimum_spanning_tree/prim.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="70" selection-start="352" selection-end="414" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/algorithms/graph/minimum_spanning_tree/kruskal.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="90" selection-start="850" selection-end="850" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/algorithms/graph/graph.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="137" column="40" selection-start="4585" selection-end="4585" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/algorithms/greedy/greedy.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+        <state line="28" column="0" selection-start="774" selection-end="774" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/algorithms/greedy/activitySelect.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="71" column="76" selection-start="2183" selection-end="2183" vertical-scroll-proportion="0.0">
+        <state line="83" column="44" selection-start="2616" selection-end="2616" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/menu.js">
+    <entry file="file://$PROJECT_DIR$/algorithms/greedy/fractionPackage.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="42" column="69" selection-start="1252" selection-end="1252" vertical-scroll-proportion="0.0">
+        <state line="82" column="39" selection-start="2476" selection-end="2476" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/algorithms/graph/shortest_path/spfa.js">
+    <entry file="file://$PROJECT_DIR$/algorithms/AlgorithmBase.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Base.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="20" selection-start="235" selection-end="235" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/algorithms/graph/shortest_path/floyd.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+        <state line="13" column="55" selection-start="354" selection-end="354" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/algorithms/graph/shortest_path/dijkstra.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="25" selection-start="390" selection-end="390" vertical-scroll-proportion="0.0">
+        <state line="10" column="24" selection-start="278" selection-end="278" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/algorithms/sort/sort.js">
+    <entry file="file://$PROJECT_DIR$/algorithms/graph/minimum_spanning_tree/kruskal.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+        <state line="69" column="49" selection-start="2018" selection-end="2018" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/algorithms/sort/orderSort.js">
+    <entry file="file://$PROJECT_DIR$/algorithms/graph/minimum_spanning_tree/prim.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="78" selection-start="185" selection-end="185" vertical-scroll-proportion="0.0">
+        <state line="54" column="51" selection-start="1764" selection-end="1764" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/algorithms/sort/mergeSort.js">
+    <entry file="file://$PROJECT_DIR$/canvas/Canvas.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="63" selection-start="290" selection-end="290" vertical-scroll-proportion="0.0">
+        <state line="92" column="31" selection-start="3787" selection-end="3787" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/canvas/CanvasLib.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="34" column="58" selection-start="1053" selection-end="1053" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/html/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="101" selection-start="481" selection-end="481" vertical-scroll-proportion="-10.0">
+        <state line="110" column="30" selection-start="5601" selection-end="5601" vertical-scroll-proportion="-16.666666">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/algorithms/sort/quickSort.js">
+    <entry file="file://$PROJECT_DIR$/canvas/CanvasBase.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="16" selection-start="202" selection-end="202" vertical-scroll-proportion="0.0">
+        <state line="232" column="46" selection-start="8123" selection-end="8123" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="25" selection-start="622" selection-end="622" vertical-scroll-proportion="0.403709">
+        <state line="115" column="49" selection-start="3371" selection-end="3371" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/algorithms/graph/shortest_path/spfa.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="26" selection-start="237" selection-end="237" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/algorithms/graph/graph.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="114" column="25" selection-start="3605" selection-end="3605" vertical-scroll-proportion="0.2853067">
           <folding />
         </state>
       </provider>

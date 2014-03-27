@@ -18,23 +18,34 @@ Graph = function() {
             this.nxt = [];
             this.GraphMatrix = [];
             this.array = [];
+            this.radius = 15;
+            this.nodeColor = 'grey';
+            this.edgeColor = 'blue';
+            Canvas.clearAll();
             return this;
         },
         random: function() {
             this.init()
-                .generateGraph();
+                .generateGraph()
+                .drawGragh();
             return this;
         },
-
+        randomInRange: function(limit, padding) {
+            return Math.random() * (limit - padding * 2) + padding;
+        },
         addNodes: function(node) {
-            node.r = 10;
+            node.r = this.radius;
+            node.color = this.nodeColor;
+            node.o.x = this.randomInRange(this.width, 60);
+            node.o.y = this.randomInRange(this.height, 60);
             this.nodes.push(node);
             return this;
         },
 
-        addEdge: function(a, b, v, c) {
-            this.addDirectedEdge(a, b, v, c)
-                .addDirectedEdge(b, a, v, c);
+        addEdge: function(a, b, v) {
+            var color = this.edgeColor;
+            this.addDirectedEdge(a, b, v, color)
+                .addDirectedEdge(b, a, v, color);
             return this;
         },
 
@@ -55,14 +66,14 @@ Graph = function() {
             return this;
         },
         generateEdges: function() {
-            this.addEdge(2,1,1, 'black')
-                .addEdge(0,1,5, 'black')
-                .addEdge(0,2,1, 'black')
-                .addEdge(1,3,2, 'black')
-                .addEdge(1,4,3, 'black')
-                .addEdge(3,4,1, 'black')
-                .addEdge(2,4,1, 'black')
-                .addEdge(2,3,2, 'black');
+            this.addEdge(2,1,1)
+                .addEdge(0,1,5)
+                .addEdge(0,2,1)
+                .addEdge(1,3,2)
+                .addEdge(1,4,3)
+                .addEdge(3,4,1)
+                .addEdge(2,4,1)
+                .addEdge(2,3,2);
             return this;
         },
         generateGraph: function() {

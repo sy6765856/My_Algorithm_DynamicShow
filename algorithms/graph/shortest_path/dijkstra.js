@@ -7,16 +7,14 @@
  */
 Dijkstra = function() {
     app.initToolsView('dijkstra')
+        .randomButtonInit('产生随机图')
+        .description('')
         .startButtonInit();
     return extend(Graph, {
         run: function(id) {
             Canvas.init(id);
-            this.init('Dijkstra')
-                .generateGraph()
-                .dijkstra()
-//                .drawGragh();
+            this.dijkstra()
                 .draw();
-            console.log(this.array);
             return this;
         },
         dij_init: function() {

@@ -13,9 +13,7 @@ Prim = function() {
     return extend(Graph, {
         run: function(id){
             Canvas.init(id);
-            this.init('Prim')
-                .generateGraph()
-                .prim()
+            this.prim()
                 .draw();
             $('#answer').html('最小生成树边权和为：' + this.minLength);
             return this;
@@ -62,12 +60,12 @@ Prim = function() {
                                     .saveGraph();
                             } else {
                                 this.changeEdgeColor(edgeIndex[i], 'yellow')
-                                    .changeEdgeColor(edgeIndex[source], 'black')
+                                    .changeEdgeColor(edgeIndex[source], 'blue')
                                     .saveGraph();
                             }
                             source = i;
                         } else {
-                            this.changeEdgeColor(edgeIndex[i], 'black')
+                            this.changeEdgeColor(edgeIndex[i], 'blue')
                                 .saveGraph();
                         }
                     }

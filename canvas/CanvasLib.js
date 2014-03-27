@@ -30,7 +30,7 @@ CanvasLib = function() {
                     colorString = "#FF0000";
                     break;
                 case "blue":
-                    colorString = "#0033CC";
+                    colorString = "#99B3FF";
                     break;
                 case "skyblue":
                     colorString = "#00FFFF";
@@ -49,6 +49,9 @@ CanvasLib = function() {
                     break;
                 case "black":
                     colorString = "#000000";
+                    break;
+                case "grey":
+                    colorString = "#778899";
                     break;
                 default:
                     colorString = "#FFFFFF";

@@ -13,8 +13,7 @@ Kruskal = function() {
     return extend(Graph, {
         run: function(id) {
             Canvas.init(id);
-            this.random()
-                .kruskal()
+            this.kruskal()
                 .draw();
             return this;
         },
@@ -68,7 +67,7 @@ Kruskal = function() {
                     cnt ++;
                     this.minLength += edges[i][2];
                 } else {
-                    this.changeEdgeColor(i, 'black')
+                    this.changeEdgeColor(i, 'blue')
                         .saveGraph();
                 }
                 if(cnt === this.nodes.length - 1) {

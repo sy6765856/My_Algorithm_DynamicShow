@@ -11,8 +11,8 @@ CanvasBase = function() {
         initCanvas: function(id, width, height) {
             this.INF = 10000;
             var canvas = document.getElementById(id);
-            canvas.width = width ? width : 1110;
-            canvas.height = height ? height : 780;
+            canvas.width = width ? width : this.width;
+            canvas.height = height ? height : this.height;
             this.canvas = canvas;
 
             if (canvas.getContext) {
@@ -199,6 +199,7 @@ CanvasBase = function() {
                 var ctx = this.ctx,
                     color = opt && opt.color ? opt.color : "white";
                 ctx.fillStyle = CanvasLib.colorSet(color);
+                this.setShadow();
                 ctx.beginPath();
                 ctx.arc(pos.x, pos.y, radius, 0, Math.PI*2, true);
                 ctx.closePath();
@@ -233,7 +234,6 @@ CanvasBase = function() {
             var ctx = this.ctx;
             style = {color: style && style.color ? style.color : this.lineColor, lineWidth: style && style.lineWidth ? style.lineWidth:3};
             ctx.strokeStyle = style.color;
-//            ctx.strokeStyle = isset(this.lineColor) ? CanvasLib.colorSet(this.lineColor) : CanvasLib.colorSet(style.color);
             ctx.beginPath();
             ctx.moveTo(start.x, start.y);
             ctx.lineTo(end.x, end.y);

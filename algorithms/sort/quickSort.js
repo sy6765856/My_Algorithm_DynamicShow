@@ -30,20 +30,21 @@ QuickSort = function() {
             return this;
         },
         quickSort: function(array, begin, end) {
-            if(begin === end) {
-                console.log(array);
+            if(begin >= end) {
                 return this;
             }
             var mid = Math.floor((begin + end)/ 2),
                 left = [],
-                right = [];
+                right = [],
+                tmp = array[mid];
             for(var i = begin; i <= end; i++) {
-                if(array[i] <= array[mid]) {
+                if(array[i] < array[mid]) {
                     left.push(array[i]);
-                } else {
+                } else if(array[i] > array[mid]){
                     right.push(array[i]);
                 }
             }
+            left.push(tmp);
             var leftLength = left.length + begin;
             for(var i = begin; i < leftLength; i++) {
                 array[i] = left[i - begin];
@@ -51,8 +52,9 @@ QuickSort = function() {
             for(var i = leftLength; i <= end; i++) {
                 array[i] = right[i - leftLength];
             }
-            this.quickSort(array, begin, leftLength)
-                .quickSort(array, leftLength + 1, end);
+            this.QUEUE.push(array.slice(0));
+            this.quickSort(array, begin, leftLength - 2)
+                .quickSort(array, leftLength, end);
             return this;
         }
     })

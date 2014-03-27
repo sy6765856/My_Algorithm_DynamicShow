@@ -7,6 +7,8 @@
  */
 Base = function() {
     return {
+        width: 1110,
+        height: 780,
         init: function() {
             this.clearBuffer();
             return this;

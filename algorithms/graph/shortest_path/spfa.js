@@ -6,6 +6,10 @@
  * To change this template use File | Settings | File Templates.
  */
 Spfa = function() {
+    app.initToolsView('spfa')
+        .randomButtonInit('产生随机图')
+        .description('')
+        .startButtonInit();
     return extend(Graph, {
         run: function() {
             return this;

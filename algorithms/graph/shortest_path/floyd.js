@@ -7,14 +7,13 @@
  */
 Floyd = function() {
     app.initToolsView('floyd')
+        .randomButtonInit('产生随机图')
+        .description('')
         .startButtonInit();
     return extend(Graph, {
         run: function(id) {
             Canvas.init(id);
-            this.init('floyd')
-                .generateGraph()
-                .drawGragh()
-                .floyd()
+            this.floyd()
                 .draw();
             return this;
         },
