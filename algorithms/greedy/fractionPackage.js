@@ -33,7 +33,7 @@ FractionPackage = function() {
             if(warnNumber(weight, '物品重量应为数字！')) {
                 return this;
             }
-            this.goods.push([parseFloat(weight), parseFloat(value)]);
+            this.goods.push([parseFloat(weight), parseFloat(value), this.goods.length, 0]);
             this.drawGoods();
             $('#input2').val('');
             $('#input1').val('').focus();
@@ -81,6 +81,43 @@ FractionPackage = function() {
             return this;
         },
         fractionPackage: function() {
+            var goods = this.goods,
+                cmp = function(a, b) {
+                    return - a[0]/a[1] + b[0]/b[1];
+                },
+                packageSize = this.packageSize,
+                totalValue = 0;
+            goods.sort(cmp);
+            for(var i = 0; i < goods.length; i++) {
+                var good = goods[i];
+                if(packageSize <= 0) {
+                    break;
+                }
+                if(packageSize >= good[1]) {
+                    packageSize -= good[1];
+                    good[3] = good[1];
+                    totalValue += good[0];
+                } else {
+                    totalValue += packageSize / good[1] * good[0];
+                    good[3] = packageSize;
+                    packageSize = 0;
+                }
+            }
+            this.totalValue = totalValue;
+            return this;
+        },
+        drawAfter: function() {
+            $('#info').html('选出物品最大价值为' + this.totalValue);
+            return this;
+        },
+        drawing: function() {
+            if(Canvas.imageFrame >= Canvas.imageDataQUEUE.length) {
+                FractionPackage.drawAfter();
+                return this;
+            }
+            this.drawCanvasFrame(Canvas.imageDataQUEUE[Canvas.imageFrame]);
+            Canvas.imageFrame++;
+            setTimeout.call(null, 'FractionPackage.drawing();', 300);
             return this;
         }
     });

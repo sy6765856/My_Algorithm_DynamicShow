@@ -11,7 +11,8 @@ $obj = new CaculateFiles();
 $obj->setShowFlag(false);
 //会跳过所有All开头的文件
 $obj->setFileSkip(array('jquery'));
-$obj->run("J:\My_Algorithm_DynamicShow");
+$dirName = dirname(__FILE__);
+$obj->run($dirName);
 
 
 /**

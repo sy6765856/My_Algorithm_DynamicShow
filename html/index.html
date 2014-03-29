@@ -157,12 +157,12 @@
             bend.width=2;
             wrap.onmouseover=function (){
                 this.fxTimer=_bendImg.fx(bend.width,70,function (x){
-                    bend.width=x
+                    bend.width=x;
                 },0,0,function(x){return -(Math.pow((x-1), 4) -1)},this)
             };
             wrap.onmouseout=function (){
                 this.fxTimer=_bendImg.fx(bend.width,0,function (x){
-                    bend.width=x
+                    bend.width=x;
                 },0,0,0,this)
             }
         };
