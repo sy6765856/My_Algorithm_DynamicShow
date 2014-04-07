@@ -60,10 +60,10 @@ app = {
         $(index).click(FunctionTemplate.addSingleButton(className, name));
         return this;
     },
-    addButtonInit: function() {
+    addButtonInit: function(name) {
         var index = '#' + this.id,
             className = this.class;
-        $(index).click(FunctionTemplate.addButton(className));
+        $(index).click(FunctionTemplate.addButton(className, name));
         return this;
     },
     resetButtonInit: function() {

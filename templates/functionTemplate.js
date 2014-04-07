@@ -19,9 +19,9 @@ FunctionTemplate = function() {
                 $('#add').html(Template.addSingleButton(name, str));
             };
         },
-        addButton: function(name) {
+        addButton: function(val, name) {
             return function() {
-                $('#add').html(Template.addButton(name));
+                $('#add').html(Template.addButton(val, name));
             };
         },
         resetButton: function(name) {

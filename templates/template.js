@@ -33,8 +33,9 @@ Template = function() {
                 str +
                 '</button>';
         },
-        addButton: function(name) {
-            return'<button class="add" onclick=' + name + ".add($('#input1').val(),$('#input2').val());" + '>插入</button>';
+        addButton: function(val, name) {
+            name = name ? name : '插入';
+            return'<button class="add" onclick=' + val + ".add($('#input1').val(),$('#input2').val());>" + name + '</button>';
         },
         addSingleButton: function(name, str) {
             str = isset(str) ? str : '插入';
@@ -42,7 +43,7 @@ Template = function() {
                 str + '</button>';
         },
         resetButton: function(name) {
-            return '<button class="reset" onclick=' + name + ".reset();" + '>重置</button>';;
+            return '<button class="reset" onclick=' + name + ".reset();" + '>重置</button>';
         },
         popButton: function(name, str) {
             str = isset(str) ? str : '弹出';

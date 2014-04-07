@@ -24,6 +24,26 @@ Graph = function() {
             Canvas.clearAll();
             return this;
         },
+        add: function() {
+            var a = $('#input1').val(),
+                b = $('#input2').val(),
+                v = $('#input3').val(),
+                warnInfo = '边的端点编号不合法';
+            if(warnNumber(a, warnInfo)) {
+                return this;
+            }
+            if(warnNumber(b, warnInfo)) {
+                return this;
+            }
+            this.clearAll()
+                .addEdge(a, b, v)
+                .drawGragh();
+            return this;
+        },
+        reset: function() {
+            this.init();
+            return this;
+        },
         random: function() {
             this.init()
                 .generateGraph()
@@ -36,14 +56,14 @@ Graph = function() {
         addNodes: function(node) {
             node.r = this.radius;
             node.color = this.nodeColor;
-            node.o.x = this.randomInRange(this.width, 60);
-            node.o.y = this.randomInRange(this.height, 60);
+            node.o.x = this.randomInRange(this.width, 200);
+            node.o.y = this.randomInRange(this.height,200);
             this.nodes.push(node);
             return this;
         },
 
         addEdge: function(a, b, v) {
-            var color = this.edgeColor;
+            var color = this.edgeColor ? this.edgeColor : 'blue';
             this.addDirectedEdge(a, b, v, color)
                 .addDirectedEdge(b, a, v, color);
             return this;
