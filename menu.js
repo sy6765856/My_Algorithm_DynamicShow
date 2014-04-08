@@ -19,6 +19,7 @@ Menu = function() {
                 'stack': ['栈', 2],
                 'queue': ['队列', 2],
                 'heap': ['堆', 2],
+                'binarySearchTree': ['二叉搜索树', 2],
 
                 'dynamic': ['动态规划', 1],
                 'LCS': ['最长公共子序列', 2],

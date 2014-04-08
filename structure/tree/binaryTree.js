@@ -7,16 +7,27 @@
  */
 BinaryTree = function() {
     return extend(Tree, {
+        left: [],
+        right: [],
+        nodes: [],
         run: function() {
-
+            return this;
         },
-        insert: function() {
-            var value = $('#input').val();
-
-            console.log(value);
-
-            this.addNodes();
-
+        add: function(val) {
+            if(warnNumber(val, '输入值应该为数字！')) {
+                return this;
+            }
+            this.insert(parseFloat(val));
+            return this;
+        },
+        insert: function(val) {
+            return this;
+        },
+        reset: function() {
+            this.left = [];
+            this.right = [];
+            this.nodes = [];
+            return this;
         }
     });
 }();

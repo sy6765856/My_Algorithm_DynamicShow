@@ -70,9 +70,12 @@ Graph = function() {
         },
 
         addDirectedEdge: function(a, b, v, c) {
-            this.edges[this.edgesNum] = [a, b, v, c];
+            this.edges[this.edgesNum] = [a, b, v, c, this.edgesNum, 0];
             this.nxt[this.edgesNum] = this.first[a]? this.first[a] : 0;
             this.first[a] = this.edgesNum++;
+            if(!isset(this.GraphMatrix[a])) {
+                this.GraphMatrix[a] = [];
+            }
             this.GraphMatrix[a][b] = min(this.GraphMatrix[a][b], v);
             return this;
         },

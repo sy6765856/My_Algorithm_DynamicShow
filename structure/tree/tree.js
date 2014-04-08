@@ -7,6 +7,8 @@
  */
 Tree = function() {
     return extend(Graph, {
+        father: [],
+        node: [],
         generateTree: function() {
             this.generateNodes()
                 .resetGraphMatrix()
@@ -19,7 +21,7 @@ Tree = function() {
             return this;
         },
         addFatherChildRelation: function(father, child, len) {
-            this.addEdge(father, child, len, 'black');
+            this.addEdge(father, child, len);
             return this;
         },
         draw_Tree: function() {

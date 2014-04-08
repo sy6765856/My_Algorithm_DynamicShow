@@ -8,6 +8,11 @@
 Floyd = function() {
     app.initToolsView('floyd')
         .randomButtonInit('产生随机图')
+        .resetButtonInit()
+        .inputOneInit('边的两个端点 A')
+        .inputTwoInit('          B')
+        .inputThreeInit('边权值')
+        .addButtonInit('添加这条边')
         .description('')
         .startButtonInit();
     return extend(Graph, {

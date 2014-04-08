@@ -80,6 +80,7 @@
     <script type="text/javascript" src = "../algorithms/graph/graph.js"></script>
     <script type="text/javascript" src = "../structure/tree/tree.js"></script>
     <script type="text/javascript" src = "../structure/tree/binaryTree.js"></script>
+    <script type="text/javascript" src = "../structure/tree/binarySearchTree.js"></script>
     <script type="text/javascript" src = "../structure/heap.js"></script>
     <script type="text/javascript" src = "../structure/stack.js"></script>
     <script type="text/javascript" src = "../structure/queue.js"></script>
@@ -93,6 +94,7 @@
     <script type="text/javascript" src = "../algorithms/sort/quickSort.js"></script>
     <script type="text/javascript" src = "../algorithms/graph/shortest_path/floyd.js"></script>
     <script type="text/javascript" src = "../algorithms/graph/shortest_path/dijkstra.js"></script>
+    <script type="text/javascript" src = "../algorithms/graph/shortest_path/spfa.js"></script>
     <script type="text/javascript" src = "../algorithms/dynamic/dynamic.js"></script>
     <script type="text/javascript" src = "../algorithms/dynamic/LCS.js"></script>
     <script type="text/javascript" src = "../algorithms/dynamic/ZeroOnePackage.js"></script>
@@ -116,6 +118,9 @@
                 case 'bubbleSort':
                     BubbleSort.reset();
                     break;
+                case 'quickSort':
+                    QuickSort.reset();
+                    break;
                 case 'stack':
                     Stack.init();
                     break;
@@ -124,6 +129,12 @@
                     break;
                 case 'boardCover':
                     BoardCover.init();
+                    break;
+                case 'prim':
+                    Prim.init();
+                    break;
+                case 'kruskal':
+                    Kruskal.init();
                     break;
             }
         });

@@ -68,6 +68,7 @@ Kruskal = function() {
                 if(a !== b) {
                     this.changeEdgeColor(i, 'yellow')
                         .saveGraph();
+                    edges[i][5] = 1;
                     this.merge(a, b);
                     cnt ++;
                     this.minLength += edges[i][2];
@@ -76,9 +77,11 @@ Kruskal = function() {
                         .saveGraph();
                 }
                 if(cnt === this.nodes.length - 1) {
+                    console.log(edges);
                     return this;
                 }
             }
+            console.log(edges);
             return this;
         }
     });

@@ -14,9 +14,6 @@ QuickSort = function() {
         .inputOneInit('请输入一个数')
         .description('这里会演示快速排序过程中数字序列的变化过程');
     return extend(Sort, {
-        reset: function() {
-            return this;
-        },
         run: function(id) {
             this.quick_Sort(Canvas.init(id));
             return this;
