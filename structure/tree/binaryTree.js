@@ -10,6 +10,8 @@ BinaryTree = function() {
         left: [],
         right: [],
         nodes: [],
+        level: [],
+        max_level: 100,
         run: function() {
             return this;
         },
@@ -27,6 +29,9 @@ BinaryTree = function() {
             this.left = [];
             this.right = [];
             this.nodes = [];
+            for(var h = 0; h < this.max_level; h++) {
+                this.level[h] = 0;
+            }
             return this;
         }
     });

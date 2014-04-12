@@ -20,44 +20,52 @@ BinarySearchTree = function() {
                 rot = 0,
                 nodes = this.nodes,
                 left = this.left,
-                right = this.right;
+                right = this.right,
+                dep = 0;
             if(this.nodes.length) {
                 while(isset(rot)) {
                     rt = rot;
-                    var value = nodes[rt];
+                    var value = nodes[rt][0];
                     if(val <= value) {
                         rot = left[rt];
                     } else {
                         rot = right[rt];
                     }
+                    dep++;
                 }
-                if(val <= nodes[rt]) {
+                if(val <= nodes[rt][0]) {
                     left[rt] = nodes.length;
                 } else {
                     right[rt] = nodes.length;
                 }
             }
-            nodes.push(val);
-            this.drawTree(0, 0);
+            this.level[dep] ++;
+            nodes.push([val, 'green', this.level[dep]]);
+            this.drawTree(0, 0, 0);
             return this;
         },
-        drawTree: function(rt, x) {
-            this.draw_Tree(rt, x);
+        drawTree: function(rt, x, h) {
+            Canvas.clearAll();
+            this.draw_Tree(rt, x, h);
             return this;
         },
-        draw_Tree: function(rt, x) {
+        draw_Tree: function(rt, x, h) {
             if(!isset(rt)) {
                 return this;
             }
-            Canvas.drawCircle();
+            var num = this.level[h],
+                ct = this.nodes[rt][2],
+                pos = { x: this.width/2/num*ct, y: h*120};
+            this.nodes[rt]['pos'] = pos;
+            this.drawNode(pos, this.nodes[rt]);
             if(rt !== x) {
-                Canvas.linkTwoCircle();
+                this.linkFatherAndSon(this.nodes[rt], this.nodes[x]);
             }
             if(this.left[rt]) {
-                this.draw_Tree(this.left[rt], rt);
+                this.draw_Tree(this.left[rt], rt, h + 1);
             }
             if(this.right[rt]) {
-                this.draw_Tree(this.right[rt], rt);
+                this.draw_Tree(this.right[rt], rt, h + 1);
             }
             return this;
         }

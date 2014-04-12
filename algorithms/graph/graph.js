@@ -260,6 +260,18 @@ Graph = function() {
                 .saveCanvasFrame()
                 .clearAll();
             return this;
+        },
+        drawNode: function(pos, node) {
+            var r = isset(node.r) ? node.r : 10;
+            Canvas.drawCircle(r, pos, {str: node[0], color: node[1]});
+            return this;
+        },
+        linkFatherAndSon: function(father, son) {
+            var r = 10,
+                A = { o: father['pos'], r: r },
+                B = { o: son['pos'], r: r };
+            Canvas.linkTwoCircle(A, B, { style: {color: 'green'}});
+            return this;
         }
     });
 }();
