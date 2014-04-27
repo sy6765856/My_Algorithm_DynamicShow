@@ -20,7 +20,7 @@ MergeSort = function() {
         },
         merge_Sort: function(CanvasObject){
             var array = this.array;
-            this.init('MergeSort', 500)
+            this.init('MergeSort', 1000)
                 .QUEUE.push(array.slice(0));
 
             this.mergeSort(array, 0, array.length-1)
@@ -51,10 +51,13 @@ MergeSort = function() {
                 st = st.concat(array.slice(j, end+1));
             }
 
+            var color = [];
             for(var pos = begin; pos <= end; pos++){
                 array[pos] = st[pos - begin];
+                color[pos] = "yellow";
             }
             this.QUEUE.push(array.slice(0));
+            this.COLOR.push(color);
             return this;
         }
     });

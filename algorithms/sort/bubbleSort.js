@@ -20,7 +20,7 @@ BubbleSort = function() {
         },
         bubble_Sort: function(CanvasObject){
             var array = this.array;
-            this.init('BubbleSort', 200)
+            this.init('BubbleSort', 1000)
                 .QUEUE.push(array.slice(0));
 
             this.bubbleSort(array, 0, array.length)
@@ -40,8 +40,12 @@ BubbleSort = function() {
                         tmp = array[j];
                         array[j] = array[j+1];
                         array[j+1] = tmp;
-                        this.QUEUE.push(array.slice(0));
                     }
+                    var color = [];
+                    color[j] = "red";
+                    color[j + 1] = "yellow";
+                    this.QUEUE.push(array.slice(0));
+                    this.COLOR.push(color);
                 }
             }
             return this;

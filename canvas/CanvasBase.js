@@ -135,10 +135,11 @@ CanvasBase = function() {
             ctx.fill();
             return this;
         },
-        drawRectangle: function(width, height, pos, str) {
+        drawRectangle: function(width, height, pos, str, color) {
             var ctx = this.ctx,
                 opacity = isset(this.opacity) ? this.opacity : 0.85;
-            ctx.fillStyle = isset(this.color) ? this.color : CanvasLib.colorSet("green");
+            color = isset(color) ? color : "green";
+            ctx.fillStyle = isset(this.color) ? this.color : CanvasLib.colorSet(color);
             this.setShadow()
                 .setSelfOpacity(opacity);
             var ps = {x: pos.x - width, y: pos.y-height},

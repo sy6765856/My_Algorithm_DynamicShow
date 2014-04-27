@@ -19,9 +19,11 @@ QuickSort = function() {
             return this;
         },
         quick_Sort: function(CanvasObject) {
-            var array = this.array;
-            this.init('QuickSort', 500)
+            var array = this.array,
+                color = [];
+            this.init('QuickSort', 2000)
                 .QUEUE.push(array.slice(0));
+            this.COLOR.push(color);
             this.quickSort(array, 0, array.length - 1)
                 .draw();
             return this;
@@ -33,23 +35,29 @@ QuickSort = function() {
             var mid = Math.floor((begin + end)/ 2),
                 left = [],
                 right = [],
-                tmp = array[mid];
+                tmp = array[mid],
+                color =[];
+
             for(var i = begin; i <= end; i++) {
                 if(array[i] < array[mid]) {
                     left.push(array[i]);
                 } else if(array[i] > array[mid]){
                     right.push(array[i]);
                 }
+                color[i] = "yellow";
             }
             left.push(tmp);
             var leftLength = left.length + begin;
             for(var i = begin; i < leftLength; i++) {
                 array[i] = left[i - begin];
             }
+            color[leftLength - 1] = "red";
             for(var i = leftLength; i <= end; i++) {
                 array[i] = right[i - leftLength];
             }
             this.QUEUE.push(array.slice(0));
+            this.COLOR.push(color);
+
             this.quickSort(array, begin, leftLength - 2)
                 .quickSort(array, leftLength, end);
             return this;

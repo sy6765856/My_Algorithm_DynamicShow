@@ -7,13 +7,16 @@
  */
 Canvas = function(){
     return extend(CanvasBase, {
-            drawRectangleByNumber: function(array, width) {
+            drawRectangleByNumber: function(array, color, width) {
                 width = width ? width : (400 - array.length)/array.length;
-
+                color = isset(color) ? color : [];
                 var h = 100/(array.max() - array.min()),
                     pos = {x:120 + width, y:350};
                 for(var i in array) {
-                    this.drawRectangle(width, array[i]*h, pos, array[i]);
+                    if(typeof array[i] == "function") {
+                        continue;
+                    }
+                    this.drawRectangle(width, array[i]*h, pos, array[i], color[i]);
                     pos.x += width + 5;
                 }
                 return this;

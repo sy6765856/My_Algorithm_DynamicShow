@@ -13,6 +13,7 @@ AlgorithmBase = function(){
             this.NAME = name;
             this.FRAME = 0;
             this.QUEUE = [];
+            this.COLOR = [];
 
             this.INTERVAL = interval ? interval : this.INTERVAL;
             return this;
@@ -38,7 +39,7 @@ AlgorithmBase = function(){
                 return this;
             }
             Canvas.clearAll('canvas')
-                .drawRectangleByNumber(this.QUEUE[this.FRAME]);
+                .drawRectangleByNumber(this.QUEUE[this.FRAME], this.COLOR[this.FRAME]);
             this.FRAME++;
             setTimeout.call(null, this.DRAW_FUNCTION, this.INTERVAL ? this.INTERVAL : 500);
             return this;

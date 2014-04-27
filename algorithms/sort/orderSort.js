@@ -27,11 +27,15 @@ OrderSort = function() {
             len = array.length;
             for(var i = 0; i<len; i++) {
                 for(var j = i+1; j<len; j++) {
+                    var color = [];
+                    color[i] = "red";
+                    color[j] = "yellow";
                     if(array[i] > array[j]) {
                         var tmp = array[i]; array[i] = array[j]; array[j] = tmp;
                     }
+                    this.QUEUE.push(array.slice(0));
+                    this.COLOR.push(color);
                 }
-                this.QUEUE.push(array.slice(0));
             }
             this.draw();
             return this;
