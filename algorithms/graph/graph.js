@@ -9,7 +9,7 @@ Graph = function() {
     return extend(AlgorithmBase, {
 
         init: function(name) {
-            AlgorithmBase.init(name, 200);
+            AlgorithmBase.init(name, Scroll.interval);
             this.INF = 1000000;
             this.edges = [];
             this.nodes = [];
@@ -211,7 +211,7 @@ Graph = function() {
             }
             this.drawCanvasFrame(Canvas.imageDataQUEUE[Canvas.imageFrame]);
             Canvas.imageFrame++;
-            setTimeout.call(null, 'Graph.drawing();', 300);
+            setTimeout.call(null, 'Graph.drawing();', Scroll.interval);
             return this;
         },
 

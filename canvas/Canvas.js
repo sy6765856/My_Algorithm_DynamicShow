@@ -21,6 +21,11 @@ Canvas = function(){
                 }
                 return this;
             },
+            drawBoard: function(grids, color, row, col) {
+                color = isset(color)? color : [];
+                Table.drawGrids(grids, color, row, col);
+                return this;
+            },
 
             drawActivities: function(array, minimum, maximum, pos, width, height, spacing) {
                 var widthPer = width/(maximum - minimum + 1),
@@ -60,11 +65,14 @@ Canvas = function(){
                 return this;
             },
 
-            drawGrid: function(pos, width, str) {
+            drawGrid: function(pos, width, str, color) {
                 var offX = 25,
                     offY = 15;
+                if(str == undefined) {
+                    str = '';
+                }
                 this.fontColor = 'red';
-                this.drawRectangle(width, width, pos)
+                this.drawRectangle(width, width, pos, 0, color)
                     .writeText(str,{ x: pos.x - offX, y: pos.y - offY});
                 return this;
             },

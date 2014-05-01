@@ -117,7 +117,7 @@ FractionPackage = function() {
             }
             this.drawCanvasFrame(Canvas.imageDataQUEUE[Canvas.imageFrame]);
             Canvas.imageFrame++;
-            setTimeout.call(null, 'FractionPackage.drawing();', 300);
+            setTimeout.call(null, 'FractionPackage.drawing();', Scroll.interval);
             return this;
         }
     });

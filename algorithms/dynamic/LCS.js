@@ -44,7 +44,7 @@ LCS = function() {
             }
             this.drawCanvasFrame(Canvas.imageDataQUEUE[Canvas.imageFrame]);
             Canvas.imageFrame++;
-            setTimeout.call(null, 'LCS.drawing();', 300);
+            setTimeout.call(null, 'LCS.drawing();', Scroll.interval);
             return this;
         },
         drawAfter: function() {

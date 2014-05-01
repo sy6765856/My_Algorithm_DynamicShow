@@ -21,7 +21,7 @@ OrderSort = function() {
         },
         orderSort: function(CanvasObject){
             var array = this.array;
-            this.init('OrderSort', 500)
+            this.init('OrderSort', Scroll.interval)
                 .QUEUE.push(array.slice(0));
 
             len = array.length;

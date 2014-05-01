@@ -20,7 +20,7 @@ BubbleSort = function() {
         },
         bubble_Sort: function(CanvasObject){
             var array = this.array;
-            this.init('BubbleSort', 1000)
+            this.init('BubbleSort', Scroll.interval)
                 .QUEUE.push(array.slice(0));
 
             this.bubbleSort(array, 0, array.length)

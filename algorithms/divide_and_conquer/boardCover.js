@@ -15,9 +15,6 @@ BoardCover = function() {
         .description('在2^n的棋盘上有且仅有一个特殊方格，除特殊方格外的所有方格要求被四种L型的地砖覆盖。本问题采用分治的方法，对于2^n的棋盘，递归为2^(n-1)的子问题。特殊方格标记为零，其他标记相同的L型为一块地砖。');
     return extend(DivideAndConquer, {
         board: [],
-        init: function() {
-            return this;
-        },
         run: function(scale, x, y) {
             this.clearAll()
                 .divideAndConquer(scale, x, y);
@@ -37,9 +34,10 @@ BoardCover = function() {
             this.check(scale)
                 .check(x)
                 .check(y);
-            this.divideAndConquer(scale, x, y);
-            Table.drawGrids(this.board, this.height, this.width)
-                .drawXYCoordinateSystem();
+            this.divideAndConquer(scale, x, y)
+                .draw();
+//            Table.drawGrids(this.board, this.height, this.width)
+//                .drawXYCoordinateSystem();
             return this;
         },
         generateBoard: function(scale, x, y) {
@@ -74,17 +72,42 @@ BoardCover = function() {
             this.generateBoard(scale, x, y);
             var width =  this.width,
                 height = this.height;
+
             this.divide_conquer_init(x, y)
-                .divide_conquer(0, width - 1, 0, height - 1, x, y);
+                .init('BoardCover', Scroll.interval);
+            var target = new Object();
+            deepCopy(target, this.board);
+            this.BoardQueue.push(target);
+            this.divide_conquer(0, width - 1, 0, height - 1, x, y);
             return this;
         },
         in: function(low_x, high_x, x, low_y, high_y, y) {
             return (x >= low_x && x <= high_x && y >= low_y && y <= high_y);
         },
+        colorInit: function(low_x, high_x, low_y, high_y, x, y) {
+            var color = [];
+            for(var row = 0; row < this.height; row ++) {
+                color[row] = [];
+            }
+            for(var row = low_x; row <= high_x; row ++) {
+                color[row] = [];
+                for(var col = low_y; col <= high_y; col ++) {
+                    color[row][col] = "yellow";
+                }
+            }
+            color[x][y] = "red";
+            this.BoardColor.push(color);
+            return this;
+        },
         divide_conquer: function(low_x, high_x, low_y, high_y, x, y) {
             if(high_x === low_x || high_y === low_y ) {
                 return this;
             }
+            var target = new Object(),
+                color = this.colorInit(low_x, high_x, low_y, high_y, x, y);
+            deepCopy(target, this.board);
+            this.BoardQueue.push(target);
+
             var midx = parseInt( (low_x + high_x) / 2),
                 midy = parseInt( (low_y + high_y) / 2),
                 board = this.board,

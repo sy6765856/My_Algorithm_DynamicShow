@@ -51,7 +51,7 @@ ActivitySelect = function() {
             }
             this.drawCanvasFrame(Canvas.imageDataQUEUE[Canvas.imageFrame]);
             Canvas.imageFrame++;
-            setTimeout.call(null, 'ActivitySelect.drawing();', 300);
+            setTimeout.call(null, 'ActivitySelect.drawing();', Scroll.interval);
             return this;
         },
         add: function(begin, end) {

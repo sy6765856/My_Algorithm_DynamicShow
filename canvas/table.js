@@ -250,7 +250,7 @@ Table = function() {
             Canvas.drawRectangleBound(pos, this.tableWidth, this.tableHeight, color);
             return this;
         },
-        drawGrids: function(grids, row, col) {
+        drawGrids: function(grids, color, row, col) {
             var pos = { x: this.pos.x - 50, y: this.pos.y - 100},
                 width = this.tableWidth,
                 sp = 10,
@@ -258,7 +258,7 @@ Table = function() {
             for(var i = 0; i < row; i++) {
                 for(var j = 0; j < col; j++) {
                     ps = {x: pos.x + i * (width + sp), y: pos.y + j * (width + sp)};
-                    Canvas.drawGrid(ps, width, grids[i][j]);
+                    Canvas.drawGrid(ps, width, grids[i][j], color[i][j]);
                 }
             }
             return this;

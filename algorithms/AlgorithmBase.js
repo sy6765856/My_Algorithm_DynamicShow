@@ -7,15 +7,16 @@
  */
 AlgorithmBase = function(){
     return extend(Base, {
-
+        INTERVAL: 1000,
         init: function(name, interval) {
             Base.init.call(this);
             this.NAME = name;
             this.FRAME = 0;
             this.QUEUE = [];
+            this.BoardQueue = [];
+            this.BoardColor = [];
             this.COLOR = [];
-
-            this.INTERVAL = interval ? interval : this.INTERVAL;
+            Scroll.setInterval(interval);
             return this;
         },
 
@@ -41,7 +42,8 @@ AlgorithmBase = function(){
             Canvas.clearAll('canvas')
                 .drawRectangleByNumber(this.QUEUE[this.FRAME], this.COLOR[this.FRAME]);
             this.FRAME++;
-            setTimeout.call(null, this.DRAW_FUNCTION, this.INTERVAL ? this.INTERVAL : 500);
+            setTimeout.call(null, this.DRAW_FUNCTION, Scroll.interval);
+            console.log(Scroll.interval);
             return this;
         },
 

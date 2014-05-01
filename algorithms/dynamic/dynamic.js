@@ -8,7 +8,7 @@
 Dynamic = function() {
     return extend(AlgorithmBase, {
         init: function(name) {
-            AlgorithmBase.init(name, 200);
+            AlgorithmBase.init(name, Scroll.interval);
             this.queue = [];
             this.Table = Table.init();
             return this;

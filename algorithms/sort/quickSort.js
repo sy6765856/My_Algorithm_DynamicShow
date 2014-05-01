@@ -21,7 +21,7 @@ QuickSort = function() {
         quick_Sort: function(CanvasObject) {
             var array = this.array,
                 color = [];
-            this.init('QuickSort', 2000)
+            this.init('QuickSort', Scroll.interval)
                 .QUEUE.push(array.slice(0));
             this.COLOR.push(color);
             this.quickSort(array, 0, array.length - 1)

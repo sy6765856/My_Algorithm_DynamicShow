@@ -7,6 +7,15 @@
  */
 DivideAndConquer = function() {
     return extend(AlgorithmBase, {
-
+        drawing: function() {
+            if(this.FRAME >= this.BoardQueue.length) {
+                return this;
+            }
+            Canvas.clearAll('canvas')
+                .drawBoard(this.BoardQueue[this.FRAME], this.BoardColor[this.FRAME], BoardCover.height, BoardCover.width);
+            this.FRAME++;
+            setTimeout.call(null, this.DRAW_FUNCTION, Scroll.interval);
+            return this;
+        }
     });
 }();
