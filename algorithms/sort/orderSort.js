@@ -5,6 +5,8 @@
  * Time: 下午6:44
  * To change this template use File | Settings | File Templates.
  */
+DotTest.init('orderSort.js')
+    .begin();
 OrderSort = function() {
     app.initToolsView('orderSort')
         .startButtonInit('开始动态演示')
@@ -15,8 +17,10 @@ OrderSort = function() {
         .description('这里会演示顺序排序过程中数字序列的变化过程');
     Canvas.init('canvas');
     return extend(Sort, {
+        SIG: 'OrderSort',
         run: function(id) {
             this.orderSort();
+            Log.success();
             return this;
         },
         orderSort: function(CanvasObject){
@@ -42,3 +46,5 @@ OrderSort = function() {
         }
     });
 }();
+DotTest.end()
+    .calculate();

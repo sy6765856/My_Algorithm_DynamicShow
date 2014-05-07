@@ -5,6 +5,8 @@
  * Time: 下午4:11
  * To change this template use File | Settings | File Templates.
  */
+DotTest.init('bubbleSort.js')
+    .begin();
 BubbleSort = function() {
     app.initToolsView('bubbleSort')
         .startButtonInit('开始动态演示')
@@ -14,8 +16,10 @@ BubbleSort = function() {
         .inputOneInit('请输入一个数')
         .description('这里会演示冒泡排序过程中数字序列的变化过程');
     return extend(Sort, {
+        SIG: 'BubbleSort',
         run: function(id) {
             this.bubble_Sort(Canvas.init(id));
+            Log.success();
             return this;
         },
         bubble_Sort: function(CanvasObject){
@@ -25,7 +29,6 @@ BubbleSort = function() {
 
             this.bubbleSort(array, 0, array.length)
                 .draw();
-
             return this;
         },
         bubbleSort: function(array, begin, end) {
@@ -52,3 +55,5 @@ BubbleSort = function() {
         }
     });
 }();
+DotTest.end()
+    .calculate();

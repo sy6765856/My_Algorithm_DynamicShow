@@ -17,6 +17,7 @@ AlgorithmBase = function(){
             this.BoardColor = [];
             this.COLOR = [];
             Scroll.setInterval(interval);
+            Log.setSig(this.SIG);
             return this;
         },
 
@@ -43,7 +44,7 @@ AlgorithmBase = function(){
                 .drawRectangleByNumber(this.QUEUE[this.FRAME], this.COLOR[this.FRAME]);
             this.FRAME++;
             setTimeout.call(null, this.DRAW_FUNCTION, Scroll.interval);
-            console.log(Scroll.interval);
+//            console.log(Scroll.interval);
             return this;
         },
 

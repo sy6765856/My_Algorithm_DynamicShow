@@ -5,6 +5,8 @@
  * Time: 下午6:44
  * To change this template use File | Settings | File Templates.
  */
+DotTest.init('mergeSort.js')
+    .begin();
 MergeSort = function() {
     app.initToolsView('mergeSort')
         .startButtonInit('开始动态演示')
@@ -14,8 +16,10 @@ MergeSort = function() {
         .inputOneInit('请输入一个数')
         .description('这里会演示归并排序过程中数字序列的变化过程');
     return extend(Sort, {
+        SIG: 'MergeSort',
         run: function(id) {
             this.merge_Sort(Canvas.init(id));
+            Log.success();
             return this;
         },
         merge_Sort: function(CanvasObject){
@@ -25,7 +29,6 @@ MergeSort = function() {
 
             this.mergeSort(array, 0, array.length-1)
                 .draw();
-
             return this;
         },
         mergeSort: function(array, begin, end){
@@ -62,3 +65,5 @@ MergeSort = function() {
         }
     });
 }();
+DotTest.end()
+    .calculate();

@@ -5,6 +5,8 @@
  * Time: 下午5:08
  * To change this template use File | Settings | File Templates.
  */
+DotTest.init('sort.js')
+    .begin();
 Sort = function() {
     return extend(AlgorithmBase, {
         array: [],
@@ -44,3 +46,5 @@ Sort = function() {
         }
     });
 }();
+DotTest.end()
+    .calculate();

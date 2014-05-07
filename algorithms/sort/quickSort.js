@@ -5,6 +5,8 @@
  * Time: 下午4:37
  * To change this template use File | Settings | File Templates.
  */
+DotTest.init('quickSort')
+    .begin();
 QuickSort = function() {
     app.initToolsView('quickSort')
         .startButtonInit('开始动态演示')
@@ -14,8 +16,10 @@ QuickSort = function() {
         .inputOneInit('请输入一个数')
         .description('这里会演示快速排序过程中数字序列的变化过程');
     return extend(Sort, {
+        SIG: 'QuickSort',
         run: function(id) {
             this.quick_Sort(Canvas.init(id));
+            Log.success();
             return this;
         },
         quick_Sort: function(CanvasObject) {
@@ -64,3 +68,5 @@ QuickSort = function() {
         }
     })
 }();
+DotTest.end()
+    .calculate();
