@@ -5,13 +5,13 @@
     <ignored path="testjs.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/AlgorithmBase.js" changelist="b8866d45-fac2-4c5e-ab85-e2969b0a6841" time="1399454231779" ignored="false" />
-    <file path="/index.html" changelist="b8866d45-fac2-4c5e-ab85-e2969b0a6841" time="1399456885441" ignored="false" />
+    <file path="/index.html" changelist="b8866d45-fac2-4c5e-ab85-e2969b0a6841" time="1399816339393" ignored="false" />
     <file path="/CanvasBase.js" changelist="b8866d45-fac2-4c5e-ab85-e2969b0a6841" time="1398604459962" ignored="false" />
-    <file path="/app.js" changelist="b8866d45-fac2-4c5e-ab85-e2969b0a6841" time="1396882542268" ignored="false" />
-    <file path="/Canvas.js" changelist="b8866d45-fac2-4c5e-ab85-e2969b0a6841" time="1398656455273" ignored="false" />
+    <file path="/app.js" changelist="b8866d45-fac2-4c5e-ab85-e2969b0a6841" time="1399813714469" ignored="false" />
+    <file path="/Canvas.js" changelist="b8866d45-fac2-4c5e-ab85-e2969b0a6841" time="1399802086913" ignored="false" />
     <file path="/lib.js" changelist="b8866d45-fac2-4c5e-ab85-e2969b0a6841" time="1394203714672" ignored="false" />
     <file path="/prim.js" changelist="b8866d45-fac2-4c5e-ab85-e2969b0a6841" time="1396881949570" ignored="false" />
-    <file path="/main.css" changelist="b8866d45-fac2-4c5e-ab85-e2969b0a6841" time="1398850152102" ignored="false" />
+    <file path="/main.css" changelist="b8866d45-fac2-4c5e-ab85-e2969b0a6841" time="1399816806254" ignored="false" />
     <file path="/init.js" changelist="b8866d45-fac2-4c5e-ab85-e2969b0a6841" time="1392033732266" ignored="false" />
     <file path="/sort.js" changelist="b8866d45-fac2-4c5e-ab85-e2969b0a6841" time="1399471686063" ignored="false" />
     <file path="/CanvasLib.js" changelist="b8866d45-fac2-4c5e-ab85-e2969b0a6841" time="1395902932764" ignored="false" />
@@ -20,7 +20,7 @@
     <file path="/heap.js" changelist="b8866d45-fac2-4c5e-ab85-e2969b0a6841" time="1394694224747" ignored="false" />
     <file path="/graph.js" changelist="b8866d45-fac2-4c5e-ab85-e2969b0a6841" time="1398848734127" ignored="false" />
     <file path="/test.html" changelist="b8866d45-fac2-4c5e-ab85-e2969b0a6841" time="1390568210063" ignored="false" />
-    <file path="/a.dummy" changelist="b8866d45-fac2-4c5e-ab85-e2969b0a6841" time="1399454462393" ignored="false" />
+    <file path="/a.dummy" changelist="b8866d45-fac2-4c5e-ab85-e2969b0a6841" time="1399814299812" ignored="false" />
     <file path="/Base.js" changelist="b8866d45-fac2-4c5e-ab85-e2969b0a6841" time="1395903964212" ignored="false" />
     <file path="/tree.js" changelist="b8866d45-fac2-4c5e-ab85-e2969b0a6841" time="1396963285086" ignored="false" />
     <file path="/krusal.js" changelist="b8866d45-fac2-4c5e-ab85-e2969b0a6841" time="1392870132908" ignored="false" />
@@ -30,14 +30,14 @@
     <file path="/binaryTree.js" changelist="b8866d45-fac2-4c5e-ab85-e2969b0a6841" time="1397197219497" ignored="false" />
     <file path="/greedy.js" changelist="b8866d45-fac2-4c5e-ab85-e2969b0a6841" time="1398590094786" ignored="false" />
     <file path="/menu.js" changelist="b8866d45-fac2-4c5e-ab85-e2969b0a6841" time="1396928482412" ignored="false" />
-    <file path="/template.js" changelist="b8866d45-fac2-4c5e-ab85-e2969b0a6841" time="1396881280984" ignored="false" />
+    <file path="/template.js" changelist="b8866d45-fac2-4c5e-ab85-e2969b0a6841" time="1399811266829" ignored="false" />
     <file path="/mergeSort.js" changelist="b8866d45-fac2-4c5e-ab85-e2969b0a6841" time="1399471495186" ignored="false" />
     <file path="/orderSort.js" changelist="b8866d45-fac2-4c5e-ab85-e2969b0a6841" time="1399471602904" ignored="false" />
     <file path="/activitySelect.js" changelist="b8866d45-fac2-4c5e-ab85-e2969b0a6841" time="1398842383054" ignored="false" />
     <file path="/functionTemplate.js" changelist="b8866d45-fac2-4c5e-ab85-e2969b0a6841" time="1396881330321" ignored="false" />
     <file path="/queue.js" changelist="b8866d45-fac2-4c5e-ab85-e2969b0a6841" time="1394783383447" ignored="false" />
     <file path="/kruskal.js" changelist="b8866d45-fac2-4c5e-ab85-e2969b0a6841" time="1396921960026" ignored="false" />
-    <file path="/bubbleSort.js" changelist="b8866d45-fac2-4c5e-ab85-e2969b0a6841" time="1399471308065" ignored="false" />
+    <file path="/bubbleSort.js" changelist="b8866d45-fac2-4c5e-ab85-e2969b0a6841" time="1399818620543" ignored="false" />
     <file path="/boardCover.js" changelist="b8866d45-fac2-4c5e-ab85-e2969b0a6841" time="1398848691612" ignored="false" />
     <file path="/DivideAndConquer.js" changelist="b8866d45-fac2-4c5e-ab85-e2969b0a6841" time="1394269534804" ignored="false" />
     <file path="/divideAndConquer.js" changelist="b8866d45-fac2-4c5e-ab85-e2969b0a6841" time="1398842347415" ignored="false" />
@@ -49,7 +49,7 @@
     <file path="/*.regexp" changelist="b8866d45-fac2-4c5e-ab85-e2969b0a6841" time="1398848664094" ignored="false" />
     <file path="/binarySearchTree.js" changelist="b8866d45-fac2-4c5e-ab85-e2969b0a6841" time="1397293344848" ignored="false" />
     <file path="/scroll.js" changelist="b8866d45-fac2-4c5e-ab85-e2969b0a6841" time="1398848337158" ignored="false" />
-    <file path="/info.js" changelist="b8866d45-fac2-4c5e-ab85-e2969b0a6841" time="1399022744728" ignored="false" />
+    <file path="/info.js" changelist="b8866d45-fac2-4c5e-ab85-e2969b0a6841" time="1399818464336" ignored="false" />
     <file path="/log.js" changelist="b8866d45-fac2-4c5e-ab85-e2969b0a6841" time="1399456514442" ignored="false" />
     <file path="/dotTest.js" changelist="b8866d45-fac2-4c5e-ab85-e2969b0a6841" time="1399471412517" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -71,43 +71,90 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/html/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="61" selection-start="460" selection-end="460" vertical-scroll-proportion="-7.142857">
+            <state line="73" column="45" selection-start="3390" selection-end="3390" vertical-scroll-proportion="0.35955057">
               <folding>
-                <element signature="n#style#0;n#a#0;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#a#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#3;n#div#2;n#div#1;n#div#0;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#div#3;n#div#2;n#div#1;n#div#0;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#2;n#div#3;n#div#2;n#div#1;n#div#0;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#3;n#div#3;n#div#2;n#div#1;n#div#0;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#4;n#div#3;n#div#2;n#div#1;n#div#0;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#5;n#div#3;n#div#2;n#div#1;n#div#0;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="dotTest.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/dotTest.js">
+      <file leaf-file-name="main.css" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/css/main.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="24" column="25" selection-start="726" selection-end="726" vertical-scroll-proportion="0.0">
+            <state line="198" column="31" selection-start="6221" selection-end="6221" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="activitySelect.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/algorithms/greedy/activitySelect.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="16" column="18" selection-start="542" selection-end="542" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="greedy.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/algorithms/greedy/greedy.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="54" column="68" selection-start="1557" selection-end="1557" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="info.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/info.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="13" column="12" selection-start="289" selection-end="289" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Canvas.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/canvas/Canvas.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="29" column="12" selection-start="1072" selection-end="1072" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="app.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="145" column="102" selection-start="4554" selection-end="4554" vertical-scroll-proportion="0.0">
               <folding>
-                <element signature="e#0#159#0" expanded="false" />
+                <marker date="1399814314000" expanded="true" signature="1306:1347" placeholder="..." />
+                <marker date="1399814314000" expanded="true" signature="2720:2739" placeholder="..." />
+                <marker date="1399814314000" expanded="true" signature="3160:3179" placeholder="..." />
+                <marker date="1399814314000" expanded="true" signature="3604:3623" placeholder="..." />
+                <marker date="1399814314000" expanded="true" signature="4049:4085" placeholder="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="log.js" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/log.js">
+      <file leaf-file-name="mergeSort.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/algorithms/sort/mergeSort.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="28" column="27" selection-start="696" selection-end="696" vertical-scroll-proportion="0.48795182">
-              <folding>
-                <element signature="e#0#159#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AlgorithmBase.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/algorithms/AlgorithmBase.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="31" column="42" selection-start="850" selection-end="850" vertical-scroll-proportion="0.0">
+            <state line="16" column="18" selection-start="439" selection-end="439" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -116,34 +163,7 @@
       <file leaf-file-name="bubbleSort.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/algorithms/sort/bubbleSort.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="56" column="9" selection-start="1727" selection-end="1727" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="mergeSort.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/algorithms/sort/mergeSort.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="68" column="17" selection-start="2039" selection-end="2070" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="orderSort.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/algorithms/sort/orderSort.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="49" column="17" selection-start="1462" selection-end="1462" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="quickSort.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/algorithms/sort/quickSort.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="71" column="17" selection-start="2217" selection-end="2217" vertical-scroll-proportion="0.0">
+            <state line="16" column="46" selection-start="469" selection-end="469" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -152,16 +172,7 @@
       <file leaf-file-name="sort.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/algorithms/sort/sort.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="49" column="17" selection-start="1330" selection-end="1330" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="binarySearchTree.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/structure/tree/binarySearchTree.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="53" column="59" selection-start="1615" selection-end="1615" vertical-scroll-proportion="0.0">
+            <state line="17" column="19" selection-start="425" selection-end="425" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -177,22 +188,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/scroll.js" />
-        <option value="$PROJECT_DIR$/algorithms/divide_and_conquer/boardCover.js" />
-        <option value="$PROJECT_DIR$/algorithms/dynamic/dynamic.js" />
-        <option value="$PROJECT_DIR$/algorithms/graph/graph.js" />
-        <option value="$PROJECT_DIR$/css/main.css" />
-        <option value="$PROJECT_DIR$/info.js" />
-        <option value="$PROJECT_DIR$/menu.js" />
         <option value="$PROJECT_DIR$/algorithms/AlgorithmBase.js" />
-        <option value="$PROJECT_DIR$/log.js" />
-        <option value="$PROJECT_DIR$/html/index.html" />
-        <option value="$PROJECT_DIR$/algorithms/sort/bubbleSort.js" />
         <option value="$PROJECT_DIR$/dotTest.js" />
-        <option value="$PROJECT_DIR$/algorithms/sort/mergeSort.js" />
         <option value="$PROJECT_DIR$/algorithms/sort/orderSort.js" />
         <option value="$PROJECT_DIR$/algorithms/sort/quickSort.js" />
         <option value="$PROJECT_DIR$/algorithms/sort/sort.js" />
+        <option value="$PROJECT_DIR$/log.js" />
+        <option value="$PROJECT_DIR$/canvas/Canvas.js" />
+        <option value="$PROJECT_DIR$/Base.js" />
+        <option value="$PROJECT_DIR$/algorithms/sort/mergeSort.js" />
+        <option value="$PROJECT_DIR$/templates/template.js" />
+        <option value="$PROJECT_DIR$/app.js" />
+        <option value="$PROJECT_DIR$/html/index.html" />
+        <option value="$PROJECT_DIR$/css/main.css" />
+        <option value="$PROJECT_DIR$/algorithms/greedy/greedy.js" />
+        <option value="$PROJECT_DIR$/info.js" />
+        <option value="$PROJECT_DIR$/algorithms/sort/bubbleSort.js" />
       </list>
     </option>
   </component>
@@ -228,6 +239,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -243,34 +255,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="My_Algorithm_DynamicShow" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="testjs" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="My_Algorithm_DynamicShow" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pictures" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="testjs" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="My_Algorithm_DynamicShow" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="html" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -306,9 +290,26 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="testjs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="My_Algorithm_DynamicShow" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="algorithms" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="divide_and_conquer" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -480,120 +481,133 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/canvas/CanvasLib.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="40" column="29" selection-start="1258" selection-end="1258" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/menu.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="50" selection-start="161" selection-end="161" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/canvas/CanvasBase.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="52" column="13" selection-start="1565" selection-end="1570" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/canvas/Canvas.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="117" column="10" selection-start="4813" selection-end="4813" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/canvas/table.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="12" selection-start="771" selection-end="771" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/structure/tree/tree.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="52" selection-start="910" selection-end="910" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/structure/tree/binarySearchTree.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="53" column="59" selection-start="1615" selection-end="1615" vertical-scroll-proportion="0.0">
+        <state line="52" column="0" selection-start="1557" selection-end="1557" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/algorithms/AlgorithmBase.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="42" selection-start="850" selection-end="850" vertical-scroll-proportion="0.0">
+        <state line="11" column="20" selection-start="300" selection-end="300" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dotTest.js">
+    <entry file="file://$PROJECT_DIR$/Base.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="25" selection-start="726" selection-end="726" vertical-scroll-proportion="0.0">
+        <state line="9" column="18" selection-start="212" selection-end="212" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/functionTemplate.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="50" selection-start="409" selection-end="409" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/template.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="30" column="80" selection-start="961" selection-end="961" vertical-scroll-proportion="0.0">
           <folding>
-            <element signature="e#0#159#0" expanded="false" />
+            <marker date="1399811392000" expanded="false" signature="-1:-1" placeholder="..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/algorithms/sort/bubbleSort.js">
+    <entry file="file://$PROJECT_DIR$/algorithms/divide_and_conquer/boardCover.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="56" column="9" selection-start="1727" selection-end="1727" vertical-scroll-proportion="0.0">
+        <state line="10" column="19" selection-start="278" selection-end="278" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="145" column="102" selection-start="4554" selection-end="4554" vertical-scroll-proportion="0.0">
+          <folding>
+            <marker date="1399814314000" expanded="true" signature="1306:1347" placeholder="..." />
+            <marker date="1399814314000" expanded="true" signature="2720:2739" placeholder="..." />
+            <marker date="1399814314000" expanded="true" signature="3160:3179" placeholder="..." />
+            <marker date="1399814314000" expanded="true" signature="3604:3623" placeholder="..." />
+            <marker date="1399814314000" expanded="true" signature="4049:4085" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/algorithms/sort/sort.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="19" selection-start="425" selection-end="425" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/algorithms/sort/mergeSort.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="68" column="17" selection-start="2039" selection-end="2070" vertical-scroll-proportion="0.0">
+        <state line="16" column="18" selection-start="439" selection-end="439" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/algorithms/sort/orderSort.js">
+    <entry file="file://$PROJECT_DIR$/css/main.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="49" column="17" selection-start="1462" selection-end="1462" vertical-scroll-proportion="0.0">
+        <state line="198" column="31" selection-start="6221" selection-end="6221" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/algorithms/sort/quickSort.js">
+    <entry file="file://$PROJECT_DIR$/algorithms/greedy/activitySelect.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="71" column="17" selection-start="2217" selection-end="2217" vertical-scroll-proportion="0.0">
+        <state line="16" column="18" selection-start="542" selection-end="542" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/algorithms/sort/sort.js">
+    <entry file="file://$PROJECT_DIR$/canvas/Canvas.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="49" column="17" selection-start="1330" selection-end="1330" vertical-scroll-proportion="0.0">
+        <state line="29" column="12" selection-start="1072" selection-end="1072" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/algorithms/greedy/greedy.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="54" column="68" selection-start="1557" selection-end="1557" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/info.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="12" selection-start="289" selection-end="289" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/algorithms/sort/bubbleSort.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="46" selection-start="469" selection-end="469" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/html/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="61" selection-start="460" selection-end="460" vertical-scroll-proportion="-7.142857">
+        <state line="73" column="45" selection-start="3390" selection-end="3390" vertical-scroll-proportion="0.35955057">
           <folding>
-            <element signature="n#style#0;n#a#0;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/log.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="27" selection-start="696" selection-end="696" vertical-scroll-proportion="0.48795182">
-          <folding>
-            <element signature="e#0#159#0" expanded="false" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#3;n#div#2;n#div#1;n#div#0;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#3;n#div#2;n#div#1;n#div#0;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#div#3;n#div#2;n#div#1;n#div#0;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#3;n#div#3;n#div#2;n#div#1;n#div#0;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#4;n#div#3;n#div#2;n#div#1;n#div#0;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#5;n#div#3;n#div#2;n#div#1;n#div#0;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>

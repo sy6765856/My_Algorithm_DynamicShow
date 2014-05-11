@@ -1,7 +1,7 @@
-.title { opacity: 1; font-size: 35px; font-weight: bold; padding: 20px; background-color: mediumslateblue; color: greenyellow; border: 1px solid grey; border-radius: 8px;}
-.subTitle { padding: 2px; font-size: 20px; font-family: Arial; position: absolute; left: 60%; top: 53px; color: dimgray; background-color: papayawhip; width: 103px; height: 40px; border-radius: 8px; opacity: 0.9;}
+.title { opacity: 0.95; font-size: 35px; font-weight: bold; padding: 20px; background-color: #111; color: greenyellow; border: 1px solid grey; border-radius: 8px; text-align: center; }
+.subTitle { padding: 2px; font-size: 20px; font-family: Arial; position: relative; left: 5px; top: 5px; color: dimgray; background-color: papayawhip; width: 90px; height: 40px; border-radius: 8px; opacity: 0.9;}
 .subTitle:hover { border-radius: 7px; background: antiquewhite; box-shadow: 3px 3px 2px #888888; height: 38px;}
-.label { color: whitesmoke; font-weight: bold; }
+.label { color: #000000; font-weight: bold; }
 body {
     font: normal 11px auto "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
     color: #000;
@@ -12,6 +12,7 @@ input {
     border-radius: 8px;
     margin: 7px;
     border: 1px solid grey;
+    width: 100px;
 }
 button {
     background-color: #3498db;
@@ -25,6 +26,7 @@ button {
     padding: 5px 10px 5px 10px;
     font: bold 11px "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
     opacity: 0.9;
+    cursor: hand;
 }
 button:hover {
     background-color: #3cb0fd;
@@ -51,9 +53,11 @@ button:hover {
 
 .canvas { opacity: 0.8; position: relative; top: 15px; left: 10px; background-color: darkgray; border: 1px solid gray;}
 
-.information { position: relative; top: 5px;}
+.information { position: relative; top: -3px;}
 .input { position: relative; top: 10px;}
-.buttons { position: relative; top: 5px;}
+.buttons { position: absolute; top: 100px; left: 0px; width: 200px;}
+button { width: 50px;}
+
 .buttonFrame { margin: 23px 25px 0 0; position: relative; top: 5px; left: 5px; height: 90px; border-radius: 8px; opacity: 0.9;}
 
 .buttonFrame button { float: left;}
@@ -119,8 +123,8 @@ button:hover {
     border-bottom-right-radius: 8px;
 }
 
-.info { color: greenyellow; position: relative; left: 10px; top: 5px; height: 10px;}
-.answer { color: lightcyan; position: relative; left: 10px; top: 10px; height: 10px;}
+.info { color: green; position: absolute; left: 10px; top: 0px; height: 10px;}
+.answer { color: lightcyan; position: absolute; left: 10px; top: 10px; height: 10px;}
 
 
 .curved_box {
@@ -165,28 +169,46 @@ button:hover {
 
 .description {
     padding: 6px;
-    position: absolute;
-    left: 860px;
-    top: 50px;
+    position: relative;
+    left: 5px;
+    top: 5px;
     background-color: wheat;
     width: 240px;
+    height: 150px;
     border-radius: 10px;
     font: 15px bold Arial;
     font-weight: bold;
 }
 .description:hover {
     border-radius: 6px;
-    height: 100px;
+    height: 147px;
 }
 
 .scroll {
     background-color: #808080;
     border-radius: 4px;
-    border: 2px solid #000000;
-    height: 6px;
-    width: 320px;
+    height: 15px;
+    line-height: 10px;
+    text-align: center;
+    font-family: Arial;
+    color: whitesmoke;
+    width: 300px;
+    left: -5px;
+    top: 91px;
+    position: absolute;
+    cursor: hand;
 }
 
 .scroll:hover {
     background-color: greenyellow;
+    color: #000000;
+}
+
+.dot {
+    width: 4px;
+    height: 18px;
+    position: absolute;
+    background-color: red;
+    cursor: hand;
+    border-radius: 3px;
 }

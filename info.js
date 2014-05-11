@@ -7,6 +7,15 @@
  */
 Info = function() {
     return {
+        left: 0,
+        top: 0,
+        permanentInfo: '',
+        temporary: function(info) {
 
+            return this;
+        },
+        permanent: function() {
+            return this;
+        }
     };
 }();

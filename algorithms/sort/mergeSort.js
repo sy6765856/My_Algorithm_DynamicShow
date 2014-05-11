@@ -14,7 +14,7 @@ MergeSort = function() {
         .resetButtonInit()
         .randomButtonInit()
         .inputOneInit('请输入一个数')
-        .description('这里会演示归并排序过程中数字序列的变化过程');
+        .description('这里会演示归并排序过程中数字序列的变化过程。');
     return extend(Sort, {
         SIG: 'MergeSort',
         run: function(id) {

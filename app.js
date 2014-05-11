@@ -45,7 +45,7 @@ app = {
 
     description: function(content) {
         var index = '#' + this.id;
-        $(index).click(function(){$('#description').html('&nbsp&nbsp' + content);});
+        $(index).click(function(){$('#description').html('<div style="position: absolute; top: 6px; left: 18px;">&nbsp&nbsp' + content + '</div>');});
         return this;
     },
     startButtonInit: function(name) {
@@ -87,7 +87,7 @@ app = {
         }
         $(index).click(
             function() {
-                $('#input').append('<label class = "label" for="input1">'+ name +'</label><input id = "input1"/>');
+                $('#input').append('<div style="position: absolute;"><label class = "label" for="input1">'+ name +'</label><input id = "input1"/></div>');
             }
         );
         return this;
@@ -101,7 +101,7 @@ app = {
         }
         $(index).click(
             function() {
-                $('#input').append('</br><label class = "label" for="input2">' + name + '</label><input id = "input2"/>');
+                $('#input').append('</br><div style="position: absolute;"><label class = "label" for="input2">' + name + '</label><input id = "input2"/></div>');
             }
         );
         return this;
@@ -115,7 +115,7 @@ app = {
         }
         $(index).click(
             function() {
-                $('#input').append('</br><label class = "label" for="input3">' + name + '</label><input id = "input3"/>');
+                $('#input').append('</br><div style="position: absolute;"><label class = "label" for="input3">' + name + '</label><input id = "input3"/></div>');
             }
         );
         return this;
@@ -129,7 +129,7 @@ app = {
         }
         $(index).click(
             function() {
-                $('#input').append('</br><a>' + name + '</a>');
+                $('#input').append('</br><div style="position: absolute; margin-top: 3px;"><a>' + name + '</a></div>');
             }
         );
         return this;

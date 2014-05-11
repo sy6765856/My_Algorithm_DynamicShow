@@ -52,7 +52,7 @@ Greedy = function() {
         drawActivities: function(array, minimum, maximum) {
             this.checkParameters();
             Canvas.clearAll()
-                .drawActivities(array, minimum, maximum, this.pos, 800, this.height, this.spacing);
+                .drawActivities(array, minimum, maximum, this.pos, 500, this.height, this.spacing);
             return this;
         },
         save: function() {

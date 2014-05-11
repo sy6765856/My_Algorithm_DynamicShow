@@ -31,33 +31,39 @@
             </div>
             <div class="context">
                 <div>
-                    <div class="buttonFrame">
-                        <div class="information">
-                            <div id = "answer" class = "answer"></div>
-                            <div id = "info" class="info">&nbsp</div>
+                    <div>
+                        <div style="float: left; margin-top: 12px; border-radius: 8px;">
+                            <canvas id="canvas" class="canvas curved_box"></canvas>
                         </div>
-                        <div class="input" id = "input">
-                            <input id = "input1"/>
-                            <input id = "input2"/>
+                        <div style="position: relative; width: 300px; height: 333px; top: 47px; left: 820px; background-color: white">
+                            <div class = "subTitle" id = "subTitle"></div>
+                            <a href="#" style="position: absolute; left:15px; top: 28px; text-decoration: none;">Description：</a>
+                            <div id = "description" class="description">
+                            </div>
+                            <div class="buttonFrame">
+                                <div class="information">
+                                    <div id = "answer" class = "answer"></div>
+                                    <div id = "info" class="info"></div>
+                                </div>
+                                <div class="input" id = "input">
+                                </div>
+                                <div class="scroll">点这里调节速度哦</div>
+                                <div class = "buttons">
+                                    <div id = "add" style="float: left"></div>
+                                    <div id = "pop" style="float: left"></div>
+                                    <div id = "start" style="float: left"></div>
+                                    <div id = "set" style="float: left"></div>
+                                    <div id = "reset" style="float: left"></div>
+                                    <div id = "random" style="float: left"></div>
+                                </div>
+                            </div>
                         </div>
-                        <div class = "buttons">
-                            <div id = "add"></div>
-                            <div id = "pop"></div>
-                            <div id = "start"></div>
-                            <div id = "set"></div>
-                            <div id = "reset"></div>
-                            <div id = "random"></div>
-                        </div>
-                        <div class = "subTitle" id = "subTitle"></div>
                     </div>
-                    <a href="#" style="position: absolute; left:870px; top: 28px; text-decoration: none;">Description：</a>
-                    <div id = "description" class="description"></div>
-                    <div class="scroll"></div>
-                    <canvas id="canvas" class="canvas curved_box"></canvas>
                 </div>
                 <div class="code"></div>
         </div>
         </div>
+        <div class="dot" style=" top: 440px; left: 1200px;"></div>
     </body>
 
     <script type="text/javascript" src = "../jsLib/jquery-1.4.2.js"></script>
@@ -116,6 +122,7 @@
                     end = object.width(),
                     pos = e.clientX;
             Scroll.setSpeed(pos, begin, end);
+            $('.dot').css("left", e.clientX);
         });
         $('#menu').click(function(e) {
             e = window.event ? window.event : e;
