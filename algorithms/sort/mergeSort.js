@@ -18,6 +18,8 @@ MergeSort = function() {
     return extend(Sort, {
         SIG: 'MergeSort',
         run: function(id) {
+            Info.init()
+                .setPermanent('归并排序');
             this.merge_Sort(Canvas.init(id));
             Log.success();
             return this;
@@ -59,7 +61,8 @@ MergeSort = function() {
                 array[pos] = st[pos - begin];
                 color[pos] = "yellow";
             }
-            this.QUEUE.push(array.slice(0));
+            this.addInfo('对' + begin + '到' + end + '进行排序。')
+                .QUEUE.push(array.slice(0));
             this.COLOR.push(color);
             return this;
         }

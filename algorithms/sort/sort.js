@@ -43,6 +43,10 @@ Sort = function() {
             this.clearAll();
             Table.drawStackAndQueue(this.array, this.array.length);
             return this;
+        },
+        addInfo: function(info) {
+            Info.addTemp(info);
+            return this;
         }
     });
 }();

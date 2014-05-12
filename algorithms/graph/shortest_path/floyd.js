@@ -5,6 +5,8 @@
  * Time: 下午4:11
  * To change this template use File | Settings | File Templates.
  */
+DotTest.init('floyd.js')
+    .begin();
 Floyd = function() {
     app.initToolsView('floyd')
         .randomButtonInit('产生随机图')
@@ -18,6 +20,8 @@ Floyd = function() {
     return extend(Graph, {
         run: function(id) {
             Canvas.init(id);
+            Info.init()
+                .setPermanent('floyd算法');
             this.floyd()
                 .draw();
             return this;
@@ -40,3 +44,5 @@ Floyd = function() {
         }
     });
 }();
+DotTest.end()
+    .calculate();

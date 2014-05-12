@@ -5,6 +5,8 @@
  * Time: 上午9:57
  * To change this template use File | Settings | File Templates.
  */
+DotTest.init('AlgorithmBase.js')
+    .begin();
 AlgorithmBase = function(){
     return extend(Base, {
         INTERVAL: 1000,
@@ -42,9 +44,10 @@ AlgorithmBase = function(){
             }
             Canvas.clearAll('canvas')
                 .drawRectangleByNumber(this.QUEUE[this.FRAME], this.COLOR[this.FRAME]);
+            Info.permanent()
+                .temporary(this.FRAME);
             this.FRAME++;
             setTimeout.call(null, this.DRAW_FUNCTION, Scroll.interval);
-//            console.log(Scroll.interval);
             return this;
         },
 
@@ -64,3 +67,5 @@ AlgorithmBase = function(){
         }
     });
 }();
+DotTest.end()
+    .calculate();

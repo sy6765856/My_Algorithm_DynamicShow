@@ -5,6 +5,8 @@
  * Time: 下午5:21
  * To change this template use File | Settings | File Templates.
  */
+DotTest.init('prim.js')
+    .begin();
 Prim = function() {
     app.initToolsView('prim')
         .startButtonInit()
@@ -18,6 +20,8 @@ Prim = function() {
     return extend(Graph, {
         run: function(id){
             Canvas.init(id);
+            Info.init()
+                .setPermanent('最小生成树prim算法');
             this.prim()
                 .draw();
             $('#answer').html('最小生成树边权和为：' + this.minLength);
@@ -42,6 +46,7 @@ Prim = function() {
 
             f[source] = 1;
             this.changeNodeColor(source, "green")
+                .addTemp('将点' + source + '加入已选点集')
                 .saveGraph();
 
             for(var cnt = 1; cnt < this.nodes.length; cnt++) {
@@ -57,33 +62,41 @@ Prim = function() {
                 for(var i = 0; i < this.nodes.length; i++) {
                     if(!f[i] && edgeIndex[i]) {
                         this.changeEdgeColor(edgeIndex[i], 'red')
+                            .addTemp('判断' + i)
                             .saveGraph();
                         if(dis[i] < min) {
                             min = dis[i];
                             if(source === pre_source) {
                                 this.changeEdgeColor(edgeIndex[i], 'yellow')
+                                    .addTemp('判断' + i)
                                     .saveGraph();
                             } else {
                                 this.changeEdgeColor(edgeIndex[i], 'yellow')
                                     .changeEdgeColor(edgeIndex[source], 'blue')
+                                    .addTemp('判断' + i)
                                     .saveGraph();
                             }
                             source = i;
                         } else {
                             this.changeEdgeColor(edgeIndex[i], 'blue')
+                                .addTemp('判断' + i)
                                 .saveGraph();
                         }
                     }
                 }
                 f[source] = 1;
                 this.changeNodeColor(source, "green")
+                    .addTemp('将点' + source + '加入已选点集')
                     .saveGraph();
-
                 this.minLength += min;
             }
             return this;
         },
 
+        drawAfter: function() {
+            $('#answer').html('最小生成树边权和为：' + this.minLength);
+            return this;
+        },
 
         drawTree: function(CanvasObject){
             var treeNodes = new Array();
@@ -96,3 +109,5 @@ Prim = function() {
         }
     });
 }();
+DotTest.end()
+    .calculate();

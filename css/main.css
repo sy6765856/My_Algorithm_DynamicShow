@@ -124,12 +124,11 @@ button { width: 50px;}
 }
 
 .info { color: green; position: absolute; left: 10px; top: 0px; height: 10px;}
-.answer { color: lightcyan; position: absolute; left: 10px; top: 10px; height: 10px;}
+.answer { color: darkgreen; position: absolute; left: 0px; top: 0px;}
 
 
 .curved_box {
     display: inline-block;
-    *display: inline;
     margin: 20px;
     background-color: #fff;
     border: 1px solid #eee;

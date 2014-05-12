@@ -5,6 +5,8 @@
  * Time: 下午4:39
  * To change this template use File | Settings | File Templates.
  */
+DotTest.init('fractionPackage.js')
+    .begin();
 FractionPackage = function() {
     app.initToolsView('fractionPackage')
         .startButtonInit('开始')
@@ -122,3 +124,5 @@ FractionPackage = function() {
         }
     });
 }();
+DotTest.end()
+    .calculate();

@@ -5,6 +5,8 @@
  * Time: 下午5:04
  * To change this template use File | Settings | File Templates.
  */
+DotTest.init('boardcover.js')
+    .begin();
 BoardCover = function() {
     app.initToolsView('boardCover')
         .inputOneInit('棋盘大小（2的次方数）')
@@ -157,3 +159,5 @@ BoardCover = function() {
         }
     });
 }();
+DotTest.end()
+    .calculate();

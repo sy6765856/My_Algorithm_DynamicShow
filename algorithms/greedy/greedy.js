@@ -5,6 +5,8 @@
  * Time: 下午9:56
  * To change this template use File | Settings | File Templates.
  */
+DotTest.init('greedy.js')
+    .begin();
 Greedy = function() {
     $('#greedy').click(FunctionTemplate.startButton('Greedy'));
     return extend(Dynamic, {
@@ -61,3 +63,5 @@ Greedy = function() {
         }
     });
 }();
+DotTest.end()
+    .calculate();

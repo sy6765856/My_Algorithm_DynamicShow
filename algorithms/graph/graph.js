@@ -5,6 +5,8 @@
  * Time: 下午3:47
  * To change this template use File | Settings | File Templates.
  */
+DotTest.init('graph.js')
+    .begin();
 Graph = function() {
     return extend(AlgorithmBase, {
 
@@ -58,6 +60,21 @@ Graph = function() {
             node.color = this.nodeColor;
             node.o.x = this.randomInRange(this.width, 200);
             node.o.y = this.randomInRange(this.height,200);
+            this.collisionCheck(node);
+            return this;
+        },
+
+        collisionCheck: function(node) {
+            for(var key in this.nodes) {
+                var nod = this.nodes[key];
+                if(!isset(nod.o)) {
+                    continue;
+                }
+                var limit = (node.r + nod.r) * 2;
+                if(CanvasLib.distance(nod.o, node.o) < limit) {
+                    return this;
+                }
+            }
             this.nodes.push(node);
             return this;
         },
@@ -80,15 +97,13 @@ Graph = function() {
             return this;
         },
 
-        generateNodes: function() {
-            this.addNodes({o:{x:34,y:34}})
-                .addNodes({o:{x:64,y:34}})
-                .addNodes({o:{x:124,y:154}})
-                .addNodes({o:{x:150,y:33}})
-                .addNodes({o:{x:300,y:300}});
+        generateNodes: function(num) {
+            for(var i = 0; i < num; i++) {
+                this.addNodes({o:{x:150,y:33}});
+            }
             return this;
         },
-        generateEdges: function() {
+        generateEdges: function(num) {
             this.addEdge(2,1,1)
                 .addEdge(0,1,5)
                 .addEdge(0,2,1)
@@ -100,7 +115,7 @@ Graph = function() {
             return this;
         },
         generateGraph: function() {
-            this.generateNodes()
+            this.generateNodes(5)
                 .resetGraphMatrix()
                 .generateEdges();
             return this;
@@ -210,6 +225,8 @@ Graph = function() {
                 return this;
             }
             this.drawCanvasFrame(Canvas.imageDataQUEUE[Canvas.imageFrame]);
+            Info.permanent()
+                .temporary(Canvas.imageFrame);
             Canvas.imageFrame++;
             setTimeout.call(null, 'Graph.drawing();', Scroll.interval);
             return this;
@@ -272,6 +289,12 @@ Graph = function() {
                 B = { o: son['pos'], r: r };
             Canvas.linkTwoCircle(A, B, { style: {color: 'green'}});
             return this;
+        },
+        addTemp: function(info) {
+            Info.addTemp(info);
+            return this;
         }
     });
 }();
+DotTest.end()
+    .calculate();

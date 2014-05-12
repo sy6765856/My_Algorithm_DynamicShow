@@ -5,6 +5,8 @@
  * Time: 下午9:35
  * To change this template use File | Settings | File Templates.
  */
+DotTest.init('dijkstra.js')
+    .begin();
 Dijkstra = function() {
     app.initToolsView('dijkstra')
         .randomButtonInit('产生随机图')
@@ -18,6 +20,8 @@ Dijkstra = function() {
     return extend(Graph, {
         run: function(id) {
             Canvas.init(id);
+            Info.init()
+                .setPermanent('dijkstra算法');
             this.dijkstra()
                 .draw();
             return this;
@@ -72,3 +76,5 @@ Dijkstra = function() {
 
     });
 }();
+DotTest.end()
+    .calculate();

@@ -5,6 +5,8 @@
  * Time: 下午9:40
  * To change this template use File | Settings | File Templates.
  */
+DotTest.init('kruskal.js')
+    .begin();
 Kruskal = function() {
     app.initToolsView('kruskal')
         .startButtonInit()
@@ -18,8 +20,11 @@ Kruskal = function() {
     return extend(Graph, {
         run: function(id) {
             Canvas.init(id);
+            Info.init()
+                .setPermanent('最小生成树kruskal算法');
             this.kruskal()
                 .draw();
+            $('#answer').html('最小生成树边权和为：' + this.minLength);
             return this;
         },
         drawAfter: function() {
@@ -61,12 +66,14 @@ Kruskal = function() {
                     continue;
                 }
                 this.changeEdgeColor(i, 'red')
+                    .addTemp('正在判断边' + edges[i][0] + '-' + edges[i][1])
                     .saveGraph();
 
                 var a = this.find(edges[i][0]),
                     b = this.find(edges[i][1]);
                 if(a !== b) {
                     this.changeEdgeColor(i, 'yellow')
+                        .addTemp('将边' + edges[i][0] + '-' + edges[i][1] + '加入已选边集' )
                         .saveGraph();
                     edges[i][5] = 1;
                     this.merge(a, b);
@@ -74,15 +81,18 @@ Kruskal = function() {
                     this.minLength += edges[i][2];
                 } else {
                     this.changeEdgeColor(i, 'blue')
+                        .addTemp('正在判断边' + edges[i][0] + '-' + edges[i][1])
                         .saveGraph();
                 }
                 if(cnt === this.nodes.length - 1) {
-                    console.log(edges);
+                    console.log(this.minLength);
                     return this;
                 }
             }
-            console.log(edges);
+            console.log(this.minLength);
             return this;
         }
     });
 }();
+DotTest.end()
+    .calculate();

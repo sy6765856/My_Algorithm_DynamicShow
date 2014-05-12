@@ -5,6 +5,8 @@
  * Time: 下午5:06
  * To change this template use File | Settings | File Templates.
  */
+DotTest.init('divideAndConquer.js')
+    .begin();
 DivideAndConquer = function() {
     return extend(AlgorithmBase, {
         drawing: function() {
@@ -19,3 +21,5 @@ DivideAndConquer = function() {
         }
     });
 }();
+DotTest.end()
+    .calculate();

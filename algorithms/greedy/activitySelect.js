@@ -5,6 +5,8 @@
  * Time: 下午7:15
  * To change this template use File | Settings | File Templates.
  */
+DotTest.init('activitySelect.js')
+    .begin();
 ActivitySelect = function() {
     app.initToolsView('activitySelect')
         .startButtonInit()
@@ -126,3 +128,5 @@ ActivitySelect = function() {
         }
     });
 }();
+DotTest.end()
+    .calculate();

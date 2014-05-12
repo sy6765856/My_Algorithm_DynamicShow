@@ -18,6 +18,8 @@ Spfa = function() {
     return extend(Graph, {
         run: function(id) {
             Canvas.init(id);
+            Info.init()
+                .setPermanent('spfa算法');
             this.SPFA()
                 .draw();
             return this;

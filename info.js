@@ -9,12 +9,33 @@ Info = function() {
     return {
         left: 0,
         top: 0,
-        permanentInfo: '',
-        temporary: function(info) {
-
+        init: function() {
+            this.temporaryArray = [];
+            this.permanentInfo = '';
+            this.pos = { x: 200, y: 200 };
+            this.temporaryPos = { x: 400, y: 200 };
+            return this;
+        },
+        addTemp: function(info) {
+            this.temporaryArray.push(info);
+            return this;
+        },
+        setPermanent: function(info, pos) {
+            this.permanentInfo = info;
+            this.pos = pos ? pos : this.pos;
+            this.permanent();
+            return this;
+        },
+        temporary: function(frame) {
+            var info = this.temporaryArray[frame];
+            if(isset(info)) {
+                Canvas.writeText(info, this.temporaryPos);
+            }
             return this;
         },
         permanent: function() {
+           // console.log(this.permanentInfo, this.pos);
+            Canvas.writeText(this.permanentInfo, this.pos);
             return this;
         }
     };

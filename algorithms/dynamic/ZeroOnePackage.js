@@ -5,6 +5,8 @@
  * Time: 下午3:18
  * To change this template use File | Settings | File Templates.
  */
+DotTest.init('greedy.js')
+    .begin();
 ZeroOnePackage = function() {
     app.initToolsView('zeroOnePackage')
         .startButtonInit('开始')
@@ -102,3 +104,5 @@ ZeroOnePackage = function() {
         }
     });
 }();
+DotTest.end()
+    .calculate();
