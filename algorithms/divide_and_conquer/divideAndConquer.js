@@ -13,8 +13,11 @@ DivideAndConquer = function() {
             if(this.FRAME >= this.BoardQueue.length) {
                 return this;
             }
+//            console.log(this.BoardQueue[this.FRAME], this.BoardColor[this.FRAME]);
             Canvas.clearAll('canvas')
                 .drawBoard(this.BoardQueue[this.FRAME], this.BoardColor[this.FRAME], BoardCover.height, BoardCover.width);
+            Info.permanent()
+                .temporary(this.FRAME);
             this.FRAME++;
             setTimeout.call(null, this.DRAW_FUNCTION, Scroll.interval);
             return this;

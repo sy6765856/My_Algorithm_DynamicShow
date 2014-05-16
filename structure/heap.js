@@ -9,6 +9,7 @@ Heap = function(){
     app.initToolsView('heap')
         .startButtonInit();
     return extend(Tree, {
+        SIG: 'Heap',
         run: function(id) {
             Canvas.init(id);
             this.init('heap')

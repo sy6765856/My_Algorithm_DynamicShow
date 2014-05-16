@@ -211,3 +211,10 @@ button { width: 50px;}
     cursor: hand;
     border-radius: 3px;
 }
+
+.complexity {
+    position: absolute;
+    top: 250px;
+    border: 1px solid #000000;
+    background-color: whitesmoke;
+}

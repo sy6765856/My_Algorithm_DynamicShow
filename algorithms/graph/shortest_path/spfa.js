@@ -5,6 +5,8 @@
  * Time: 下午4:46
  * To change this template use File | Settings | File Templates.
  */
+DotTest.init('spfa.js')
+    .begin();
 Spfa = function() {
     app.initToolsView('spfa')
         .randomButtonInit('产生随机图')
@@ -16,12 +18,15 @@ Spfa = function() {
         .description('')
         .startButtonInit();
     return extend(Graph, {
+        SIG: 'Spfa',
         run: function(id) {
             Canvas.init(id);
             Info.init()
                 .setPermanent('spfa算法');
+            ComplexityAnalysis.init(this.SIG, this.nodes.length);
             this.SPFA()
                 .draw();
+            ComplexityAnalysis.compare();
             return this;
         },
         setSource: function(source) {
@@ -56,11 +61,14 @@ Spfa = function() {
                 var u,v;
                 u = Q[--top];
                 vis[u] = false;
+                ComplexityAnalysis.addCalculation(2);
                 for(var e = this.first[s]; e; e = this.nxt[e]) {
                     v = edges[e][1];
+                    ComplexityAnalysis.addCalculation(1);
                     if(this.relax(u, v, edges[e][2] && !vis[v])) {
                         Q[top++] = v;
                         vis[v] = true;
+                        ComplexityAnalysis.addCalculation(2);
                     }
                 }
             }
@@ -69,11 +77,15 @@ Spfa = function() {
         },
         relax: function(u, v, cost) {
             var dist = this.array;
+            ComplexityAnalysis.addCalculation(1);
             if(dist[v] > dist[u] + cost) {
                 dist[v] = dist[u] + cost;
+                ComplexityAnalysis.addCalculation(1);
                 return true;
             }
             return false;
         }
     })
 }();
+DotTest.end()
+    .calculate();

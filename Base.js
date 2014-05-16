@@ -5,8 +5,11 @@
  * Time: 下午3:04
  * To change this template use File | Settings | File Templates.
  */
+DotTest.init('Base.js')
+    .begin();
 Base = function() {
     return {
+        SIG: 'Base',
         width: 765,
         height: 780,
         init: function() {
@@ -32,3 +35,5 @@ Base = function() {
         }
     }
 }();
+DotTest.end()
+    .calculate();

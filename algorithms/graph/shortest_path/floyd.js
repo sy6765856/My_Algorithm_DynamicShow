@@ -18,12 +18,15 @@ Floyd = function() {
         .description('')
         .startButtonInit();
     return extend(Graph, {
+        SIG: 'Floyd',
         run: function(id) {
             Canvas.init(id);
             Info.init()
                 .setPermanent('floyd算法');
+            ComplexityAnalysis.init(this.SIG, this.nodes.length);
             this.floyd()
                 .draw();
+            ComplexityAnalysis.compare();
             return this;
         },
         floyd: function() {
@@ -32,8 +35,10 @@ Floyd = function() {
             for(var k = 0; k < n; k++) {
                 for(var i = 0; i < n; i++) {
                     for(var j = 0; j < n; j++) {
+                        ComplexityAnalysis.addCalculation(1);
                         if(v[i][k] + v[k][j] < v[i][j]) {
                             v[i][j] = v[i][k] + v[k][j];
+                            ComplexityAnalysis.addCalculation(1);
                             this.drawGragh()
                                 .saveTable([[i, j, 'red'], [i, k, 'blue'], [k, j, 'BLue']]);
                         }

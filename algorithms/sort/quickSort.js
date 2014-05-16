@@ -5,7 +5,7 @@
  * Time: 下午4:37
  * To change this template use File | Settings | File Templates.
  */
-DotTest.init('quickSort')
+DotTest.init('quickSort.js')
     .begin();
 QuickSort = function() {
     app.initToolsView('quickSort')
@@ -18,6 +18,8 @@ QuickSort = function() {
     return extend(Sort, {
         SIG: 'QuickSort',
         run: function(id) {
+            Info.init()
+                .setPermanent('快速排序');
             this.quick_Sort(Canvas.init(id));
             Log.success();
             return this;
@@ -26,10 +28,14 @@ QuickSort = function() {
             var array = this.array,
                 color = [];
             this.init('QuickSort', Scroll.interval)
+                .addInfo('对于区间' + '0' + '-' + (array.length - 1) + '进行排序')
                 .QUEUE.push(array.slice(0));
             this.COLOR.push(color);
+            ComplexityAnalysis.init(this.SIG, array.length);
             this.quickSort(array, 0, array.length - 1)
                 .draw();
+            ComplexityAnalysis.compare();
+            console.log(ComplexityAnalysis.complexityName);
             return this;
         },
         quickSort: function(array, begin, end) {
@@ -50,6 +56,7 @@ QuickSort = function() {
                 }
                 color[i] = "yellow";
             }
+            ComplexityAnalysis.addCalculation(end - begin + 1);
             left.push(tmp);
             var leftLength = left.length + begin;
             for(var i = begin; i < leftLength; i++) {
@@ -59,7 +66,8 @@ QuickSort = function() {
             for(var i = leftLength; i <= end; i++) {
                 array[i] = right[i - leftLength];
             }
-            this.QUEUE.push(array.slice(0));
+            this.addInfo('对于区间' + begin + '-' + end + '进行排序,选定' + array[leftLength - 1] + '为固定数')
+                .QUEUE.push(array.slice(0));
             this.COLOR.push(color);
 
             this.quickSort(array, begin, leftLength - 2)

@@ -5,6 +5,8 @@
  * Time: 下午9:36
  * To change this template use File | Settings | File Templates.
  */
+DotTest.init('dynamic.js')
+    .begin();
 Dynamic = function() {
     return extend(AlgorithmBase, {
         init: function(name) {
@@ -40,3 +42,5 @@ Dynamic = function() {
 
     });
 }();
+DotTest.end()
+    .calculate();

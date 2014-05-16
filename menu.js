@@ -5,8 +5,11 @@
  * Time: 上午10:41
  * To change this template use File | Settings | File Templates.
  */
+DotTest.init('menu.js')
+    .begin();
 Menu = function() {
     return {
+        SIG: 'Menu',
         init: function(id) {
             this.area = '#' + id;
             this.load()
@@ -18,8 +21,8 @@ Menu = function() {
                 'structure': ['基本数据结构', 1],
                 'stack': ['栈', 2],
                 'queue': ['队列', 2],
-                'heap': ['堆', 2],
-                'binarySearchTree': ['二叉搜索树', 2],
+//                'heap': ['堆', 2],
+//                'binarySearchTree': ['二叉搜索树', 2],
 
                 'dynamic': ['动态规划', 1],
                 'LCS': ['最长公共子序列', 2],
@@ -68,3 +71,5 @@ Menu = function() {
         }
     }
 }();
+DotTest.end()
+    .calculate();

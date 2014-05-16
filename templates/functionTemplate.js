@@ -63,6 +63,16 @@ FunctionTemplate = function() {
             return function() {
                 $('#input').html('');
             }
+        },
+        complexity: function(array) {
+            $('.complexity').html('');
+            for(var key in array) {
+                if(typeof array[key] === 'function') {
+                    continue;
+                }
+                $('.complexity').append(Template.complexity(key, array[key]));
+            }
+            return this;
         }
     };
 }();

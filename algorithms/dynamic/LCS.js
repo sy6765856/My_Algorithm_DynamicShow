@@ -5,6 +5,8 @@
  * Time: 下午5:09
  * To change this template use File | Settings | File Templates.
  */
+DotTest.init('LCS.js')
+    .begin();
 LCS = function() {
     app.initToolsView('LCS')
         .inputOneInit('字符串a')
@@ -14,6 +16,7 @@ LCS = function() {
         .description('现有两个你给出的字符串A,B。最长公共子序列问题就是求解A,B中相同子序列的最大长度，最后会给出最大公共子序列长度及子序列。');
 
     return extend(Dynamic, {
+        SIG: 'LCS',
         dp: [],
         link: [],
         pos: { x: 40, y: 60},
@@ -32,9 +35,13 @@ LCS = function() {
                 return this;
             }
             Canvas.init('canvas');
+            Info.init()
+                .setPermanent('最长公共子序列');
+            ComplexityAnalysis.init(this.SIG, this.str1.length + this.str2.length);
             this.init('canvas')
                 .LCS()
                 .draw();
+            ComplexityAnalysis.compare();
             return this;
         },
         drawing: function() {
@@ -43,6 +50,8 @@ LCS = function() {
                 return this;
             }
             this.drawCanvasFrame(Canvas.imageDataQUEUE[Canvas.imageFrame]);
+            Info.permanent()
+                .temporary(Canvas.imageFrame);
             Canvas.imageFrame++;
             setTimeout.call(null, 'LCS.drawing();', Scroll.interval);
             return this;
@@ -82,16 +91,20 @@ LCS = function() {
             for(var i = 0; i < a.length; i++) {
                 for(var j = 0; j < b.length; j++) {
                     this.saveDpArray();
+                    ComplexityAnalysis.addCalculation(1);
                     if(dp[i][j+1] > dp[i+1][j]) {
                         dp[i+1][j+1] = dp[i][j+1];
                         link[i+1][j+1] = 1;
+                        ComplexityAnalysis.addCalculation(2);
                     } else if(dp[i][j+1] <= dp[i+1][j]) {
                         dp[i+1][j+1] = dp[i+1][j];
                         link[i+1][j+1] = 2;
+                        ComplexityAnalysis.addCalculation(2);
                     }
                     var add = (a[i] === b[j] ? 1 : 0);
                     if(dp[i][j] + add > dp[i+1][j+1]) {
                         dp[i+1][j+1] = dp[i][j] + add;
+                        ComplexityAnalysis.addCalculation(2);
                         link[i+1][j+1] = add ? 3 : 4;
                     }
                 }
@@ -133,3 +146,5 @@ LCS = function() {
         }
     });
 }();
+DotTest.end()
+    .calculate();

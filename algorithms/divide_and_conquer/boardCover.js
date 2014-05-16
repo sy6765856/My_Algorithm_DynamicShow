@@ -36,6 +36,8 @@ BoardCover = function() {
             this.check(scale)
                 .check(x)
                 .check(y);
+            Info.init()
+                .setPermanent('棋盘覆盖问题');
             this.divideAndConquer(scale, x, y)
                 .draw();
 //            Table.drawGrids(this.board, this.height, this.width)
@@ -80,6 +82,7 @@ BoardCover = function() {
             var target = new Object();
             deepCopy(target, this.board);
             this.BoardQueue.push(target);
+            this.colorInit(0, width - 1, 0, height - 1, x, y);
             this.divide_conquer(0, width - 1, 0, height - 1, x, y);
             return this;
         },
@@ -88,7 +91,7 @@ BoardCover = function() {
         },
         colorInit: function(low_x, high_x, low_y, high_y, x, y) {
             var color = [];
-            for(var row = 0; row < this.height; row ++) {
+            for(var row = 0; row <= this.height; row ++) {
                 color[row] = [];
             }
             for(var row = low_x; row <= high_x; row ++) {
@@ -105,10 +108,11 @@ BoardCover = function() {
             if(high_x === low_x || high_y === low_y ) {
                 return this;
             }
-            var target = new Object(),
-                color = this.colorInit(low_x, high_x, low_y, high_y, x, y);
+            var target = new Object();
+            this.colorInit(low_x, high_x, low_y, high_y, x, y);
             deepCopy(target, this.board);
             this.BoardQueue.push(target);
+            Info.addTemp('覆盖子棋盘' + '(' + low_x + ',' + low_y + ')-(' + high_x + ',' + high_y  + ')' );
 
             var midx = parseInt( (low_x + high_x) / 2),
                 midy = parseInt( (low_y + high_y) / 2),

@@ -5,6 +5,8 @@
  * Time: 下午5:18
  * To change this template use File | Settings | File Templates.
  */
+DotTest.init('CanvasLib.js')
+    .begin();
 CanvasLib = function() {
     return {
         distance: function(A, B){
@@ -61,3 +63,5 @@ CanvasLib = function() {
         }
     }
 }();
+DotTest.end()
+    .calculate();

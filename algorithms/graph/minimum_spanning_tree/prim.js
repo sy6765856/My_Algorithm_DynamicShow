@@ -18,12 +18,15 @@ Prim = function() {
         .addButtonInit('添加这条边')
         .description('最小生成树问题：给定一张无向图，选择其中的一些边得到图的一棵生成树，使得这些边的权值和最小。');
     return extend(Graph, {
+        SIG: 'Prim',
         run: function(id){
             Canvas.init(id);
             Info.init()
                 .setPermanent('最小生成树prim算法');
+            ComplexityAnalysis.init(this.SIG, this.nodes.length);
             this.prim()
                 .draw();
+            ComplexityAnalysis.compare();
             $('#answer').html('最小生成树边权和为：' + this.minLength);
             return this;
         },
@@ -52,9 +55,11 @@ Prim = function() {
             for(var cnt = 1; cnt < this.nodes.length; cnt++) {
                 for(var e = this.first[source]; e; e = this.nxt[e]) {
                     var v = edges[e][1];
+                    ComplexityAnalysis.addCalculation(1);
                     if(!f[v] && dis[v] > edges[e][2]) {
                         dis[v] = edges[e][2];
                         edgeIndex[v] = e;
+                        ComplexityAnalysis.addCalculation(2);
                     }
                 }
                 min = this.INF;
@@ -90,6 +95,7 @@ Prim = function() {
                     .saveGraph();
                 this.minLength += min;
             }
+            ComplexityAnalysis.addCalculation(this.nodes.length);
             return this;
         },
 

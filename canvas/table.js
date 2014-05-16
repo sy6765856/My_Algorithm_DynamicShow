@@ -5,8 +5,11 @@
  * Time: 下午5:03
  * To change this template use File | Settings | File Templates.
  */
+DotTest.init('table.js')
+    .begin();
 Table = function() {
     return extend(Canvas, {
+        SIG: 'Table',
         init: function(pos, tableWidth, tableHeight) {
             this.pos = pos ? pos : {x: 300, y:450};
             this.tableWidth = tableWidth ? tableWidth : 40;
@@ -295,3 +298,5 @@ Table = function() {
         }
     });
 }();
+DotTest.end()
+    .calculate();

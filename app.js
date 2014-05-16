@@ -5,7 +5,10 @@
  * Time: 下午3:27
  * To change this template use File | Settings | File Templates.
  */
+DotTest.init('app.js')
+    .begin();
 app = {
+    SIG: 'app',
     init: function(id) {
         Array.prototype.max = function(){
             return Math.max.apply({}, this);
@@ -147,3 +150,5 @@ app = {
         return this;
     }
 };
+DotTest.end()
+    .calculate();

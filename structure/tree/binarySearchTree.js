@@ -5,6 +5,8 @@
  * Time: 上午11:38
  * To change this template use File | Settings | File Templates.
  */
+DotTest.init('binarySearchTree.js')
+    .begin();
 BinarySearchTree = function() {
     app.initToolsView('binarySearchTree')
         .singleAddButtonInit('插入')
@@ -12,6 +14,7 @@ BinarySearchTree = function() {
         .inputOneInit('插入值')
         .description('');
     return extend(BinaryTree, {
+        SIG: 'BinarySearchTree',
         run: function() {
             return this;
         },
@@ -71,3 +74,5 @@ BinarySearchTree = function() {
         }
     });
 }();
+DotTest.end()
+    .calculate();

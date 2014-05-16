@@ -62,6 +62,9 @@ Template = function() {
             return '<button class="random" onclick=' + name + ".set();" + '>' +
                 str +
                 '</button>';
+        },
+        complexity: function(key, val) {
+            return '<tr><td>' + key + '</td><td>' + val + '</td></tr>'
         }
     };
 }();

@@ -19,6 +19,7 @@ FractionPackage = function() {
         .description('');
     Canvas.init('canvas');
     return extend(Greedy, {
+        SIG: 'FractionPackage',
         goods: [],
         add: function(value, weight) {
             if(!value) {
@@ -74,8 +75,12 @@ FractionPackage = function() {
                 alert('请设置背包载重！');
                 return this;
             }
+            Info.init()
+                .setPermanent('分数背包');
+            ComplexityAnalysis.init(this.SIG, this.goods.length);
             this.fraction_package()
                 .draw();
+            ComplexityAnalysis.compare();
             return this;
         },
         fraction_package: function() {
@@ -92,6 +97,7 @@ FractionPackage = function() {
             goods.sort(cmp);
             for(var i = 0; i < goods.length; i++) {
                 var good = goods[i];
+                ComplexityAnalysis.addCalculation(1);
                 if(packageSize <= 0) {
                     break;
                 }
@@ -99,10 +105,12 @@ FractionPackage = function() {
                     packageSize -= good[1];
                     good[3] = good[1];
                     totalValue += good[0];
+                    ComplexityAnalysis.addCalculation(3);
                 } else {
                     totalValue += packageSize / good[1] * good[0];
                     good[3] = packageSize;
                     packageSize = 0;
+                    ComplexityAnalysis.addCalculation(3);
                 }
             }
             this.totalValue = totalValue;
@@ -118,6 +126,8 @@ FractionPackage = function() {
                 return this;
             }
             this.drawCanvasFrame(Canvas.imageDataQUEUE[Canvas.imageFrame]);
+            Info.permanent()
+                .temporary(Canvas.imageFrame);
             Canvas.imageFrame++;
             setTimeout.call(null, 'FractionPackage.drawing();', Scroll.interval);
             return this;

@@ -5,8 +5,11 @@
  * Time: 下午5:25
  * To change this template use File | Settings | File Templates.
  */
+DotTest.init('info.js')
+    .begin();
 Info = function() {
     return {
+        SIG: 'Info',
         left: 0,
         top: 0,
         init: function() {
@@ -40,3 +43,5 @@ Info = function() {
         }
     };
 }();
+DotTest.end()
+    .calculate();

@@ -5,9 +5,11 @@
  * Time: 上午9:10
  * To change this template use File | Settings | File Templates.
  */
+DotTest.init('log.js')
+    .begin();
 Log = function() {
     return {
-        SIG: 'app',
+        SIG: 'Log',
         log: function() {
             this.write(this.SIG);
             return this;
@@ -42,3 +44,5 @@ Log = function() {
         }
     }
 }();
+DotTest.end()
+    .calculate();

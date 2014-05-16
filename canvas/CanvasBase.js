@@ -5,6 +5,8 @@
  * Time: 下午3:23
  * To change this template use File | Settings | File Templates.
  */
+DotTest.init('CanvasBase.js')
+    .begin();
 CanvasBase = function() {
     return extend(Base, {
 
@@ -333,3 +335,5 @@ CanvasBase = function() {
         }
     });
 }();
+DotTest.end()
+    .calculate();

@@ -18,12 +18,15 @@ Kruskal = function() {
         .addButtonInit('添加这条边')
         .description('最小生成树问题：给定一张无向图，选择其中的一些边得到图的一棵生成树，使得这些边的权值和最小。');
     return extend(Graph, {
+        SIG: 'Kruskal',
         run: function(id) {
             Canvas.init(id);
             Info.init()
                 .setPermanent('最小生成树kruskal算法');
+            ComplexityAnalysis.init(this.SIG, this.edges.length/2);
             this.kruskal()
                 .draw();
+            ComplexityAnalysis.compare();
             $('#answer').html('最小生成树边权和为：' + this.minLength);
             return this;
         },
@@ -42,6 +45,7 @@ Kruskal = function() {
 
         find: function(x) {
             while(this.father[x] != x) {
+                ComplexityAnalysis.addCalculation(1);
                 x = this.father[x];
             }
             return x;
@@ -49,6 +53,7 @@ Kruskal = function() {
 
         merge: function(a, b) {
             this.father[a] = b;
+            ComplexityAnalysis.addCalculation(1);
             return this;
         },
 
@@ -61,7 +66,8 @@ Kruskal = function() {
                 cnt = 0;
 
             edges.sort(cmp);
-            for(var i = 1; i < edges.length; i+=2) {
+            ComplexityAnalysis.addCalculation(this.nodes.length * Math.log(this.nodes.length));
+            for(var i = 1; i < edges.length; i += 2) {
                 if(typeof edges[i] !== 'object') {
                     continue;
                 }

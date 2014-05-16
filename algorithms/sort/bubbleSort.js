@@ -18,6 +18,8 @@ BubbleSort = function() {
     return extend(Sort, {
         SIG: 'BubbleSort',
         run: function(id) {
+            Info.init()
+                .setPermanent('冒泡排序');
             this.bubble_Sort(Canvas.init(id));
             Log.success();
             return this;
@@ -27,8 +29,11 @@ BubbleSort = function() {
             this.init('BubbleSort', Scroll.interval)
                 .QUEUE.push(array.slice(0));
 
+            ComplexityAnalysis.init(this.SIG, array.length);
             this.bubbleSort(array, 0, array.length)
                 .draw();
+            ComplexityAnalysis.compare();
+            console.log(ComplexityAnalysis.complexityName);
             return this;
         },
         bubbleSort: function(array, begin, end) {
@@ -43,11 +48,13 @@ BubbleSort = function() {
                         tmp = array[j];
                         array[j] = array[j+1];
                         array[j+1] = tmp;
+                        ComplexityAnalysis.addCalculation(3);
                     }
                     var color = [];
                     color[j] = "red";
                     color[j + 1] = "yellow";
-                    this.QUEUE.push(array.slice(0));
+                    this.addInfo('比较第' + j + '和' + (j+1) + '的大小')
+                        .QUEUE.push(array.slice(0));
                     this.COLOR.push(color);
                 }
             }

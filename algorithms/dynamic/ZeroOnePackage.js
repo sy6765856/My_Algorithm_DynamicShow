@@ -18,6 +18,7 @@ ZeroOnePackage = function() {
         .resetButtonInit()
         .description('小偷抢劫一家商店时带了一个能容纳限定重量的背包，商店里有一些物品，每个商品有一定价值和重量。假设背包能容纳的物品重量，商品的价值重量均为整数，且每种商品都只有一个，求解小偷可以偷走的最大价值。');
     return extend(Dynamic, {
+        SIG: 'ZeroOnePackage',
         goods: [],
         dp: [],
         reset: function() {

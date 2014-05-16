@@ -5,6 +5,8 @@
  * Time: 下午3:47
  * To change this template use File | Settings | File Templates.
  */
+DotTest.init('Canvas.js')
+    .begin();
 Canvas = function(){
     return extend(CanvasBase, {
             drawRectangleByNumber: function(array, color, width) {
@@ -142,3 +144,5 @@ Canvas = function(){
             }
     });
 }();
+DotTest.end()
+    .calculate();

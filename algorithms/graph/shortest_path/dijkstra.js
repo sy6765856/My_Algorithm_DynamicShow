@@ -18,12 +18,15 @@ Dijkstra = function() {
         .description('')
         .startButtonInit();
     return extend(Graph, {
+        SIG: 'Dijkstra',
         run: function(id) {
             Canvas.init(id);
             Info.init()
                 .setPermanent('dijkstra算法');
+            ComplexityAnalysis.init(this.SIG, this.nodes.length);
             this.dijkstra()
                 .draw();
+            ComplexityAnalysis.compare();
             return this;
         },
         dij_init: function() {
@@ -48,9 +51,11 @@ Dijkstra = function() {
                 min = this.INF;
                 var s_pre = s;
                 for(var j = 0; j < n; j++) {
+                    ComplexityAnalysis.addCalculation(1);
                     if(!f[j] && d[j] < min) {
                         min = d[j];
                         s = j;
+                        ComplexityAnalysis.addCalculation(2);
                     }
                 }
 
@@ -60,8 +65,10 @@ Dijkstra = function() {
                 f[s] = 1;
                 for(var e = this.first[s]; e; e = this.nxt[e]) {
                     var v = edges[e][1];
+                    ComplexityAnalysis.addCalculation(1);
                     if(edges[e][2] + d[s] < d[v]) {
                         d[v] = d[s] + edges[e][2];
+                        ComplexityAnalysis.addCalculation(1);
                         this.saveGraphAndArray([[0, v, 'red']]);
                     } else {
 
@@ -70,7 +77,6 @@ Dijkstra = function() {
             }
             this.changeNodeColor(s, "white")
                 .saveGraphAndArray();
-
             return this;
         }
 

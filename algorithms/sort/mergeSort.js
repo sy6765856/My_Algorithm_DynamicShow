@@ -29,8 +29,11 @@ MergeSort = function() {
             this.init('MergeSort', Scroll.interval)
                 .QUEUE.push(array.slice(0));
 
+            ComplexityAnalysis.init(this.SIG, array.length);
             this.mergeSort(array, 0, array.length-1)
                 .draw();
+            ComplexityAnalysis.compare();
+            console.log(ComplexityAnalysis.complexityName);
             return this;
         },
         mergeSort: function(array, begin, end){
@@ -40,6 +43,7 @@ MergeSort = function() {
             var mid = Math.floor((begin + end)/2);
             this.mergeSort(array, begin, mid)
                 .mergeSort(array, mid+1, end);
+            ComplexityAnalysis.addCalculation(end - begin + 1);
             var i = begin,j = mid + 1,st = [];
             while(i <= mid && j <= end){
                 if(array[i] <= array[j]){

@@ -5,6 +5,8 @@
  * Time: 下午9:31
  * To change this template use File | Settings | File Templates.
  */
+DotTest.init('tree.js')
+    .begin();
 Tree = function() {
     return extend(Graph, {
         father: [],
@@ -54,3 +56,5 @@ Tree = function() {
         }
     });
 }();
+DotTest.end()
+    .calculate();

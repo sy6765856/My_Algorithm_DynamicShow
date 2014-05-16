@@ -17,6 +17,7 @@ ActivitySelect = function() {
         .description('现有一些活动，每个活动会占用活动开始到结束时间内的资源，该资源只能在某一时刻被一个活动占用。假设活动的开始结束时间都是整数，现给出一系列活动，求解最多可以安排的活动数。最后选出的活动用黄色标记。');
     Canvas.init('canvas');
     return extend(Greedy, {
+        SIG: 'ActivitySelect',
         activities: [],
         height: 20,
         widthPer: 2,
@@ -37,9 +38,11 @@ ActivitySelect = function() {
             return this;
         },
         run: function() {
+            ComplexityAnalysis.init(this.SIG, this.activities.length);
             this.init('canvas')
                 .activitySelect()
                 .draw();
+            ComplexityAnalysis.compare();
             return this;
         },
         drawAfter: function() {
@@ -99,6 +102,7 @@ ActivitySelect = function() {
                 ed = this.minimum - 1,
                 ans = 0;
             activities.sort(cmp);
+            ComplexityAnalysis.addCalculation(activities.length * Math.log(activities.length));
             this.refresh()
                 .save();
 
@@ -119,6 +123,7 @@ ActivitySelect = function() {
                         .save();
                 }
             }
+            ComplexityAnalysis.addCalculation(activities.length);
             this.ans = ans;
             return this;
         },

@@ -7,6 +7,8 @@
  */
 DotTest = function() {
     return {
+        SIG: 'DotTest',
+        time_total: 0,
         init: function(name) {
             this.name = name;
             this.beginTime = 0;
@@ -24,8 +26,10 @@ DotTest = function() {
             return this;
         },
         calculate: function() {
-            console.log(this.name + ' costs ' + (this.endTime - this.beginTime) + ' milliseconds.');
+            var time = this.endTime - this.beginTime;
+            console.log(this.name + ' costs ' + time + ' milliseconds.');
             console.log('');
+            this.time_total += time;
             return this;
         }
     }

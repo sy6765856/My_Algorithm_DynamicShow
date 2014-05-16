@@ -5,8 +5,11 @@
  * Time: 下午3:15
  * To change this template use File | Settings | File Templates.
  */
+DotTest.init('scroll.js')
+    .begin();
 Scroll = function() {
     return {
+        SIG: 'Scroll',
         interval: 1000,
         minSpeed: 10,
         maxSpeed: 100,
@@ -21,3 +24,5 @@ Scroll = function() {
         }
     }
 }();
+DotTest.end()
+    .calculate();

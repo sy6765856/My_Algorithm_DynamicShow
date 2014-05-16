@@ -5,6 +5,8 @@
  * Time: 下午7:45
  * To change this template use File | Settings | File Templates.
  */
+DotTest.init('binaryTree.js')
+    .begin();
 BinaryTree = function() {
     return extend(Tree, {
         left: [],
@@ -36,3 +38,5 @@ BinaryTree = function() {
         }
     });
 }();
+DotTest.end()
+    .calculate();
