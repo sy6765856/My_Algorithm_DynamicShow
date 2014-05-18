@@ -63,6 +63,12 @@ app = {
         $(index).click(FunctionTemplate.addSingleButton(className, name));
         return this;
     },
+    next: function(name) {
+        var index = '#' + this.id,
+            className = this.class;
+        $(index).click(FunctionTemplate.addNextButton(className, name));
+        return this;
+    },
     addButtonInit: function(name) {
         var index = '#' + this.id,
             className = this.class;

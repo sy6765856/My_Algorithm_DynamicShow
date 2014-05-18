@@ -37,8 +37,12 @@ Info = function() {
             return this;
         },
         permanent: function() {
-           // console.log(this.permanentInfo, this.pos);
             Canvas.writeText(this.permanentInfo, this.pos);
+            return this;
+        },
+        setInfo: function(info) {
+            $('#info').html(info);
+            setTimeout("$('#info').html('');", '1600');
             return this;
         }
     };

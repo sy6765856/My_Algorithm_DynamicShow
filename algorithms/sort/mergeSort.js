@@ -65,7 +65,7 @@ MergeSort = function() {
                 array[pos] = st[pos - begin];
                 color[pos] = "yellow";
             }
-            this.addInfo('对' + begin + '到' + end + '进行排序。')
+            this.addInfo('正在对' + begin + '到' + end + '进行排序。')
                 .QUEUE.push(array.slice(0));
             this.COLOR.push(color);
             return this;

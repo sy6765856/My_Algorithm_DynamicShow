@@ -28,7 +28,7 @@ QuickSort = function() {
             var array = this.array,
                 color = [];
             this.init('QuickSort', Scroll.interval)
-                .addInfo('对于区间' + '0' + '-' + (array.length - 1) + '进行排序')
+                .addInfo('正在对于区间' + '0' + '-' + (array.length - 1) + '进行排序')
                 .QUEUE.push(array.slice(0));
             this.COLOR.push(color);
             ComplexityAnalysis.init(this.SIG, array.length);

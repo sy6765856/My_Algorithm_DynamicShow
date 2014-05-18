@@ -18,7 +18,8 @@ AlgorithmBase = function(){
             this.BoardQueue = [];
             this.BoardColor = [];
             this.COLOR = [];
-            Scroll.setInterval(interval);
+            this.step = 0;
+//            Scroll.setInterval(interval);
             Log.setSig(this.SIG);
             return this;
         },
@@ -37,7 +38,20 @@ AlgorithmBase = function(){
         drawAfter: function() {
             return this;
         },
-
+        drawNextFrame: function(frame) {
+            Canvas.clearAll('canvas')
+                .drawRectangleByNumber(this.QUEUE[frame], this.COLOR[frame]);
+            return this;
+        },
+        next: function() {
+            if(this.step < this.QUEUE.length) {
+                this.drawNextFrame(this.step);
+                Info.permanent()
+                    .temporary(this.step);
+                this.step++;
+            }
+            return this;
+        },
         drawing: function() {
             if(this.FRAME >= this.QUEUE.length) {
                 return this;

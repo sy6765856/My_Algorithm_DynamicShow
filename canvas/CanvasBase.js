@@ -277,7 +277,7 @@ CanvasBase = function() {
 
         writeText: function(str, pos) {
             var ctx = this.ctx;
-            ctx.font = isset(this.font) ? this.font : "15px Arial";
+            ctx.font = isset(this.font) ? this.font : "17px Arial";
             ctx.shadowOffsetX = 0;
             ctx.shadowOffsetY = 0;
             ctx.fillStyle = isset(this.fontColor)? CanvasLib.colorSet(this.fontColor) : CanvasLib.colorSet('black');

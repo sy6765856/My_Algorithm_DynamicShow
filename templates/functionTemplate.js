@@ -19,6 +19,11 @@ FunctionTemplate = function() {
                 $('#add').html(Template.addSingleButton(name, str));
             };
         },
+        addNextButton: function(name, str) {
+            return function() {
+                $('#next').html(Template.addNextButton(name, str));
+            };
+        },
         addButton: function(val, name) {
             return function() {
                 $('#add').html(Template.addButton(val, name));
@@ -57,6 +62,7 @@ FunctionTemplate = function() {
                 $('#reset').html('');
                 $('#random').html('');
                 $('#set').html('');
+                $('#next').html('');
             }
         },
         clearAllInputs: function() {
@@ -64,8 +70,8 @@ FunctionTemplate = function() {
                 $('#input').html('');
             }
         },
-        complexity: function(array) {
-            $('.complexity').html('');
+        complexity: function(array, info) {
+            $('.complexity').html('算法复杂度为： ' + info);
             for(var key in array) {
                 if(typeof array[key] === 'function') {
                     continue;

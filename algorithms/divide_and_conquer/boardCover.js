@@ -14,6 +14,7 @@ BoardCover = function() {
         .inputTwoInit('x坐标')
         .inputThreeInit('y坐标')
         .singleAddButtonInit('开始覆盖')
+        .next()
         .description('在2^n的棋盘上有且仅有一个特殊方格，除特殊方格外的所有方格要求被四种L型的地砖覆盖。本问题采用分治的方法，对于2^n的棋盘，递归为2^(n-1)的子问题。特殊方格标记为零，其他标记相同的L型为一块地砖。');
     return extend(DivideAndConquer, {
         board: [],
@@ -30,8 +31,16 @@ BoardCover = function() {
             return this;
         },
         add: function(scale) {
+            if(!scale) {
+                alert('请输入棋盘的大小，输入值为2的次方数！');
+                return this;
+            }
             var x = $('#input2').val(),
                 y = $('#input3').val();
+            if(!x || !y) {
+                alert('请输入棋盘上特殊格的位置！');
+                return this;
+            }
             this.clearAll();
             this.check(scale)
                 .check(x)
@@ -84,6 +93,12 @@ BoardCover = function() {
             this.BoardQueue.push(target);
             this.colorInit(0, width - 1, 0, height - 1, x, y);
             this.divide_conquer(0, width - 1, 0, height - 1, x, y);
+
+//            var target = new Object();
+//            this.colorInit(0, width - 1, 0, height - 1, x, y);
+//            deepCopy(target, this.board);
+//            this.BoardQueue.push(target);
+//            Info.addTemp('正在处理子棋盘' + '(' + 0 + ',' + 0 + ')-(' + (width - 1) + ',' + (height - 1)  + ')' );
             return this;
         },
         in: function(low_x, high_x, x, low_y, high_y, y) {
@@ -94,6 +109,12 @@ BoardCover = function() {
             for(var row = 0; row <= this.height; row ++) {
                 color[row] = [];
             }
+//            for(var row = 0; row < this.height; row ++) {
+//                for(var col = 0; col < this.width; col ++) {
+//                    deepCopy(color[row][col], this.board[row][col]);
+//                }
+//            }
+//            deepCopy(color, this.board);
             for(var row = low_x; row <= high_x; row ++) {
                 color[row] = [];
                 for(var col = low_y; col <= high_y; col ++) {
@@ -112,7 +133,7 @@ BoardCover = function() {
             this.colorInit(low_x, high_x, low_y, high_y, x, y);
             deepCopy(target, this.board);
             this.BoardQueue.push(target);
-            Info.addTemp('覆盖子棋盘' + '(' + low_x + ',' + low_y + ')-(' + high_x + ',' + high_y  + ')' );
+            Info.addTemp('正在处理子棋盘' + '(' + low_x + ',' + low_y + ')-(' + high_x + ',' + high_y  + ')' );
 
             var midx = parseInt( (low_x + high_x) / 2),
                 midy = parseInt( (low_y + high_y) / 2),

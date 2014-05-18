@@ -15,8 +15,7 @@ Sort = function() {
         },
         random: function() {
             this.produceRandomArray(10);
-            $('#info').html('成功生成随机序列');
-            setTimeout("$('#info').html('');", '1600');
+            Info.setInfo('成功生成随机序列');
             return this;
         },
         produceRandomArray: function(len){
@@ -28,6 +27,7 @@ Sort = function() {
         },
         reset: function() {
             this.array = [];
+            this.step = 0;
             this.clearAll();
             return this;
         },

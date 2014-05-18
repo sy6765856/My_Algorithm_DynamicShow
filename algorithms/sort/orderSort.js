@@ -41,11 +41,11 @@ OrderSort = function() {
                     color[j] = "yellow";
                     if(array[i] > array[j]) {
                         var tmp = array[i]; array[i] = array[j]; array[j] = tmp;
-                        this.addInfo('比较第' + i + '和第' + j + '个数的大小,' + array[i] + '>' + array[j] + ',交换两个数位置')
+                        this.addInfo('正在比较第' + i + '和第' + j + '个数的大小,' + array[i] + '>' + array[j] + ',交换两个数位置')
                             .QUEUE.push(array.slice(0));
                         this.COLOR.push(color);
                     } else {
-                        this.addInfo('比较第' + i + '和第' + j + '个数的大小,' + array[i] + '<=' + array[j] + ',两个数位置不变')
+                        this.addInfo('正在比较第' + i + '和第' + j + '个数的大小,' + array[i] + '<=' + array[j] + ',两个数位置不变')
                             .QUEUE.push(array.slice(0));
                         this.COLOR.push(color);
                     }

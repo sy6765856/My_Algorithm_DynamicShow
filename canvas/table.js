@@ -261,6 +261,9 @@ Table = function() {
             for(var i = 0; i < row; i++) {
                 for(var j = 0; j < col; j++) {
                     ps = {x: pos.x + i * (width + sp), y: pos.y + j * (width + sp)};
+                    if(!isNaN(color[i][j])) {
+                        color[i][j] = CanvasLib.produceColor(color[i][j]);
+                    }
                     Canvas.drawGrid(ps, width, grids[i][j], color[i][j]);
                 }
             }

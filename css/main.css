@@ -31,8 +31,8 @@ button {
 button:hover {
     background-color: #3cb0fd;
     opacity: 1;
-    box-shadow: 3px 3px 3px #888888;
-    border: 7px;
+    /*box-shadow: 3px 3px 3px #888888;*/
+    /*border: 7px;*/
 }
 
 .col1 { float: left; width: 130px; margin: 5px;}
@@ -214,7 +214,7 @@ button { width: 50px;}
 
 .complexity {
     position: absolute;
-    top: 250px;
+    top: 300px;
     border: 1px solid #000000;
     background-color: whitesmoke;
 }

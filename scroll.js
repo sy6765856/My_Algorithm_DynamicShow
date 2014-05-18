@@ -20,6 +20,7 @@ Scroll = function() {
         setSpeed: function(pos, begin, end) {
             var speed = (pos - begin) / (end - begin) * (this.maxSpeed - this.minSpeed) + this.minSpeed;
             this.setInterval(this.minSpeed / speed * 1000);
+            Info.setInfo('设置了新的演示速度，快试试吧~');
             return this;
         }
     }

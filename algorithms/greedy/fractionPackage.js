@@ -76,7 +76,7 @@ FractionPackage = function() {
                 return this;
             }
             Info.init()
-                .setPermanent('分数背包');
+                .setPermanent('分数背包。  背包载重为：' + this.packageSize);
             ComplexityAnalysis.init(this.SIG, this.goods.length);
             this.fraction_package()
                 .draw();
@@ -105,12 +105,10 @@ FractionPackage = function() {
                     packageSize -= good[1];
                     good[3] = good[1];
                     totalValue += good[0];
-                    ComplexityAnalysis.addCalculation(3);
                 } else {
                     totalValue += packageSize / good[1] * good[0];
                     good[3] = packageSize;
                     packageSize = 0;
-                    ComplexityAnalysis.addCalculation(3);
                 }
             }
             this.totalValue = totalValue;

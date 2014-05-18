@@ -14,6 +14,7 @@ BubbleSort = function() {
         .resetButtonInit()
         .randomButtonInit()
         .inputOneInit('请输入一个数')
+        .next()
         .description('这里会演示冒泡排序过程中数字序列的变化过程');
     return extend(Sort, {
         SIG: 'BubbleSort',
@@ -33,6 +34,7 @@ BubbleSort = function() {
             this.bubbleSort(array, 0, array.length)
                 .draw();
             ComplexityAnalysis.compare();
+            Button.enableNextButton();
             console.log(ComplexityAnalysis.complexityName);
             return this;
         },
@@ -53,7 +55,7 @@ BubbleSort = function() {
                     var color = [];
                     color[j] = "red";
                     color[j + 1] = "yellow";
-                    this.addInfo('比较第' + j + '和' + (j+1) + '的大小')
+                    this.addInfo('正在比较第' + j + '和' + (j+1) + '的大小')
                         .QUEUE.push(array.slice(0));
                     this.COLOR.push(color);
                 }

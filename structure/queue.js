@@ -41,7 +41,7 @@ Queue = function() {
             $("#input1").val('').focus();
             return this;
         },
-        push: function(v) {                          z
+        push: function(v) {
             this.queue.push(v);
             Info.setPermanent(v + '进入队列');
             this.drawQueue();

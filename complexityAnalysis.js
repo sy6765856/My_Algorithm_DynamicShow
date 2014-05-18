@@ -55,7 +55,7 @@ ComplexityAnalysis = function() {
             return this;
         },
         render: function() {
-            FunctionTemplate.complexity(this.ratioList);
+            FunctionTemplate.complexity(this.ratioList, this.complexityName);
             return this;
         },
         _sqr_complexity: function() {

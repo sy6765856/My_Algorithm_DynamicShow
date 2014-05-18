@@ -42,6 +42,11 @@ Template = function() {
             return '<button class="add" onclick=' + name + ".add($('#input1').val());" + '>' +
                 str + '</button>';
         },
+        addNextButton: function(name, str) {
+            str = isset(str) ? str : '下一步';
+            return '<button class="next" disabled="disabled" onclick=' + name + ".next();" + '>' +
+                str + '</button>';
+        },
         resetButton: function(name) {
             return '<button class="reset" onclick=' + name + ".reset();" + '>重置</button>';
         },

@@ -55,6 +55,7 @@
                                     <div id = "set" style="float: left"></div>
                                     <div id = "reset" style="float: left"></div>
                                     <div id = "random" style="float: left"></div>
+                                    <div id = "next" style="float: left"></div>
                                 </div>
                                 <table border="1" class="complexity">
                                 </table>
@@ -69,6 +70,7 @@
     </body>
 
     <script type="text/javascript" src = "../jsLib/jquery-1.4.2.js"></script>
+    <script type="text/javascript" src = "../button.js"></script>
     <script type="text/javascript" src = "../log.js"></script>
     <script type="text/javascript" src = "../app.js"></script>
     <script type="text/javascript" src = "../menu.js"></script>
@@ -124,7 +126,8 @@
                     begin = object.offset().left,
                     end = object.width(),
                     pos = e.clientX;
-            Scroll.setSpeed(pos, begin, end);
+            console.log(begin, begin + end, pos);
+            Scroll.setSpeed(pos, begin, begin + end);
             $('.dot').css("left", e.clientX);
         });
         $('#menu').click(function(e) {

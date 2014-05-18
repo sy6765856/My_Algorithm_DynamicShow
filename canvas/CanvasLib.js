@@ -24,6 +24,33 @@ CanvasLib = function() {
             return this.distance(A.o, B.o) - A.r - B.r;
         },
 
+        randomColor: function(key) {
+            var colorString = "",
+                val;
+            val = Math.floor(Math.random() * 256);
+            colorString += val.toString(16);
+            val = Math.floor(Math.random() * 256);
+            colorString += val.toString(16);
+            val = Math.floor(Math.random() * 256);
+            colorString += val.toString(16);
+            return colorString;
+        },
+
+        produceColor: function(key) {
+//            var val =[37, 123, 53],
+//                colorString = "";
+//            for(var i = 0; i < 3; i ++) {
+//                colorString += ((key * val[i])%256).toString(16);
+//            }
+            var colorString = "";
+            if(key%2) {
+                colorString = '000000';
+            } else {
+                colorString = "FFFFFF";
+            }
+            return colorString;
+        },
+
         colorSet: function(color) {
             color = color.toLowerCase();
             var colorString = "";
@@ -56,7 +83,7 @@ CanvasLib = function() {
                     colorString = "#778899";
                     break;
                 default:
-                    colorString = "#FFFFFF";
+                    colorString = "#" + color;
                     break;
             }
             return colorString;
