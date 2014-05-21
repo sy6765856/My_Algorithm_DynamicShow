@@ -13,12 +13,13 @@ OrderSort = function() {
         .resetButtonInit()
         .randomButtonInit()
         .singleAddButtonInit('输入')
-        .inputOneInit('请输入一个数')
+        .inputOneInit('请输入一个数', '请输入要加入排序序列的数')
+        .next()
         .description('这里会演示顺序排序过程中数字序列的变化过程');
     Canvas.init('canvas');
     return extend(Sort, {
         SIG: 'OrderSort',
-        run: function(id) {
+        run_init: function(id) {
             Info.init()
                 .setPermanent('顺序排序');
             ComplexityAnalysis.init(this.SIG, this.array.length);
@@ -26,6 +27,11 @@ OrderSort = function() {
             ComplexityAnalysis.compare();
             console.log(ComplexityAnalysis.complexityName);
             Log.success();
+            return this;
+        },
+        run: function() {
+            this.run_init()
+                .draw();
             return this;
         },
         orderSort: function(CanvasObject){
@@ -52,7 +58,6 @@ OrderSort = function() {
                     ComplexityAnalysis.addCalculation(3);
                 }
             }
-            this.draw();
             return this;
         }
     });

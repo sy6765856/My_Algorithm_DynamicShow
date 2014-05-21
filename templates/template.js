@@ -29,47 +29,57 @@ Template = function() {
         },
         beginButton: function(name, str) {
             str = isset(str) ? str : '开始';
-            return '<button class="start" onclick=' + name + '.run("canvas")' + '>' +
+            return '<button class="start btn btn-success" onclick=' + name + '.run("canvas")' + '>' +
                 str +
                 '</button>';
         },
         addButton: function(val, name) {
             name = name ? name : '插入';
-            return'<button class="add" onclick=' + val + ".add($('#input1').val(),$('#input2').val());>" + name + '</button>';
+            return'<button class="add btn" onclick=' + val + ".add($('#input1').val(),$('#input2').val());>" + name + '</button>';
         },
         addSingleButton: function(name, str) {
             str = isset(str) ? str : '插入';
-            return '<button class="add" onclick=' + name + ".add($('#input1').val());" + '>' +
+            return '<button class="add btn" onclick=' + name + ".add($('#input1').val());" + '>' +
                 str + '</button>';
         },
         addNextButton: function(name, str) {
             str = isset(str) ? str : '下一步';
-            return '<button class="next" disabled="disabled" onclick=' + name + ".next();" + '>' +
+            return '<button class="next btn btn-primary"  id = "next-button" disabled="disabled" onclick=' + name + ".next();" + '>' +
                 str + '</button>';
         },
         resetButton: function(name) {
-            return '<button class="reset" onclick=' + name + ".reset();" + '>重置</button>';
+            return '<button class="reset btn btn-danger" onclick=' + name + ".reset();" + '>重置</button>';
         },
         popButton: function(name, str) {
             str = isset(str) ? str : '弹出';
-            return '<button class="pop" onclick=' + name + ".pop();" + '>' +
+            return '<button class="pop btn" onclick=' + name + ".pop();" + '>' +
                 str +
                 '</button>';
         },
         randomButton: function(name, str) {
             str = isset(str) ? str : '产生随机序列';
-            return '<button class="random" onclick=' + name + ".random();" + '>' +
+            return '<button class="random btn" onclick=' + name + ".random();" + '>' +
                 str +
                 '</button>';
         },
         setButton: function(name, str) {
             str = isset(str) ? str : '产生随机序列';
-            return '<button class="random" onclick=' + name + ".set();" + '>' +
+            return '<button class="random btn" onclick=' + name + ".set();" + '>' +
                 str +
                 '</button>';
         },
         complexity: function(key, val) {
             return '<tr><td>' + key + '</td><td>' + val + '</td></tr>'
+        },
+        complexity_head: function(list) {
+            content = '<thead><tr>';
+            for(var key in list) {
+                if(typeof list[key] === 'function') {
+                    continue;
+                }
+                content += '<td>' + list[key] + '</td>';
+            }
+            return content + '</tr></thead>';
         }
     };
 }();

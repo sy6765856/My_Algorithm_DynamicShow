@@ -12,22 +12,27 @@ Kruskal = function() {
         .startButtonInit()
         .randomButtonInit('产生随机图')
         .resetButtonInit()
-        .inputOneInit('边的两个端点 A')
-        .inputTwoInit('          B')
-        .inputThreeInit('边权值')
+        .inputOneInit('A', '要加边的一个端点标号')
+        .inputTwoInit('B', '要加边的另一个端点标号')
+        .inputThreeInit('边权值', '请输入要加边的权值')
         .addButtonInit('添加这条边')
+        .next()
         .description('最小生成树问题：给定一张无向图，选择其中的一些边得到图的一棵生成树，使得这些边的权值和最小。');
+    Canvas.init('canvas');
     return extend(Graph, {
         SIG: 'Kruskal',
-        run: function(id) {
-            Canvas.init(id);
+        run_init: function(id) {
             Info.init()
                 .setPermanent('最小生成树kruskal算法');
             ComplexityAnalysis.init(this.SIG, this.edges.length/2);
-            this.kruskal()
-                .draw();
+            this.kruskal();
             ComplexityAnalysis.compare();
             $('#answer').html('最小生成树边权和为：' + this.minLength);
+            return this;
+        },
+        run: function() {
+            this.run_init()
+                .draw();
             return this;
         },
         drawAfter: function() {

@@ -38,18 +38,25 @@ AlgorithmBase = function(){
         drawAfter: function() {
             return this;
         },
-        drawNextFrame: function(frame) {
-            Canvas.clearAll('canvas')
-                .drawRectangleByNumber(this.QUEUE[frame], this.COLOR[frame]);
+        drawNextFrame: function() {
+            if(this.step < this.QUEUE.length) {
+                Canvas.clearAll('canvas')
+                    .drawRectangleByNumber(this.QUEUE[this.step], this.COLOR[this.step]);
+                this.step++;
+            } else {
+                this.step = 0;
+            }
             return this;
         },
         next: function() {
-            if(this.step < this.QUEUE.length) {
-                this.drawNextFrame(this.step);
-                Info.permanent()
-                    .temporary(this.step);
-                this.step++;
-            }
+            this.drawNextFrame();
+            Info.permanent()
+                .temporary(this.step);
+            return this;
+        },
+        change: function() {
+            eval(this.SIG + '.run_init();');
+            Button.enableNextButton();
             return this;
         },
         drawing: function() {

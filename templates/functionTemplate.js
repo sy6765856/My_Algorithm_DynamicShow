@@ -72,12 +72,15 @@ FunctionTemplate = function() {
         },
         complexity: function(array, info) {
             $('.complexity').html('算法复杂度为： ' + info);
+            $('.complexity').append(Template.complexity_head(['复杂度', '相似度（完全相同为1）']));
+            $('.complexity').append('<tbody>');
             for(var key in array) {
                 if(typeof array[key] === 'function') {
                     continue;
                 }
-                $('.complexity').append(Template.complexity(key, array[key]));
+                $('.complexity').append(Template.complexity(key, Math.round(array[key]*1000)/1000));
             }
+            $('.complexity').append('</tbody>');
             return this;
         }
     };

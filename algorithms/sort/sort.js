@@ -9,6 +9,7 @@ DotTest.init('sort.js')
     .begin();
 Sort = function() {
     return extend(AlgorithmBase, {
+        SIG: 'Sort',
         array: [],
         run: function(id){
             return this;
@@ -28,7 +29,8 @@ Sort = function() {
         reset: function() {
             this.array = [];
             this.step = 0;
-            this.clearAll();
+            this.clearAll()
+                .change();
             return this;
         },
         add: function(v) {
@@ -37,6 +39,7 @@ Sort = function() {
             }
             this.array.push(Number(v));
             this.drawSortArray();
+            this.change();
             return this;
         },
         drawSortArray: function() {

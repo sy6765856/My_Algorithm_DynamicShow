@@ -9,6 +9,15 @@ DotTest.init('divideAndConquer.js')
     .begin();
 DivideAndConquer = function() {
     return extend(AlgorithmBase, {
+        drawNextFrame: function() {
+            if(this.step < this.BoardQueue.length) {
+                Canvas.clearAll('canvas')
+                    .drawBoard(this.BoardQueue[this.step], this.BoardColor[this.step], BoardCover.height, BoardCover.width);
+                this.step++;
+            }
+            return this;
+        },
+
         drawing: function() {
             if(this.FRAME >= this.BoardQueue.length) {
                 return this;

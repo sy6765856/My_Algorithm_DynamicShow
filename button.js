@@ -8,11 +8,13 @@
 Button = function() {
     return {
         enableNextButton: function() {
-            $('.next').attr('disabled', '');
+            $('#next-button').attr('disabled', '');
+            $('#next-button').attr('class', 'next btn btn-primary');
             return this;
         },
         disableNextButton: function() {
-            $('.next').attr('disabled', 'disabled');
+            $('#next-button').attr('disabled', 'disabled');
+            $('#next-button').attr('class', 'next-disable btn btn-primary disabled');
             return this;
         }
     }

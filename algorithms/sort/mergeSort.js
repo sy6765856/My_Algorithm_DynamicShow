@@ -13,25 +13,31 @@ MergeSort = function() {
         .singleAddButtonInit('输入')
         .resetButtonInit()
         .randomButtonInit()
-        .inputOneInit('请输入一个数')
+        .inputOneInit('请输入一个数', '请输入要加入排序序列的数')
+        .next()
         .description('这里会演示归并排序过程中数字序列的变化过程。');
+    Canvas.init('canvas');
     return extend(Sort, {
         SIG: 'MergeSort',
-        run: function(id) {
+        run_init: function(id) {
             Info.init()
                 .setPermanent('归并排序');
-            this.merge_Sort(Canvas.init(id));
+            this.merge_Sort();
             Log.success();
             return this;
         },
-        merge_Sort: function(CanvasObject){
+        run: function() {
+            this.run_init()
+                .draw();
+            return this;
+        },
+        merge_Sort: function(){
             var array = this.array;
             this.init('MergeSort', Scroll.interval)
                 .QUEUE.push(array.slice(0));
 
             ComplexityAnalysis.init(this.SIG, array.length);
-            this.mergeSort(array, 0, array.length-1)
-                .draw();
+            this.mergeSort(array.slice(0), 0, array.length-1);
             ComplexityAnalysis.compare();
             console.log(ComplexityAnalysis.complexityName);
             return this;

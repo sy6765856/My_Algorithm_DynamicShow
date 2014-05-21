@@ -4,6 +4,7 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta>
         <link rel="stylesheet" href="../css/main.css"/>
+        <link rel="stylesheet" href="../css/bootstrap.min.css"/>
         <style type="text/css">
             .picView li{
                 position:relative;
@@ -35,18 +36,17 @@
                         <div style="float: left; margin-top: 12px; border-radius: 8px;">
                             <canvas id="canvas" class="canvas curved_box"></canvas>
                         </div>
-                        <div style="position: relative; width: 300px; height: 333px; top: 47px; left: 820px; background-color: white">
+                        <div style="position: relative; width: 300px; top: 47px; left: 820px; background-color: white">
                             <div class = "subTitle" id = "subTitle"></div>
                             <a href="#" style="position: absolute; left:15px; top: 28px; text-decoration: none;">Description：</a>
                             <div id = "description" class="description">
                             </div>
                             <div class="buttonFrame">
-                                <div class="information">
+                                <div class="information bg-success">
                                     <div id = "answer" class = "answer"></div>
                                     <div id = "info" class="info"></div>
                                 </div>
-                                <div class="input" id = "input">
-                                </div>
+                                <div class="input" id = "input"></div>
                                 <div class="scroll">点这里调节速度哦</div>
                                 <div class = "buttons">
                                     <div id = "add" style="float: left"></div>
@@ -57,7 +57,7 @@
                                     <div id = "random" style="float: left"></div>
                                     <div id = "next" style="float: left"></div>
                                 </div>
-                                <table border="1" class="complexity">
+                                <table border="1" class="complexity table">
                                 </table>
                             </div>
                         </div>
@@ -66,7 +66,7 @@
                 <div class="code"></div>
         </div>
         </div>
-        <div class="dot" style=" top: 440px; left: 1200px;"></div>
+        <div class="dot"></div>
     </body>
 
     <script type="text/javascript" src = "../jsLib/jquery-1.4.2.js"></script>
@@ -134,6 +134,7 @@
             e = window.event ? window.event : e;
             var who = e.target ? e.target : e.srcElement;
             Canvas.clearAll();
+            Button.disableNextButton();
             if(who.id) {
                 $('.complexity').html('');
             }

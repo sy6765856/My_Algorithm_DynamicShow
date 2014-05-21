@@ -9,8 +9,8 @@ DotTest.init('LCS.js')
     .begin();
 LCS = function() {
     app.initToolsView('LCS')
-        .inputOneInit('字符串a')
-        .inputTwoInit('字符串b')
+        .inputOneInit('字符串a', '请输入一个字符串')
+        .inputTwoInit('字符串b', '请输入一个字符串')
         .startButtonInit()
         .resetButtonInit()
         .description('现有两个你给出的字符串A,B。最长公共子序列问题就是求解A,B中相同子序列的最大长度，最后会给出最大公共子序列长度及子序列。');

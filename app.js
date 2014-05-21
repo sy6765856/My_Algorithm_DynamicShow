@@ -9,6 +9,7 @@ DotTest.init('app.js')
     .begin();
 app = {
     SIG: 'app',
+    info: '请输入',
     init: function(id) {
         Array.prototype.max = function(){
             return Math.max.apply({}, this);
@@ -87,7 +88,8 @@ app = {
         $(index).click(FunctionTemplate.popButton(className, name));
         return this;
     },
-    inputOneInit: function(name) {
+    inputOneInit: function(name, info) {
+        info = isset(info) ? info : this.info;
         var index = '#' + this.id;
         if(name === undefined) {
             name = '';
@@ -96,12 +98,13 @@ app = {
         }
         $(index).click(
             function() {
-                $('#input').append('<div style="position: absolute;"><label class = "label" for="input1">'+ name +'</label><input id = "input1"/></div>');
+                $('#input').append('<label class = "label" for="input1">'+ name +'</label><input type="text" class="form-control" id = "input1" placeholder="' + info + '"/>');
             }
         );
         return this;
     },
-    inputTwoInit: function(name) {
+    inputTwoInit: function(name, info) {
+        info = isset(info) ? info : this.info;
         var index = '#' + this.id;
         if(name === undefined) {
             name = '';
@@ -110,12 +113,13 @@ app = {
         }
         $(index).click(
             function() {
-                $('#input').append('</br><div style="position: absolute;"><label class = "label" for="input2">' + name + '</label><input id = "input2"/></div>');
+                $('#input').append('</br><label class = "label" for="input2">' + name + '</label><input type="text" class="form-control" id = "input2" placeholder="' + info + '"/>');
             }
         );
         return this;
     },
-    inputThreeInit: function(name) {
+    inputThreeInit: function(name, info) {
+        info = isset(info) ? info : this.info;
         var index = '#' + this.id;
         if(name === undefined) {
             name = '';
@@ -124,7 +128,7 @@ app = {
         }
         $(index).click(
             function() {
-                $('#input').append('</br><div style="position: absolute;"><label class = "label" for="input3">' + name + '</label><input id = "input3"/></div>');
+                $('#input').append('</br><label class = "label" for="input3">' + name + '</label><input type="text" class="form-control" id = "input3" placeholder="' + info + '"/>');
             }
         );
         return this;

@@ -13,18 +13,25 @@ QuickSort = function() {
         .singleAddButtonInit('输入')
         .resetButtonInit()
         .randomButtonInit()
-        .inputOneInit('请输入一个数')
+        .inputOneInit('请输入一个数', '请输入要加入排序序列的数')
+        .next()
         .description('这里会演示快速排序过程中数字序列的变化过程');
+    Canvas.init('canvas');
     return extend(Sort, {
         SIG: 'QuickSort',
-        run: function(id) {
+        run_init: function(id) {
             Info.init()
                 .setPermanent('快速排序');
-            this.quick_Sort(Canvas.init(id));
+            this.quick_Sort();
             Log.success();
             return this;
         },
-        quick_Sort: function(CanvasObject) {
+        run: function() {
+            this.run_init()
+                .draw();
+            return this;
+        },
+        quick_Sort: function() {
             var array = this.array,
                 color = [];
             this.init('QuickSort', Scroll.interval)
@@ -32,8 +39,7 @@ QuickSort = function() {
                 .QUEUE.push(array.slice(0));
             this.COLOR.push(color);
             ComplexityAnalysis.init(this.SIG, array.length);
-            this.quickSort(array, 0, array.length - 1)
-                .draw();
+            this.quickSort(array, 0, array.length - 1);
             ComplexityAnalysis.compare();
             console.log(ComplexityAnalysis.complexityName);
             return this;

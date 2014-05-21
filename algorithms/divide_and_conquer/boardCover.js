@@ -9,10 +9,10 @@ DotTest.init('boardcover.js')
     .begin();
 BoardCover = function() {
     app.initToolsView('boardCover')
-        .inputOneInit('棋盘大小（2的次方数）')
+        .inputOneInit('棋盘大小（2的次方数）', '请输入棋盘大小')
         .informationInit('棋盘上特殊格位置')
-        .inputTwoInit('x坐标')
-        .inputThreeInit('y坐标')
+        .inputTwoInit('x坐标', 'x坐标左侧从0开始')
+        .inputThreeInit('y坐标', 'y坐标上方从0开始')
         .singleAddButtonInit('开始覆盖')
         .next()
         .description('在2^n的棋盘上有且仅有一个特殊方格，除特殊方格外的所有方格要求被四种L型的地砖覆盖。本问题采用分治的方法，对于2^n的棋盘，递归为2^(n-1)的子问题。特殊方格标记为零，其他标记相同的L型为一块地砖。');
@@ -49,6 +49,7 @@ BoardCover = function() {
                 .setPermanent('棋盘覆盖问题');
             this.divideAndConquer(scale, x, y)
                 .draw();
+            Button.enableNextButton();
 //            Table.drawGrids(this.board, this.height, this.width)
 //                .drawXYCoordinateSystem();
             return this;

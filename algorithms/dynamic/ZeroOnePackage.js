@@ -11,9 +11,9 @@ ZeroOnePackage = function() {
     app.initToolsView('zeroOnePackage')
         .startButtonInit('开始')
         .addButtonInit()
-        .inputOneInit('物品重量')
-        .inputTwoInit('物品价值')
-        .inputThreeInit('背包大小')
+        .inputOneInit('物品重量', '请输入一个物品的重量')
+        .inputTwoInit('物品价值', '请输入该物品的价值')
+        .inputThreeInit('背包大小', '请输入背包能存放的最大重量')
         .setButtonInit('设置背包大小')
         .resetButtonInit()
         .description('小偷抢劫一家商店时带了一个能容纳限定重量的背包，商店里有一些物品，每个商品有一定价值和重量。假设背包能容纳的物品重量，商品的价值重量均为整数，且每种商品都只有一个，求解小偷可以偷走的最大价值。');

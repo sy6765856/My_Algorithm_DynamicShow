@@ -11,22 +11,27 @@ Floyd = function() {
     app.initToolsView('floyd')
         .randomButtonInit('产生随机图')
         .resetButtonInit()
-        .inputOneInit('边的两个端点 A')
-        .inputTwoInit('          B')
-        .inputThreeInit('边权值')
+        .inputOneInit('A', '要加边的一个端点标号')
+        .inputTwoInit('B', '要加边的另一个端点标号')
+        .inputThreeInit('边权值', '请输入要加边的权值')
         .addButtonInit('添加这条边')
         .description('')
+        .next()
         .startButtonInit();
+    Canvas.init('canvas');
     return extend(Graph, {
         SIG: 'Floyd',
-        run: function(id) {
-            Canvas.init(id);
+        run_init: function(id) {
             Info.init()
                 .setPermanent('floyd算法');
             ComplexityAnalysis.init(this.SIG, this.nodes.length);
-            this.floyd()
-                .draw();
+            this.floyd();
             ComplexityAnalysis.compare();
+            return this;
+        },
+        run: function() {
+            this.run_init()
+                .draw();
             return this;
         },
         floyd: function() {

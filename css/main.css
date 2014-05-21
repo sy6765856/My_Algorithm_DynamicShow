@@ -8,11 +8,7 @@ body {
     background: url(../backgrounds/blue.jpg);
 }
 input {
-    background-color: lightgrey;
-    border-radius: 8px;
-    margin: 7px;
-    border: 1px solid grey;
-    width: 100px;
+    line-height: 10px;
 }
 button {
     background-color: #3498db;
@@ -25,15 +21,14 @@ button {
     -moz-border-radius: 8px;
     padding: 5px 10px 5px 10px;
     font: bold 11px "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
-    opacity: 0.9;
     cursor: hand;
 }
-button:hover {
-    background-color: #3cb0fd;
-    opacity: 1;
+/*button:hover {*/
+    /*background-color: #3cb0fd;*/
+    /*opacity: 1;*/
     /*box-shadow: 3px 3px 3px #888888;*/
     /*border: 7px;*/
-}
+/*}*/
 
 .col1 { float: left; width: 130px; margin: 5px;}
 .col2 { float: left; width: 240px; margin: 5px;}
@@ -53,12 +48,12 @@ button:hover {
 
 .canvas { opacity: 0.8; position: relative; top: 15px; left: 10px; background-color: darkgray; border: 1px solid gray;}
 
-.information { position: relative; top: -3px;}
-.input { position: relative; top: 10px;}
-.buttons { position: absolute; top: 100px; left: 0px; width: 200px;}
+.information { position: relative; top: -10px;}
+.input { position: absolute; top: 10px;}
+.buttons { position: absolute; top: 160px; left: 0px; width: 300px;}
 button { width: 50px;}
 
-.buttonFrame { margin: 23px 25px 0 0; position: relative; top: 5px; left: 5px; height: 90px; border-radius: 8px; opacity: 0.9;}
+.buttonFrame { margin: 23px 25px 0 0; position: relative; top: 5px; left: 5px; height: 150px; border-radius: 8px; opacity: 0.9;}
 
 .buttonFrame button { float: left;}
 
@@ -126,7 +121,6 @@ button { width: 50px;}
 .info { color: green; position: absolute; left: 10px; top: 0px; height: 10px;}
 .answer { color: darkgreen; position: absolute; left: 0px; top: 0px;}
 
-
 .curved_box {
     display: inline-block;
     margin: 20px;
@@ -178,10 +172,10 @@ button { width: 50px;}
     font: 15px bold Arial;
     font-weight: bold;
 }
-.description:hover {
-    border-radius: 6px;
-    height: 147px;
-}
+/*.description:hover {*/
+    /*border-radius: 6px;*/
+    /*height: 147px;*/
+/*}*/
 
 .scroll {
     background-color: #808080;
@@ -193,7 +187,7 @@ button { width: 50px;}
     color: whitesmoke;
     width: 300px;
     left: -5px;
-    top: 91px;
+    top: 145px;
     position: absolute;
     cursor: hand;
 }
@@ -210,6 +204,8 @@ button { width: 50px;}
     background-color: red;
     cursor: hand;
     border-radius: 3px;
+    top: 490px;
+    left: 1200px;
 }
 
 .complexity {
@@ -217,4 +213,7 @@ button { width: 50px;}
     top: 300px;
     border: 1px solid #000000;
     background-color: whitesmoke;
+}
+.next-disable {
+    background-color: #000000;
 }

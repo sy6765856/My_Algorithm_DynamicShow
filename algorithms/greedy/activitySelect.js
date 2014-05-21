@@ -12,8 +12,9 @@ ActivitySelect = function() {
         .startButtonInit()
         .addButtonInit()
         .resetButtonInit()
-        .inputOneInit('活动开始时间')
-        .inputTwoInit('活动结束时间')
+        .inputOneInit('活动开始时间', '请输入活动的开始时间')
+        .inputTwoInit('活动结束时间', '请输入活动的结束时间')
+        .next()
         .description('现有一些活动，每个活动会占用活动开始到结束时间内的资源，该资源只能在某一时刻被一个活动占用。假设活动的开始结束时间都是整数，现给出一系列活动，求解最多可以安排的活动数。最后选出的活动用黄色标记。');
     Canvas.init('canvas');
     return extend(Greedy, {
@@ -42,6 +43,7 @@ ActivitySelect = function() {
             this.init('canvas')
                 .activitySelect()
                 .draw();
+            Button.enableNextButton();
             ComplexityAnalysis.compare();
             return this;
         },
@@ -83,6 +85,7 @@ ActivitySelect = function() {
             this.minimum = min(this.minimum, begin);
             this.maximum = max(this.maximum, end);
             this.insert([begin, end, 'green', this.activities.length]);
+            Button.disableNextButton();
             return this;
         },
         refresh: function() {

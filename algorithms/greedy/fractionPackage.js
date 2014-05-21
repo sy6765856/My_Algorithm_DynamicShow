@@ -12,9 +12,9 @@ FractionPackage = function() {
         .startButtonInit('开始')
         .addButtonInit()
         .resetButtonInit()
-        .inputOneInit('物品价值')
-        .inputTwoInit('物品重量')
-        .inputThreeInit('背包载重')
+        .inputOneInit('物品价值', '请输入一个物品的重量')
+        .inputTwoInit('物品重量', '请输入该物品的价值')
+        .inputThreeInit('背包大小', '请输入背包能存放的最大重量')
         .setButtonInit('设置背包载重')
         .description('');
     Canvas.init('canvas');
