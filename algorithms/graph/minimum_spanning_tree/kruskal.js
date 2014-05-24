@@ -22,6 +22,7 @@ Kruskal = function() {
     return extend(Graph, {
         SIG: 'Kruskal',
         run_init: function(id) {
+            Canvas.init('canvas');
             Info.init()
                 .setPermanent('最小生成树kruskal算法');
             ComplexityAnalysis.init(this.SIG, this.edges.length/2);

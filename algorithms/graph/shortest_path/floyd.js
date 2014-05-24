@@ -22,6 +22,7 @@ Floyd = function() {
     return extend(Graph, {
         SIG: 'Floyd',
         run_init: function(id) {
+            Canvas.init('canvas');
             Info.init()
                 .setPermanent('floyd算法');
             ComplexityAnalysis.init(this.SIG, this.nodes.length);
@@ -45,6 +46,7 @@ Floyd = function() {
                             v[i][j] = v[i][k] + v[k][j];
                             ComplexityAnalysis.addCalculation(1);
                             this.drawGragh()
+                                .addTemp('更新顶点' + i + '和顶点' + j + '之间的最小距离')
                                 .saveTable([[i, j, 'red'], [i, k, 'blue'], [k, j, 'BLue']]);
                         }
                     }

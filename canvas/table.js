@@ -11,7 +11,7 @@ Table = function() {
     return extend(Canvas, {
         SIG: 'Table',
         init: function(pos, tableWidth, tableHeight) {
-            this.pos = pos ? pos : {x: 300, y:450};
+            this.pos = pos ? pos : {x: 500, y: 500};
             this.tableWidth = tableWidth ? tableWidth : 40;
             this.tableHeight = tableHeight ? tableHeight : 20;
             this.offset_x = this.tableWidth/2 - 3;
@@ -99,9 +99,20 @@ Table = function() {
         drawNames: function(rowNames, colNames, kind) {
             kind = kind ? kind : 2;
             this.separateGrad(kind);
+            var pos = this.pos,
+                offsetx = 20,
+                offsety = 5;
+            for(var i = 0; i < rowNames; i++) {
+                this.writeText(i, { x: pos.x - offsetx, y: pos.y + this.tableHeight * (i+1) - offsety});
+            }
+            for(var j = 0; j < colNames; j++) {
+                this.writeText(j, { x: pos.x + this.tableWidth * (j+1) - offsetx, y: pos.y - offsety});
+            }
             return this;
         },
         drawTable: function(table, row, col, rowNames, colNames) {
+            rowNames = isset(rowNames) ? rowNames : row;
+            colNames = isset(colNames) ? colNames : col;
             this.drawNames(rowNames, colNames)
                 .drawTableBody(row, col)
                 .drawTableContent(table, row, col);

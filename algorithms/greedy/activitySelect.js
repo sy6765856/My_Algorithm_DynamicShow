@@ -38,13 +38,20 @@ ActivitySelect = function() {
             this.selfInit();
             return this;
         },
-        run: function() {
+        run_init: function() {
+            Canvas.init('canvas');
+            Info.init()
+                .setPermanent('活动选择问题');
             ComplexityAnalysis.init(this.SIG, this.activities.length);
             this.init('canvas')
-                .activitySelect()
-                .draw();
+                .activitySelect();
             Button.enableNextButton();
             ComplexityAnalysis.compare();
+            return this;
+        },
+        run: function() {
+            this.run_init()
+                .draw();
             return this;
         },
         drawAfter: function() {
@@ -57,10 +64,22 @@ ActivitySelect = function() {
                 return this;
             }
             this.drawCanvasFrame(Canvas.imageDataQUEUE[Canvas.imageFrame]);
+            Info.permanent()
+                .temporary(Canvas.imageFrame);
             Canvas.imageFrame++;
             setTimeout.call(null, 'ActivitySelect.drawing();', Scroll.interval);
             return this;
         },
+//        drawNextFrame: function() {
+//            if(this.step < Canvas.imageDataQUEUE.length) {
+//                console.log(this.step);
+//                this.drawCanvasFrame(Canvas.imageDataQUEUE[Canvas.imageFrame]);
+//                this.step++;
+//            } else {
+//                this.step = 0;
+//            }
+//            return this;
+//        },
         add: function(begin, end) {
             if(!begin) {
                 alert('请输入开始时间！');
@@ -88,8 +107,10 @@ ActivitySelect = function() {
             Button.disableNextButton();
             return this;
         },
-        refresh: function() {
-            this.drawActivities(this.activities, this.minimum, this.maximum);
+        refresh: function(info) {
+            this.drawActivities(this.activities, this.minimum, this.maximum)
+                .addTemp(info)
+                .save();
             return this;
         },
         insert: function(obj) {
@@ -106,24 +127,23 @@ ActivitySelect = function() {
                 ans = 0;
             activities.sort(cmp);
             ComplexityAnalysis.addCalculation(activities.length * Math.log(activities.length));
-            this.refresh()
-                .save();
+            this.refresh('对所有活动按结束时间由早到晚排序');
 
             for(var key in activities) {
+                if(typeof activities[key] === 'function') {
+                    continue;
+                }
                 this.changeActivityColor(key, 'red')
-                    .refresh()
-                    .save();
+                    .refresh('考虑活动' + key);
                 var activity = activities[key];
                 if(activity[0] > ed) {
                     ans ++;
                     ed = activity[1];
                     this.changeActivityColor(key, 'yellow')
-                        .refresh()
-                        .save();
+                        .refresh('选中活动' + key);
                 } else {
                     this.changeActivityColor(key, 'green')
-                        .refresh()
-                        .save();
+                        .refresh('不选活动' + key);
                 }
             }
             ComplexityAnalysis.addCalculation(activities.length);

@@ -78,6 +78,9 @@ LCS = function() {
             this.chose2 = [];
             return this;
         },
+        dpstr: function(i, j) {
+            return 'dp[' + i + '][' + j + ']';
+        },
         LCS: function() {
             this.LCS_init();
             var a = this.str1,
@@ -86,24 +89,27 @@ LCS = function() {
                 link = this.link,
                 chose1 = this.chose1,
                 chose2 = this.chose2;
-            this.saveTextArray();
+            this.saveTextArray('');
             link[0][0] = link[0][1] = link[1][0] = 0;
             for(var i = 0; i < a.length; i++) {
                 for(var j = 0; j < b.length; j++) {
-                    this.saveDpArray();
+                    this.saveDpArray('处理' + this.dpstr(i, j));
                     ComplexityAnalysis.addCalculation(1);
                     if(dp[i][j+1] > dp[i+1][j]) {
                         dp[i+1][j+1] = dp[i][j+1];
                         link[i+1][j+1] = 1;
+                        this.saveDpArray(this.dpstr(i, j+1) + '>' + this.dpstr(i+1, j) + ',' + this.dpstr(i+1, j+1) + '=' + dp[i+1][j+1]);
                         ComplexityAnalysis.addCalculation(2);
                     } else if(dp[i][j+1] <= dp[i+1][j]) {
                         dp[i+1][j+1] = dp[i+1][j];
                         link[i+1][j+1] = 2;
+                        this.saveDpArray(this.dpstr(i+1, j) + '>=' + this.dpstr(i, j+1) + ',' + this.dpstr(i+1, j+1) + '=' + dp[i+1][j]);
                         ComplexityAnalysis.addCalculation(2);
                     }
                     var add = (a[i] === b[j] ? 1 : 0);
                     if(dp[i][j] + add > dp[i+1][j+1]) {
                         dp[i+1][j+1] = dp[i][j] + add;
+                        this.saveDpArray(this.dpstr(i, j+1) + '>' + this.dpstr(i+1, j) + ',' + this.dpstr(i+1, j+1) + '=' + dp[i+1][j+1]);
                         ComplexityAnalysis.addCalculation(2);
                         link[i+1][j+1] = add ? 3 : 4;
                     }
@@ -112,7 +118,7 @@ LCS = function() {
             var fi = a.length,
                 li = b.length;
             while(link[fi][li]) {
-                this.saveTextArray();
+                this.saveTextArray('');
                 switch (link[fi][li]) {
                     case 1:
                         fi --;
@@ -132,16 +138,17 @@ LCS = function() {
                         break;
                 }
             }
-            this.saveTextArray();
+            this.saveTextArray('');
             return this;
         },
 
-        saveTextArray: function() {
+        saveTextArray: function(text) {
             var ps = { x: this.pos.x + 90, y: this.pos.y + 60};
             Canvas.writeTextArray(this.str1, this.chose1, ps)
-                  .writeTextArray(this.str2, this.chose2, {x: ps.x, y: ps.y + 50})
-                  .saveCanvasFrame()
-                  .clearAll();
+                    .writeTextArray(this.str2, this.chose2, {x: ps.x, y: ps.y + 50})
+                    .saveCanvasFrame()
+            this.addTemp(text);
+            Canvas.clearAll();
             return this;
         }
     });

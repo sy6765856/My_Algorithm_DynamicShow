@@ -22,6 +22,7 @@ Prim = function() {
     return extend(Graph, {
         SIG: 'Prim',
         run_init: function(id){
+            Canvas.init('canvas');
             Info.init()
                 .setPermanent('最小生成树prim算法');
             ComplexityAnalysis.init(this.SIG, this.nodes.length);

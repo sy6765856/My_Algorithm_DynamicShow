@@ -36,6 +36,10 @@ Greedy = function() {
             this.spacing = spacing;
             return this;
         },
+        addTemp: function(info) {
+            Info.addTemp(info);
+            return this;
+        },
         checkParameters: function() {
             if(!isset(this.width)) {
                 this.width = 300;

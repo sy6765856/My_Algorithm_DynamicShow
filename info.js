@@ -15,11 +15,12 @@ Info = function() {
         init: function() {
             this.temporaryArray = [];
             this.permanentInfo = '';
-            this.pos = { x: 200, y: 200 };
-            this.temporaryPos = { x: 400, y: 200 };
+            this.pos = { x: 100, y: 100 };
+            this.temporaryPos = { x: 120, y: 140 };
             return this;
         },
         addTemp: function(info) {
+            this.temporaryArray = isset(this.temporaryArray) ? this.temporaryArray : [];
             this.temporaryArray.push(info);
             return this;
         },

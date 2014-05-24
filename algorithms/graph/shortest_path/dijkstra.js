@@ -22,6 +22,7 @@ Dijkstra = function() {
     return extend(Graph, {
         SIG: 'Dijkstra',
         run_init: function(id) {
+            Canvas.init('canvas');
             Info.init()
                 .setPermanent('dijkstra算法');
             ComplexityAnalysis.init(this.SIG, this.nodes.length);
