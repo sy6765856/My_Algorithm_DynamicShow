@@ -70,16 +70,6 @@ ActivitySelect = function() {
             setTimeout.call(null, 'ActivitySelect.drawing();', Scroll.interval);
             return this;
         },
-//        drawNextFrame: function() {
-//            if(this.step < Canvas.imageDataQUEUE.length) {
-//                console.log(this.step);
-//                this.drawCanvasFrame(Canvas.imageDataQUEUE[Canvas.imageFrame]);
-//                this.step++;
-//            } else {
-//                this.step = 0;
-//            }
-//            return this;
-//        },
         add: function(begin, end) {
             if(!begin) {
                 alert('请输入开始时间！');
@@ -115,7 +105,7 @@ ActivitySelect = function() {
         },
         insert: function(obj) {
             this.activities.push(obj);
-            this.refresh();
+            this.refresh('');
             return this;
         },
         activitySelect: function() {

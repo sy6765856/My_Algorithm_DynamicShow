@@ -13,6 +13,7 @@ Dynamic = function() {
             AlgorithmBase.init(name, Scroll.interval);
             this.queue = [];
             this.Table = Table.init();
+//            this.change();
             return this;
         },
 
@@ -42,6 +43,17 @@ Dynamic = function() {
         },
         addTemp: function(info) {
             Info.addTemp(info);
+            return this;
+        },
+        drawNextFrame: function() {
+            if(this.step < Canvas.imageDataQUEUE.length) {
+                Canvas.clearAll();
+                this.drawCanvasFrame(Canvas.imageDataQUEUE[this.step]);
+                Info.permanent();
+                this.step++;
+            } else {
+                this.step = 0;
+            }
             return this;
         }
 

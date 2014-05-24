@@ -13,6 +13,7 @@ LCS = function() {
         .inputTwoInit('字符串b', '请输入一个字符串')
         .startButtonInit()
         .resetButtonInit()
+        .next()
         .description('现有两个你给出的字符串A,B。最长公共子序列问题就是求解A,B中相同子序列的最大长度，最后会给出最大公共子序列长度及子序列。');
 
     return extend(Dynamic, {
@@ -22,10 +23,19 @@ LCS = function() {
         pos: { x: 40, y: 60},
         reset: function() {
             this.str1 = this.str2 = '';
+            Canvas.init('canvas');
+            this.dp = [];
+            this.link = [];
             this.clearAll();
+//            this.change();
             return this;
         },
         run: function() {
+            this.run_init()
+                .draw();
+            return this;
+        },
+        run_init: function() {
             this.str1 = $('#input1').val();
             this.str2 = $('#input2').val();
             $('#input1').val('').focus();
@@ -39,9 +49,9 @@ LCS = function() {
                 .setPermanent('最长公共子序列');
             ComplexityAnalysis.init(this.SIG, this.str1.length + this.str2.length);
             this.init('canvas')
-                .LCS()
-                .draw();
+                .LCS();
             ComplexityAnalysis.compare();
+            Button.enableNextButton();
             return this;
         },
         drawing: function() {

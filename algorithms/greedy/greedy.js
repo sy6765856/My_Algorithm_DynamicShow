@@ -12,6 +12,7 @@ Greedy = function() {
     return extend(Dynamic, {
         init: function(id) {
             Canvas.init(id);
+            this.setPos({ x: 100, y: 300});
             return this;
         },
         generateQueue: function() {
@@ -48,7 +49,7 @@ Greedy = function() {
                 this.height = 50;
             }
             if(!isset(this.pos)) {
-                this.pos = {x: 10, y: 10};
+                this.pos = {x: 150, y: 300};
             }
             if(!isset(this.spacing)) {
                 this.spacing = 30;

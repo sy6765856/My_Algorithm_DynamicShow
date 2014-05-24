@@ -219,6 +219,18 @@ Graph = function() {
             return this;
         },
 
+        drawNextFrame: function() {
+            if(this.step < Canvas.imageDataQUEUE.length) {
+                this.drawCanvasFrame(Canvas.imageDataQUEUE[this.step]);
+                Info.permanent()
+                    .temporary(this.step);
+                this.step++;
+            } else {
+                this.step = 0;
+            }
+            return this;
+        },
+
         drawing: function() {
             if(Canvas.imageFrame >= Canvas.imageDataQUEUE.length) {
                 Graph.drawAfter();
