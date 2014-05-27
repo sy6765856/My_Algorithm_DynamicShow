@@ -66,7 +66,7 @@ Dijkstra = function() {
                 }
 
                 this.changeNodeColor(s, "green")
-                    .changeNodeColor(s_pre, 'white');
+                    .changeNodeColor(s_pre, 'yellow');
 
                 f[s] = 1;
                 for(var e = this.first[s]; e; e = this.nxt[e]) {
