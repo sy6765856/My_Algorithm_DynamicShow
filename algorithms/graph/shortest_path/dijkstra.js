@@ -41,6 +41,7 @@ Dijkstra = function() {
             for(var i = 0; i < this.nodes.length; i++) {
                 this.array[i] = this.INF;
             }
+            Button.enableNextButton();
             return this;
         },
         dijkstra: function() {

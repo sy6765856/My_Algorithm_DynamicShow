@@ -28,6 +28,7 @@ Floyd = function() {
             ComplexityAnalysis.init(this.SIG, this.nodes.length);
             this.floyd();
             ComplexityAnalysis.compare();
+            Button.enableNextButton();
             return this;
         },
         run: function() {

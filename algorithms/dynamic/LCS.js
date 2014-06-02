@@ -103,23 +103,23 @@ LCS = function() {
             link[0][0] = link[0][1] = link[1][0] = 0;
             for(var i = 0; i < a.length; i++) {
                 for(var j = 0; j < b.length; j++) {
-                    this.saveDpArray('处理' + this.dpstr(i, j));
+                    this.saveDpArray('处理' + this.dpstr(i, j), [[i, j, 'red']]);
                     ComplexityAnalysis.addCalculation(1);
                     if(dp[i][j+1] > dp[i+1][j]) {
                         dp[i+1][j+1] = dp[i][j+1];
                         link[i+1][j+1] = 1;
-                        this.saveDpArray(this.dpstr(i, j+1) + '>' + this.dpstr(i+1, j) + ',' + this.dpstr(i+1, j+1) + '=' + dp[i+1][j+1]);
+                        this.saveDpArray(this.dpstr(i, j+1) + '>' + this.dpstr(i+1, j) + ',' + this.dpstr(i+1, j+1) + '=' + dp[i+1][j+1], [[i+1, j+1, 'red'], [i, j+1, 'green']]);
                         ComplexityAnalysis.addCalculation(2);
                     } else if(dp[i][j+1] <= dp[i+1][j]) {
                         dp[i+1][j+1] = dp[i+1][j];
                         link[i+1][j+1] = 2;
-                        this.saveDpArray(this.dpstr(i+1, j) + '>=' + this.dpstr(i, j+1) + ',' + this.dpstr(i+1, j+1) + '=' + dp[i+1][j]);
+                        this.saveDpArray(this.dpstr(i+1, j) + '>=' + this.dpstr(i, j+1) + ',' + this.dpstr(i+1, j+1) + '=' + dp[i+1][j], [[i+1, j+1, 'red'], [i+1, j, 'green']]);
                         ComplexityAnalysis.addCalculation(2);
                     }
                     var add = (a[i] === b[j] ? 1 : 0);
                     if(dp[i][j] + add > dp[i+1][j+1]) {
                         dp[i+1][j+1] = dp[i][j] + add;
-                        this.saveDpArray(this.dpstr(i, j+1) + '>' + this.dpstr(i+1, j) + ',' + this.dpstr(i+1, j+1) + '=' + dp[i+1][j+1]);
+                        this.saveDpArray(this.dpstr(i, j+1) + '>' + this.dpstr(i+1, j) + ',' + this.dpstr(i+1, j+1) + '=' + dp[i+1][j+1], [[i+1, j+1, 'red'], [i, j, 'green']]);
                         ComplexityAnalysis.addCalculation(2);
                         link[i+1][j+1] = add ? 3 : 4;
                     }
@@ -156,7 +156,7 @@ LCS = function() {
             var ps = { x: this.pos.x + 90, y: this.pos.y + 60};
             Canvas.writeTextArray(this.str1, this.chose1, ps)
                     .writeTextArray(this.str2, this.chose2, {x: ps.x, y: ps.y + 50})
-                    .saveCanvasFrame()
+                    .saveCanvasFrame();
             this.addTemp(text);
             Canvas.clearAll();
             return this;

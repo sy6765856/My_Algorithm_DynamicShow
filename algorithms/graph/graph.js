@@ -221,9 +221,8 @@ Graph = function() {
 
         drawNextFrame: function() {
             if(this.step < Canvas.imageDataQUEUE.length) {
+                Canvas.clearAll();
                 this.drawCanvasFrame(Canvas.imageDataQUEUE[this.step]);
-                Info.permanent()
-                    .temporary(this.step);
                 this.step++;
             } else {
                 this.step = 0;

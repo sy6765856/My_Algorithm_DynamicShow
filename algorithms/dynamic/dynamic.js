@@ -34,8 +34,10 @@ Dynamic = function() {
             this.drawQueue();
             return this;
         },
-        saveDpArray: function(info) {
-            Table.drawTable(this.dp, this.str1.length, this.str2.length);
+        saveDpArray: function(info, hightlights) {
+            Table.init()
+                .drawTable(this.dp, this.str1.length, this.str2.length)
+                .highLightRectangles(hightlights);
             this.saveCanvasFrame()
                 .addTemp(info)
                 .clearAll();

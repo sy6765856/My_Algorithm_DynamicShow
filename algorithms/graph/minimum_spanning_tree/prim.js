@@ -29,6 +29,7 @@ Prim = function() {
             this.prim();
             ComplexityAnalysis.compare();
             $('#answer').html('最小生成树边权和为：' + this.minLength);
+            Button.enableNextButton();
             return this;
         },
         run: function(){
