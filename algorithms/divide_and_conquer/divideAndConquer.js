@@ -29,6 +29,14 @@ DivideAndConquer = function() {
             this.FRAME++;
             setTimeout.call(null, this.DRAW_FUNCTION, Scroll.interval);
             return this;
+        },
+
+        reset: function() {
+            Canvas.clearAll();
+            $('#input2').val('');
+            $('#input3').val('');
+            $('#input1').val('').focus();
+            return this;
         }
     });
 }();

@@ -48,7 +48,7 @@ Menu = function() {
                 'shortest_path': ['最短路径', 1],
                 'dijkstra': ['dijkstra', 2],
                 'floyd': ['floyd', 2],
-                'spfa': ['spfa', 2]
+//                'spfa': ['spfa', 2]
             };
             return this;
         },

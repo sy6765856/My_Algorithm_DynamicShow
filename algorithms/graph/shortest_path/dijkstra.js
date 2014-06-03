@@ -76,14 +76,16 @@ Dijkstra = function() {
                     if(edges[e][2] + d[s] < d[v]) {
                         d[v] = d[s] + edges[e][2];
                         ComplexityAnalysis.addCalculation(1);
-                        this.saveGraphAndArray([[0, v, 'red']]);
+                        this.saveGraphAndArray([[0, v, 'red']])
+                            .addTemp(edges[e][2] + '+d[' + s +']<d[' + v +'],更新d[' + v +']');
                     } else {
 
                     }
                 }
             }
-            this.changeNodeColor(s, "white")
-                .saveGraphAndArray();
+            this.changeNodeColor(s, "green")
+                .saveGraphAndArray()
+                .addTemp('');
             return this;
         }
 

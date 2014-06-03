@@ -23,6 +23,7 @@ Prim = function() {
         SIG: 'Prim',
         run_init: function(id){
             Canvas.init('canvas');
+            Canvas.clearAll();
             Info.init()
                 .setPermanent('最小生成树prim算法');
             ComplexityAnalysis.init(this.SIG, this.nodes.length);

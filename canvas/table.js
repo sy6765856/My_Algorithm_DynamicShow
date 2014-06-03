@@ -11,7 +11,7 @@ Table = function() {
     return extend(Canvas, {
         SIG: 'Table',
         init: function(pos, tableWidth, tableHeight) {
-            this.pos = pos ? pos : {x: 500, y: 500};
+            this.pos = pos ? pos : {x: 300, y: 500};
             this.tableWidth = tableWidth ? tableWidth : 40;
             this.tableHeight = tableHeight ? tableHeight : 20;
             this.offset_x = this.tableWidth/2 - 3;
@@ -192,11 +192,6 @@ Table = function() {
                 this.drawPolygon(vertexs);
                 Canvas.restoreOpacity();
             }
-//            this.drawLine({ x: this.pos.x - border, y: 60}, { x:this.pos.x - border, y: this.pos.y + this.tableHeight}, {color: 'red'})
-//                .drawLine({ x: this.pos.x + this.tableWidth + border, y: 60}, { x: this.pos.x + this.tableWidth + border, y: this.pos.y + this.tableHeight}, {color: 'red'})
-//            if(type === 'stack') {
-//                this.drawLine({ x: this.pos.x - border, y: this.pos.y + this.tableHeight}, { x: this.pos.x + this.tableWidth + border, y: this.pos.y + this.tableHeight}, {color: 'red'});
-//            }
             return this;
         },
         render3Dback: function(row, col, pos) {

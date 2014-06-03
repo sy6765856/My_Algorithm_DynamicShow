@@ -31,14 +31,22 @@ Graph = function() {
                 b = $('#input2').val(),
                 v = $('#input3').val(),
                 warnInfo = '边的端点编号不合法';
+            if(!(a && b && v)) {
+                alert('边信息输入不完整');
+                return this;
+            }
             if(warnNumber(a, warnInfo)) {
                 return this;
             }
             if(warnNumber(b, warnInfo)) {
                 return this;
             }
+            if(warnNumber(v, '请输入边的权值')) {
+                return this;
+            }
+            $("#input3").val('');
             this.clearAll()
-                .addEdge(a, b, v)
+                .addEdge(a, b, parseInt(v))
                 .drawGragh();
             return this;
         },
@@ -59,7 +67,7 @@ Graph = function() {
             node.r = this.radius;
             node.color = this.nodeColor;
             node.o.x = this.randomInRange(this.width, 200);
-            node.o.y = this.randomInRange(this.height,200);
+            node.o.y = this.randomInRange(this.height, 200) - 100;
             this.collisionCheck(node);
             return this;
         },

@@ -15,6 +15,7 @@ BoardCover = function() {
         .inputThreeInit('y坐标', 'y坐标上方从0开始')
         .singleAddButtonInit('开始覆盖')
         .next()
+        .resetButtonInit()
         .description('在2^n的棋盘上有且仅有一个特殊方格，除特殊方格外的所有方格要求被四种L型的地砖覆盖。本问题采用分治的方法，对于2^n的棋盘，递归为2^(n-1)的子问题。特殊方格标记为零，其他标记相同的L型为一块地砖。');
     return extend(DivideAndConquer, {
         board: [],
