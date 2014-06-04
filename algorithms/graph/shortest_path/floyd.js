@@ -15,7 +15,7 @@ Floyd = function() {
         .inputTwoInit('B', '要加边的另一个端点标号')
         .inputThreeInit('边权值', '请输入要加边的权值')
         .addButtonInit('添加这条边')
-        .description('')
+        .description('floyd算法用于求解图中所有顶点到其他顶点的最短距离')
         .next()
         .startButtonInit();
     Canvas.init('canvas');

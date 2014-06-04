@@ -15,7 +15,7 @@ Dijkstra = function() {
         .inputTwoInit('B', '要加边的另一个端点标号')
         .inputThreeInit('边权值', '请输入要加边的权值')
         .addButtonInit('添加这条边')
-        .description('')
+        .description('dijkstra算法用于求解单一源点到图中其他点的最短距离，给出的图中必须不存在负权环。演示默认原点是标号为0的顶点。')
         .next()
         .startButtonInit();
     Canvas.init('canvas');
