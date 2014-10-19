@@ -5,6 +5,10 @@
  * Time: 下午3:24
  * To change this template use File | Settings | File Templates.
  */
+window.myAlert = function(info) {
+    swal('', info);
+};
+
 window.isset = function(a) {
     if(a === null || a === undefined) {
         return 0;

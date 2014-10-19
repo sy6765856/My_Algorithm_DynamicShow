@@ -72,11 +72,11 @@ ActivitySelect = function() {
         },
         add: function(begin, end) {
             if(!begin) {
-                alert('请输入开始时间！');
+                myAlert('请输入开始时间！');
                 return this;
             }
             if(!end) {
-                alert('请输入结束时间！');
+                myAlert('请输入结束时间！');
                 return this;
             }
             if(warnNumber(begin, '开始时间应为数字！')) {
@@ -88,7 +88,7 @@ ActivitySelect = function() {
             begin = parseInt(begin);
             end = parseInt(end);
             if(begin > end) {
-                alert('开始时间不能大于结束时间！');
+                myAlert('开始时间不能大于结束时间！');
                 return this;
             }
             this.minimum = min(this.minimum, begin);

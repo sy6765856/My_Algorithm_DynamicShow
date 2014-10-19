@@ -41,7 +41,7 @@ LCS = function() {
             $('#input1').val('').focus();
             $('#input2').val('');
             if(!(this.str1 && this.str2)) {
-                alert("请输入两个字符串!");
+                myAlert("请输入两个字符串!");
                 return this;
             }
             Canvas.init('canvas');

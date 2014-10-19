@@ -26,20 +26,20 @@ BoardCover = function() {
         },
         check: function(v) {
             if(isNaN(v)) {
-                alert('坐标应为整数！');
+                myAlert('坐标应为整数！');
                 return this;
             }
             return this;
         },
         add: function(scale) {
             if(!scale) {
-                alert('请输入棋盘的大小，输入值为2的次方数！');
+                myAlert('请输入棋盘的大小，输入值为2的次方数！');
                 return this;
             }
             var x = $('#input2').val(),
                 y = $('#input3').val();
             if(!x || !y) {
-                alert('请输入棋盘上特殊格的位置！');
+                myAlert('请输入棋盘上特殊格的位置！');
                 return this;
             }
             this.clearAll();
@@ -66,7 +66,7 @@ BoardCover = function() {
                 mul *= mul;
             }
             if(!(x >=0 && x < ret) || !(y >=0 && y < ret)) {
-                alert('特殊格须是棋盘上一点！');
+                myAlert('特殊格须是棋盘上一点！');
                 return this;
             }
             this.width = ret;

@@ -23,11 +23,11 @@ FractionPackage = function() {
         goods: [],
         add: function(value, weight) {
             if(!value) {
-                alert('请输入物品价值！');
+                myAlert('请输入物品价值！');
                 return this;
             }
             if(!weight) {
-                alert('请输入物品重量！');
+                myAlert('请输入物品重量！');
                 return this;
             }
             if(warnNumber(value, '物品价值应为数字！')) {
@@ -46,7 +46,7 @@ FractionPackage = function() {
         set: function() {
             var size = $('#input3').val();
             if(!size) {
-                alert('请输入背包载重！');
+                myAlert('请输入背包载重！');
                 return this;
             }
             this.setPackageSize(size);
@@ -72,7 +72,7 @@ FractionPackage = function() {
         },
         run: function() {
             if(!isset(this.packageSize)) {
-                alert('请设置背包载重！');
+                myAlert('请设置背包载重！');
                 return this;
             }
             Info.init()

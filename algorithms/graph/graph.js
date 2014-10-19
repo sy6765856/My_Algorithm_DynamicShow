@@ -32,7 +32,7 @@ Graph = function() {
                 v = $('#input3').val(),
                 warnInfo = '边的端点编号不合法';
             if(!(a && b && v)) {
-                alert('边信息输入不完整');
+                myAlert('边信息输入不完整');
                 return this;
             }
             if(warnNumber(a, warnInfo)) {

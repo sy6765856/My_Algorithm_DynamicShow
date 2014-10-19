@@ -29,11 +29,11 @@ ZeroOnePackage = function() {
         },
         add: function(w, v) {
             if(!w) {
-                alert('请输入物品重量！');
+                myAlert('请输入物品重量！');
                 return this;
             }
             if(!v) {
-                alert('请输入物品价值！');
+                myAlert('请输入物品价值！');
                 return this;
             }
             this.goods.push([parseInt(w), parseInt(v)]);
@@ -46,7 +46,7 @@ ZeroOnePackage = function() {
         set: function() {
             var size = $('#input3').val();
             if(!size) {
-                alert('请输入背包大小！');
+                myAlert('请输入背包大小！');
                 return this;
             }
             this.setPackageSize(size);
@@ -66,7 +66,7 @@ ZeroOnePackage = function() {
         },
         run: function() {
             if(!isset(this.packageSize)) {
-                alert('请设置背包大小！');
+                myAlert('请设置背包大小！');
                 return this;
             }
             this.zeroOne_package()
